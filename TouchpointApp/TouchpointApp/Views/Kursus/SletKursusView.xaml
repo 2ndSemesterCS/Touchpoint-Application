@@ -1,5 +1,5 @@
 ﻿<Page
-    x:Class="TouchpointApp.Views.AdminView"
+    x:Class="TouchpointApp.Views.SletKursusView"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:TouchpointApp.Views"
@@ -14,25 +14,10 @@
             <StackPanel>
                 <TextBlock FontSize="48px" FontWeight="Bold">Touchpoint</TextBlock>
             </StackPanel>
-            <!-- Navigation Bar -->
-            <StackPanel Orientation="Horizontal">
-                <StackPanel.Resources>
-                    <Style TargetType="Button">
-                        <Setter Property="Margin" Value="0,0,20,0" />
-                    </Style>
-                </StackPanel.Resources>
-                <Button Click="KursistViewClick">Kursist</Button>
-                <Button Click="KursusViewClick">Kursus</Button>
-                <Button>Lokale</Button>
-                <Button>Serie</Button>
-                <Button Click="UnderviserViewClick">Underviser</Button>
-                <Button>Undervisningssted</Button>
-                
-                <!-- Ikke i vores scope -->
-                <Button>Invoice</Button>
-            </StackPanel>
             <!-- Content -->
             <StackPanel>
+                <TextBlock>Name</TextBlock>
+                <TextBox></TextBox>
             </StackPanel>
             <!-- Footer -->
             <StackPanel>

@@ -20,26 +20,26 @@ namespace TouchpointApp.Views
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class AdminView : Page
+    public sealed partial class KursusView : Page
     {
-        public AdminView()
+        public KursusView()
         {
             this.InitializeComponent();
         }
 
-        private void KursistViewClick(object sender, RoutedEventArgs e)
+        private void OpretKursusViewClick(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(Views.KursistView), null);
+            this.Frame.Navigate(typeof(OpretKursusView), null);
         }
 
-        private void KursusViewClick(object sender, RoutedEventArgs e)
+        private void RedigerKursusViewClick(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(Views.KursusView), null);
+            this.Frame.Navigate(typeof(RedigerKursusView), null);
         }
 
-        private void UnderviserViewClick(object sender, RoutedEventArgs e)
+        private void SletKursusViewClick(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(Views.UnderviserView), null);
+            this.Frame.Navigate(typeof(SletKursusView), null);
         }
     }
 }

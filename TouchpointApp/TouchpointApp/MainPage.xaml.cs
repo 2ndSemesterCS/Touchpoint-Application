@@ -12,6 +12,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using TouchpointApp.Views;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -25,6 +26,13 @@ namespace TouchpointApp
         public MainPage()
         {
             this.InitializeComponent();
+        }
+
+        // Code behind, til funktionalitet på vores button, til at skifte til et andet view.
+
+        private void AdminViewClick(object sennder, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(AdminView), null);
         }
     }
 }

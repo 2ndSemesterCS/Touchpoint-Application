@@ -12,6 +12,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using TouchpointApp.Views.Underviser;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -20,26 +21,26 @@ namespace TouchpointApp.Views
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class AdminView : Page
+    public sealed partial class UnderviserView : Page
     {
-        public AdminView()
+        public UnderviserView()
         {
             this.InitializeComponent();
         }
 
-        private void KursistViewClick(object sender, RoutedEventArgs e)
+        private void OpretUnderviserViewClick(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(Views.KursistView), null);
+            this.Frame.Navigate(typeof(OpretUnderviserView), null);
         }
 
-        private void KursusViewClick(object sender, RoutedEventArgs e)
+        private void RedigerUnderviserViewClick(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(Views.KursusView), null);
+            this.Frame.Navigate(typeof(RedigerUnderviserView), null);
         }
 
-        private void UnderviserViewClick(object sender, RoutedEventArgs e)
+        private void SletUnderviserViewClick(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(Views.UnderviserView), null);
+            this.Frame.Navigate(typeof(SletUnderviserView), null);
         }
     }
 }

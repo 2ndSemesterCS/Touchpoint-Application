@@ -103,6 +103,43 @@
     <Compile Include="Views\AdminView.xaml.cs">
       <DependentUpon>AdminView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Kursist\KursistView.xaml.cs">
+      <DependentUpon>KursistView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Kursist\OpretKursistView.xaml.cs">
+      <DependentUpon>OpretKursistView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Kursist\RedigerKursistView.xaml.cs">
+      <DependentUpon>RedigerKursistView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Kursist\SletKursistView.xaml.cs">
+      <DependentUpon>SletKursistView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Kursus\KursusView.xaml.cs">
+      <DependentUpon>KursusView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Kursus\OpretKursusView.xaml.cs">
+      <DependentUpon>OpretKursusView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PageWithBack.cs" />
+    <Compile Include="Views\Kursus\RedigerKursusView.xaml.cs">
+      <DependentUpon>RedigerKursusView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Kursus\SletKursusView.xaml.cs">
+      <DependentUpon>SletKursusView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Underviser\OpretUnderviserView.xaml.cs">
+      <DependentUpon>OpretUnderviserView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Underviser\RedigerUnderviserView.xaml.cs">
+      <DependentUpon>RedigerUnderviserView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Underviser\SletUnderviserView.xaml.cs">
+      <DependentUpon>SletUnderviserView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Underviser\UnderviserView.xaml.cs">
+      <DependentUpon>UnderviserView.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -130,6 +167,54 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Views\AdminView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Kursist\KursistView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Kursist\OpretKursistView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Kursist\RedigerKursistView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Kursist\SletKursistView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Kursus\KursusView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Kursus\OpretKursusView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Kursus\RedigerKursusView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Kursus\SletKursusView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Underviser\OpretUnderviserView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Underviser\RedigerUnderviserView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Underviser\SletUnderviserView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Underviser\UnderviserView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
