@@ -100,6 +100,7 @@
     </Compile>
     <Compile Include="Model\Kursus.cs" />
     <Compile Include="Model\Lokale.cs" />
+    <Compile Include="Model\Serie.cs" />
     <Compile Include="Model\Underviser.cs" />
     <Compile Include="Model\Undervisningssted.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
