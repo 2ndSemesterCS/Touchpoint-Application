@@ -42,5 +42,11 @@ namespace TouchpointApp.Views.Lokale
             this.Frame.Navigate(typeof(SletKursusView), null);
         }
 
+        private void BackToAdminView(object sender, RoutedEventArgs e)
+        {
+            this.Frame.GoBack();
+            e = null;
+        }
+
     }
 }
