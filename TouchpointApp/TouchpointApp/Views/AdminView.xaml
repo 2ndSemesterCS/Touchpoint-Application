@@ -38,7 +38,7 @@
             </StackPanel>
             <!-- Footer -->
             <StackPanel>
-                <Button>Back</Button>
+                <Button Click="BackToMainPage">Back</Button>
             </StackPanel>
         </StackPanel>
     </Grid>

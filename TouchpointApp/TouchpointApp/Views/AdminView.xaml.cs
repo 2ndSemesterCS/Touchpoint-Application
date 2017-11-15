@@ -58,5 +58,10 @@ namespace TouchpointApp.Views
         {
             this.Frame.Navigate(typeof(UndervisningsstedView), null);
         }
+
+        private void BackToMainPage(object sender, RoutedEventArgs e)
+        {
+            this.Frame.GoBack();
+        }
     }
 }

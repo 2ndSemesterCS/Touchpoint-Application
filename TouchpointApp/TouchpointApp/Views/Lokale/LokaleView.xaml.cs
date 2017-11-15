@@ -45,7 +45,6 @@ namespace TouchpointApp.Views.Lokale
         private void BackToAdminView(object sender, RoutedEventArgs e)
         {
             this.Frame.GoBack();
-            e = null;
         }
 
     }
