@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TouchpointApp.Model
 {
-    class Underviser
+    public class Underviser
     {
         private string _navn;
         private int _underviserId;

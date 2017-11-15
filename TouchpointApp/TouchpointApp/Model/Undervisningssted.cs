@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TouchpointApp.Model
 {
-    class Undervisningssted
+    public class Undervisningssted
     {
         private string _tlf;
         private string _email;
