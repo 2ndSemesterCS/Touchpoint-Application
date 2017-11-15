@@ -8,25 +8,27 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <!-- StackPanel sorrounding full page.-->
+        <!-- StackPanel surrounding full page.-->
         <StackPanel>
             <!-- Logo & Title -->
             <StackPanel>
                 <TextBlock FontSize="48px" FontWeight="Bold">Touchpoint</TextBlock>
             </StackPanel>
             <!-- Navigation Bar -->
-            <StackPanel Orientation="Horizontal">
+            <StackPanel Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center">
                 <StackPanel.Resources>
                     <Style TargetType="Button">
-                        <Setter Property="Margin" Value="0,0,20,0" />
+                        <Setter Property="Margin" Value="0,20,0,0" />
+                        <Setter Property="Height" Value="50px" />
+                        <Setter Property="Width" Value="200px" />
                     </Style>
                 </StackPanel.Resources>
                 <Button Click="KursistViewClick">Kursist</Button>
                 <Button Click="KursusViewClick">Kursus</Button>
-                <Button>Lokale</Button>
-                <Button>Serie</Button>
+                <Button Click="LokaleViewClick">Lokale</Button>
+                <Button Click="SerieViewClick">Serie</Button>
                 <Button Click="UnderviserViewClick">Underviser</Button>
-                <Button>Undervisningssted</Button>
+                <Button Click="UndervisningsstedViewClick">Undervisningssted</Button>
                 
                 <!-- Ikke i vores scope -->
                 <Button>Invoice</Button>

@@ -121,6 +121,18 @@
     <Compile Include="Views\Kursus\OpretKursusView.xaml.cs">
       <DependentUpon>OpretKursusView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Lokale\LokaleView.xaml.cs">
+      <DependentUpon>LokaleView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Lokale\OpretLokaleView.xaml.cs">
+      <DependentUpon>OpretLokaleView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Lokale\RedigerLokaleView.xaml.cs">
+      <DependentUpon>RedigerLokaleView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Lokale\SletLokaleView.xaml.cs">
+      <DependentUpon>SletLokaleView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\PageWithBack.cs" />
     <Compile Include="Views\Kursus\RedigerKursusView.xaml.cs">
       <DependentUpon>RedigerKursusView.xaml</DependentUpon>
@@ -139,6 +151,18 @@
     </Compile>
     <Compile Include="Views\Underviser\UnderviserView.xaml.cs">
       <DependentUpon>UnderviserView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Undervisningssted\OpretUndervisningsstedView.xaml.cs">
+      <DependentUpon>OpretUndervisningsstedView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Undervisningssted\RedigerUndervisningsstedView.xaml.cs">
+      <DependentUpon>RedigerUndervisningsstedView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Undervisningssted\SletUndervisningsstedView.xaml.cs">
+      <DependentUpon>SletUndervisningsstedView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Undervisningssted\UndervisningsstedView.xaml.cs">
+      <DependentUpon>UndervisningsstedView.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -202,6 +226,22 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\Lokale\LokaleView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Lokale\OpretLokaleView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Lokale\RedigerLokaleView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Lokale\SletLokaleView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\Underviser\OpretUnderviserView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -218,6 +258,22 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\Undervisningssted\OpretUndervisningsstedView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Undervisningssted\RedigerUndervisningsstedView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Undervisningssted\SletUndervisningsstedView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Undervisningssted\UndervisningsstedView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
@@ -228,6 +284,7 @@
     <Folder Include="Command\" />
     <Folder Include="Model\" />
     <Folder Include="Persistency\" />
+    <Folder Include="Views\Serie\" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>

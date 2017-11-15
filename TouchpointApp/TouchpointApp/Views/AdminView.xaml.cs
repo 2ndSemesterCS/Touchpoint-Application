@@ -12,6 +12,8 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using TouchpointApp.Views.Lokale;
+using TouchpointApp.Views.Undervisningssted;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -37,9 +39,24 @@ namespace TouchpointApp.Views
             this.Frame.Navigate(typeof(Views.KursusView), null);
         }
 
+        private void LokaleViewClick(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(LokaleView), null);
+        }
+
+        private void SerieViewClick(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(MainPage), null);
+        }
+
         private void UnderviserViewClick(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(Views.UnderviserView), null);
+        }
+
+        private void UndervisningsstedViewClick(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(UndervisningsstedView), null);
         }
     }
 }

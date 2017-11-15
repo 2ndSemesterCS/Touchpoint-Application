@@ -1,8 +1,8 @@
 ﻿<Page
-    x:Class="TouchpointApp.Views.UnderviserView"
+    x:Class="TouchpointApp.Views.Undervisningssted.OpretUndervisningsstedView"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:TouchpointApp.Views"
+    xmlns:local="using:TouchpointApp.Views.Undervisningssted"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
@@ -14,22 +14,12 @@
             <StackPanel>
                 <TextBlock FontSize="48px" FontWeight="Bold">Touchpoint</TextBlock>
             </StackPanel>
-            <!-- Navigation Bar -->
-            <StackPanel Orientation="Vertical">
-                <StackPanel.Resources>
-                    <Style TargetType="Button">
-                        <Setter Property="Margin" Value="0,20,0,0" />
-                    </Style>
-                </StackPanel.Resources>
-                <Button Click="OpretUnderviserViewClick">Opret Underviser</Button>
-                <Button Click="RedigerUnderviserViewClick">Rediger Underviser</Button>
-                <Button Click="SletUnderviserViewClick">Slet Underviser</Button>
-            </StackPanel>
             <!-- Content -->
             <StackPanel>
+
             </StackPanel>
             <!-- Footer -->
-            <StackPanel VerticalAlignment="Bottom">
+            <StackPanel>
                 <Button>Back</Button>
             </StackPanel>
         </StackPanel>
