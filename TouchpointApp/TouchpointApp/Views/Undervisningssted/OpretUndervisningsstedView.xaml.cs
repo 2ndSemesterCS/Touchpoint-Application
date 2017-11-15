@@ -26,5 +26,9 @@ namespace TouchpointApp.Views.Undervisningssted
         {
             this.InitializeComponent();
         }
+        public void BackToUndervisningsstedView(object sender, RoutedEventArgs e)
+        {
+            this.Frame.GoBack();
+        }
     }
 }

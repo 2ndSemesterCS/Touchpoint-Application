@@ -26,5 +26,9 @@ namespace TouchpointApp.Views.Lokale
         {
             this.InitializeComponent();
         }
+        public void BackToLokaleView(object sender, RoutedEventArgs e)
+        {
+            this.Frame.GoBack();
+        }
     }
 }

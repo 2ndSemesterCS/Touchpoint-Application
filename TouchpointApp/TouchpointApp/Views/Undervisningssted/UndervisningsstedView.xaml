@@ -30,7 +30,7 @@
             </StackPanel>
             <!-- Footer -->
             <StackPanel>
-                <Button>Back</Button>
+                <Button Click="BackToAdminside">Back</Button>
             </StackPanel>
         </StackPanel>
     </Grid>

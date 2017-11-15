@@ -26,5 +26,9 @@ namespace TouchpointApp.Views.Kursist
         {
             this.InitializeComponent();
         }
+        public void BackToKursistView(object sender, RoutedEventArgs e)
+        {
+            this.Frame.GoBack();
+        }
     }
 }

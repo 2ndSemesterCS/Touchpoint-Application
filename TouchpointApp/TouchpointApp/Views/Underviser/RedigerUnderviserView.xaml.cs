@@ -26,5 +26,9 @@ namespace TouchpointApp.Views.Underviser
         {
             this.InitializeComponent();
         }
+        public void BackToUnderviserView(object sender, RoutedEventArgs e)
+        {
+            this.Frame.GoBack();
+        }
     }
 }
