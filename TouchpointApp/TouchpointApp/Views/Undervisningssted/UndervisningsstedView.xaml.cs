@@ -41,5 +41,10 @@ namespace TouchpointApp.Views.Undervisningssted
         {
             this.Frame.Navigate(typeof(SletUndervisningsstedView), null);
         }
+
+        private void BackToAdminView(object sender, RoutedEventArgs e)
+        {
+            this.Frame.GoBack();
+        }
     }
 }
