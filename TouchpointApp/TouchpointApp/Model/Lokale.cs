@@ -8,17 +8,14 @@ namespace TouchpointApp.Model
 {
     class Lokale
     {
-        private string _navn;
-        private int _lokaleId;
-
         public int LokaleId { get; set; }
 
         public string Navn { get; set; }
 
-        public Lokale(int LokaleId, string Navn)
+        public Lokale(int lokaleId, string navn)
         {
-            Navn = _navn;
-            LokaleId = _lokaleId;
+            Navn = navn;
+            LokaleId = lokaleId;
         }
     }
 }

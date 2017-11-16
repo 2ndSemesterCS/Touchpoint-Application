@@ -8,21 +8,15 @@ namespace TouchpointApp.Model
 {
     public class Underviser
     {
-        private string _navn;
-        private int _underviserId;
-
-
         public int UnderviserId { get; set; }
 
-        public string navn { get; set; }
+        public string Navn { get; set; }
 
 
-
-
-        public Underviser(string navn, int UnderviserId)
+        public Underviser(string navn, int underviserId)
         {
-            UnderviserId = _underviserId;
-            navn = _navn;
+            UnderviserId = underviserId;
+            Navn = navn;
         }
 
 

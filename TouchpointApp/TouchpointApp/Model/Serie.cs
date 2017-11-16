@@ -8,19 +8,16 @@ namespace TouchpointApp.Model
 {
     class Serie
     {
-        private int _serieId;
-        private Kursus _kursus;
-        private string _beskrivelse;
 
-        public int SerieID { get; set; }
+        public int SerieID { get ; set; }
         public Kursus Kursus { get; set; }
         public string Beskrivelse { get; set; }
 
-        public Serie(int SerieID, Kursus Kursus, string Beskrivelse)
+        public Serie(int serieId, Kursus kursus, string beskrivelse)
         {
-            SerieID = _serieId;
-            Kursus = _kursus;
-            Beskrivelse = _beskrivelse;
+            SerieID = serieId;
+            Kursus = kursus;
+            Beskrivelse = beskrivelse;
         }
     }
 }
