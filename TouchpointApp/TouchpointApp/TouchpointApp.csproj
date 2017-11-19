@@ -107,6 +107,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModel\Kursus\OpretKursusViewModel.cs" />
     <Compile Include="ViewModel\lokaleViewModel\OpretLokaleViewModel.cs" />
+    <Compile Include="ViewModel\Serie\OpretSerieViewModel.cs" />
     <Compile Include="ViewModel\Underviser\OpretUnderviserViewModel.cs" />
     <Compile Include="ViewModel\Undervisningssted\OpretUndervisningsstedViewModel.cs" />
     <Compile Include="ViewModel\ViewModelBase.cs" />
