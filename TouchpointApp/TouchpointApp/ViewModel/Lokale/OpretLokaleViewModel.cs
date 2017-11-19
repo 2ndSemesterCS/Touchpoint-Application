@@ -14,7 +14,7 @@ namespace TouchpointApp.ViewModel.lokaleViewModel
         private int _lokaleId;
         #endregion
 
-#region Properties
+        #region Properties
         public string Navn
         {
             get { return _navn; }
@@ -35,7 +35,7 @@ namespace TouchpointApp.ViewModel.lokaleViewModel
             }
         }
 
-#endregion
+        #endregion
 
 
 
