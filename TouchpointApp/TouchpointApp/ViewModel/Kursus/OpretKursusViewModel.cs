@@ -17,8 +17,8 @@ namespace TouchpointApp.ViewModel
 
         private double _kursusPris;
 
-        private Underviser _kursusUnderviser;
-        private Undervisningssted _kursusUndervisningssted;
+        private Model.Underviser _kursusUnderviser;
+        private Model.Undervisningssted _kursusUndervisningssted;
         #endregion  
 
         #region Properties
@@ -67,7 +67,7 @@ namespace TouchpointApp.ViewModel
                 OnPropertyChanged("KursusPris");
             }
         }
-        public Underviser KursusUnderviser
+        public Model.Underviser KursusUnderviser
         {
             get { return _kursusUnderviser; }
             set
@@ -76,7 +76,7 @@ namespace TouchpointApp.ViewModel
                 OnPropertyChanged("KursusUnderviser");
             }
         }
-        public Undervisningssted KursusUndervisningssted
+        public Model.Undervisningssted KursusUndervisningssted
         {
             get { return _kursusUndervisningssted; }
             set
