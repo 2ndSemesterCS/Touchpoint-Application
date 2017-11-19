@@ -8,6 +8,10 @@ namespace TouchpointApp.Model
 {
     class Lokale
     {
+
+        private string _navn;
+        private int _lokaleId;
+
         public int LokaleId { get; set; }
 
         public string Navn { get; set; }
