@@ -5,7 +5,13 @@
     xmlns:local="using:TouchpointApp.Views.Underviser"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:vm="using:TouchpointApp.ViewModel.Underviser"
     mc:Ignorable="d">
+    
+    <!--<Page.DataContext>
+        <vm:OpretUnderviserViewModel/>
+    </Page.DataContext>-->
+    
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <!-- StackPanel surrounding full page.-->
@@ -23,7 +29,7 @@
         <StackPanel x:Name="Holder_alt" HorizontalAlignment="Left" Height="442" Margin="122,158,-175,0" VerticalAlignment="Top" Width="1333">
             <StackPanel x:Name="Navn" HorizontalAlignment="Left" Height="116" Margin="0,0,-58,0" VerticalAlignment="Top" Width="1245" Orientation="Horizontal">
                 <TextBlock HorizontalAlignment="Left" Height="100" TextWrapping="Wrap" Text="Navn" VerticalAlignment="Top" Width="315" FontSize="48"/>
-                <TextBox TextWrapping="Wrap" Text="Indtast navn" Margin="0,0.51,0,-2.478" Width="815" FontSize="48" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
+                <TextBox TextWrapping="Wrap" Text="{Binding }" Margin="0,0.51,0,-2.478" Width="815" FontSize="48" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
                     <TextBox.RenderTransform>
                         <CompositeTransform Rotation="0.128"/>
                     </TextBox.RenderTransform>
