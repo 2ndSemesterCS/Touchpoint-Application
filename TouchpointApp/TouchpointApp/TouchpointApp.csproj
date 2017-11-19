@@ -108,6 +108,7 @@
     <Compile Include="ViewModel\Kursus\OpretKursusViewModel.cs" />
     <Compile Include="ViewModel\lokaleViewModel\OpretLokaleViewModel.cs" />
     <Compile Include="ViewModel\Underviser\OpretUnderviserViewModel.cs" />
+    <Compile Include="ViewModel\Undervisningssted\OpretUndervisningsstedViewModel.cs" />
     <Compile Include="ViewModel\ViewModelBase.cs" />
     <Compile Include="Views\AdminView.xaml.cs">
       <DependentUpon>AdminView.xaml</DependentUpon>
