@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TouchpointApp.ViewModel.Kursist
 {
-    public class OpretKursistViewModel : ViewModelBase
+    public class KursistViewModel : ViewModelBase
     {
         #region Instance Fields
         private Model.Kursisten _kursist;

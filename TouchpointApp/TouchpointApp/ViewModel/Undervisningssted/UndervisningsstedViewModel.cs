@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TouchpointApp.ViewModel.Undervisningssted
 {
-    class OpretUndervisningsstedViewModel : ViewModelBase
+    public class UndervisningsstedViewModel : ViewModelBase
     {
 
         #region Instance Fields

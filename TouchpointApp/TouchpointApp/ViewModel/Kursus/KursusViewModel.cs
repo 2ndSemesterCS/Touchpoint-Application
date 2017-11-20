@@ -7,7 +7,7 @@ using TouchpointApp.Model;
 
 namespace TouchpointApp.ViewModel
 {
-    public class OpretKursusViewModel : ViewModelBase
+    public class KursusViewModel : ViewModelBase
     {
         #region Instance Fields
         private string _kursusTitel;
