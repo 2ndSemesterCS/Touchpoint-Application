@@ -4,29 +4,59 @@
     {
         // Instance Fields
 
-        private int _id;
         private string _navn;
-        private string _eMail;
+        private string _email;
         private string _by;
         private string _land;
+        private string _adresse;
+        private string _tlf;
 
         // Properties
 
-        public int ID { get; set; }
-        public string Navn { get; set; }
-        public string EMail { get; set; }
-        public string By { get; set; }
-        public string Land { get; set; }
+        public string Navn
+        {
+            get { return _navn; }
+            set { _navn = value; }
+        }
+
+        public string EMail
+        {
+            get { return _email; }
+            set { _email = value; }
+        }
+
+        public string By
+        {
+            get { return _by; }
+            set { _by = value; }
+        }
+
+        public string Land
+        {
+            get { return _land; }
+            set { _land = value; }
+        }
+        public string Adresse
+        {
+            get { return _adresse; }
+            set { _adresse = value; }
+        }
+        public string Tlf
+        {
+            get { return _tlf; }
+            set { _tlf = value; }
+        }
 
         // Constructor
 
-        public Kursist(int id, string navn, string email, string by, string land)
+        public Kursist(string navn, string email, string by, string land, string adresse, string tlf)
         {
-            id = _id;
-            navn = _navn;
-            email = _eMail;
-            by = _by;
-            land = _land;
+            _navn = navn ;
+            _email = email;
+            _by = by;
+            _land = land;
+            _adresse = adresse;
+            _tlf = tlf;
         }
     }
 }

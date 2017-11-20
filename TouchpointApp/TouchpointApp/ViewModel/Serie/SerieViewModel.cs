@@ -7,7 +7,7 @@ using TouchpointApp.Model;
 
 namespace TouchpointApp.ViewModel
 {
-    public class OpretSerieViewModel : ViewModelBase
+    public class SerieViewModel : ViewModelBase
     {
         #region Instance Fields
         private string _beskrivelse;

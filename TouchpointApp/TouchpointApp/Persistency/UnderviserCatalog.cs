@@ -7,20 +7,24 @@ using TouchpointApp.Model;
 
 namespace TouchpointApp.Persistency
 {
-    class UnderviserCatelog
+    public class UnderviserCatalog
     {
-        #region Instqandfields
+<<<<<<< HEAD:TouchpointApp/TouchpointApp/Persistency/UnderviserCatelog.cs
+        #region Instq andfields
+=======
+        #region Instance fields
+>>>>>>> 43ac465f420b1b11c7b5734f4dfc2a3294231db4:TouchpointApp/TouchpointApp/Persistency/UnderviserCatalog.cs
         public Dictionary<int, Model.Underviser> _Dictionary;
         #endregion
 
-        #region MyRegion
-        public UnderviserCatelog()
+        #region Constructor
+        public UnderviserCatalog()
         {
             _Dictionary = new Dictionary<int, Underviser>();
         }
         #endregion
 
-        #region MyRegion
+        #region Metoder
         public void OpretUnderviser(string navn, string addresse, string email)
         {
             //dictionary(key, value) 

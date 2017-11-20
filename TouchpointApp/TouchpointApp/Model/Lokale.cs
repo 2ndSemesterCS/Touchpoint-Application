@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TouchpointApp.Model
 {
-    class Lokale
+    public class Lokale
     {
 
         private string _navn;

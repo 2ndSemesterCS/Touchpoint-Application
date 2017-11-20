@@ -1,6 +1,6 @@
 ﻿namespace TouchpointApp.ViewModel.Underviser
 {
-    class OpretUnderviserViewModel : ViewModelBase
+    public class UnderviserViewModel : ViewModelBase
     {
         #region Instandsfields
         //Referance to our underviser class, need it for our propperties in the viewmodel.
@@ -44,6 +44,10 @@
         }
         #endregion
 
+        public void OpretUnderviser()
+        {
+          
+        }
 
 
 

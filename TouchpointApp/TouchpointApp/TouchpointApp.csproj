@@ -95,22 +95,26 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Command\RelayCommand.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Model\Kursist.cs" />
     <Compile Include="Model\Kursus.cs" />
     <Compile Include="Model\Lokale.cs" />
     <Compile Include="Model\Serie.cs" />
     <Compile Include="Model\Underviser.cs" />
     <Compile Include="Model\Undervisningssted.cs" />
     <Compile Include="Persistency\KursusCatalog.cs" />
-    <Compile Include="Persistency\UnderviserCatelog.cs" />
+    <Compile Include="Persistency\UnderviserCatalog.cs" />
+    <Compile Include="Persistency\UndervisningsstedCatalog.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ViewModel\Kursus\OpretKursusViewModel.cs" />
-    <Compile Include="ViewModel\Lokale\OpretLokaleViewModel.cs" />
-    <Compile Include="ViewModel\Serie\OpretSerieViewModel.cs" />
-    <Compile Include="ViewModel\Underviser\OpretUnderviserViewModel.cs" />
-    <Compile Include="ViewModel\Undervisningssted\OpretUndervisningsstedViewModel.cs" />
+    <Compile Include="ViewModel\Kursist\KursistViewModel.cs" />
+    <Compile Include="ViewModel\Kursus\KursusViewModel.cs" />
+    <Compile Include="ViewModel\Lokale\LokaleViewModel.cs" />
+    <Compile Include="ViewModel\Serie\SerieViewModel.cs" />
+    <Compile Include="ViewModel\Underviser\UnderviserViewModel.cs" />
+    <Compile Include="ViewModel\Undervisningssted\UndervisningsstedViewModel.cs" />
     <Compile Include="ViewModel\ViewModelBase.cs" />
     <Compile Include="Views\AdminView.xaml.cs">
       <DependentUpon>AdminView.xaml</DependentUpon>
@@ -151,6 +155,18 @@
     </Compile>
     <Compile Include="Views\Kursus\SletKursusView.xaml.cs">
       <DependentUpon>SletKursusView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Serie\OpretSerieView.xaml.cs">
+      <DependentUpon>OpretSerieView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Serie\RedigerSerieView.xaml.cs">
+      <DependentUpon>RedigerSerieView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Serie\SerieView.xaml.cs">
+      <DependentUpon>SerieView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Serie\SletSerieViewxaml.xaml.cs">
+      <DependentUpon>SletSerieViewxaml.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Underviser\OpretUnderviserView.xaml.cs">
       <DependentUpon>OpretUnderviserView.xaml</DependentUpon>
@@ -254,6 +270,22 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\Serie\OpretSerieView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Serie\RedigerSerieView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Serie\SerieView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Serie\SletSerieViewxaml.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\Underviser\OpretUnderviserView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -292,10 +324,7 @@
       <Version>6.0.1</Version>
     </PackageReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Command\" />
-    <Folder Include="Views\Serie\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>
