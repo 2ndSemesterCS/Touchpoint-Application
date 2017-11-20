@@ -9,7 +9,7 @@
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <!-- StackPanel surrounding full page.-->
-        <StackPanel>
+        <StackPanel Margin="37,10,39,0" RenderTransformOrigin="0.52,0.39">
             <!-- Logo & Title -->
             <StackPanel>
                 <TextBlock FontSize="48px" FontWeight="Bold">Touchpoint</TextBlock>
@@ -19,9 +19,19 @@
 
             </StackPanel>
             <!-- Footer -->
-            <StackPanel>
-                <Button Click="BackToLokaleView">Back</Button>
+            <StackPanel/>
+            <StackPanel Height="212" Margin="0,0,97,0">
+                <StackPanel Height="109" Orientation="Horizontal">
+                    <TextBlock TextWrapping="Wrap" Text="Navn" Width="332" FontSize="48"/>
+                    <TextBox TextWrapping="Wrap" Text="" Width="321" FontSize="48"/>
+                </StackPanel>
+                <StackPanel    Height="459" Orientation="Horizontal" Padding="0">
+                    <TextBlock TextWrapping="Wrap" Text="LokaleID" Width="332" Height="109" VerticalAlignment="Top" FontSize="48"/>
+                    <TextBox x:Name="ssadsad" TextWrapping="Wrap" Text="" Width="321" FontSize="48" Height="109" VerticalAlignment="Top"/>
+                </StackPanel>
             </StackPanel>
+            <Button Content="Opret&#xD;&#xA;" HorizontalAlignment="Right" Height="96" Margin="0,0,340,0" VerticalAlignment="Stretch" Width="264" FontSize="48"/>
         </StackPanel>
+        <Button Click="BackToLokaleView" Height="69" Margin="10,0,0,82" VerticalAlignment="Bottom" Width="196" FontSize="48">Back</Button>
     </Grid>
 </Page>
