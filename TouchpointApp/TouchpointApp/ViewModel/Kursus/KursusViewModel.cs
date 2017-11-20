@@ -92,14 +92,26 @@ namespace TouchpointApp.ViewModel
         }
         #endregion
 
+        #region Commands
+
+        public RelayCommand OpretNytKursusCommand { get; set; }
+
+        #endregion
+
+        #region Constructor
+        public KursusViewModel()
+        {
+            _kc = new KursusCatalog();
+            OpretNytKursusCommand = new RelayCommand(OpretNytKursus);
+        }
+        #endregion
 
         #region Metoder
-
-
 
         private void OpretNytKursus()
         {
             _kc.OpretKursus(_kursusTitel, _kursusDato, _kursusTidspunkt, _kursusVarighed, _kursusPris, _kursusUnderviser, _kursusUndervisningssted);
+
         }
 
         #endregion
