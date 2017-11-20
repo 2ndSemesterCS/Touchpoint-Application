@@ -107,6 +107,7 @@
     <Compile Include="Model\Undervisningssted.cs" />
     <Compile Include="Persistency\KursusCatalog.cs" />
     <Compile Include="Persistency\UnderviserCatalog.cs" />
+    <Compile Include="Persistency\UndervisningsstedCatalog.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModel\Kursist\KursistViewModel.cs" />
     <Compile Include="ViewModel\Kursus\KursusViewModel.cs" />

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TouchpointApp.Persistency;
 
 namespace TouchpointApp.ViewModel.Undervisningssted
 {
@@ -10,10 +11,12 @@ namespace TouchpointApp.ViewModel.Undervisningssted
     {
 
         #region Instance Fields
-        public string _tlf;
-        public string _email;
-        public string _adresse;
-        public int _undervisningsstedID;
+
+        private UndervisningsstedCatalog _uc;
+
+        private string _tlf;
+        private string _email;
+        private string _adresse;
         #endregion
         public string Tlf
         {
@@ -45,14 +48,10 @@ namespace TouchpointApp.ViewModel.Undervisningssted
             }
         }
 
-        public int UndervisningsstedID
+        public void OpretNytUndervisningssted()
         {
-            get { return _undervisningsstedID; }
-            set
-            {
-                _undervisningsstedID = value;
-                OnPropertyChanged("UndervisningsstedID");
-            }
+            _uc.OpretUndervisningssted(_tlf, _email, _adresse);
         }
+
     }
 }
