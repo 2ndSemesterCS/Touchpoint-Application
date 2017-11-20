@@ -3,13 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TouchpointApp.Command;
 using TouchpointApp.Model;
+using TouchpointApp.Persistency;
 
 namespace TouchpointApp.ViewModel.Kursist
 {
     public class KursistViewModel : ViewModelBase
     {
         #region Instance Fields
+
+        private KursistCatalog _kursistCatalog;
         private Model.Kursist _kursist;
         #endregion
 
@@ -34,5 +38,26 @@ namespace TouchpointApp.ViewModel.Kursist
 
         #endregion
 
+        #region Commands
+        public RelayCommand OpretNyKursistCommand { get; set; }
+        #endregion
+
+        #region Constructor
+
+        public KursistViewModel()
+        {
+            _kursistCatalog = new KursistCatalog();
+            OpretNyKursistCommand = new RelayCommand(OpretNyKursist);
+        }
+        #endregion
+
+        #region Metoder
+
+        public void OpretNyKursist()
+        {
+            _kursistCatalog.OpretKursist(Navn, Email, _kursist.By, _kursist.Land, _kursist.Adresse, Telefon);
+        }
+
+        #endregion
     }
 }
