@@ -105,6 +105,7 @@
     <Compile Include="Model\Serie.cs" />
     <Compile Include="Model\Underviser.cs" />
     <Compile Include="Model\Undervisningssted.cs" />
+    <Compile Include="Persistency\KursistCatalog.cs" />
     <Compile Include="Persistency\KursusCatalog.cs" />
     <Compile Include="Persistency\UnderviserCatalog.cs" />
     <Compile Include="Persistency\UndervisningsstedCatalog.cs" />
