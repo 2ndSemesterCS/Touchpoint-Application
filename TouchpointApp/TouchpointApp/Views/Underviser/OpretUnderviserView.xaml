@@ -5,12 +5,12 @@
     xmlns:local="using:TouchpointApp.Views.Underviser"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:vm="using:TouchpointApp.ViewModel.Underviser"
+    xmlns:vm="using:TouchpointApp.ViewModel"
     mc:Ignorable="d">
 
-    <!--<Page.DataContext>
-        <vm:OpretUnderviserViewModel/>
-    </Page.DataContext>-->
+    <Page.DataContext>
+        <vm:UnderviserViewModel/>
+    </Page.DataContext>
 
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
