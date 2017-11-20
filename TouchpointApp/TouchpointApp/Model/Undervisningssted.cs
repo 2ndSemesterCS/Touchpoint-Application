@@ -20,8 +20,6 @@ namespace TouchpointApp.Model
             _adresse = adresse;
         }
 
-
-      
         public Undervisningssted(string adresse, Model.Lokale lokale)
         {
             _adresse = adresse;

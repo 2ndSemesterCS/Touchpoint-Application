@@ -10,16 +10,16 @@ namespace TouchpointApp.Model
     {
 
         private string _navn;
-        private int _lokaleId;
 
-        public int LokaleId { get; set; }
+        public string Navn
+        {
+            get { return _navn; }
+            set { _navn = value; }
+        }
 
-        public string Navn { get; set; }
-
-        public Lokale(int lokaleId, string navn)
+        public Lokale(string navn)
         {
             Navn = navn;
-            LokaleId = lokaleId;
         }
     }
 }

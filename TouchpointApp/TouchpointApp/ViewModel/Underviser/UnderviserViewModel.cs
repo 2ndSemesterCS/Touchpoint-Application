@@ -9,11 +9,7 @@
 
         #region Propperties For Navn, Addresse, Email Og Id 
 
-        // The id, is not changeable (thats why we only have a get) 
-        public int Id
-        {
-            get { return _underviser.UnderviserId; }
-        }
+   
         public string Navn
         {
             get { return _underviser.Navn; }

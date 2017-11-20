@@ -13,12 +13,14 @@ namespace TouchpointApp.Model
         private string _navn;
         private string _addresse;
         private string _email;
+        private string _tlf;
 
-        public Underviser(string navn, string addresse, string email)
+        public Underviser(string navn, string addresse, string email, string tlf)
         {
             _navn = navn;
             _addresse = addresse;
             _email = email;
+            _tlf = tlf;
         }
 
         public string Navn
@@ -37,6 +39,11 @@ namespace TouchpointApp.Model
         {
             get { return _email; }
             set { _email = value; }
+        }
+        public string Tlf
+        {
+            get { return _tlf; }
+            set { _tlf = value; }
         }
     }
 }
