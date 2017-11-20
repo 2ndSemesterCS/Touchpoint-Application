@@ -9,7 +9,11 @@ namespace TouchpointApp.Persistency
 {
     public class UnderviserCatalog
     {
+<<<<<<< HEAD:TouchpointApp/TouchpointApp/Persistency/UnderviserCatelog.cs
+        #region Instq andfields
+=======
         #region Instance fields
+>>>>>>> 43ac465f420b1b11c7b5734f4dfc2a3294231db4:TouchpointApp/TouchpointApp/Persistency/UnderviserCatalog.cs
         public Dictionary<int, Model.Underviser> _Dictionary;
         #endregion
 
