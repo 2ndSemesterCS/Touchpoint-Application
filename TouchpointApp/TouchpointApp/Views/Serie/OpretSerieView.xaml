@@ -8,6 +8,31 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <!-- StackPanel surrounding full page.-->
+        <StackPanel Height="86" VerticalAlignment="Top" d:LayoutOverrides="VerticalAlignment">
+            <!-- Logo & Title -->
+            <StackPanel>
+                <TextBlock FontSize="48px" FontWeight="Bold">Touchpoint</TextBlock>
+            </StackPanel>
+            <!-- Content -->
 
+
+            <!-- Footer -->
+        </StackPanel>
+        <Button Click="BackToSerieView" Content="Back" Margin="80,0,0,56" VerticalAlignment="Bottom"/>
+        <StackPanel x:Name="Holder_alt" HorizontalAlignment="Left" Height="442" Margin="122,158,-175,0" VerticalAlignment="Top" Width="1333">
+            <StackPanel x:Name="Beskrivelse" HorizontalAlignment="Left" Height="116" Margin="0,0,-58,0" VerticalAlignment="Top" Width="1245" Orientation="Horizontal">
+                <TextBlock HorizontalAlignment="Left" Height="100" TextWrapping="Wrap" Text="Beskrivelse" VerticalAlignment="Top" Width="315" FontSize="48"/>
+                <TextBox TextWrapping="Wrap" Text="{Binding }" Margin="0,0.51,0,-2.478" Width="815" FontSize="48" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
+                    <TextBox.RenderTransform>
+                        <CompositeTransform Rotation="0.128"/>
+                    </TextBox.RenderTransform>
+                </TextBox>
+            </StackPanel>
+            <StackPanel x:Name="Kursus" HorizontalAlignment="Left" Height="116" Margin="0,0,-58,0" VerticalAlignment="Top" Width="1245" Orientation="Horizontal">
+                <TextBlock HorizontalAlignment="Left" Height="100" TextWrapping="Wrap" Text="Kursus" VerticalAlignment="Bottom" Width="315" FontSize="48" Margin="0,0,0,16"/>
+                <ComboBox x:Name="comboBox" HorizontalAlignment="Stretch" Margin="0,10,0,0" VerticalAlignment="Stretch" Width="814"/>
+            </StackPanel>
+        </StackPanel>
     </Grid>
 </Page>

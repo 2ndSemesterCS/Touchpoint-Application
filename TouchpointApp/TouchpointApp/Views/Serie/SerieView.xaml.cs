@@ -39,7 +39,7 @@ namespace TouchpointApp.Views.Serie
 
         private void SletLokaleViewClick(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(SletSerieView), null);
+            this.Frame.Navigate(typeof(SletSerieViewxaml), null);
         }
 
         private void BackToAdminView(object sender, RoutedEventArgs e)
