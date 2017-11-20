@@ -1,39 +1,44 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using TouchpointApp.Command;
-using TouchpointApp.Model;
+﻿using TouchpointApp.Command;
 using TouchpointApp.Persistency;
+using TouchpointApp.Model;
 
-namespace TouchpointApp.ViewModel.KursistViewModel
+namespace TouchpointApp.ViewModel.Kursist
 {
     public class KursistViewModel : ViewModelBase
     {
         #region Instance Fields
 
-        private KursistCatalog _kursistCatalog;
+
         private Model.Kursist _kursist;
+        private KursistCatalog _kursistCatalog;
+
         #endregion
 
         #region Properties
         public string Email
         {
             get { return _kursist.EMail; }
-            set { _kursist.EMail = value; OnPropertyChanged("Email opdateret"); }
+            set
+            {_kursist.EMail = value;
+                OnPropertyChanged("Email");
+            }
         }
 
         public string Telefon
         {
-            get { return _kursist.Tlf; }
-            set { _kursist.Tlf = value; OnPropertyChanged("Telefon opdateret"); }
+            get { return _kursistTlf; }
+            set
+            {
+                _kursistTlf = value;
+                OnPropertyChanged("Telefon");
+            }
         }
 
         public string Navn
         {
-            get { return _kursist.Navn; }
-            set { _kursist.Navn = value; OnPropertyChanged("Navn opdateret"); }
+            get { return _kursistNavn; }
+            set { _kursistNavn = value;
+                OnPropertyChanged("Navn"); }
         }
 
         #endregion
@@ -55,7 +60,7 @@ namespace TouchpointApp.ViewModel.KursistViewModel
 
         public void OpretNyKursist()
         {
-            _kursistCatalog.OpretKursist(Navn, Email, _kursist.By, _kursist.Land, _kursist.Adresse, Telefon);
+            _kursistCatalog.OpretKursist(Navn, Email, Telefon);
         }
 
         #endregion

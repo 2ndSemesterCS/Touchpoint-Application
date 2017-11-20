@@ -20,9 +20,9 @@ namespace TouchpointApp.Persistency
         #endregion
 
 
-        public void OpretKursist(string navn, string email, string by, string land, string adresse, string tlf)
+        public void OpretKursist(string navn, string email, /*string by, string land, string adresse, */string tlf)
         {
-            Kursist kursist1 = new Kursist(navn, email, by, land, adresse, tlf);
+            Kursist kursist1 = new Kursist(navn, email,/* by, land, adresse,*/ tlf);
             _kursistList.Add(kursist1);
         }
 

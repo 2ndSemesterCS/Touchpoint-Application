@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using TouchpointApp.Model;
-using TouchpointApp.Persistency;
+﻿using TouchpointApp.Persistency;
 
-namespace TouchpointApp.ViewModel.UndervisningsstedViewModel
+namespace TouchpointApp.ViewModel.Undervisningssted
 {
     public class UndervisningsstedViewModel : ViewModelBase
     {
@@ -15,11 +9,11 @@ namespace TouchpointApp.ViewModel.UndervisningsstedViewModel
 
         private UndervisningsstedCatalog _uc;
 
-        private Lokale _lokale;
+        private Model.Lokale _lokale;
         private string _adresse;
         #endregion
 
-        public Lokale Lokale
+        public Model.Lokale Lokale
         {
             get { return _lokale; }
             set

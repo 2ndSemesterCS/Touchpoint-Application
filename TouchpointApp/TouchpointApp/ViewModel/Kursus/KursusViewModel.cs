@@ -1,7 +1,7 @@
 ﻿using TouchpointApp.Command;
 using TouchpointApp.Persistency;
 
-namespace TouchpointApp.ViewModel.KursusViewModel
+namespace TouchpointApp.ViewModel.Kursus
 {
     public class KursusViewModel : ViewModelBase
     {
