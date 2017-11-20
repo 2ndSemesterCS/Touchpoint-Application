@@ -1,4 +1,4 @@
-﻿namespace TouchpointApp.ViewModel.Underviser
+﻿namespace TouchpointApp.ViewModel.UnderviserViewModel
 {
     public class UnderviserViewModel : ViewModelBase
     {

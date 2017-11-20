@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using TouchpointApp.Model;
 
-namespace TouchpointApp.ViewModel
+namespace TouchpointApp.ViewModel.Serie
 {
     public class SerieViewModel : ViewModelBase
     {

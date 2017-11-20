@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using TouchpointApp.Model;
 using TouchpointApp.Persistency;
 
-namespace TouchpointApp.ViewModel.Undervisningssted
+namespace TouchpointApp.ViewModel.UndervisningsstedViewModel
 {
     public class UndervisningsstedViewModel : ViewModelBase
     {
