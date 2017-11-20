@@ -99,7 +99,7 @@
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Model\Kursisten.cs" />
+    <Compile Include="Model\Kursist.cs" />
     <Compile Include="Model\Kursus.cs" />
     <Compile Include="Model\Lokale.cs" />
     <Compile Include="Model\Serie.cs" />
