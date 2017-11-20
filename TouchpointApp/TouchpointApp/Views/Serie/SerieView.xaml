@@ -8,6 +8,30 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-
+        <!-- StackPanel surrounding full page.-->
+        <StackPanel>
+            <!-- Logo & Title -->
+            <StackPanel>
+                <TextBlock FontSize="48px" FontWeight="Bold">Touchpoint</TextBlock>
+            </StackPanel>
+            <!-- Navigation Bar -->
+            <StackPanel Orientation="Vertical">
+                <StackPanel.Resources>
+                    <Style TargetType="Button">
+                        <Setter Property="Margin" Value="0,20,0,0" />
+                    </Style>
+                </StackPanel.Resources>
+                <Button Click="OpretLokaleViewClick">Opret Serie</Button>
+                <Button Click="RedigerLokaleViewClick">Rediger Serie</Button>
+                <Button Click="SletLokaleViewClick">Slet Serie</Button>
+            </StackPanel>
+            <!-- Content -->
+            <StackPanel>
+            </StackPanel>
+            <!-- Footer -->
+            <StackPanel>
+                <Button Click="BackToAdminView">Back</Button>
+            </StackPanel>
+        </StackPanel>
     </Grid>
 </Page>

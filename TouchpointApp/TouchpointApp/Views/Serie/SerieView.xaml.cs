@@ -26,5 +26,25 @@ namespace TouchpointApp.Views.Serie
         {
             this.InitializeComponent();
         }
+
+        private void OpretLokaleViewClick(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(OpretSerieView), null);
+        }
+
+        private void RedigerLokaleViewClick(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(RedigerSerieView), null);
+        }
+
+        private void SletLokaleViewClick(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(SletSerieView), null);
+        }
+
+        private void BackToAdminView(object sender, RoutedEventArgs e)
+        {
+            this.Frame.GoBack();
+        }
     }
 }

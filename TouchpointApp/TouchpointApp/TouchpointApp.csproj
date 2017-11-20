@@ -154,6 +154,18 @@
     <Compile Include="Views\Kursus\SletKursusView.xaml.cs">
       <DependentUpon>SletKursusView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Serie\OpretSerieView.xaml.cs">
+      <DependentUpon>OpretSerieView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Serie\RedigerSerieView.xaml.cs">
+      <DependentUpon>RedigerSerieView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Serie\SerieView.xaml.cs">
+      <DependentUpon>SerieView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Serie\SletSerieViewxaml.xaml.cs">
+      <DependentUpon>SletSerieViewxaml.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Underviser\OpretUnderviserView.xaml.cs">
       <DependentUpon>OpretUnderviserView.xaml</DependentUpon>
     </Compile>
@@ -256,6 +268,22 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\Serie\OpretSerieView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Serie\RedigerSerieView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Serie\SerieView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Serie\SletSerieViewxaml.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\Underviser\OpretUnderviserView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -296,7 +324,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Command\" />
-    <Folder Include="Views\Serie\" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>

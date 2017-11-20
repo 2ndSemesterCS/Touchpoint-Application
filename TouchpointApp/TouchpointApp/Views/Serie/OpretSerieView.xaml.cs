@@ -26,5 +26,10 @@ namespace TouchpointApp.Views.Serie
         {
             this.InitializeComponent();
         }
+
+        private void BackToAdminView(object sender, RoutedEventArgs e)
+        {
+            this.Frame.GoBack();
+        }
     }
 }
