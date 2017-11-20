@@ -8,18 +8,16 @@ namespace TouchpointApp.Model
 {
     public class Undervisningssted
     {
-        public string Tlf{ get; set; }
-        public string Email { get; set; }
-        public string Adressse { get; set; }
-        public int UndervisningsstedID { get; set; }
-
-        public Undervisningssted(string tlf, string email, string adresse, int undervisningsstediD)
+        private string _adresse;
+        public Undervisningssted(string adresse )
         {
-            Tlf = tlf;
-            Email = email;
-            Adressse = adresse;
-            UndervisningsstedID = undervisningsstediD;
+            _adresse = adresse;
         }
 
+        public string Adresse
+        {
+            get { return _adresse; }
+            set { _adresse = value; }
+        }
     }
 }
