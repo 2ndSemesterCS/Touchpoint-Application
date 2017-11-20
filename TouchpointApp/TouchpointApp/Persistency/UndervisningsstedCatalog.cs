@@ -19,9 +19,9 @@ namespace TouchpointApp.Persistency
 
         #region Metoder
 
-        public void OpretUndervisningssted(string tlf, string email, string adresse)
+        public void OpretUndervisningssted(string adresse, Lokale lokale)
         {
-            Undervisningssted u1 = new Undervisningssted(tlf, email, adresse);
+            Undervisningssted u1 = new Undervisningssted(adresse, lokale);
             __usl.Add(u1);
         }
 

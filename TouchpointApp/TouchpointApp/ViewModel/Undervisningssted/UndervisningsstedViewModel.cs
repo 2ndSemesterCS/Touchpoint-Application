@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TouchpointApp.Model;
 using TouchpointApp.Persistency;
 
 namespace TouchpointApp.ViewModel.Undervisningssted
@@ -14,27 +15,17 @@ namespace TouchpointApp.ViewModel.Undervisningssted
 
         private UndervisningsstedCatalog _uc;
 
-        private string _tlf;
-        private string _email;
+        private Lokale _lokale;
         private string _adresse;
         #endregion
-        public string Tlf
-        {
-            get { return _tlf; }
-            set
-            {
-                _tlf = value;
-                OnPropertyChanged("Telefon");
-            }
 
-        }
-        public string Email
+        public Lokale Lokale
         {
-            get { return _email; }
+            get { return _lokale; }
             set
             {
-                _email = value;
-                OnPropertyChanged("Email");
+                _lokale = value;
+                OnPropertyChanged("Lokale");
             }
         }
 
@@ -50,7 +41,7 @@ namespace TouchpointApp.ViewModel.Undervisningssted
 
         public void OpretNytUndervisningssted()
         {
-            _uc.OpretUndervisningssted(_tlf, _email, _adresse);
+            _uc.OpretUndervisningssted(_adresse, _lokale);
         }
 
     }

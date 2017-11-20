@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TouchpointApp.Command;
 using TouchpointApp.Model;
 
 namespace TouchpointApp.Persistency

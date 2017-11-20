@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TouchpointApp.Command;
 using TouchpointApp.Model;
 using TouchpointApp.Persistency;
 
@@ -91,7 +92,10 @@ namespace TouchpointApp.ViewModel
         }
         #endregion
 
+
         #region Metoder
+
+
 
         private void OpretNytKursus()
         {
