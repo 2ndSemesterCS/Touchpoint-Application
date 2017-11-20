@@ -110,7 +110,7 @@ namespace TouchpointApp.ViewModel
 
         private void OpretNytKursus()
         {
-            _kc.OpretKursus(_kursusTitel, _kursusDato, _kursusTidspunkt, _kursusVarighed, _kursusPris, _kursusUnderviser, _kursusUndervisningssted);
+            _kc.OpretKursus(_kursusTitel, _kursusDato, _kursusTidspunkt, _kursusVarighed, _kursusPris, _kursusUnderviser, _kursusUndervisningssted, );
 
         }
 
