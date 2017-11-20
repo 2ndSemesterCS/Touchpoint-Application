@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TouchpointApp.ViewModel.lokaleViewModel
 {
-    class OpretLokaleViewModel :ViewModelBase
+    public class LokaleViewModel :ViewModelBase
     {
 
         #region Instance Fields
