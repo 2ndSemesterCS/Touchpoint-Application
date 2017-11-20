@@ -8,6 +8,9 @@
         private string _tidspunkt;
         private string _varighed;
         private double _pris;
+        private string _sprog;
+        private string _beskrivelse;
+        private double _depositum;
 
         private Underviser _underviser;
         private Undervisningssted _undervisningssted;
@@ -49,7 +52,22 @@
             get { return _underviser; }
             set { _underviser = value; }
         }
-
+      
+        public string Sprog
+        {
+            get { return _sprog; }
+            set { _sprog = value; }
+        }
+        public string Beskrivelse
+        {
+            get { return _beskrivelse; }
+            set { _beskrivelse = value; }
+        }
+        public double Depositum
+        {
+            get { return _depositum; }
+            set { _depositum = value; }
+        }
         public Undervisningssted Undervisningssted
         {
             get { return _undervisningssted; }
@@ -58,7 +76,9 @@
         #endregion
 
         #region Constructor
-        public Kursus(string titel, string dato, string tidspunkt, string varighed, double pris, Underviser underviser, Undervisningssted undervisningssted)
+        public Kursus(string titel, string dato, string tidspunkt, string varighed, 
+            double pris, Underviser underviser, Undervisningssted undervisningssted,
+            string sprog, string beskrivelse, double depositum )
         {
             _titel = titel;
             _dato = dato;
@@ -67,6 +87,10 @@
             _pris = pris;
             _underviser = underviser;
             _undervisningssted = undervisningssted;
+            _sprog = sprog;
+            _beskrivelse = beskrivelse;
+            _depositum = depositum;
+
         }
         #endregion  
     }

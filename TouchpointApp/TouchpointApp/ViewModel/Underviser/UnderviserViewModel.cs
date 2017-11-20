@@ -40,6 +40,14 @@
         }
         #endregion
 
+        #region Constructor
+
+        public UnderviserViewModel()
+        {
+                
+        }
+        #endregion
+
         public void OpretUnderviser()
         {
           
