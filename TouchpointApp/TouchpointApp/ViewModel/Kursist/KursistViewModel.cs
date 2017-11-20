@@ -7,7 +7,7 @@ using TouchpointApp.Command;
 using TouchpointApp.Model;
 using TouchpointApp.Persistency;
 
-namespace TouchpointApp.ViewModel.Kursist
+namespace TouchpointApp.ViewModel.KursistViewModel
 {
     public class KursistViewModel : ViewModelBase
     {

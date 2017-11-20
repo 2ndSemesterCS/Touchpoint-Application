@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TouchpointApp.ViewModel.lokaleViewModel
+namespace TouchpointApp.ViewModel.LokaleViewModel
 {
-    public class LokaleViewModel :ViewModelBase
+    public class LokaleViewModel : ViewModelBase
     {
 
         #region Instance Fields

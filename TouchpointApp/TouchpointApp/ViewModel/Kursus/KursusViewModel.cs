@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using TouchpointApp.Command;
-using TouchpointApp.Model;
+﻿using TouchpointApp.Command;
 using TouchpointApp.Persistency;
 
-namespace TouchpointApp.ViewModel
+namespace TouchpointApp.ViewModel.KursusViewModel
 {
     public class KursusViewModel : ViewModelBase
     {
@@ -19,7 +13,10 @@ namespace TouchpointApp.ViewModel
         private string _kursusDato;
         private string _kursusTidspunkt;
         private string _kursusVarighed;
+        private string _kursusSprog;
+        private string _beskrivelse;
 
+        private double _depositum;
         private double _kursusPris;
 
         private Model.Underviser _kursusUnderviser;
@@ -90,6 +87,36 @@ namespace TouchpointApp.ViewModel
                 OnPropertyChanged("KursusUndervisningssted");
             }
         }
+
+        public string Sprog
+        {
+            get { return _kursusSprog; }
+            set
+            {
+                _kursusSprog = value;
+                OnPropertyChanged("KursusSprog");
+            }
+        }
+
+        public string Beskrivelse
+        {
+            get { return _beskrivelse; }
+            set
+            {
+                _beskrivelse = value;
+                OnPropertyChanged("Beskrivelse");
+            }
+        }
+
+        public double Depositum
+        {
+            get { return _depositum; }
+            set
+            {
+                _depositum = value;
+                OnPropertyChanged("Depositum");
+            }
+        }
         #endregion
 
         #region Commands
@@ -110,7 +137,7 @@ namespace TouchpointApp.ViewModel
 
         private void OpretNytKursus()
         {
-            _kc.OpretKursus(_kursusTitel, _kursusDato, _kursusTidspunkt, _kursusVarighed, _kursusPris, _kursusUnderviser, _kursusUndervisningssted, );
+            _kc.OpretKursus(_kursusTitel, _kursusDato, _kursusTidspunkt, _kursusVarighed, _kursusPris, _kursusUnderviser, _kursusUndervisningssted, _kursusSprog, _beskrivelse, _depositum);
 
         }
 
