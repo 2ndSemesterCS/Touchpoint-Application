@@ -38,12 +38,13 @@
                     <TextBox PlaceholderText='Indsæt email...'/>
                 </StackPanel>
             </StackPanel>
+            <StackPanel Height="138" RenderTransformOrigin="0.501,0.526">
+                <Button Click="BackToKursistView" Content="Back" Margin="80,0,0,56" VerticalAlignment="Bottom" Height="58" Width="107" FontSize="22"/>
+            </StackPanel>
 
             <!-- Footer -->
-            <StackPanel Height="85">
-                <Button Click="BackToKursistView" Content="Back" Margin="80,0,0,56" VerticalAlignment="Bottom"/>
-            </StackPanel>
         </StackPanel>
+        <Button Content="opret" HorizontalAlignment="Right" Height="68" Margin="0,0,373,90" VerticalAlignment="Bottom" Width="131" FontSize="36"/>
 
     </Grid>
 </Page>
