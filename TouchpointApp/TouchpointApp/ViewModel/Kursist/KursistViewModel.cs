@@ -6,28 +6,23 @@ using System.Threading.Tasks;
 
 namespace TouchpointApp.ViewModel.Kursist
 {
-    public class OpretKursistViewModel : ViewModelBase
+    public class KursistViewModel : ViewModelBase
     {
         #region Instance Fields
-        private Model.Kursisten _kursist;
+        private Model.Kursist _kursist;
         #endregion
 
         #region Properties
-        public int KursistId
-        {
-            get { return _kursist.KursistId; }
-        }
-
         public string Email
         {
-            get { return _kursist.Email; }
-            set { _kursist.Email = value; OnPropertyChanged("Email opdateret"); }
+            get { return _kursist.EMail; }
+            set { _kursist.EMail = value; OnPropertyChanged("Email opdateret"); }
         }
 
         public string Telefon
         {
-            get { return _kursist.Telefon; }
-            set { _kursist.Telefon = value; OnPropertyChanged("Telefon opdateret"); }
+            get { return _kursist.Tlf; }
+            set { _kursist.Tlf = value; OnPropertyChanged("Telefon opdateret"); }
         }
 
         public string Navn

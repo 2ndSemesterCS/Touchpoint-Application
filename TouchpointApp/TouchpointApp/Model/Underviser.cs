@@ -10,24 +10,17 @@ namespace TouchpointApp.Model
 {
     public class Underviser
     {
-        private int _undervisningsid;
         private string _navn;
         private string _addresse;
         private string _email;
+        private string _tlf;
 
-        public Underviser(string navn, string addresse, string email)
+        public Underviser(string navn, string addresse, string email, string tlf)
         {
             _navn = navn;
             _addresse = addresse;
             _email = email;
-
-            countUnderviserId1Up();
-        }
-
-        public int UnderviserId
-        {
-            get { return _undervisningsid; }
-            set { _undervisningsid = value; }
+            _tlf = tlf;
         }
 
         public string Navn
@@ -35,27 +28,22 @@ namespace TouchpointApp.Model
             get { return _navn; }
             set { _navn = value; }
         }
+
         public string Addresse
         {
             get { return _addresse; }
             set { _addresse = value; }
         }
+
         public string Email
         {
             get { return _email; }
             set { _email = value; }
         }
-
-
-        //private becouse we're only using it inside of the class itself.
-        private int countUnderviserId1Up()
+        public string Tlf
         {
-           return _undervisningsid = _undervisningsid + 1;
+            get { return _tlf; }
+            set { _tlf = value; }
         }
-
-       
-
-
-
     }
 }

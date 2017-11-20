@@ -3,13 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TouchpointApp.Command;
 using TouchpointApp.Model;
+using TouchpointApp.Persistency;
 
 namespace TouchpointApp.ViewModel
 {
-    public class OpretKursusViewModel : ViewModelBase
+    public class KursusViewModel : ViewModelBase
     {
         #region Instance Fields
+
+        private KursusCatalog _kc;
+
         private string _kursusTitel;
         private string _kursusDato;
         private string _kursusTidspunkt;
@@ -85,6 +90,20 @@ namespace TouchpointApp.ViewModel
                 OnPropertyChanged("KursusUndervisningssted");
             }
         }
-        #endregion 
+        #endregion
+
+
+        #region Metoder
+
+
+
+        private void OpretNytKursus()
+        {
+            _kc.OpretKursus(_kursusTitel, _kursusDato, _kursusTidspunkt, _kursusVarighed, _kursusPris, _kursusUnderviser, _kursusUndervisningssted);
+        }
+
+        #endregion
+
+
     }
 }

@@ -14,6 +14,8 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using TouchpointApp.Views.Lokale;
 using TouchpointApp.Views.Undervisningssted;
+using TouchpointApp.Views.Serie;
+
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -46,7 +48,7 @@ namespace TouchpointApp.Views
 
         private void SerieViewClick(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(MainPage), null);
+            this.Frame.Navigate(typeof(SerieView), null);
         }
 
         private void UnderviserViewClick(object sender, RoutedEventArgs e)

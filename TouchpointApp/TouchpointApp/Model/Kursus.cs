@@ -7,7 +7,6 @@
         private string _dato;
         private string _tidspunkt;
         private string _varighed;
-
         private double _pris;
 
         private Underviser _underviser;
