@@ -9,19 +9,41 @@
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <!-- StackPanel surrounding full page.-->
-        <StackPanel>
+        <StackPanel Height="990" VerticalAlignment="Top">
             <!-- Logo & Title -->
-            <StackPanel>
-                <TextBlock FontSize="48px" FontWeight="Bold">Touchpoint</TextBlock>
+            <!-- Content -->
+            <StackPanel Background="blue" Height="290">
+                <TextBlock FontSize="48px" FontWeight="Bold" Height="90">
+                    <Run Text="Touchpoint"/>
+                </TextBlock>
             </StackPanel>
             <!-- Content -->
-            <StackPanel>
-
+            <StackPanel  Margin="0,0,0,0"  x:Name="Content" Height="632">
+                <StackPanel x:Name="Navn" Width="585" HorizontalAlignment="Left" Height="136">
+                    <TextBlock HorizontalAlignment='Left'>
+                        <Run Text="Navn"/>
+                    </TextBlock>
+                    <TextBox HorizontalAlignment="Right" PlaceholderText='Indsæt navn...'/>
+                </StackPanel>
+                <StackPanel x:Name="Telefon" Background='Orange' Margin="0,0,0,12" Height="216">
+                    <TextBlock HorizontalAlignment="Left">
+                        <Run Text="Telefon"/>
+                    </TextBlock>
+                    <TextBox HorizontalAlignment="Right" PlaceholderText='Indsæt telefon...'/>
+                </StackPanel>
+                <StackPanel   Background="Azure"  x:Name="Email" Height="108">
+                    <TextBlock Height="56">
+                        <Run Text="E-Mail"/>
+                    </TextBlock>
+                    <TextBox PlaceholderText='Indsæt email...'/>
+                </StackPanel>
             </StackPanel>
+
             <!-- Footer -->
-            <StackPanel>
-                <Button Click="BackToKursistView">Back</Button>
+            <StackPanel Height="85">
+                <Button Click="BackToKursistView" Content="Back" Margin="80,0,0,56" VerticalAlignment="Bottom"/>
             </StackPanel>
         </StackPanel>
+
     </Grid>
 </Page>

@@ -31,5 +31,10 @@ namespace TouchpointApp.Views.Kursist
         {
             this.Frame.GoBack();
         }
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }

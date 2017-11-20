@@ -163,8 +163,8 @@
     <Compile Include="Views\Serie\SerieView.xaml.cs">
       <DependentUpon>SerieView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\Serie\SletSerieViewxaml.xaml.cs">
-      <DependentUpon>SletSerieViewxaml.xaml</DependentUpon>
+    <Compile Include="Views\Serie\SletSerieView.xaml.cs">
+      <DependentUpon>SletSerieView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Underviser\OpretUnderviserView.xaml.cs">
       <DependentUpon>OpretUnderviserView.xaml</DependentUpon>
@@ -280,7 +280,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\Serie\SletSerieViewxaml.xaml">
+    <Page Include="Views\Serie\SletSerieView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

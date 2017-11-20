@@ -18,7 +18,7 @@
         <StackPanel Height="86" VerticalAlignment="Top" d:LayoutOverrides="VerticalAlignment">
             <!-- Logo & Title -->
             <StackPanel>
-                <TextBlock FontSize="48px" FontWeight="Bold">Touchpoint</TextBlock>
+                <TextBlock FontSize="48px" FontWeight="Bold" Text="Touchpoint"/>
             </StackPanel>
             <!-- Content -->
 
