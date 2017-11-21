@@ -1,14 +1,11 @@
-<<<<<<< HEAD
-﻿namespace TouchpointApp.ViewModel.Underviser
-=======
-﻿using TouchpointApp.Command;
+
+using TouchpointApp.Command;
 using TouchpointApp.Persistency;
 using TouchpointApp.Model;
 using TouchpointApp.ViewModel;
 using TouchpointApp.Views;
 
 namespace TouchpointApp.ViewModel
->>>>>>> 71d16af73c7718a00d2cd5343fd5e3713f47aeba
 {
     public class UnderviserViewModel : ViewModelBase
     {

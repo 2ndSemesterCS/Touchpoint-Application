@@ -26,18 +26,18 @@ namespace TouchpointApp.ViewModel.Kursist
 
         public string Telefon
         {
-            get { return _kursistTlf; }
+            get { return _kursist.Tlf; }
             set
             {
-                _kursistTlf = value;
+                _kursist.Tlf = value;
                 OnPropertyChanged("Telefon");
             }
         }
 
         public string Navn
         {
-            get { return _kursistNavn; }
-            set { _kursistNavn = value;
+            get { return _kursist.Navn; }
+            set { _kursist.Navn = value;
                 OnPropertyChanged("Navn"); }
         }
 
