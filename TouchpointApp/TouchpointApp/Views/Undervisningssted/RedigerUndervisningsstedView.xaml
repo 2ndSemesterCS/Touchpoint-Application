@@ -9,19 +9,35 @@
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <!-- StackPanel surrounding full page.-->
-        <StackPanel>
+        <StackPanel Margin="10,0,-10,0">
             <!-- Logo & Title -->
             <StackPanel>
                 <TextBlock FontSize="48px" FontWeight="Bold">Touchpoint</TextBlock>
             </StackPanel>
             <!-- Content -->
-            <StackPanel>
-
-            </StackPanel>
             <!-- Footer -->
-            <StackPanel>
-                <Button Click="BackToUndervisningsstedView">Back</Button>
+        </StackPanel>
+        <Button Click="BackToUndervisningsstedView" Content="Back" Margin="51,0,0,148" VerticalAlignment="Bottom" Height="93" Width="177"/>
+        <StackPanel HorizontalAlignment="Left" Margin="51,109,0,272" Width="464">
+            <TextBlock Height="112" Margin="10,0,0,0" TextWrapping="Wrap" Text="Oversigt over undervisningssteder" FontSize="36"/>
+            <ListView Height="556" Margin="10,0"/>
+        </StackPanel>
+        <StackPanel Margin="594,109,518,272" d:LayoutOverrides="LeftPosition, RightPosition, TopPosition, BottomPosition">
+            <StackPanel Height="127" Margin="10,0,-184,0" Orientation="Horizontal">
+                <TextBlock Margin="0,10" TextWrapping="Wrap" Width="192" FontSize="36">
+                    <Run Text="L"/>
+                    <Run Text="okale"/>
+                </TextBlock>
+                <TextBox Margin="0,10,0,0" TextWrapping="Wrap" Text="Indtast lokale" Width="218" FontSize="36"/>
+            </StackPanel>
+            <StackPanel Height="120" Margin="10,0" Orientation="Horizontal">
+                <TextBlock HorizontalAlignment="Left" Height="119" TextWrapping="Wrap" Width="191" FontSize="36">
+                    <Run Text="A"/>
+                    <Run Text="dresse"/>
+                </TextBlock>
+                <TextBox Margin="0,10,0,0" TextWrapping="Wrap" Text="Indtast adresse" Width="210" FontSize="36"/>
             </StackPanel>
         </StackPanel>
+        <Button Content="Rediger" HorizontalAlignment="Right" Height="93" Margin="0,0,657,157" VerticalAlignment="Bottom" Width="177" FontSize="36"/>
     </Grid>
 </Page>
