@@ -5,10 +5,12 @@ using System.Net.NetworkInformation;
 using System.Text;
 using System.Threading.Tasks;
 using Windows.Security.Cryptography.Core;
+using DataTransformation.Interfaces;
+using InMemoryStorage.Implementation;
 
 namespace TouchpointApp.Model
 {
-    public class Underviser
+    public class Underviser : StorableBase, ITransformed<Underviser>
     {
         private string _navn;
         private string _addresse;
@@ -21,6 +23,11 @@ namespace TouchpointApp.Model
             _addresse = addresse;
             _email = email;
             _tlf = tlf;
+        }
+
+        public Underviser()
+        {
+            throw new NotImplementedException();
         }
 
         public string Navn

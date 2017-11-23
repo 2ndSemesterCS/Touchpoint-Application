@@ -8,9 +8,9 @@
     xmlns:vm="using:TouchpointApp.ViewModel"
     mc:Ignorable="d">
 
-    <Page.DataContext>
+    <!--<Page.DataContext>
         <vm:UnderviserViewModel/>
-    </Page.DataContext>
+    </Page.DataContext>-->
 
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
@@ -39,7 +39,7 @@
             </StackPanel>
             <StackPanel x:Name="Addresse" HorizontalAlignment="Left" Height="116" Margin="0,0,-58,0" VerticalAlignment="Top" Width="1245" Orientation="Horizontal">
                 <TextBlock HorizontalAlignment="Left" Height="100" TextWrapping="Wrap" Text="E-mail" VerticalAlignment="Top" Width="315" FontSize="48"/>
-                <TextBox TextWrapping="Wrap" Text="Indtast e-mail" Margin="0,0.607,0,-2.575" Width="815" FontSize="48" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
+                <TextBox TextWrapping="Wrap" Text="{Binding Navn}" Margin="0,0.607,0,-2.575" Width="815" FontSize="48" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
                     <TextBox.RenderTransform>
                         <CompositeTransform Rotation="0.128"/>
                     </TextBox.RenderTransform>

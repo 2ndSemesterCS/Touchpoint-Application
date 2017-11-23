@@ -1,87 +1,52 @@
 
+using DataTransformation.Implementation;
 using TouchpointApp.Command;
 using TouchpointApp.Persistency;
 using TouchpointApp.Model;
 using TouchpointApp.ViewModel;
 using TouchpointApp.Views;
+using ViewModel.Implementation;
 
-namespace TouchpointApp.ViewModel
+namespace TouchpointApp.ViewModel 
 {
-    public class UnderviserViewModel : ViewModelBase
+    public class UnderviserViewModel : TransformedBase<Model.Underviser>
     {
-        #region Instandsfields
+        private string _navn;
+        private string _Adresse;
+        private string _email;
+        private string _tlf;
 
-        //Referance to our underviser class, need it for our propperties in the viewmodel.
-        private Model.Underviser _underviser;
-        private UnderviserCatalog _underviserCatalog;
-
-        private RelayCommand _relayCommand;
-
-        #endregion
-
-
-        #region Constructor
-        public UnderviserViewModel()
+        public override void SetValuesFromObject(Model.Underviser obj)
         {
-            _underviserCatalog = new UnderviserCatalog();
-            _relayCommand = new RelayCommand(OpretUnderviser);
+            _navn = obj.Navn;
+            _Adresse = obj.Addresse;
+            _email = obj.Email;
+            _tlf = obj.Tlf;
 
         }
-        #endregion
-
-        public void OpretUnderviser()
-        {
-          _underviserCatalog.OpretUnderviser(Navn, Addresse, Email, Tlf);
-        }
-
-        #region RelayCommand propperties
-        public RelayCommand OpretNytKursusCommand
-        {
-            get { return _relayCommand; }
-        }
-        #endregion
-
-        #region Propperties For Navn, Addresse, Email Og Id 
+   
         public string Navn
         {
-            get { return _underviser.Navn; }
-            set
-            {
-                _underviser.Navn = value;
-                OnPropertyChanged("Navn opdateret");
-            }
+            get { return _navn; }
+            set { _navn = value; }
         }
 
-        public string Addresse
+        public string Adresse
         {
-            get { return _underviser.Addresse; }
-            set
-            {
-                _underviser.Addresse = value;
-                OnPropertyChanged("Addresse opdateret");
-            }
+            get { return _Adresse; }
+            set { _Adresse = value; }
         }
+
         public string Email
         {
-            get { return _underviser.Email; }
-            set
-            {
-                _underviser.Email = value;
-                OnPropertyChanged("Email opdateret");
-            }
+            get { return _email; }
+            set { _email = value; }
         }
         public string Tlf
         {
-            get { return _underviser.Tlf; }
-            set
-            {
-                _underviser.Tlf = value;
-                OnPropertyChanged("Email opdateret");
-            }
+            get { return _tlf; }
+            set { _tlf = value; }
         }
-        #endregion
-
-
 
     }
 }
