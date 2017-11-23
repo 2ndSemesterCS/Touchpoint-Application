@@ -15,13 +15,13 @@
                 <TextBlock FontSize="48px" FontWeight="Bold">Touchpoint</TextBlock>
             </StackPanel>
             <!-- Content -->
-            <StackPanel>
-
-            </StackPanel>
             <!-- Footer -->
-            <StackPanel>
-                <Button Click="BackToUndervisningsstedView">Back</Button>
-            </StackPanel>
         </StackPanel>
+        <Button Click="BackToUndervisningsstedView" Content="Back" Margin="0,0,0,102" VerticalAlignment="Bottom" Width="148" Height="85" FontSize="36"/>
+        <StackPanel HorizontalAlignment="Left" Margin="10,82,0,343" Width="525">
+            <TextBlock Height="114" Margin="0,0,10,0" TextWrapping="Wrap" Text="Oversigt over undervisningssteder " FontSize="36"/>
+            <ListView Height="536" Margin="0,0,10,0"/>
+        </StackPanel>
+        <Button Content="Slet" Height="94" Margin="354,0,0,228" VerticalAlignment="Bottom" Width="181" FontSize="36"/>
     </Grid>
 </Page>
