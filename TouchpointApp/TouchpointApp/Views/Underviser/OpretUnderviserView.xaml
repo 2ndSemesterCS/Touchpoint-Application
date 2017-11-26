@@ -14,19 +14,16 @@
 
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <!-- StackPanel surrounding full page.-->
+        <!-- Logo & Title -->
         <StackPanel Height="86" VerticalAlignment="Top" d:LayoutOverrides="VerticalAlignment">
-            <!-- Logo & Title -->
+
             <StackPanel>
                 <TextBlock FontSize="48px" FontWeight="Bold" Text="Touchpoint"/>
             </StackPanel>
             <!-- Content -->
-
-
-            <!-- Footer -->
         </StackPanel>
-        <Button Click="BackToUnderviserView" Content="Back" Margin="80,0,0,56" VerticalAlignment="Bottom"/>
-        <StackPanel x:Name="Holder_alt" HorizontalAlignment="Left" Height="442" Margin="62,158,0,0" VerticalAlignment="Top" Width="1208">
+        <Button Click="BackToUnderviserView" Content="Back" Margin="80,0,0,56" VerticalAlignment="Bottom" Height="48" Width="97"/>
+        <StackPanel x:Name="Holder_alt" HorizontalAlignment="Left" Height="493" Margin="62,158,0,0" VerticalAlignment="Top" Width="1208">
             <StackPanel x:Name="Navn" HorizontalAlignment="Left" Height="116" Margin="0,0,-58,0" VerticalAlignment="Top" Width="1245" Orientation="Horizontal">
                 <StackPanel x:Name="Addresse_Copy" HorizontalAlignment="Left" Height="116" Margin="0,0,-58,0" VerticalAlignment="Top" Width="1245" Orientation="Horizontal">
                     <TextBlock HorizontalAlignment="Left" Height="100" TextWrapping="Wrap" Text="Navn" VerticalAlignment="Top" Width="315" FontSize="48"/>
@@ -62,5 +59,6 @@
                 </TextBox>
             </StackPanel>
         </StackPanel>
+        <Button Click="1" Content="Opret Underviser" Margin="966,0,0,343" VerticalAlignment="Bottom" Height="81" Width="214" FontSize="25"/>
     </Grid>
 </Page>
