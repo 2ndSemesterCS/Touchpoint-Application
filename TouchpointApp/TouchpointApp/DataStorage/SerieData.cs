@@ -18,18 +18,19 @@ namespace TouchpointApp.DataStorage
             set
             {
                 _beskrivelse = value;
-               
+
             }
         }
-        
+
         public Model.Kursus Kursus
         {
             get { return _kursus; }
             set
             {
                 _kursus = value;
-             
+
             }
             #endregion
         }
+    }
 }
