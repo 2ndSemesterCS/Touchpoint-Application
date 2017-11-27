@@ -96,6 +96,11 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="Command\RelayCommand.cs" />
+    <Compile Include="DataStorage\KursistData.cs" />
+    <Compile Include="DataStorage\KursusData.cs" />
+    <Compile Include="DataStorage\SerieData.cs" />
+    <Compile Include="DataStorage\UnderviserData.cs" />
+    <Compile Include="DataStorage\UndervisningsstedData.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>

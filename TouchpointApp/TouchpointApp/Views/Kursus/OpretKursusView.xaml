@@ -5,8 +5,12 @@
     xmlns:local="using:TouchpointApp.Views"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:vm="using:TouchpointApp.ViewModel.Kursus"
     mc:Ignorable="d">
 
+    <Page.DataContext>
+        <vm:KursusViewModel></vm:KursusViewModel>
+    </Page.DataContext>
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <!-- StackPanel surrounding full page.-->
@@ -20,91 +24,97 @@
 
             <!-- Footer -->
         </StackPanel>
-        <Button Click="BackToKursusView" Content="Back" Margin="80,0,0,56" VerticalAlignment="Bottom"/>
-        <StackPanel x:Name="Holder_alt" HorizontalAlignment="Left" Height="904" Margin="131,86,0,0" VerticalAlignment="Top" Width="1208">
-            <StackPanel x:Name="Titel" HorizontalAlignment="Left" Height="75" Margin="0,0,-58,0" VerticalAlignment="Top" Width="1245" Orientation="Horizontal">
-                <StackPanel x:Name="Addresse_Copy" HorizontalAlignment="Left" Height="116" Margin="0,0,-58,0" VerticalAlignment="Top" Width="1245" Orientation="Horizontal">
-                    <TextBlock HorizontalAlignment="Left" Height="100" TextWrapping="Wrap" Text="Titel" VerticalAlignment="Top" Width="315" FontSize="48"/>
-                    <TextBox TextWrapping="Wrap" Text="Indtast Titel" Margin="0,0.607,0,-2.575" Width="815" FontSize="48" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
+
+        
+        <ScrollViewer>
+
+            <StackPanel x:Name="Holder_alt" HorizontalAlignment="Left" Height="904" Margin="131,86,0,0" VerticalAlignment="Top" Width="1208">
+
+                <StackPanel x:Name="Titel" HorizontalAlignment="Left" Height="75" Margin="0,0,-58,0" VerticalAlignment="Top" Width="1245" Orientation="Horizontal">
+                    <StackPanel x:Name="AddresseCopy" HorizontalAlignment="Left" Height="116" Margin="0,0,-58,0" VerticalAlignment="Top" Width="1245" Orientation="Horizontal">
+                        <TextBlock HorizontalAlignment="Left" Height="100" TextWrapping="Wrap" Text="Titel" VerticalAlignment="Top" Width="315" FontSize="48"/>
+                        <TextBox TextWrapping="Wrap" PlaceholderText="Indtast Navn" Margin="0,0.607,0,-2.575" Width="815" FontSize="48" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
+                            <TextBox.RenderTransform>
+                                <CompositeTransform Rotation="0.128"/>
+                            </TextBox.RenderTransform>
+                        </TextBox>
+                    </StackPanel>
+                </StackPanel>
+                <StackPanel x:Name="Dato" HorizontalAlignment="Left" Height="75" Margin="0,0,-58,0" VerticalAlignment="Top" Width="1245" Orientation="Horizontal">
+                    <TextBlock HorizontalAlignment="Left" Height="100" TextWrapping="Wrap" Text="Dato" VerticalAlignment="Top" Width="315" FontSize="48"/>
+                    <TextBox TextWrapping="Wrap" PlaceholderText="Indtast Dato" Margin="0,0.607,0,-2.575" Width="815" FontSize="48" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
+                        <TextBox.RenderTransform>
+                            <CompositeTransform Rotation="0.128"/>
+                        </TextBox.RenderTransform>
+                    </TextBox>
+                </StackPanel>
+                <StackPanel x:Name="Tidspunkt" HorizontalAlignment="Left" Height="75" Margin="0,0,-58,0" VerticalAlignment="Top" Width="1245" Orientation="Horizontal">
+                    <TextBlock HorizontalAlignment="Left" Height="100" TextWrapping="Wrap" Text="Tidspunkt" VerticalAlignment="Top" Width="315" FontSize="48"/>
+                    <TextBox TextWrapping="Wrap" PlaceholderText="Indtast Tidspunkt" Margin="0,0.211,0,-2.179" Width="815" FontSize="48" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
+                        <TextBox.RenderTransform>
+                            <CompositeTransform Rotation="0.128"/>
+                        </TextBox.RenderTransform>
+                    </TextBox>
+                </StackPanel>
+                <StackPanel x:Name="Varighed" HorizontalAlignment="Left" Height="75" Margin="0,0,-37,0" VerticalAlignment="Top" Width="1245" Orientation="Horizontal">
+                    <TextBlock HorizontalAlignment="Left" Height="100" TextWrapping="Wrap" Text="Varighed" VerticalAlignment="Top" Width="315" FontSize="48"/>
+                    <TextBox TextWrapping="Wrap" PlaceholderText="Indtast Varighed" Margin="0,0.211,0,-2.179" Width="815" FontSize="48" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
+                        <TextBox.RenderTransform>
+                            <CompositeTransform Rotation="0.128"/>
+                        </TextBox.RenderTransform>
+                    </TextBox>
+                </StackPanel>
+                <StackPanel x:Name="Pris" HorizontalAlignment="Left" Height="75" Margin="0,0,-58,0" VerticalAlignment="Top" Width="1245" Orientation="Horizontal">
+                    <TextBlock HorizontalAlignment="Left" Height="100" TextWrapping="Wrap" Text="Pris" VerticalAlignment="Top" Width="315" FontSize="48"/>
+                    <TextBox TextWrapping="Wrap" PlaceholderText="Indtast Pris" Margin="0,0.211,0,-2.179" Width="815" FontSize="48" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
+                        <TextBox.RenderTransform>
+                            <CompositeTransform Rotation="0.128"/>
+                        </TextBox.RenderTransform>
+                    </TextBox>
+                </StackPanel>
+                <StackPanel x:Name="Sprog" HorizontalAlignment="Left" Height="75" Margin="0,0,-58,0" VerticalAlignment="Top" Width="1245" Orientation="Horizontal">
+                    <TextBlock HorizontalAlignment="Left" Height="100" TextWrapping="Wrap" Text="Sprog" VerticalAlignment="Top" Width="315" FontSize="48"/>
+                    <TextBox TextWrapping="Wrap" PlaceholderText="Indtast Sprog" Margin="0,0.211,0,-2.179" Width="815" FontSize="48" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
+                        <TextBox.RenderTransform>
+                            <CompositeTransform Rotation="0.128"/>
+                        </TextBox.RenderTransform>
+                    </TextBox>
+                </StackPanel>
+                <StackPanel x:Name="Beskrivelse" HorizontalAlignment="Left" Height="75" Margin="0,0,-58,0" VerticalAlignment="Top" Width="1245" Orientation="Horizontal">
+                    <TextBlock HorizontalAlignment="Left" Height="100" TextWrapping="Wrap" Text="Beskrivelse" VerticalAlignment="Top" Width="315" FontSize="48"/>
+                    <TextBox TextWrapping="Wrap" PlaceholderText="Indtast Beskrivelse" Margin="0,0.211,0,-2.179" Width="815" FontSize="48" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
+                        <TextBox.RenderTransform>
+                            <CompositeTransform Rotation="0.128"/>
+                        </TextBox.RenderTransform>
+                    </TextBox>
+                </StackPanel>
+                <StackPanel x:Name="Depositum" HorizontalAlignment="Left" Height="75" Margin="0,0,-58,0" VerticalAlignment="Top" Width="1245" Orientation="Horizontal">
+                    <TextBlock HorizontalAlignment="Left" Height="100" TextWrapping="Wrap" Text="Depositum" VerticalAlignment="Top" Width="315" FontSize="48"/>
+                    <TextBox TextWrapping="Wrap" PlaceholderText="Indtast Depositum" Margin="0,0.211,0,-2.179" Width="815" FontSize="48" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
+                        <TextBox.RenderTransform>
+                            <CompositeTransform Rotation="0.128"/>
+                        </TextBox.RenderTransform>
+                    </TextBox>
+                </StackPanel>
+                <StackPanel x:Name="Underviser" HorizontalAlignment="Left" Height="75" Margin="0,0,-58,0" VerticalAlignment="Top" Width="1245" Orientation="Horizontal">
+                    <TextBlock HorizontalAlignment="Left" Height="100" TextWrapping="Wrap" Text="Underviser" VerticalAlignment="Top" Width="315" FontSize="48"/>
+                    <TextBox TextWrapping="Wrap" PlaceholderText="Indtast Underviser" Margin="0,0.211,0,-2.179" Width="815" FontSize="48" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
+                        <TextBox.RenderTransform>
+                            <CompositeTransform Rotation="0.128"/>
+                        </TextBox.RenderTransform>
+                    </TextBox>
+                </StackPanel>
+                <StackPanel x:Name="Undervisningssted" HorizontalAlignment="Left" Height="75" Margin="0,0,-58,0" VerticalAlignment="Top" Width="1245" Orientation="Horizontal">
+                    <TextBlock HorizontalAlignment="Left" Height="100" TextWrapping="Wrap" Text="Lokation" VerticalAlignment="Top" Width="315" FontSize="48"/>
+                    <TextBox TextWrapping="Wrap" PlaceholderText="Indtast Undervisningssted" Margin="0,0.211,0,-2.179" Width="815" FontSize="48" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
                         <TextBox.RenderTransform>
                             <CompositeTransform Rotation="0.128"/>
                         </TextBox.RenderTransform>
                     </TextBox>
                 </StackPanel>
             </StackPanel>
-            <StackPanel x:Name="Dato" HorizontalAlignment="Left" Height="75" Margin="0,0,-58,0" VerticalAlignment="Top" Width="1245" Orientation="Horizontal">
-                <TextBlock HorizontalAlignment="Left" Height="100" TextWrapping="Wrap" Text="Dato" VerticalAlignment="Top" Width="315" FontSize="48"/>
-                <TextBox TextWrapping="Wrap" Text="Indtast Dato" Margin="0,0.607,0,-2.575" Width="815" FontSize="48" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
-                    <TextBox.RenderTransform>
-                        <CompositeTransform Rotation="0.128"/>
-                    </TextBox.RenderTransform>
-                </TextBox>
-            </StackPanel>
-            <StackPanel x:Name="Tidspunkt" HorizontalAlignment="Left" Height="75" Margin="0,0,-58,0" VerticalAlignment="Top" Width="1245" Orientation="Horizontal">
-                <TextBlock HorizontalAlignment="Left" Height="100" TextWrapping="Wrap" Text="Tidspunkt" VerticalAlignment="Top" Width="315" FontSize="48"/>
-                <TextBox TextWrapping="Wrap" Text="Indtast Tidspunkt" Margin="0,0.211,0,-2.179" Width="815" FontSize="48" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
-                    <TextBox.RenderTransform>
-                        <CompositeTransform Rotation="0.128"/>
-                    </TextBox.RenderTransform>
-                </TextBox>
-            </StackPanel>
-            <StackPanel x:Name="Varighed" HorizontalAlignment="Left" Height="75" Margin="0,0,-37,0" VerticalAlignment="Top" Width="1245" Orientation="Horizontal">
-                <TextBlock HorizontalAlignment="Left" Height="100" TextWrapping="Wrap" Text="Varighed" VerticalAlignment="Top" Width="315" FontSize="48"/>
-                <TextBox TextWrapping="Wrap" Text="Indtast Varighed" Margin="0,0.211,0,-2.179" Width="815" FontSize="48" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
-                    <TextBox.RenderTransform>
-                        <CompositeTransform Rotation="0.128"/>
-                    </TextBox.RenderTransform>
-                </TextBox>
-            </StackPanel>
-            <StackPanel x:Name="Pris" HorizontalAlignment="Left" Height="75" Margin="0,0,-58,0" VerticalAlignment="Top" Width="1245" Orientation="Horizontal">
-                <TextBlock HorizontalAlignment="Left" Height="100" TextWrapping="Wrap" Text="Pris" VerticalAlignment="Top" Width="315" FontSize="48"/>
-                <TextBox TextWrapping="Wrap" Text="Indtast Pris" Margin="0,0.211,0,-2.179" Width="815" FontSize="48" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
-                    <TextBox.RenderTransform>
-                        <CompositeTransform Rotation="0.128"/>
-                    </TextBox.RenderTransform>
-                </TextBox>
-            </StackPanel>
-            <StackPanel x:Name="Sprog" HorizontalAlignment="Left" Height="75" Margin="0,0,-58,0" VerticalAlignment="Top" Width="1245" Orientation="Horizontal">
-                <TextBlock HorizontalAlignment="Left" Height="100" TextWrapping="Wrap" Text="Sprog" VerticalAlignment="Top" Width="315" FontSize="48"/>
-                <TextBox TextWrapping="Wrap" Text="Indtast Sprog" Margin="0,0.211,0,-2.179" Width="815" FontSize="48" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
-                    <TextBox.RenderTransform>
-                        <CompositeTransform Rotation="0.128"/>
-                    </TextBox.RenderTransform>
-                </TextBox>
-            </StackPanel>
-            <StackPanel x:Name="Beskrivelse" HorizontalAlignment="Left" Height="75" Margin="0,0,-58,0" VerticalAlignment="Top" Width="1245" Orientation="Horizontal">
-                <TextBlock HorizontalAlignment="Left" Height="100" TextWrapping="Wrap" Text="Beskrivelse" VerticalAlignment="Top" Width="315" FontSize="48"/>
-                <TextBox TextWrapping="Wrap" Text="Indtast Beskrivelse" Margin="0,0.211,0,-2.179" Width="815" FontSize="48" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
-                    <TextBox.RenderTransform>
-                        <CompositeTransform Rotation="0.128"/>
-                    </TextBox.RenderTransform>
-                </TextBox>
-            </StackPanel>
-            <StackPanel x:Name="Depositum" HorizontalAlignment="Left" Height="75" Margin="0,0,-58,0" VerticalAlignment="Top" Width="1245" Orientation="Horizontal">
-                <TextBlock HorizontalAlignment="Left" Height="100" TextWrapping="Wrap" Text="Depositum" VerticalAlignment="Top" Width="315" FontSize="48"/>
-                <TextBox TextWrapping="Wrap" Text="Indtast Depositum" Margin="0,0.211,0,-2.179" Width="815" FontSize="48" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
-                    <TextBox.RenderTransform>
-                        <CompositeTransform Rotation="0.128"/>
-                    </TextBox.RenderTransform>
-                </TextBox>
-            </StackPanel>
-            <StackPanel x:Name="Underviser" HorizontalAlignment="Left" Height="75" Margin="0,0,-58,0" VerticalAlignment="Top" Width="1245" Orientation="Horizontal">
-                <TextBlock HorizontalAlignment="Left" Height="100" TextWrapping="Wrap" Text="Underviser" VerticalAlignment="Top" Width="315" FontSize="48"/>
-                <TextBox TextWrapping="Wrap" Text="Indtast Underviser" Margin="0,0.211,0,-2.179" Width="815" FontSize="48" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
-                    <TextBox.RenderTransform>
-                        <CompositeTransform Rotation="0.128"/>
-                    </TextBox.RenderTransform>
-                </TextBox>
-            </StackPanel>
-            <StackPanel x:Name="Undervisningssted" HorizontalAlignment="Left" Height="75" Margin="0,0,-58,0" VerticalAlignment="Top" Width="1245" Orientation="Horizontal">
-                <TextBlock HorizontalAlignment="Left" Height="100" TextWrapping="Wrap" Text="Lokation" VerticalAlignment="Top" Width="315" FontSize="48"/>
-                <TextBox TextWrapping="Wrap" Text="Indtast Undervisningssted" Margin="0,0.211,0,-2.179" Width="815" FontSize="48" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
-                    <TextBox.RenderTransform>
-                        <CompositeTransform Rotation="0.128"/>
-                    </TextBox.RenderTransform>
-                </TextBox>
-            </StackPanel>
-            
-        </StackPanel>
+        </ScrollViewer>
+        <Button Content="Back" Click="BackToKursusView" Margin="80,0,0,56" VerticalAlignment="Bottom"/>
+        <Button Content="Gem" Click="{Binding OpretNytKursusCommand}" VerticalAlignment="Bottom" HorizontalAlignment="Right"/>
     </Grid>
 </Page>
