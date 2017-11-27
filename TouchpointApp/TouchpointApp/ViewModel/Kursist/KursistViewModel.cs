@@ -8,8 +8,7 @@ namespace TouchpointApp.ViewModel.Kursist
     {
         #region Instance Fields
 
-
-        private Model.Kursist _kursist;
+        private Model.Kursist _kurist;
         private KursistCatalog _kursistCatalog;
 
         #endregion
@@ -17,7 +16,10 @@ namespace TouchpointApp.ViewModel.Kursist
         #region Properties
         public string Email
         {
-            get { return _kursist.EMail; }
+            get
+            {
+                return _kursist.EMail;
+            }
             set
             {_kursist.EMail = value;
                 OnPropertyChanged("Email");
