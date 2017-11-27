@@ -114,11 +114,6 @@
     <Compile Include="ViewModel\Kursus\KursusViewModel.cs" />
     <Compile Include="ViewModel\Lokale\LokaleViewModel.cs" />
     <Compile Include="ViewModel\Serie\SerieViewModel.cs" />
-    <Compile Include="ViewModel\Underviser\MasterDetailsViewmodel.cs" />
-    <Compile Include="ViewModel\Underviser\UnderviserViewmodelFactory.cs" />
-    <Compile Include="ViewModel\Underviser\UnderviserDetailsViewmodel.cs" />
-    <Compile Include="ViewModel\Underviser\UnderviserViewModel.cs" />
-    <Compile Include="ViewModel\Underviser\ViewmodelFactory.cs" />
     <Compile Include="ViewModel\Undervisningssted\UndervisningsstedViewModel.cs" />
     <Compile Include="ViewModel\ViewModelBase.cs" />
     <Compile Include="Views\AdminView.xaml.cs">
@@ -330,33 +325,7 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="CatalogImplementation">
-      <HintPath>..\..\..\GitHub\MVVMStarterLibrary\ExtensionsViewModel\bin\Debug\CatalogImplementation.dll</HintPath>
-    </Reference>
-    <Reference Include="DataTransformationImplementation">
-      <HintPath>..\..\..\GitHub\MVVMStarterLibrary\ViewModelImplementation\bin\Debug\DataTransformationImplementation.dll</HintPath>
-    </Reference>
-    <Reference Include="DataTransformationInterfaces">
-      <HintPath>..\..\..\GitHub\MVVMStarterLibrary\DataTransformationInterfaces\bin\Debug\DataTransformationInterfaces.dll</HintPath>
-    </Reference>
-    <Reference Include="ExtensionsModel">
-      <HintPath>..\..\..\GitHub\MVVMStarterLibrary\ExtensionsModel\bin\Debug\ExtensionsModel.dll</HintPath>
-    </Reference>
-    <Reference Include="ExtensionsViewModel">
-      <HintPath>..\..\..\GitHub\MVVMStarterLibrary\ExtensionsViewModel\bin\Debug\ExtensionsViewModel.dll</HintPath>
-    </Reference>
-    <Reference Include="InMemoryStorageImplementation">
-      <HintPath>..\..\..\GitHub\MVVMStarterLibrary\ViewModelImplementation\bin\Debug\InMemoryStorageImplementation.dll</HintPath>
-    </Reference>
-    <Reference Include="InMemoryStorageInterfaces">
-      <HintPath>..\..\..\GitHub\MVVMStarterLibrary\InMemoryStorageImplementation\bin\Debug\InMemoryStorageInterfaces.dll</HintPath>
-    </Reference>
-    <Reference Include="ViewModelImplementation">
-      <HintPath>..\..\..\GitHub\MVVMStarterLibrary\ViewModelImplementation\bin\Debug\ViewModelImplementation.dll</HintPath>
-    </Reference>
-    <Reference Include="ViewModelInterfaces">
-      <HintPath>..\..\..\GitHub\MVVMStarterLibrary\ViewModelImplementation\bin\Debug\ViewModelInterfaces.dll</HintPath>
-    </Reference>
+    <Folder Include="ViewModel\Underviser\" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>

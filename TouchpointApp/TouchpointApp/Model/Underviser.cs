@@ -1,16 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net.NetworkInformation;
-using System.Text;
-using System.Threading.Tasks;
-using Windows.Security.Cryptography.Core;
-using DataTransformation.Interfaces;
-using InMemoryStorage.Implementation;
 
 namespace TouchpointApp.Model
 {
-    public class Underviser : StorableBase, ITransformed<Underviser>
+    public class Underviser 
     {
         private string _navn;
         private string _addresse;
