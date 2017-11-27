@@ -1,4 +1,4 @@
-﻿namespace TouchpointApp.DataController
+﻿namespace TouchpointApp.DataStorage
 {
     public class SerieData
     {
