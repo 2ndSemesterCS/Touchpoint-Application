@@ -8,7 +8,7 @@ namespace TouchpointApp.ViewModel.Kursist
     {
         #region Instance Fields
 
-        private Model.Kursist _kurist;
+        private Model.Kursist _kursist;
         private KursistCatalog _kursistCatalog;
 
         #endregion
