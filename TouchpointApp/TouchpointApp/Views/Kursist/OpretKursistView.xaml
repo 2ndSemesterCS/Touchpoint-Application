@@ -6,11 +6,11 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:vm="using:TouchpointApp.ViewModel.Kursist"
     mc:Ignorable="d">
-    <!--<Page.DataContext>
+    <Page.DataContext>
         <vm:KursistViewModel/>
-    </Page.DataContext>-->
+    </Page.DataContext>
 
-    
+
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <!-- StackPanel surrounding full page.-->
         <StackPanel Height="990" VerticalAlignment="Top">
@@ -27,19 +27,19 @@
                     <TextBlock HorizontalAlignment='Left'>
                         <Run Text="Navn"/>
                     </TextBlock>
-                    <TextBox Text="{Binding Navn, Mode=OneWay}" HorizontalAlignment="Right" PlaceholderText='Indsæt navn...'/>
+                    <TextBox TextWrapping="Wrap"  Text="{Binding KursistData.Navn, Mode=TwoWay}" HorizontalAlignment="Right" PlaceholderText='Indsæt navn...'/>
                 </StackPanel>
                 <StackPanel x:Name="Telefon" Background='Orange' Margin="0,0,0,12" Height="216">
                     <TextBlock HorizontalAlignment="Left">
                         <Run Text="Telefon"/>
                     </TextBlock>
-                    <TextBox Text="{Binding Telefon, Mode=OneWay}" HorizontalAlignment="Right" PlaceholderText='Indsæt telefon...'/>
+                    <TextBox Text="{Binding KursistData.Tlf, Mode=TwoWay}" HorizontalAlignment="Right" PlaceholderText='Indsæt telefon...'/>
                 </StackPanel>
                 <StackPanel   Background="Azure"  x:Name="Email" Height="108">
                     <TextBlock Height="56">
                         <Run Text="E-Mail"/>
                     </TextBlock>
-                    <TextBox Text="{Binding Email, Mode=OneWay}" PlaceholderText='Indsæt email...'/>
+                    <TextBox Text="{Binding KursistData.Email, Mode=TwoWay}" PlaceholderText='Indsæt email...'/>
                 </StackPanel>
             </StackPanel>
             <StackPanel Height="138" RenderTransformOrigin="0.501,0.526">
