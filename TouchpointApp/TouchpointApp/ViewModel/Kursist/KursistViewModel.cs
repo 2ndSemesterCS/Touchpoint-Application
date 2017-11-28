@@ -1,70 +1,70 @@
-﻿using TouchpointApp.Command;
-using TouchpointApp.Persistency;
-using TouchpointApp.Model;
+﻿//using TouchpointApp.Command;
+//using TouchpointApp.Persistency;
+//using TouchpointApp.Model;
 
-namespace TouchpointApp.ViewModel.Kursist
-{
-    public class KursistViewModel : ViewModelBase
-    {
-        #region Instance Fields
+//namespace TouchpointApp.ViewModel.Kursist
+//{
+//    public class KursistViewModel : ViewModelBase
+//    {
+//        #region Instance Fields
 
-        private Model.Kursist _kurist;
-        private KursistCatalog _kursistCatalog;
+//        private Model.Kursist _kurist;
+//        private KursistCatalog _kursistCatalog;
 
-        #endregion
+//        #endregion
 
-        #region Properties
-        public string Email
-        {
-            get
-            {
-                return _kursist.EMail;
-            }
-            set
-            {_kursist.EMail = value;
-                OnPropertyChanged("Email");
-            }
-        }
+//        #region Properties
+//        public string Email
+//        {
+//            get
+//            {
+//                return _kursist.EMail;
+//            }
+//            set
+//            {_kursist.EMail = value;
+//                OnPropertyChanged("Email");
+//            }
+//        }
 
-        public string Telefon
-        {
-            get { return _kursist.Tlf; }
-            set
-            {
-                _kursist.Tlf = value;
-                OnPropertyChanged("Telefon");
-            }
-        }
+//        public string Telefon
+//        {
+//            get { return _kursist.Tlf; }
+//            set
+//            {
+//                _kursist.Tlf = value;
+//                OnPropertyChanged("Telefon");
+//            }
+//        }
 
-        public string Navn
-        {
-            get { return _kursist.Navn; }
-            set { _kursist.Navn = value;
-                OnPropertyChanged("Navn"); }
-        }
+//        public string Navn
+//        {
+//            get { return _kursist.Navn; }
+//            set { _kursist.Navn = value;
+//                OnPropertyChanged("Navn"); }
+//        }
 
-        #endregion
+//        #endregion
 
-        #region Commands
-        public RelayCommand OpretNyKursistCommand { get; set; }
-        #endregion
+//        #region Commands
+//        public RelayCommand OpretNyKursistCommand { get; set; }
+//        #endregion
 
-        #region Constructor
+//        #region Constructor
 
-        public KursistViewModel()
-        {
-            _kursistCatalog = new KursistCatalog();
-            OpretNyKursistCommand = new RelayCommand(OpretNyKursist);
-        }
-        #endregion
+//        public KursistViewModel()
+//        {
+//            _kursistCatalog = new KursistCatalog();
+//            OpretNyKursistCommand = new RelayCommand(OpretNyKursist);
+//        }
+//        #endregion
 
-        #region Metoder
+//        #region Metoder
 
-        public void OpretNyKursist()
-        {
-            _kursistCatalog.OpretKursist(Navn, Email, Telefon);
-        }
+//        public void OpretNyKursist()
+//        {
+//            _kursistCatalog.OpretKursist(Navn, Email, Telefon);
+//        }
 
-        #endregion
-    }
-}
+//        #endregion
+//    }
+//}
