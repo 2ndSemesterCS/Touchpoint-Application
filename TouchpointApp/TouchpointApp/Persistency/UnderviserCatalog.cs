@@ -18,13 +18,14 @@ namespace TouchpointApp.Persistency
         public UnderviserCatalog()
         {
             _Ul = new List<Underviser>();
+
         }
         #endregion
 
         #region Metoder
         public void OpretKursus(string Navn, string Adresse, string email, string tlf)
         {
-            Underviser U1 = new Underviser(Navn, Adresse, email, tlf);
+              Underviser U1 = new Underviser(Navn, Adresse, email, tlf);
             _Ul.Add(U1);
         }
         #endregion

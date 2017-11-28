@@ -27,7 +27,7 @@
             <StackPanel x:Name="Navn" HorizontalAlignment="Left" Height="116" Margin="0,0,-58,0" VerticalAlignment="Top" Width="1245" Orientation="Horizontal">
                 <StackPanel x:Name="Addresse_Copy" HorizontalAlignment="Left" Height="116" Margin="0,0,-58,0" VerticalAlignment="Top" Width="1245" Orientation="Horizontal">
                     <TextBlock HorizontalAlignment="Left" Height="100" TextWrapping="Wrap" Text="Navn" VerticalAlignment="Top" Width="315" FontSize="48"/>
-                    <TextBox TextWrapping="Wrap" Text="Indtast Navn" Margin="0,0.607,0,-2.575" Width="815" FontSize="48" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
+                    <TextBox TextWrapping="Wrap" Text="{Binding UnderviserData.Navn, Mode=TwoWay}" Margin="0,0.607,0,-2.575" Width="815" FontSize="48" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
                         <TextBox.RenderTransform>
                             <CompositeTransform Rotation="0.128"/>
                         </TextBox.RenderTransform>
@@ -36,7 +36,7 @@
             </StackPanel>
             <StackPanel x:Name="Addresse" HorizontalAlignment="Left" Height="116" Margin="0,0,-58,0" VerticalAlignment="Top" Width="1245" Orientation="Horizontal">
                 <TextBlock HorizontalAlignment="Left" Height="100" TextWrapping="Wrap" Text="E-mail" VerticalAlignment="Top" Width="315" FontSize="48"/>
-                <TextBox TextWrapping="Wrap" Text="{Binding Navn}" Margin="0,0.607,0,-2.575" Width="815" FontSize="48" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
+                <TextBox TextWrapping="Wrap" Text="{Binding UnderviserData.Email, Mode=TwoWay }" Margin="0,0.607,0,-2.575" Width="815" FontSize="48" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
                     <TextBox.RenderTransform>
                         <CompositeTransform Rotation="0.128"/>
                     </TextBox.RenderTransform>
@@ -44,7 +44,7 @@
             </StackPanel>
             <StackPanel x:Name="___Email_" HorizontalAlignment="Left" Height="116" Margin="0,0,-58,0" VerticalAlignment="Top" Width="1245" Orientation="Horizontal">
                 <TextBlock HorizontalAlignment="Left" Height="100" TextWrapping="Wrap" Text="Tlf" VerticalAlignment="Top" Width="315" FontSize="48"/>
-                <TextBox TextWrapping="Wrap" Text="Indtast telefonnummer" Margin="0,0.211,0,-2.179" Width="815" FontSize="48" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
+                <TextBox TextWrapping="Wrap"  Text="{Binding UnderviserData.Tlf, Mode=TwoWay}" Margin="0,0.211,0,-2.179" Width="815" FontSize="48" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
                     <TextBox.RenderTransform>
                         <CompositeTransform Rotation="0.128"/>
                     </TextBox.RenderTransform>
@@ -52,13 +52,14 @@
             </StackPanel>
             <StackPanel x:Name="___Email__Copy" HorizontalAlignment="Left" Height="116" Margin="0,0,-37,0" VerticalAlignment="Top" Width="1245" Orientation="Horizontal">
                 <TextBlock HorizontalAlignment="Left" Height="100" TextWrapping="Wrap" Text="Adresse" VerticalAlignment="Top" Width="315" FontSize="48"/>
-                <TextBox TextWrapping="Wrap" Text="Indtast adresse" Margin="0,0.211,0,-2.179" Width="815" FontSize="48" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
+                <TextBox TextWrapping="Wrap"  Text="{Binding UnderviserData.Adresse, Mode=TwoWay}" Margin="0,0.211,0,-2.179" Width="815" FontSize="48" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
                     <TextBox.RenderTransform>
                         <CompositeTransform Rotation="0.128"/>
                     </TextBox.RenderTransform>
                 </TextBox>
             </StackPanel>
         </StackPanel>
+        <Button Command="{Binding OpretNyUnderviserCommand}" Content="Opret" Margin="1016,0,0,328" VerticalAlignment="Bottom" Height="66" Width="168"/>
         <!--<Button Click="1" Content="Opret Underviser" Margin="966,0,0,343" VerticalAlignment="Bottom" Height="81" Width="214" FontSize="25"/>-->
     </Grid>
 </Page>

@@ -23,7 +23,7 @@ namespace TouchpointApp.ViewModel.Underviser
         }
 
         public RelayCommand OpretNyUnderviserCommand { get; set; }
-        public UnderviserData UnderviserData { get; set; }
+        public UnderviserData UnderviserData { get { return _underviserData; } set { _underviserData = value; } }
 
         public void OpretNyUnderviser()
         {

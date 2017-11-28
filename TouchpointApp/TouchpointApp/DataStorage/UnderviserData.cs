@@ -1,6 +1,8 @@
-﻿namespace TouchpointApp.DataStorage
+﻿using TouchpointApp.ViewModel;
+
+namespace TouchpointApp.DataStorage
 {
-    public class UnderviserData
+    public class UnderviserData : ViewModelBase
     {
         private string _navn;
         private string _addresse;
@@ -12,10 +14,10 @@
 
         }
 
-        public string Navn { get { return _navn; } set { _navn = value; } }
-        public string Adresse { get { return _addresse; } set { _addresse = value; } }
-        public string Email { get { return _email; } set { _email = value; } }
-        public string Tlf { get { return _email; } set { _email = value; } }
+        public string Navn { get { return _navn; } set { _navn = value; OnPropertyChanged("navn"); } }
+        public string Adresse { get { return _addresse; } set { _addresse = value; OnPropertyChanged("navn"); } }
+        public string Email { get { return _email; } set { _email = value; OnPropertyChanged("navn"); } }
+        public string Tlf { get { return _tlf; } set { _tlf = value; OnPropertyChanged("navn"); } }
 
 
     }
