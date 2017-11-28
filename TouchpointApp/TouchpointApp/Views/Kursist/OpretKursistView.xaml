@@ -6,9 +6,9 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:vm="using:TouchpointApp.ViewModel.Kursist"
     mc:Ignorable="d">
-    <Page.DataContext>
+    <!--<Page.DataContext>
         <vm:KursistViewModel/>
-    </Page.DataContext>
+    </Page.DataContext>-->
 
     
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
