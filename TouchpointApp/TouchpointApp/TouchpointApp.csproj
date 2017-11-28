@@ -96,6 +96,11 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="Command\RelayCommand.cs" />
+    <Compile Include="DataStorage\KursistData.cs" />
+    <Compile Include="DataStorage\KursusData.cs" />
+    <Compile Include="DataStorage\SerieData.cs" />
+    <Compile Include="DataStorage\UnderviserData.cs" />
+    <Compile Include="DataStorage\UndervisningsstedData.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
@@ -114,6 +119,7 @@
     <Compile Include="ViewModel\Kursus\KursusViewModel.cs" />
     <Compile Include="ViewModel\Lokale\LokaleViewModel.cs" />
     <Compile Include="ViewModel\Serie\SerieViewModel.cs" />
+    <Compile Include="ViewModel\Underviser\UnderviserViewmodel.cs" />
     <Compile Include="ViewModel\Undervisningssted\UndervisningsstedViewModel.cs" />
     <Compile Include="ViewModel\ViewModelBase.cs" />
     <Compile Include="Views\AdminView.xaml.cs">
@@ -324,9 +330,7 @@
       <Version>6.0.1</Version>
     </PackageReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="ViewModel\Underviser\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>
