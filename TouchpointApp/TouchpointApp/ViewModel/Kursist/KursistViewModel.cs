@@ -1,6 +1,7 @@
 ﻿using TouchpointApp.Command;
 using TouchpointApp.Persistency;
 using TouchpointApp.Model;
+using TouchpointApp.DataStorage;
 
 namespace TouchpointApp.ViewModel.Kursist
 {
@@ -8,7 +9,10 @@ namespace TouchpointApp.ViewModel.Kursist
     {
         #region Instance Fields
 
-        private Model.Kursist _kurist;
+        private KursistCatalog _kc;
+        private KursistData _kd;
+
+        private Model.Kursist _kursist;
         private KursistCatalog _kursistCatalog;
 
         #endregion
@@ -54,6 +58,8 @@ namespace TouchpointApp.ViewModel.Kursist
         public KursistViewModel()
         {
             _kursistCatalog = new KursistCatalog();
+            _kd = new KursistData();
+
             OpretNyKursistCommand = new RelayCommand(OpretNyKursist);
         }
         #endregion
@@ -62,7 +68,7 @@ namespace TouchpointApp.ViewModel.Kursist
 
         public void OpretNyKursist()
         {
-            _kursistCatalog.OpretKursist(Navn, Email, Telefon);
+            _kc.OpretKursist(_kd.Navn,_kd.Email,_kd.Telefon);
         }
 
         #endregion
