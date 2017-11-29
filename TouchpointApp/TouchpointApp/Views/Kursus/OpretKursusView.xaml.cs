@@ -30,5 +30,10 @@ namespace TouchpointApp.Views
         {
             this.Frame.GoBack();
         }
+
+        private void TextBlock_SelectionChanged(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

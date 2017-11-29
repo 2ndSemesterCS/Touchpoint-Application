@@ -26,5 +26,20 @@ namespace TouchpointApp.Views.Kursist
         {
             this.InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void BackToKursistView(object sender, RoutedEventArgs e)
+        {
+            this.Frame.GoBack();
+        }
+
+        private void TextBlock_SelectionChanged(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

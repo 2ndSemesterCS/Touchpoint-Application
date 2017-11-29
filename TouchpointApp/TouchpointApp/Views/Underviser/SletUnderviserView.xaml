@@ -26,6 +26,6 @@
               
             </ListView>
         </StackPanel>
-           <Button Content="Slet" HorizontalAlignment="Right" Height="60" Margin="0,0,1224,252" VerticalAlignment="Bottom" Width="216" FontSize="36"/>
+           <Button Content="Slet" HorizontalAlignment="Right" Height="60" Margin="0,0,656,30" VerticalAlignment="Bottom" Width="216" FontSize="36"/>
     </Grid>
 </Page>
