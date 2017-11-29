@@ -25,7 +25,6 @@
                         <Setter Property="Margin" Value="0,0,20,0" />
                     </Style>
                 </StackPanel.Resources>
-                <TextBlock  Foreground="White" Width="204"/>
                 <Button Background="#fad8d1" Foreground="White" Width="161" FontSize="25px" Content="Kurser"/>
                 <Button Background="#fad8d1" Foreground="White" Width="161" FontSize="25px" Content="Klinik"/>
                 <Button Background="#fad8d1" Foreground="White" Width="161" FontSize="25px" Content="Hvem er vi?"/>

@@ -14,7 +14,7 @@
             <StackPanel>
                 <Image Source="ms-appx:///Assets/Images/TouchPointFlotFinal.png" Height="100px" Margin="108,10,140,10" VerticalAlignment="Center" />
             </StackPanel>
-            <StackPanel Orientation="Vertical" VerticalAlignment="Center" Margin="823,0,833,0" Height="627">
+            <StackPanel Orientation="Vertical" VerticalAlignment="Center" Margin="633,0,393,0" Height="627">
                 <StackPanel.Resources>
                     <Style TargetType="Button">
                         <Setter Property="Margin" Value="0,20,0,0" />
@@ -22,7 +22,7 @@
                         <Setter Property="Width" Value="200px" />
                     </Style>
                 </StackPanel.Resources>
-                
+              
                 <Button Background="#fad8d1" Foreground="White" FontSize="25px" Click="KursistViewClick" Width="250" VerticalAlignment="Center" Content="Kursist" BorderBrush="White" BorderThickness="7" Height="75"/>
                 <Button Background="#fad8d1" Foreground="White" FontSize="25px" Click="KursusViewClick" Width="250" VerticalAlignment="Center" Content="Kursus" BorderBrush="White" BorderThickness="7" Height="75" />
                 <Button Background="#fad8d1" Foreground="White" FontSize="25px" Click="SerieViewClick" Width="250" VerticalAlignment="Center" Content="Serie" BorderBrush="White" BorderThickness="7" Height="75"/>
@@ -36,8 +36,8 @@
             <!-- Content -->
             <StackPanel>
             </StackPanel>
-            <StackPanel Height="90">
-                <Button Background="#fad8d1" Foreground="White" FontSize="25px" Width="140" VerticalAlignment="Center" BorderBrush="White" BorderThickness="7"  Height="75" Click="BackToMainPage"  Margin="10,0,0,0" Content="Back"/>
+            <StackPanel Height="132">
+                <Button Background="#fad8d1" Foreground="White" FontSize="25px" Width="140" VerticalAlignment="Center" BorderBrush="White" BorderThickness="7"  Height="75" Click="BackToMainPage"  Margin="10,-50,0,0" Content="Back"/>
             </StackPanel>
             <!-- Footer -->
         </StackPanel>

@@ -9,37 +9,37 @@
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <!-- StackPanel surrounding full page.-->
-        <StackPanel Margin="10,0,-10,0">
+        <StackPanel Background="#fad8d1" Margin="0,0,-10,0">
             <!-- Logo & Title -->
             <StackPanel>
-                <TextBlock FontSize="48px" FontWeight="Bold">Touchpoint</TextBlock>
+                <Image Source="ms-appx:///Assets/Images/TouchPointFlotFinal.png" Height="100px" Margin="108,10,140,10" VerticalAlignment="Center" />
             </StackPanel>
             <!-- Content -->
             <!-- Footer -->
         </StackPanel>
-        <Button Click="BackToUndervisningsstedView" Content="Back" Margin="51,0,0,117" VerticalAlignment="Bottom" Height="93" Width="177"/>
-        <StackPanel HorizontalAlignment="Left" Margin="51,109,0,255" Width="464">
-            <TextBlock Height="112" Margin="10,0,0,0" TextWrapping="Wrap" Text="Oversigt over undervisningssteder" FontSize="36"/>
+        <Button Click="BackToUndervisningsstedView" Content="Back" VerticalAlignment="Top" Background="#fad8d1" Foreground="White" FontSize="25px" Width="140" BorderBrush="White" BorderThickness="7"  Height="59" Margin="30,650,0,10"/>
+        <StackPanel HorizontalAlignment="Left" Margin="51,192,0,255" Width="464">
+            <TextBlock Height="112" Margin="10,0,0,0" TextWrapping="Wrap" Text="Oversigt over undervisningssteder" FontSize="36" Foreground="White"/>
             <ScrollViewer Height="245">
                 <ListView Height="244" Width="444"/>
             </ScrollViewer>
         </StackPanel>
-        <StackPanel Margin="594,109,130,255" d:LayoutOverrides="LeftPosition, RightPosition, TopPosition, BottomPosition">
+        <StackPanel Margin="594,192,130,255">
             <StackPanel Height="127" Orientation="Horizontal" d:LayoutOverrides="HorizontalAlignment">
-                <TextBlock Margin="0,0,0,3" TextWrapping="Wrap" Width="192" FontSize="36">
+                <TextBlock Margin="0,0,0,3" TextWrapping="Wrap" Width="192" Foreground="White" FontSize="36">
                     <Run Text="L"/>
                     <Run Text="okale"/>
                 </TextBlock>
-                <TextBox TextWrapping="Wrap" Text="Indtast lokale" Width="363" FontSize="36"/>
+                <TextBox TextWrapping="Wrap" Text="Indtast lokale" Width="363" FontSize="36" Foreground="#230101"/>
             </StackPanel>
             <StackPanel Height="127" Margin="10,0,0,0" Orientation="Horizontal" d:LayoutOverrides="LeftMargin, RightMargin">
-                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Width="184" FontSize="36" Margin="0,0,0,4">
+                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Width="184" FontSize="36" Foreground="White" Margin="0,0,0,4">
                     <Run Text="A"/>
                     <Run Text="dresse"/>
                 </TextBlock>
-                <TextBox TextWrapping="Wrap" Text="Indtast adresse" Width="362" FontSize="36" Margin="0,10,0,0"/>
+                <TextBox TextWrapping="Wrap" Text="Indtast adresse" Width="362" FontSize="36" Foreground="#230101" Margin="0,10,0,0"/>
             </StackPanel>
         </StackPanel>
-        <Button Content="Rediger" HorizontalAlignment="Right" Height="93" Margin="0,0,238,117" VerticalAlignment="Bottom" Width="177" FontSize="36" d:LayoutOverrides="HorizontalAlignment"/>
+        <Button Content="Rediger" VerticalAlignment="Top" Background="#fad8d1" Foreground="White" FontSize="25px" Width="140" BorderBrush="White" BorderThickness="7"  Height="75" Margin="620,550,0,10"/>
     </Grid>
 </Page>
