@@ -23,7 +23,10 @@
         <Button Click="BackToUnderviserView" Content="Back" Margin="29,0,0,30" VerticalAlignment="Bottom" Width="139" Height="60" FontSize="36"/>
         <StackPanel x:Name="ListViewStack" HorizontalAlignment="Left" Margin="51,139,0,115" Width="645">
             <ListView Height="503" Margin="0,0,10,0">
-                <TextBlock Height="84" TextWrapping="Wrap" Text="Oversigt over lokaler" Width="361" FontSize="36"/>
+                <TextBlock Height="60" TextWrapping="Wrap" Width="361" FontSize="30">
+                    <Run Text="Oversigt over "/>
+                    <Run Text="undervisere "/>
+                </TextBlock>
             </ListView>
         </StackPanel>
         <StackPanel x:Name="RedigerViewStack" HorizontalAlignment="Right" Margin="0,139,103,115" Width="733" Orientation="Vertical">

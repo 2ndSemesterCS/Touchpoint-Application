@@ -15,12 +15,12 @@
                 <TextBlock FontSize="48px" FontWeight="Bold">Touchpoint</TextBlock>
             </StackPanel>
             <StackPanel x:Name="___StackPanel___ramme" HorizontalAlignment="Left" Height="343" Margin="10,0,0,0" Width="578">
-                <StackPanel Height="118" Margin="10,0,-18,0" Orientation="Horizontal">
-                    <TextBlock Margin="0,10" TextWrapping="Wrap" Text="Lokale navn" Width="264"/>
+                <StackPanel Height="118" Margin="0,0,-18,0" Orientation="Horizontal">
+                    <TextBlock Margin="0,10" TextWrapping="Wrap" Text="Lokale navn" Width="253" Height="98"/>
                     <TextBox Margin="0,10" TextWrapping="Wrap" Text="Indtast lokale" Width="264"/>
                 </StackPanel>
-                <StackPanel Height="160" Margin="0,0,10,0" Orientation="Horizontal">
-                    <TextBlock HorizontalAlignment="Left" Height="98" Margin="0,-40,0,26" TextWrapping="Wrap" Text="Adresse" Width="264" RenderTransformOrigin="0.513,0.541"/>
+                <StackPanel Height="147" Margin="0,0,10,0" Orientation="Horizontal">
+                    <TextBlock HorizontalAlignment="Left" Height="98" Margin="0,-2,0,64" TextWrapping="Wrap" Text="Adresse" Width="253" RenderTransformOrigin="0.513,0.541"/>
                     <TextBox TextWrapping="Wrap" Text="Indtast adresse " Width="264" Height="98" VerticalAlignment="Top"/>
                 </StackPanel>
             </StackPanel>

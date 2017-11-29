@@ -21,7 +21,7 @@
             <!-- Footer -->
         </StackPanel>
         <Button Click="BackToKursusView" Content="Back" Margin="80,0,0,56" VerticalAlignment="Bottom"/>
-        <ScrollViewer HorizontalScrollBarVisibility="Auto" Margin="131,86,0,187">
+    <ScrollViewer HorizontalScrollBarVisibility="Auto" Margin="131,86,0,187">
             <StackPanel x:Name="Holder_alt" HorizontalAlignment="Left" Height="724" VerticalAlignment="Top" Width="1339">
                 <StackPanel x:Name="Titel" HorizontalAlignment="Left" Height="75" Margin="0,0,-58,0" VerticalAlignment="Top" Width="1245" Orientation="Horizontal">
                     <StackPanel x:Name="Addresse_Copy" HorizontalAlignment="Left" Height="116" Margin="0,0,-58,0" VerticalAlignment="Top" Width="1245" Orientation="Horizontal">

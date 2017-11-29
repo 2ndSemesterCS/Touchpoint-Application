@@ -25,7 +25,6 @@
                 </StackPanel.Resources>
                 <Button Click="KursistViewClick">Kursist</Button>
                 <Button Click="KursusViewClick">Kursus</Button>
-                <Button Click="LokaleViewClick">Lokale</Button>
                 <Button Click="SerieViewClick">Serie</Button>
                 <Button Click="UnderviserViewClick">Underviser</Button>
                 <Button Click="UndervisningsstedViewClick">Undervisningssted</Button>
