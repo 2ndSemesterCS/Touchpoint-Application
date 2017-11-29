@@ -9,19 +9,19 @@
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <!-- StackPanel surrounding full page.-->
-        <StackPanel>
+        <StackPanel RenderTransformOrigin="0.75,0.426">
             <!-- Logo & Title -->
             <StackPanel>
                 <TextBlock FontSize="48px" FontWeight="Bold">Touchpoint</TextBlock>
             </StackPanel>
             <!-- Content -->
-            <StackPanel>
-
-            </StackPanel>
             <!-- Footer -->
-            <StackPanel>
-                <Button Click="BackToSerieView">Back</Button>
-            </StackPanel>
         </StackPanel>
+        <Button Click="BackToSerieView" Content="Back" Margin="29,0,0,30" VerticalAlignment="Bottom" Width="139" Height="60" FontSize="36"/>
+        <StackPanel x:Name="ListViewStack" HorizontalAlignment="Left" Margin="51,139,0,313" Width="645">
+            <TextBlock Height="84" TextWrapping="Wrap" Text="Oversigt over Serier" FontSize="36" Margin="0,0,47,0" d:LayoutOverrides="TopPosition, BottomPosition"/>
+            <ListView Height="503" Margin="0,0,10,0"/>
+        </StackPanel>
+        <Button Content="Slet" HorizontalAlignment="Left" Height="60" Margin="433,0,0,248" VerticalAlignment="Bottom" Width="216" FontSize="36"/>
     </Grid>
 </Page>
