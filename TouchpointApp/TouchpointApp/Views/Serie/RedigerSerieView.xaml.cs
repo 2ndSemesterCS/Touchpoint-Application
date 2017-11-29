@@ -30,5 +30,10 @@ namespace TouchpointApp.Views.Serie
         {
             this.Frame.GoBack();
         }
+
+        private void ListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            
+        }
     }
 }
