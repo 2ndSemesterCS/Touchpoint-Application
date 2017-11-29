@@ -9,6 +9,11 @@ namespace TouchpointApp.DataStorage
         private string _email;
         private string _tlf;
         private string _navn;
+        private string _by;
+        private string _land;
+        private string _adresse;
+
+
 
 #endregion
 
@@ -25,12 +30,18 @@ namespace TouchpointApp.DataStorage
         public string Navn { get { return _navn; } set { _navn = value; OnPropertyChanged("navn"); } }
        
         public string Tlf { get { return _tlf; } set { _tlf = value; OnPropertyChanged("tlf"); } }
+
+        public string By { get { return _by; } set { _by = value; OnPropertyChanged("by"); } }
+
+        public string Land { get { return _land; } set { _land = value; OnPropertyChanged("land"); } }
+
+        public string Adresse { get { return _adresse; } set { _adresse = value; OnPropertyChanged("adresse"); } }
         //public string Email
         //{
         //    get
         //    {
         //        return _kursist.EMail;
-        //    }
+        //    } 
         //    set
         //    {
         //        _kursist.EMail = value;
