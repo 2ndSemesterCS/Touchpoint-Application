@@ -9,13 +9,12 @@
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <!-- StackPanel surrounding full page.-->
-        <StackPanel>
+        <StackPanel Background="#fad8d1">
             <!-- Logo & Title -->
             <StackPanel>
-                <TextBlock FontSize="48px" FontWeight="Bold">Touchpoint</TextBlock>
+                <Image Source="ms-appx:///Assets/Images/TouchPointFlotFinal.png" Height="100px" Margin="108,10,140,10" VerticalAlignment="Center" />
             </StackPanel>
-            <!-- Navigation Bar -->
-            <StackPanel Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <StackPanel Orientation="Vertical" VerticalAlignment="Center" Margin="823,0,833,0" Height="627">
                 <StackPanel.Resources>
                     <Style TargetType="Button">
                         <Setter Property="Margin" Value="0,20,0,0" />
@@ -23,22 +22,24 @@
                         <Setter Property="Width" Value="200px" />
                     </Style>
                 </StackPanel.Resources>
-                <Button Click="KursistViewClick">Kursist</Button>
-                <Button Click="KursusViewClick">Kursus</Button>
-                <Button Click="SerieViewClick">Serie</Button>
-                <Button Click="UnderviserViewClick">Underviser</Button>
-                <Button Click="UndervisningsstedViewClick">Undervisningssted</Button>
                 
-                <!-- Ikke i vores scope -->
-                <Button>Invoice</Button>
+                <Button Background="#fad8d1" Foreground="White" FontSize="25px" Click="KursistViewClick" Width="250" VerticalAlignment="Center" Content="Kursist" BorderBrush="White" BorderThickness="7" Height="75"/>
+                <Button Background="#fad8d1" Foreground="White" FontSize="25px" Click="KursusViewClick" Width="250" VerticalAlignment="Center" Content="Kursus" BorderBrush="White" BorderThickness="7" Height="75" />
+                <Button Background="#fad8d1" Foreground="White" FontSize="25px" Click="SerieViewClick" Width="250" VerticalAlignment="Center" Content="Serie" BorderBrush="White" BorderThickness="7" Height="75"/>
+                <Button Background="#fad8d1" Foreground="White" FontSize="25px" Click="UnderviserViewClick" Width="250" VerticalAlignment="Center" Content="Underviser" BorderBrush="White" BorderThickness="7" Height="75"/>
+                <Button Background="#fad8d1" Foreground="White" FontSize="25px" Click="UndervisningsstedViewClick" Width="250" VerticalAlignment="Center" Content="Undervisningssted" BorderBrush="White" BorderThickness="7" Height="75"/>
+
+                <Button Background="#fad8d1" Foreground="White" FontSize="25px" Width="250" Content="Invoice" BorderBrush="White" BorderThickness="7" Height="75"/>
+                    
             </StackPanel>
+            <!-- Navigation Bar -->
             <!-- Content -->
             <StackPanel>
             </StackPanel>
-            <!-- Footer -->
-            <StackPanel>
-                <Button Click="BackToMainPage">Back</Button>
+            <StackPanel Height="90">
+                <Button Background="#fad8d1" Foreground="White" FontSize="25px" Width="140" VerticalAlignment="Center" BorderBrush="White" BorderThickness="7"  Height="75" Click="BackToMainPage"  Margin="10,0,0,0" Content="Back"/>
             </StackPanel>
+            <!-- Footer -->
         </StackPanel>
     </Grid>
 </Page>

@@ -9,25 +9,25 @@
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <!-- StackPanel surrounding full page.-->
-        <StackPanel>
+        <StackPanel Background="#fad8d1" RenderTransformOrigin="0.509,0.83" Margin="-10,0,10,0">
             <!-- Logo & Title -->
-            <StackPanel x:Name="___StackPanel___titel">
-                <TextBlock FontSize="48px" FontWeight="Bold">Touchpoint</TextBlock>
+            <StackPanel x:Name="___StackPanel___titel" Height="166">
+                <Image Source="ms-appx:///Assets/Images/TouchPointFlotFinal.png" Height="100px" Margin="108,10,140,10" VerticalAlignment="Center" />
             </StackPanel>
-            <StackPanel x:Name="___StackPanel___ramme" HorizontalAlignment="Left" Height="343" Margin="10,0,0,0" Width="578">
+            <StackPanel x:Name="___StackPanel___ramme" HorizontalAlignment="Left" Height="473" Margin="320,0,0,0" Width="748">
                 <StackPanel Height="118" Margin="0,0,-18,0" Orientation="Horizontal">
-                    <TextBlock Margin="0,10" TextWrapping="Wrap" Text="Lokale navn" Width="253" Height="98"/>
-                    <TextBox Margin="0,10" TextWrapping="Wrap" Text="Indtast lokale" Width="264"/>
+                    <TextBlock Margin="0,10" TextWrapping="Wrap" Text="Lokale navn" Width="253" Height="98"  Foreground="White" FontSize="20px"/>
+                    <TextBox Margin="0,10" TextWrapping="Wrap" Text="Indtast lokale" Width="264" Foreground="#230101" />
                 </StackPanel>
                 <StackPanel Height="147" Margin="0,0,10,0" Orientation="Horizontal">
-                    <TextBlock HorizontalAlignment="Left" Height="98" Margin="0,-2,0,64" TextWrapping="Wrap" Text="Adresse" Width="253" RenderTransformOrigin="0.513,0.541"/>
-                    <TextBox TextWrapping="Wrap" Text="Indtast adresse " Width="264" Height="98" VerticalAlignment="Top"/>
+                    <TextBlock HorizontalAlignment="Left" Height="98" Margin="0,-2,0,64" TextWrapping="Wrap" Text="Adresse" Width="253" RenderTransformOrigin="0.513,0.541" Foreground="White" FontSize="20px"/>
+                    <TextBox TextWrapping="Wrap" Text="Indtast adresse " Width="264" Height="98" VerticalAlignment="Top" Foreground="#230101"/>
                 </StackPanel>
+                <Button Content="Opret" Background="#fad8d1" Foreground="White" FontSize="25px" Width="140" VerticalAlignment="Center" BorderBrush="White" BorderThickness="7"  Height="75"/>
             </StackPanel>
+            <Button Click="BackToUndervisningsstedView" Content="Back" VerticalAlignment="Top" Background="#fad8d1" Foreground="White" FontSize="25px" Width="140" BorderBrush="White" BorderThickness="7"  Height="75" Margin="10,0,0,0"/>
             <!-- Content -->
             <!-- Footer -->
         </StackPanel>
-        <Button Click="BackToUndervisningsstedView" Content="Back" Margin="10,415,0,0" VerticalAlignment="Top" Height="79" Width="159" FontSize="36"/>
-        <Button Content="Opret" Height="79" Margin="405,415,0,0" VerticalAlignment="Top" Width="170" FontSize="36"/>
     </Grid>
 </Page>

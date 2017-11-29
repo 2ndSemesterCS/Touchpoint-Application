@@ -12,7 +12,7 @@
         <StackPanel Background="#fad8d1">
             <!-- Logo & Title -->
             <StackPanel  >
-                <Image    Source="Assets/Images/TouchPointFlotFinal.png" Height="100px" Margin="10,10,10,10"/>
+                <Image    Source="Assets/Images/TouchPointFlotFinal.png" Height="100px" Margin="108,10,140,10"/>
             
             </StackPanel>
             <!-- Navigation Bar -->
@@ -25,13 +25,14 @@
                         <Setter Property="Margin" Value="0,0,20,0" />
                     </Style>
                 </StackPanel.Resources>
+                <TextBlock  Foreground="White" Width="204"/>
                 <Button Background="#fad8d1" Foreground="White" Width="161" FontSize="25px" Content="Kurser"/>
                 <Button Background="#fad8d1" Foreground="White" Width="161" FontSize="25px" Content="Klinik"/>
                 <Button Background="#fad8d1" Foreground="White" Width="161" FontSize="25px" Content="Hvem er vi?"/>
                 <Button Background="#fad8d1" Foreground="White" Width="161" FontSize="25px" Content="Artikler"/>
                 <Button Background="#fad8d1" Foreground="White" Width="161" FontSize="25px" Content="Kontakt"/>
                 <Button Background="#fad8d1" Foreground="White" Width="161" FontSize="25px" Content="Webshop"/>
-                <Button Background="#fad8d1" Foreground="White" Click="AdminViewClick" FontSize="25px" Content="Administrator"/>
+                <Button Background="#fad8d1" Foreground="White" Click="AdminViewClick" FontSize="25px" Content="Administrator" Margin="0,9,20,8"/>
             </StackPanel>
             <StackPanel Height="779">
                 <Image Source="Assets\Images\TouchMinePoints.png" Width="500" Height="532" Margin="500,30"/>
