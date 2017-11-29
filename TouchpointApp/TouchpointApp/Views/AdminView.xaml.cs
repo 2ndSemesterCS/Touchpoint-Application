@@ -12,7 +12,6 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
-using TouchpointApp.Views.Lokale;
 using TouchpointApp.Views.Undervisningssted;
 using TouchpointApp.Views.Serie;
 
@@ -39,11 +38,6 @@ namespace TouchpointApp.Views
         private void KursusViewClick(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(Views.KursusView), null);
-        }
-
-        private void LokaleViewClick(object sender, RoutedEventArgs e)
-        {
-            this.Frame.Navigate(typeof(LokaleView), null);
         }
 
         private void SerieViewClick(object sender, RoutedEventArgs e)
