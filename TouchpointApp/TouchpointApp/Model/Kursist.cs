@@ -49,13 +49,13 @@
 
         // Constructor
 
-        public Kursist(string navn, string email, /*string by, string land, string adresse,*/ string tlf)
+        public Kursist(string navn, string email, string by, string land, string adresse, string tlf)
         {
             _navn = navn ;
             _email = email;
-            //_by = by;
-            //_land = land;
-            //_adresse = adresse;
+            _by = by;
+            _land = land;
+            _adresse = adresse;
             _tlf = tlf;
         }
     }
