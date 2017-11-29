@@ -21,7 +21,7 @@
                 </StackPanel>
                 <StackPanel Height="160" Margin="0,0,10,0" Orientation="Horizontal">
                     <TextBlock HorizontalAlignment="Left" Height="98" Margin="0,-40,0,26" TextWrapping="Wrap" Text="Adresse" Width="264" RenderTransformOrigin="0.513,0.541"/>
-                    <TextBox TextWrapping="Wrap" Text="Indtast adresse " Width="264" Height="98" VerticalAlignment="Top"/>
+                    <TextBox TextWrapping="Wrap" Text="Indtast adresse " Width="269" Height="98" VerticalAlignment="Top"/>
                 </StackPanel>
             </StackPanel>
             <!-- Content -->
