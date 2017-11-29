@@ -4,6 +4,7 @@ namespace TouchpointApp.DataStorage
 {
     public class KursusData : ViewModelBase
     {
+        #region Instance Fields
         private string _titel;
         private string _dato;
         private string _tidspunkt;
@@ -15,12 +16,16 @@ namespace TouchpointApp.DataStorage
 
         private Model.Underviser _underviser;
         private Model.Undervisningssted _undervisningssted;
+        #endregion
 
+        #region Constructor
         public KursusData()
         {
 
         }
+        #endregion
 
+        #region Properties
         public string Titel { get { return _titel; } set { value = _titel; OnPropertyChanged("titel");}}
         public string Dato { get { return _dato; } set { value = _dato; OnPropertyChanged("dato");}}
         public string Tidspunkt { get { return _tidspunkt; } set { value = _tidspunkt; OnPropertyChanged("tidspunkt");}}
@@ -31,5 +36,6 @@ namespace TouchpointApp.DataStorage
         public double Depositum { get { return _depositum; } set { value = _depositum; OnPropertyChanged("depositum"); } }
         public Model.Underviser Underviser { get { return _underviser; } set { value = _underviser; OnPropertyChanged("underviser");}}
         public Model.Undervisningssted Undervisningssted { get { return _undervisningssted; } set { value = _undervisningssted; OnPropertyChanged("undervisningssted");}}
+        #endregion
     }
 }
