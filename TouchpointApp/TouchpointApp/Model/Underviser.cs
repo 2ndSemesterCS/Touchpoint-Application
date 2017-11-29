@@ -17,10 +17,7 @@ namespace TouchpointApp.Model
             _tlf = tlf;
         }
 
-        public Underviser()
-        {
-            throw new NotImplementedException();
-        }
+        public int Key { get; set; } 
 
         public string Navn
         {
