@@ -21,12 +21,11 @@
         </StackPanel>
         <Button Click="BackToSerieView" Content="Back" Margin="29,0,0,30" VerticalAlignment="Bottom" Width="139" Height="60" FontSize="36"/>
         <StackPanel x:Name="ListViewStack" HorizontalAlignment="Left" Margin="51,139,0,122" Width="374" d:LayoutOverrides="HorizontalAlignment">
-            <TextBlock Height="64" TextWrapping="Wrap" FontSize="36" Margin="0,0,0,0">
-                    <Run Text="Oversigt over "/>
-                    <Run Text="s"/>
-                    <Run Text="erier"/>
+            <TextBlock Height="104" TextWrapping="Wrap" FontSize="36" Margin="0,0,36,0">
+                <Run Text="Oversigt over "/>
+                <Run Text="serier"/>
             </TextBlock>
-            <ListView Height="396" Margin="0,0,10,0" SelectionChanged="ListView_SelectionChanged"/>
+            <ListView Height="352" Margin="0,0,10,0" SelectionChanged="ListView_SelectionChanged"/>
         </StackPanel>
         <StackPanel x:Name="RedigerViewStack" HorizontalAlignment="Right" Margin="0,139,103,154" Width="733" Orientation="Horizontal">
             <StackPanel x:Name="StackPanelBeskrivelse" Orientation="Horizontal" Margin="0,0,0,10">

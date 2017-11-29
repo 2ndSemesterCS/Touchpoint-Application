@@ -17,27 +17,29 @@
             <!-- Content -->
             <!-- Footer -->
         </StackPanel>
-        <Button Click="BackToUndervisningsstedView" Content="Back" Margin="51,0,0,148" VerticalAlignment="Bottom" Height="93" Width="177"/>
-        <StackPanel HorizontalAlignment="Left" Margin="51,109,0,272" Width="464">
+        <Button Click="BackToUndervisningsstedView" Content="Back" Margin="51,0,0,117" VerticalAlignment="Bottom" Height="93" Width="177"/>
+        <StackPanel HorizontalAlignment="Left" Margin="51,109,0,255" Width="464">
             <TextBlock Height="112" Margin="10,0,0,0" TextWrapping="Wrap" Text="Oversigt over undervisningssteder" FontSize="36"/>
-            <ListView Height="556" Margin="10,0"/>
+            <ScrollViewer Height="245">
+                <ListView Height="244" Width="444"/>
+            </ScrollViewer>
         </StackPanel>
-        <StackPanel Margin="594,109,518,272" d:LayoutOverrides="LeftPosition, RightPosition, TopPosition, BottomPosition">
-            <StackPanel Height="127" Margin="10,0,-184,0" Orientation="Horizontal">
-                <TextBlock Margin="0,10" TextWrapping="Wrap" Width="192" FontSize="36">
+        <StackPanel Margin="594,109,130,255" d:LayoutOverrides="LeftPosition, RightPosition, TopPosition, BottomPosition">
+            <StackPanel Height="127" Orientation="Horizontal" d:LayoutOverrides="HorizontalAlignment">
+                <TextBlock Margin="0,0,0,3" TextWrapping="Wrap" Width="192" FontSize="36">
                     <Run Text="L"/>
                     <Run Text="okale"/>
                 </TextBlock>
-                <TextBox Margin="0,10,0,0" TextWrapping="Wrap" Text="Indtast lokale" Width="218" FontSize="36"/>
+                <TextBox TextWrapping="Wrap" Text="Indtast lokale" Width="363" FontSize="36"/>
             </StackPanel>
-            <StackPanel Height="120" Margin="10,0" Orientation="Horizontal">
-                <TextBlock HorizontalAlignment="Left" Height="119" TextWrapping="Wrap" Width="191" FontSize="36">
+            <StackPanel Height="127" Margin="10,0,0,0" Orientation="Horizontal" d:LayoutOverrides="LeftMargin, RightMargin">
+                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Width="184" FontSize="36" Margin="0,0,0,4">
                     <Run Text="A"/>
                     <Run Text="dresse"/>
                 </TextBlock>
-                <TextBox Margin="0,10,0,0" TextWrapping="Wrap" Text="Indtast adresse" Width="210" FontSize="36"/>
+                <TextBox TextWrapping="Wrap" Text="Indtast adresse" Width="362" FontSize="36" Margin="0,10,0,0"/>
             </StackPanel>
         </StackPanel>
-        <Button Content="Rediger" HorizontalAlignment="Right" Height="93" Margin="0,0,657,157" VerticalAlignment="Bottom" Width="177" FontSize="36"/>
+        <Button Content="Rediger" HorizontalAlignment="Right" Height="93" Margin="0,0,238,117" VerticalAlignment="Bottom" Width="177" FontSize="36" d:LayoutOverrides="HorizontalAlignment"/>
     </Grid>
 </Page>
