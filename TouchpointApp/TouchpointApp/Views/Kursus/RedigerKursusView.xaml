@@ -5,75 +5,107 @@
     xmlns:local="using:TouchpointApp.Views"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d" Height="720">
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <!-- StackPanel surrounding full page.-->
-        <!-- StackPanel surrounding full page.-->
-        <StackPanel RenderTransformOrigin="0.75,0.426">
-            <!-- Logo & Title -->
-            <StackPanel>
-                <TextBlock FontSize="48px" FontWeight="Bold">
+    mc:Ignorable="d" Height="3115">
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Margin="0,0,0,-318.5">
+            <!-- StackPanel surrounding full page.-->
+            <StackPanel RenderTransformOrigin="0.75,0.426" Margin="0,0,0,10">
+                <!-- Logo & Title -->
+
+                <StackPanel>
+                    <TextBlock FontSize="48px" FontWeight="Bold">
                     <Run Text="Touchpoint"/>
-                </TextBlock>
+                    </TextBlock>
+                </StackPanel>
+                <!-- Content -->
+                <!-- Footer -->
             </StackPanel>
-            <!-- Content -->
-            <!-- Footer -->
-        </StackPanel>
+            <Button Click="BackToKursusView" Content="Back" Margin="29,0,0,30" VerticalAlignment="Bottom" Width="139" Height="60" FontSize="36"/>
 
-        <Button Click="BackToKursusView" Content="Back" Margin="29,0,0,30" VerticalAlignment="Bottom" Width="139" Height="60" FontSize="36"/>
-        <ScrollViewer HorizontalScrollBarVisibility="Auto" Margin="477,50,32,115">
-            <StackPanel x:Name="RedigerViewStack" HorizontalAlignment="Right" Width="733" Orientation="Vertical">
-                <StackPanel x:Name="Titel" Margin="0,0,0,0" HorizontalAlignment="Right" Width="733" Orientation="Horizontal" Height="71">
-                    <TextBlock Height="67" TextWrapping="Wrap" Text="Titel&#x9;" VerticalAlignment="Top" Width="209" FontSize="36" Margin="0,0,0,0"/>
-                    <TextBox Height="67" TextWrapping="Wrap" Text="Indtast titel" VerticalAlignment="Top" Width="400" FontSize="36"/>
-                </StackPanel>
-                <StackPanel x:Name="Dato" HorizontalAlignment="Right" Margin="0,0,0,0" Width="733" Orientation="Horizontal" Height="71">
-                    <TextBlock Height="67" TextWrapping="Wrap" Text="Dato" VerticalAlignment="Top" Width="209" FontSize="36" Margin="0,0,0,0"/>
-                    <TextBox Height="67" TextWrapping="Wrap" Text="Indtast dato" VerticalAlignment="Top" Width="400" FontSize="36"/>
-                </StackPanel>
-                <StackPanel x:Name="Tidspunkt" HorizontalAlignment="Right" Margin="0,0,0,0" Width="733" Orientation="Horizontal" Height="71">
-                    <TextBlock TextWrapping="Wrap" Text="Tidspunkt" Width="209" FontSize="36" Margin="0,0,0,4" Height="67"/>
-                    <TextBox Height="67" TextWrapping="Wrap" Text="Indtast tidspunkt" VerticalAlignment="Top" Width="400" FontSize="36"/>
-                </StackPanel>
-                <StackPanel x:Name="Varighed" HorizontalAlignment="Right" Margin="0,0,0,0" Width="733" Orientation="Horizontal" Height="79">
-                    <TextBlock Height="67" TextWrapping="Wrap" Text="Varighed" VerticalAlignment="Top" Width="209" FontSize="36" Margin="0,0,0,0"/>
-                    <TextBox Height="79" TextWrapping="Wrap" Text="Indtast varighed" VerticalAlignment="Top" Width="400" FontSize="36"/>
-                </StackPanel>
-                <StackPanel x:Name="Pris" HorizontalAlignment="Right" Margin="0,0,0,0" Width="733" Orientation="Horizontal" Height="77">
-                    <TextBlock TextWrapping="Wrap" Height="67" Text="Pris" Width="209" VerticalAlignment="Top" FontSize="36" Margin="0,0,0,0"/>
-                    <TextBox Height="79" TextWrapping="Wrap" Text="Indtast pris" VerticalAlignment="Top" Width="400" FontSize="36"/>
-                </StackPanel>
-                <StackPanel x:Name="Sprog" HorizontalAlignment="Right" Margin="0,0,0,0" Width="733" Orientation="Horizontal" Height="79">
-                    <TextBlock Height="67" TextWrapping="Wrap" Text="Sprog" VerticalAlignment="Top" Width="209" FontSize="36" Margin="0,0,0,0"/>
-                    <TextBox Height="79" TextWrapping="Wrap" Text="Indtast sprog" VerticalAlignment="Top" Width="400" FontSize="36"/>
-                </StackPanel>
-                <StackPanel x:Name="Beskrivelse" HorizontalAlignment="Right" Margin="0,0,0,0" Width="733" Orientation="Horizontal" Height="79">
-                    <TextBlock Height="67" TextWrapping="Wrap" Text="Beskrivelse" VerticalAlignment="Top" Width="209" FontSize="36" Margin="0,0,0,0"/>
-                    <TextBox Height="79" TextWrapping="Wrap" Text="Indtast beskrivelse" VerticalAlignment="Top" Width="400" FontSize="36"/>
-                </StackPanel>
-                <StackPanel x:Name="Depositum" Margin="0,0,0,0" HorizontalAlignment="Right" Width="733" Orientation="Horizontal" Height="79">
-                    <TextBlock Height="69" TextWrapping="Wrap" Text="Depositum" VerticalAlignment="Top" Width="209" FontSize="36" Margin="0,0,0,0"/>
-                    <TextBox Height="79" TextWrapping="Wrap" Text="Indtast depositum" VerticalAlignment="Top" Width="400" FontSize="36"/>
-                </StackPanel>
+            <StackPanel x:Name="ListViewStack" HorizontalAlignment="Left" Margin="51,139,0,90" Width="645">
+                <ListView Height="300" Margin="0,0,10,0">
+                    <TextBlock Height="84" TextWrapping="Wrap" Text="Oversigt over Titler" Width="598" FontSize="36"/>
+                </ListView>
+                <ListView Height="300" Margin="0,0,10,0">
+                    <TextBlock Height="84" TextWrapping="Wrap" Text="Oversigt over Datoer" Width="598" FontSize="36"/>
+                </ListView>
+                <ListView Height="300" Margin="0,0,10,0">
+                    <TextBlock Height="84" TextWrapping="Wrap" Text="Oversigt over Tidspunkter" Width="598" FontSize="36"/>
+                </ListView>
+                <ListView Height="300" Margin="0,0,10,0">
+                    <TextBlock Height="84" TextWrapping="Wrap" Text="Oversigt over Varigheder" Width="598" FontSize="36"/>
+                </ListView>
+                <ListView Height="300" Margin="0,0,10,0">
+                    <TextBlock Height="84" TextWrapping="Wrap" Text="Oversigt over Priser" Width="598" FontSize="36"/>
+                </ListView>
+                <ListView Height="300" Margin="0,0,10,0">
+                    <TextBlock Height="84" TextWrapping="Wrap" Text="Oversigt over Sprog" Width="598" FontSize="36"/>
+                </ListView>
+                <ListView Height="300" Margin="0,0,10,0">
+                    <TextBlock Height="84" TextWrapping="Wrap" Text="Oversigt over Beskrivelse" Width="598" FontSize="36"/>
+                </ListView>
+                <ListView Height="300" Margin="0,0,10,0">
+                    <TextBlock Height="84" TextWrapping="Wrap" Text="Oversigt over Depositum" Width="598" FontSize="36"/>
+                </ListView>
+                <ListView Height="300" Margin="0,0,10,0">
+                    <TextBlock Height="84" TextWrapping="Wrap" Text="Oversigt over Undervisere" Width="598" FontSize="36"/>
+                </ListView>
+                <ListView Height="300" Margin="0,0,10,0">
+                    <TextBlock Height="84" TextWrapping="Wrap" Text="Oversigt over Lokationer" Width="598" FontSize="36"/>
+                </ListView>
 
             </StackPanel>
-        </ScrollViewer>
-        <Button Content="Gem" HorizontalAlignment="Right" Height="60" Margin="0,0,259,30" VerticalAlignment="Bottom" Width="216" FontSize="36"/>
-        <TextBlock Height="84" TextWrapping="Wrap" Width="361" FontSize="36" HorizontalAlignment="Left" Margin="0,72,0,0" VerticalAlignment="Top" d:LayoutOverrides="Width">
-            <Run Text="Oversigt over "/>
-            <Run Text="kurser"/>
-        </TextBlock>
-        <ScrollViewer HorizontalScrollBarVisibility="Auto" Margin="10,139,919,115" RenderTransformOrigin="0.5,0.5">
-            <StackPanel x:Name="ListViewStack" HorizontalAlignment="Left" Width="341" Height="466">
-                <StackPanel x:Name="Dato_Copy" HorizontalAlignment="Right" Margin="0,0,-345,0" Width="733" Orientation="Horizontal" Height="71" d:LayoutOverrides="TopPosition, BottomPosition">
-                    <TextBlock Height="67" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="333" FontSize="36" Margin="0,0,0,0"/>
-                </StackPanel>
+            <StackPanel x:Name="RedigerViewStack" Margin="664,139,103,2849" Orientation="Horizontal">
+                <TextBlock Height="67" TextWrapping="Wrap" Text="Titel" VerticalAlignment="Top" Width="333" FontSize="36"/>
+                <TextBox Height="67" TextWrapping="Wrap" Text="Indtast Titel"  VerticalAlignment="Top" Width="399" FontSize="36" TextChanged="TextBox_TextChanged"/>
+
             </StackPanel>
-        </ScrollViewer>
-    </Grid>
 
+            <Button Content="Gem" HorizontalAlignment="Right" Height="60" Margin="0,0,259,30" VerticalAlignment="Bottom" Width="216" FontSize="36"/>
+            <StackPanel x:Name="RedigerViewStack_Copy" HorizontalAlignment="Right" Margin="0,438,103,2550" Width="733" Orientation="Horizontal">
+                <TextBlock Height="67" TextWrapping="Wrap" Text="Dato" VerticalAlignment="Top" Width="333" FontSize="36"/>
+                <TextBox Height="67" TextWrapping="Wrap" Text="Indtast Dato" VerticalAlignment="Top" Width="399" FontSize="36" TextChanged="TextBox_TextChanged"/>
 
+            </StackPanel>
+            <StackPanel x:Name="RedigerViewStack_Copy1" HorizontalAlignment="Right" Margin="0,737,103,2251" Width="733" Orientation="Horizontal">
+                <TextBlock Height="67" TextWrapping="Wrap" Text="Tidspunkt" VerticalAlignment="Top" Width="333" FontSize="36"/>
+                <TextBox Height="67" TextWrapping="Wrap" Text="Indtast Tidspunkt" VerticalAlignment="Top" Width="399" FontSize="36" TextChanged="TextBox_TextChanged"/>
 
+            </StackPanel>
+            <StackPanel x:Name="RedigerViewStack_Copy2" HorizontalAlignment="Right" Margin="0,1036,103,1952" Width="733" Orientation="Horizontal">
+                <TextBlock Height="67" TextWrapping="Wrap" Text="Varighed" VerticalAlignment="Top" Width="333" FontSize="36"/>
+                <TextBox Height="67" TextWrapping="Wrap" Text="Indtast Varighed" VerticalAlignment="Top" Width="399" FontSize="36" TextChanged="TextBox_TextChanged"/>
 
-</Page>
+            </StackPanel>
+            <StackPanel x:Name="RedigerViewStack_Copy3" HorizontalAlignment="Right" Margin="0,1335,103,1653" Width="733" Orientation="Horizontal">
+                <TextBlock Height="67" TextWrapping="Wrap" Text="Pris" VerticalAlignment="Top" Width="333" FontSize="36"/>
+                <TextBox Height="67" TextWrapping="Wrap" Text="Indtast Pris" VerticalAlignment="Top" Width="399" FontSize="36" TextChanged="TextBox_TextChanged"/>
+
+            </StackPanel>
+            <StackPanel x:Name="RedigerViewStack_Copy4" HorizontalAlignment="Right" Margin="0,1634,103,1354" Width="733" Orientation="Horizontal">
+                <TextBlock Height="67" TextWrapping="Wrap" Text="Sprog" VerticalAlignment="Top" Width="333" FontSize="36"/>
+                <TextBox Height="67" TextWrapping="Wrap" Text="Indtast Sprog" VerticalAlignment="Top" Width="399" FontSize="36" TextChanged="TextBox_TextChanged"/>
+
+            </StackPanel>
+            <StackPanel x:Name="RedigerViewStack_Copy5" HorizontalAlignment="Right" Margin="0,1933,103,1055" Width="733" Orientation="Horizontal">
+                <TextBlock Height="67" TextWrapping="Wrap" Text="Beskrivelse" VerticalAlignment="Top" Width="333" FontSize="36"/>
+                <TextBox Height="196" TextWrapping="Wrap" Text="Indtast Beskrivelse" VerticalAlignment="Top" Width="399" FontSize="36" TextChanged="TextBox_TextChanged"/>
+
+            </StackPanel>
+            <StackPanel x:Name="RedigerViewStack_Copy6" HorizontalAlignment="Right" Margin="0,2232,103,756" Width="733" Orientation="Horizontal">
+                <TextBlock Height="67" TextWrapping="Wrap" Text="Depositum" VerticalAlignment="Top" Width="333" FontSize="36"/>
+                <TextBox Height="67" TextWrapping="Wrap" Text="Indtast Depositum" VerticalAlignment="Top" Width="399" FontSize="36" TextChanged="TextBox_TextChanged"/>
+
+            </StackPanel>
+            <StackPanel x:Name="RedigerViewStack_Copy7" HorizontalAlignment="Right" Margin="0,2526,103,462" Width="733" Orientation="Horizontal">
+                <TextBlock Height="67" TextWrapping="Wrap" Text="Underviser" VerticalAlignment="Top" Width="333" FontSize="36"/>
+                <TextBox Height="67" TextWrapping="Wrap" Text="Indtast Underviser" VerticalAlignment="Top" Width="399" FontSize="36" TextChanged="TextBox_TextChanged"/>
+
+            </StackPanel>
+            <StackPanel x:Name="RedigerViewStack_Copy8" HorizontalAlignment="Right" Margin="0,2849,103,95" Width="733" Orientation="Horizontal">
+                <TextBlock Height="67" TextWrapping="Wrap" Text="Lokation" VerticalAlignment="Top" Width="333" FontSize="36"/>
+                <TextBox Height="67" TextWrapping="Wrap" Text="Indtast Lokation" VerticalAlignment="Top" Width="399" FontSize="36" TextChanged="TextBox_TextChanged"/>
+
+            </StackPanel>
+        </Grid>
+    </Page>
 

@@ -9,11 +9,11 @@ namespace TouchpointApp.ViewModel.Undervisningssted
 
         private UndervisningsstedCatalog _uc;
 
-        private string _lokale;
+        private Model.Lokale _lokale;
         private string _adresse;
         #endregion
 
-        public string Lokale
+        public Model.Lokale Lokale
         {
             get { return _lokale; }
             set

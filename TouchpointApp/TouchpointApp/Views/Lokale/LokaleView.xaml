@@ -1,8 +1,8 @@
 ﻿<Page
-    x:Class="TouchpointApp.Views.Serie.RedigerSerieView"
+    x:Class="TouchpointApp.Views.Lokale.LokaleView"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:TouchpointApp.Views.Serie"
+    xmlns:local="using:TouchpointApp.Views.Lokale"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
@@ -14,13 +14,23 @@
             <StackPanel>
                 <TextBlock FontSize="48px" FontWeight="Bold">Touchpoint</TextBlock>
             </StackPanel>
+            <!-- Navigation Bar -->
+            <StackPanel Orientation="Vertical">
+                <StackPanel.Resources>
+                    <Style TargetType="Button">
+                        <Setter Property="Margin" Value="0,20,0,0" />
+                    </Style>
+                </StackPanel.Resources>
+                <Button Click="OpretLokaleViewClick">Opret Lokale</Button>
+                <Button Click="RedigerLokaleViewClick">Rediger Lokale</Button>
+                <Button Click="SletLokaleViewClick">Slet Lokale</Button>
+            </StackPanel>
             <!-- Content -->
             <StackPanel>
-
             </StackPanel>
             <!-- Footer -->
             <StackPanel>
-                <Button Click="BackToSerieView">Back</Button>
+                <Button Click="BackToAdminView">Back</Button>
             </StackPanel>
         </StackPanel>
     </Grid>

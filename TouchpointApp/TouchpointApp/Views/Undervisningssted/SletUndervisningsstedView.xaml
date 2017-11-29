@@ -18,12 +18,10 @@
             <!-- Footer -->
         </StackPanel>
         <Button Click="BackToUndervisningsstedView" Content="Back" Margin="0,0,0,102" VerticalAlignment="Bottom" Width="148" Height="85" FontSize="36"/>
-        <StackPanel Margin="10,82,551,229" d:LayoutOverrides="LeftPosition, RightPosition">
+        <StackPanel HorizontalAlignment="Left" Margin="10,82,0,343" Width="525">
             <TextBlock Height="114" Margin="0,0,10,0" TextWrapping="Wrap" Text="Oversigt over undervisningssteder " FontSize="36"/>
-            <ScrollViewer Height="297" Margin="10,0,0,0">
-                <ListView Height="287" Width="699"/>
-            </ScrollViewer>
+            <ListView Height="536" Margin="0,0,10,0"/>
         </StackPanel>
-        <Button Content="Slet" Height="85" Margin="0,0,492,102" VerticalAlignment="Bottom" Width="148" FontSize="36" HorizontalAlignment="Right"/>
+        <Button Content="Slet" Height="94" Margin="354,0,0,228" VerticalAlignment="Bottom" Width="181" FontSize="36"/>
     </Grid>
 </Page>

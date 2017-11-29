@@ -15,18 +15,18 @@ using Windows.UI.Xaml.Navigation;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
-namespace TouchpointApp.Views
+namespace TouchpointApp.Views.Lokale
 {
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class SletKursusView : Page
+    public sealed partial class SletLokaleView : Page
     {
-        public SletKursusView()
+        public SletLokaleView()
         {
             this.InitializeComponent();
         }
-        public void BackToKursusView(object sender, RoutedEventArgs e)
+        public void BackToLokaleView(object sender, RoutedEventArgs e)
         {
             this.Frame.GoBack();
         }

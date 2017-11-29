@@ -10,16 +10,21 @@ namespace TouchpointApp.Model
     public class Undervisningssted
     {
         private string _adresse;
-        private string _lokale;
+        private Lokale _lokale;
 
 
-        public Undervisningssted(string lokale, string adresse)
+        public Undervisningssted(Lokale lokale, string adresse)
         {
           
-            _lokale = lokale;
+          _lokale = lokale;
             _adresse = adresse;
         }
-   
+
+        public Undervisningssted(string adresse, Model.Lokale lokale)
+        {
+            _adresse = adresse;
+            _lokale = lokale;
+        }
 
         public string Adresse
         {
@@ -27,7 +32,7 @@ namespace TouchpointApp.Model
             set { _adresse = value; }
         }
 
-        public string Lokale
+        public Lokale Lokale
         {
             get { return _lokale; }
             set { _lokale = value; }

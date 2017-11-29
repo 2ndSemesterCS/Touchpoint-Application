@@ -98,6 +98,7 @@
     <Compile Include="Command\RelayCommand.cs" />
     <Compile Include="DataStorage\KursistData.cs" />
     <Compile Include="DataStorage\KursusData.cs" />
+    <Compile Include="DataStorage\LokaleData.cs" />
     <Compile Include="DataStorage\SerieData.cs" />
     <Compile Include="DataStorage\UnderviserData.cs" />
     <Compile Include="DataStorage\UndervisningsstedData.cs" />
@@ -106,6 +107,7 @@
     </Compile>
     <Compile Include="Model\Kursist.cs" />
     <Compile Include="Model\Kursus.cs" />
+    <Compile Include="Model\Lokale.cs" />
     <Compile Include="Model\Serie.cs" />
     <Compile Include="Model\Underviser.cs" />
     <Compile Include="Model\Undervisningssted.cs" />
@@ -116,6 +118,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModel\Kursist\KursistViewModel.cs" />
     <Compile Include="ViewModel\Kursus\KursusViewModel.cs" />
+    <Compile Include="ViewModel\Lokale\LokaleViewModel.cs" />
     <Compile Include="ViewModel\Serie\SerieViewModel.cs" />
     <Compile Include="ViewModel\Underviser\UnderviserViewmodel.cs" />
     <Compile Include="ViewModel\Undervisningssted\UndervisningsstedViewModel.cs" />
@@ -140,6 +143,18 @@
     </Compile>
     <Compile Include="Views\Kursus\OpretKursusView.xaml.cs">
       <DependentUpon>OpretKursusView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Lokale\LokaleView.xaml.cs">
+      <DependentUpon>LokaleView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Lokale\OpretLokaleView.xaml.cs">
+      <DependentUpon>OpretLokaleView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Lokale\RedigerLokaleView.xaml.cs">
+      <DependentUpon>RedigerLokaleView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Lokale\SletLokaleView.xaml.cs">
+      <DependentUpon>SletLokaleView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\PageWithBack.cs" />
     <Compile Include="Views\Kursus\RedigerKursusView.xaml.cs">
@@ -192,8 +207,6 @@
     <None Include="TouchpointApp_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Assets\Images\TouchMinePoints.png" />
-    <Content Include="Assets\Images\TouchPointFlotFinal.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
@@ -245,6 +258,22 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\Kursus\SletKursusView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Lokale\LokaleView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Lokale\OpretLokaleView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Lokale\RedigerLokaleView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Lokale\SletLokaleView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

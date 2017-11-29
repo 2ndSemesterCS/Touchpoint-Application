@@ -59,7 +59,7 @@
                 </TextBox>
             </StackPanel>
         </StackPanel>
-        <Button Command="{Binding OpretNyUnderviserCommand}" Content="Opret" Margin="1046,0,0,29" VerticalAlignment="Bottom" Height="66" Width="168" d:LayoutOverrides="VerticalAlignment"/>
+        <Button Command="{Binding OpretNyUnderviserCommand}" Content="Opret" Margin="1016,0,0,328" VerticalAlignment="Bottom" Height="66" Width="168"/>
         <!--<Button Click="1" Content="Opret Underviser" Margin="966,0,0,343" VerticalAlignment="Bottom" Height="81" Width="214" FontSize="25"/>-->
     </Grid>
 </Page>
