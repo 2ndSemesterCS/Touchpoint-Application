@@ -15,31 +15,16 @@ using Windows.UI.Xaml.Navigation;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
-namespace TouchpointApp.Views.Kursist
+namespace TouchpointApp.ViewModel.Underviser
 {
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class OpretKursistView : Page
+    public sealed partial class UnderviserViewmodelDelete : Page
     {
-        public OpretKursistView()
+        public UnderviserViewmodelDelete()
         {
             this.InitializeComponent();
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void BackToKursistView(object sender, RoutedEventArgs e)
-        {
-            this.Frame.GoBack();
-        }
-
-        private void TextBlock_SelectionChanged(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }

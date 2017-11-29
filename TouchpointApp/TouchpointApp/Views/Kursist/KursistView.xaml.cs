@@ -35,7 +35,7 @@ namespace TouchpointApp.Views
 
         private void RedigerKursistViewClick(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(RedigerKursusView), null);
+            this.Frame.Navigate(typeof(RedigerKursistView), null);
         }
 
         private void SletKursistViewClick(object sender, RoutedEventArgs e)

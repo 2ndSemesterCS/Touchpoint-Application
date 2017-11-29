@@ -9,19 +9,48 @@
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <!-- StackPanel surrounding full page.-->
-        <StackPanel>
+        <StackPanel RenderTransformOrigin="0.75,0.426">
             <!-- Logo & Title -->
             <StackPanel>
-                <TextBlock FontSize="48px" FontWeight="Bold">Touchpoint</TextBlock>
+                <TextBlock FontSize="48px" FontWeight="Bold">
+                    <Run Text="Touchpoint"/>
+                </TextBlock>
             </StackPanel>
             <!-- Content -->
-            <StackPanel>
-
-            </StackPanel>
             <!-- Footer -->
-            <StackPanel>
-                <Button Click="BackToKursistView">Back</Button>
+        </StackPanel>
+        <Button Click="BackToKursistView" Content="Back" Margin="29,0,0,30" VerticalAlignment="Bottom" Width="139" Height="60" FontSize="36"/>
+        <StackPanel x:Name="ListViewStack" HorizontalAlignment="Left" Margin="51,139,0,115" Width="388" d:LayoutOverrides="HorizontalAlignment">
+            <ListView Height="503" Margin="0,0,-14,0" HorizontalAlignment="Left" Width="389">
+                <TextBlock Height="84" TextWrapping="Wrap" Text="Oversigt over kursister" Width="361" FontSize="36"/>
+            </ListView>
+        </StackPanel>
+        <StackPanel x:Name="RedigerViewStack" HorizontalAlignment="Right" Margin="0,139,103,115" Width="733" Orientation="Vertical">
+            <StackPanel x:Name="Navn" HorizontalAlignment="Right" Margin="0,0,0,0" Width="733" Orientation="Horizontal" Height="71">
+                <TextBlock Height="67" TextWrapping="Wrap" Text="Navn" VerticalAlignment="Top" Width="333" FontSize="36" Margin="0,0,0,0"/>
+                <TextBox Height="67" TextWrapping="Wrap" Text="Indtast navn" VerticalAlignment="Top" Width="399" FontSize="36"/>
+            </StackPanel>
+            <StackPanel x:Name="Adresse" HorizontalAlignment="Right" Margin="0,0,0,0" Width="733" Orientation="Horizontal" Height="71">
+                <TextBlock Height="67" TextWrapping="Wrap" Text="Adresse" VerticalAlignment="Top" Width="333" FontSize="36" Margin="0,0,0,0"/>
+                <TextBox Height="67" TextWrapping="Wrap" Text="Indtast adresse" VerticalAlignment="Top" Width="399" FontSize="36"/>
+            </StackPanel>
+            <StackPanel x:Name="Email" HorizontalAlignment="Right" Margin="0,0,0,0" Width="733" Orientation="Horizontal" Height="71">
+                <TextBlock Height="67" TextWrapping="Wrap" Text="Email" VerticalAlignment="Top" Width="333" FontSize="36" Margin="0,0,0,0"/>
+                <TextBox Height="67" TextWrapping="Wrap" Text="Indtast email" VerticalAlignment="Top" Width="399" FontSize="36"/>
+            </StackPanel>
+            <StackPanel x:Name="Tlf" HorizontalAlignment="Right" Margin="0,0,0,0" Width="733" Orientation="Horizontal" Height="71">
+                <TextBlock Height="67" TextWrapping="Wrap" Text="Telefonnummer" VerticalAlignment="Top" Width="333" FontSize="36" Margin="0,0,0,0"/>
+                <TextBox Height="67" TextWrapping="Wrap" Text="Indtast telefonnummer" VerticalAlignment="Top" Width="399" FontSize="36"/>
+            </StackPanel>
+            <StackPanel x:Name="By" HorizontalAlignment="Right" Margin="0,0,0,0" Width="733" Orientation="Horizontal" Height="71">
+                <TextBlock Height="67" TextWrapping="Wrap" Text="By" VerticalAlignment="Top" Width="333" FontSize="36" Margin="0,0,0,0"/>
+                <TextBox Height="67" TextWrapping="Wrap" Text="Indtast by" VerticalAlignment="Top" Width="399" FontSize="36"/>
+            </StackPanel>
+            <StackPanel x:Name="Land" HorizontalAlignment="Right" Margin="0,0,0,0" Width="733" Orientation="Horizontal" Height="71">
+                <TextBlock Height="67" TextWrapping="Wrap" Text="Land" VerticalAlignment="Top" Width="333" FontSize="36" Margin="0,0,0,0"/>
+                <TextBox Height="67" TextWrapping="Wrap" Text="Indtast land" VerticalAlignment="Top" Width="399" FontSize="36"/>
             </StackPanel>
         </StackPanel>
+        <Button Content="Gem" HorizontalAlignment="Right" Height="60" Margin="0,0,259,30" VerticalAlignment="Bottom" Width="216" FontSize="36"/>
     </Grid>
 </Page>

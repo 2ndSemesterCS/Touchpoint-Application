@@ -17,29 +17,29 @@
         <StackPanel Height="86" VerticalAlignment="Top" d:LayoutOverrides="VerticalAlignment">
 
             <StackPanel>
-                <TextBlock FontSize="48px" FontWeight="Bold" Text="Touchpoint"/>
+                <TextBlock FontSize="48px" FontWeight="Bold" Text="Touchpoint" SelectionChanged="TextBlock_SelectionChanged"/>
             </StackPanel>
             <!-- Content -->
         </StackPanel>
-        <Button  Content="Back" Margin="80,0,0,56" VerticalAlignment="Bottom" Height="48" Width="97"/>
-        <StackPanel x:Name="Holder_alt" HorizontalAlignment="Left" Height="813" Margin="62,158,0,0" VerticalAlignment="Top" Width="1208">
-            <StackPanel x:Name="Navn" HorizontalAlignment="Left" Height="116" Margin="0,0,-58,0" VerticalAlignment="Top" Width="1245" Orientation="Horizontal">
+        <Button Click="BackToKursistView" Content="Back" Margin="80,0,0,56" VerticalAlignment="Bottom" Height="48" Width="97"/>
+        <StackPanel x:Name="Holder_alt" HorizontalAlignment="Left" Height="755" Margin="62,66,0,-101" VerticalAlignment="Top" Width="1208">
+            <StackPanel x:Name="Navn" HorizontalAlignment="Left" Height="84" Margin="0,0,-37,0" VerticalAlignment="Top" Width="1245" Orientation="Horizontal">
                 <TextBlock HorizontalAlignment="Left" Height="100" TextWrapping="Wrap" Text="Navn" VerticalAlignment="Top" Width="315" FontSize="48"/>
-                <TextBox TextWrapping="Wrap" Text="{Binding KursistData.Navn, Mode=TwoWay}" Margin="0,0.607,0,-2.575" Width="815" FontSize="48" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
+                <TextBox TextWrapping="Wrap" Text="{Binding KursistData.Navn, Mode=TwoWay}" Margin="0,0.607,0,1.407" Width="815" FontSize="48" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
                     <TextBox.RenderTransform>
                         <CompositeTransform Rotation="0.128"/>
                     </TextBox.RenderTransform>
                 </TextBox>
             </StackPanel>
-            <StackPanel x:Name="Tlf" HorizontalAlignment="Left" Height="116" Margin="0,0,-58,0" VerticalAlignment="Top" Width="1245" Orientation="Horizontal">
+            <StackPanel x:Name="Tlf" HorizontalAlignment="Left" Height="84" Margin="0,0,-37,0" VerticalAlignment="Top" Width="1245" Orientation="Horizontal">
                 <TextBlock HorizontalAlignment="Left" Height="100" TextWrapping="Wrap" Text="Tlf" VerticalAlignment="Top" Width="315" FontSize="48"/>
-                <TextBox TextWrapping="Wrap"  Text="{Binding KursistData.Tlf, Mode=TwoWay}" Margin="0,0.211,0,-2.179" Width="815" FontSize="48" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
+                <TextBox TextWrapping="Wrap"  Text="{Binding KursistData.Tlf, Mode=TwoWay}" Margin="0,0.211,0,-0.201" Width="815" FontSize="48" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
                     <TextBox.RenderTransform>
                         <CompositeTransform Rotation="0.128"/>
                     </TextBox.RenderTransform>
                 </TextBox>
             </StackPanel>
-            <StackPanel x:Name="Adresse" HorizontalAlignment="Left" Height="116" Margin="0,0,-37,0" VerticalAlignment="Top" Width="1245" Orientation="Horizontal">
+            <StackPanel x:Name="Adresse" HorizontalAlignment="Left" Height="84" Margin="0,0,-37,0" VerticalAlignment="Top" Width="1245" Orientation="Horizontal">
                 <TextBlock HorizontalAlignment="Left" Height="100" TextWrapping="Wrap" Text="Adresse" VerticalAlignment="Top" Width="315" FontSize="48"/>
                 <TextBox TextWrapping="Wrap"  Text="{Binding KursistData.Adresse , Mode=TwoWay}" Margin="0,0.211,0,-2.179" Width="815" FontSize="48" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
                     <TextBox.RenderTransform>
@@ -47,7 +47,7 @@
                     </TextBox.RenderTransform>
                 </TextBox>
             </StackPanel>
-            <StackPanel x:Name="Email" HorizontalAlignment="Left" Height="116" Margin="0,0,-37,0" VerticalAlignment="Top" Width="1245" Orientation="Horizontal">
+            <StackPanel x:Name="Email" HorizontalAlignment="Left" Height="84" Margin="0,0,-37,0" VerticalAlignment="Top" Width="1245" Orientation="Horizontal">
                 <TextBlock HorizontalAlignment="Left" Height="100" TextWrapping="Wrap" Text="Email" VerticalAlignment="Top" Width="315" FontSize="48"/>
                 <TextBox TextWrapping="Wrap"  Text="{Binding KursistData.Email, Mode=TwoWay}" Margin="0,0.211,0,-2.179" Width="815" FontSize="48" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
                     <TextBox.RenderTransform>
@@ -55,7 +55,7 @@
                     </TextBox.RenderTransform>
                 </TextBox>
             </StackPanel>
-            <StackPanel x:Name="Land" HorizontalAlignment="Left" Height="116" Margin="0,0,-37,0" VerticalAlignment="Top" Width="1245" Orientation="Horizontal">
+            <StackPanel x:Name="Land" HorizontalAlignment="Left" Height="84" Margin="0,0,-37,0" VerticalAlignment="Top" Width="1245" Orientation="Horizontal">
                 <TextBlock HorizontalAlignment="Left" Height="100" TextWrapping="Wrap" Text="Land" VerticalAlignment="Top" Width="315" FontSize="48"/>
                 <TextBox TextWrapping="Wrap"  Text="{Binding KursistData.Land, Mode=TwoWay}" Margin="0,0.211,0,-2.179" Width="815" FontSize="48" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
                     <TextBox.RenderTransform>
@@ -63,16 +63,16 @@
                     </TextBox.RenderTransform>
                 </TextBox>
             </StackPanel>
-            <StackPanel x:Name="By" HorizontalAlignment="Left" Height="116" Margin="0,0,-37,0" VerticalAlignment="Top" Width="1245" Orientation="Horizontal">
+            <StackPanel x:Name="By" HorizontalAlignment="Left" Height="84" Margin="0,0,-37,0" VerticalAlignment="Top" Width="1245" Orientation="Horizontal">
                 <TextBlock HorizontalAlignment="Left" Height="100" TextWrapping="Wrap" Text="By" VerticalAlignment="Top" Width="315" FontSize="48"/>
-                <TextBox TextWrapping="Wrap"  Text="{Binding KursistData.By, Mode=TwoWay}" Margin="0,0.211,0,-2.179" Width="815" FontSize="48" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
+                <TextBox TextWrapping="Wrap"  Text="{Binding KursistData.By, Mode=TwoWay}" Margin="0,0.211,0,5.785" Width="815" FontSize="48" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
                     <TextBox.RenderTransform>
                         <CompositeTransform Rotation="0.128"/>
                     </TextBox.RenderTransform>
                 </TextBox>
             </StackPanel>
         </StackPanel>
-        <Button Command="{Binding OpretNyUnderviserCommand}" Content="Opret" Margin="1010,0,0,128" VerticalAlignment="Bottom" Height="66" Width="168"/>
+        <Button Command="{Binding OpretNyUnderviserCommand}" Content="Opret" Margin="1012,0,0,43" VerticalAlignment="Bottom" Height="66" Width="168"/>
         <!--<Button Click="1" Content="Opret Underviser" Margin="966,0,0,343" VerticalAlignment="Bottom" Height="81" Width="214" FontSize="25"/>-->
     </Grid>
 </Page>
