@@ -15,13 +15,15 @@ namespace TouchpointApp.DataStorage
 
 
 
-#endregion
+        #endregion
 
 
+        #region Constructor
         public KursistData ()
         {
 
         }
+        #endregion
 
         #region Properties
 
