@@ -14,7 +14,7 @@ namespace TouchpointApp.ViewModel.Serie
 
         private int _serieId;
 
-        private Model.Kursus _kursus;
+        private List<Model.Kursus> _kursus;
 
         #endregion
 
@@ -37,7 +37,7 @@ namespace TouchpointApp.ViewModel.Serie
                 OnPropertyChanged("SerieID");
             }
         }
-        public Model.Kursus Kursus
+        public List<Model.Kursus> Kursus
         {
             get { return _kursus; }
             set
