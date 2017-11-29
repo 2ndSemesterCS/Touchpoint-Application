@@ -9,19 +9,36 @@
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <!-- StackPanel surrounding full page.-->
-        <StackPanel>
+        <StackPanel RenderTransformOrigin="0.75,0.426">
             <!-- Logo & Title -->
             <StackPanel>
-                <TextBlock FontSize="48px" FontWeight="Bold">Touchpoint</TextBlock>
+                <TextBlock FontSize="48px" FontWeight="Bold">
+                    <Run Text="Touchpoint"/>
+                </TextBlock>
             </StackPanel>
             <!-- Content -->
-            <StackPanel>
-
-            </StackPanel>
             <!-- Footer -->
-            <StackPanel>
-                <Button Click="BackToSerieView">Back</Button>
+        </StackPanel>
+        <Button Click="BackToSerieView" Content="Back" Margin="29,0,0,30" VerticalAlignment="Bottom" Width="139" Height="60" FontSize="36"/>
+        <StackPanel x:Name="ListViewStack" HorizontalAlignment="Left" Margin="51,139,0,122" Width="374" d:LayoutOverrides="HorizontalAlignment">
+            <TextBlock Height="104" TextWrapping="Wrap" FontSize="36" Margin="0,0,36,0">
+                <Run Text="Oversigt over "/>
+                <Run Text="serier"/>
+            </TextBlock>
+            <ListView Height="352" Margin="0,0,10,0" SelectionChanged="ListView_SelectionChanged"/>
+        </StackPanel>
+        <StackPanel x:Name="RedigerViewStack" HorizontalAlignment="Right" Margin="0,139,103,154" Width="733" Orientation="Horizontal">
+            <StackPanel x:Name="StackPanelBeskrivelse" Orientation="Horizontal" Margin="0,0,0,10">
+                <TextBlock Height="67" TextWrapping="Wrap" Text="Beskrivelse" VerticalAlignment="Top" Width="333" FontSize="36"/>
+                <TextBox Height="67" TextWrapping="Wrap" Text="Indtast Beskrivelse" VerticalAlignment="Top" Width="399" FontSize="36"/>
             </StackPanel>
         </StackPanel>
+        <StackPanel x:Name="RedigerViewStack2" HorizontalAlignment="Right" Margin="0,139,103,172" Width="733" Orientation="Horizontal">
+            <StackPanel x:Name="StackPanelKursus" Orientation="Horizontal" Margin="0,0,0,255">
+                <TextBlock Height="74" TextWrapping="Wrap" Text="Kurser" VerticalAlignment="Top" Width="333" FontSize="36" Margin="0,67,0,0"/>
+                <TextBox Height="74" TextWrapping="Wrap" Text="Vælg Kurser" VerticalAlignment="Top" Width="399" FontSize="36" Margin="0,67,0,0"/>
+            </StackPanel>
+        </StackPanel>
+        <Button Content="Gem" HorizontalAlignment="Right" Height="60" Margin="0,0,259,30" VerticalAlignment="Bottom" Width="216" FontSize="36"/>
     </Grid>
 </Page>

@@ -21,10 +21,13 @@
         </StackPanel>
         <Button Click="BackToKursistView" Content="Back" Margin="51,0,0,58" VerticalAlignment="Bottom" Width="139" Height="60" FontSize="36"/>
         <StackPanel x:Name="ListViewStack" HorizontalAlignment="Left" Margin="51,139,0,160" Width="645">
-            <TextBlock Height="84" TextWrapping="Wrap" Text="Oversigt over kursister" Width="598" FontSize="36" SelectionChanged="TextBlock_SelectionChanged"/>
-            <ListView Height="365" Margin="0,0,10,0">
-
-            </ListView>
+            <TextBlock Height="53" TextWrapping="Wrap" Width="598" FontSize="36" SelectionChanged="TextBlock_SelectionChanged" Margin="24,0,23,0">
+                <Run Text="Oversigt over kurs"/>
+                <Run Text="er"/>
+            </TextBlock>
+            <ScrollViewer Height="333" Margin="24,0,23,0">
+                <ListView Height="313" Width="578"/>
+            </ScrollViewer>
         </StackPanel>
         <Button Content="Delete" HorizontalAlignment="Right" Height="60" Margin="0,0,602,58" VerticalAlignment="Bottom" Width="216" FontSize="36"/>
     </Grid>
