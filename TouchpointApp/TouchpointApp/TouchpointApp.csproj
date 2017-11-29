@@ -98,6 +98,7 @@
     <Compile Include="Command\RelayCommand.cs" />
     <Compile Include="DataStorage\KursistData.cs" />
     <Compile Include="DataStorage\KursusData.cs" />
+    <Compile Include="DataStorage\LokaleData.cs" />
     <Compile Include="DataStorage\SerieData.cs" />
     <Compile Include="DataStorage\UnderviserData.cs" />
     <Compile Include="DataStorage\UndervisningsstedData.cs" />
@@ -120,9 +121,6 @@
     <Compile Include="ViewModel\Lokale\LokaleViewModel.cs" />
     <Compile Include="ViewModel\Serie\SerieViewModel.cs" />
     <Compile Include="ViewModel\Underviser\UnderviserViewmodel.cs" />
-    <Compile Include="ViewModel\Underviser\UnderviserViewmodelDelete.xaml.cs">
-      <DependentUpon>UnderviserViewmodelDelete.xaml</DependentUpon>
-    </Compile>
     <Compile Include="ViewModel\Undervisningssted\UndervisningsstedViewModel.cs" />
     <Compile Include="ViewModel\ViewModelBase.cs" />
     <Compile Include="Views\AdminView.xaml.cs">
@@ -226,10 +224,6 @@
     <Page Include="MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
-    </Page>
-    <Page Include="ViewModel\Underviser\UnderviserViewmodelDelete.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\AdminView.xaml">
       <SubType>Designer</SubType>
