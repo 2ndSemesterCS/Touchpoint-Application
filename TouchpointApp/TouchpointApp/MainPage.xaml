@@ -9,28 +9,32 @@
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <!-- StackPanel surrounding full page.-->
-        <StackPanel>
+        <StackPanel Background="#fad8d1">
             <!-- Logo & Title -->
-            <StackPanel>
-                <TextBlock FontSize="48px" FontWeight="Bold">Touchpoint</TextBlock>
+            <StackPanel  >
+                <Image    Source="Assets/Images/TouchPointFlotFinal.png" Height="100px" Margin="10,10,10,10"/>
+            
             </StackPanel>
             <!-- Navigation Bar -->
-            <StackPanel Orientation="Horizontal">
+            <!-- Content -->
+            <StackPanel>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="101,0,102,0" Height="77" BorderBrush="White" BorderThickness="7">
                 <StackPanel.Resources>
                     <Style TargetType="Button">
                         <Setter Property="Margin" Value="0,0,20,0" />
                     </Style>
                 </StackPanel.Resources>
-                <Button>Kurser</Button>
-                <Button>Klinik</Button>
-                <Button>Hvem er vi?</Button>
-                <Button>Artikler</Button>
-                <Button>Kontakt</Button>
-                <Button>Webshop</Button>
-                <Button Click="AdminViewClick">Administrator</Button>
+                <Button Background="#fad8d1" Foreground="White" Width="161" FontSize="25px" Content="Kurser"/>
+                <Button Background="#fad8d1" Foreground="White" Width="161" FontSize="25px" Content="Klinik"/>
+                <Button Background="#fad8d1" Foreground="White" Width="161" FontSize="25px" Content="Hvem er vi?"/>
+                <Button Background="#fad8d1" Foreground="White" Width="161" FontSize="25px" Content="Artikler"/>
+                <Button Background="#fad8d1" Foreground="White" Width="161" FontSize="25px" Content="Kontakt"/>
+                <Button Background="#fad8d1" Foreground="White" Width="161" FontSize="25px" Content="Webshop"/>
+                <Button Background="#fad8d1" Foreground="White" Click="AdminViewClick" FontSize="25px" Content="Administrator"/>
             </StackPanel>
-            <!-- Content -->
-            <StackPanel>
+            <StackPanel Height="779">
+                <Image Source="Assets\Images\TouchMinePoints.png" Width="500" Height="532" Margin="500,30"/>
             </StackPanel>
         </StackPanel>
     </Grid>

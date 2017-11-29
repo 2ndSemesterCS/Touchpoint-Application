@@ -207,6 +207,8 @@
     <None Include="TouchpointApp_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\Images\TouchMinePoints.png" />
+    <Content Include="Assets\Images\TouchPointFlotFinal.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
