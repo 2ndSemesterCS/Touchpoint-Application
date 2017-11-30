@@ -1,5 +1,6 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using TouchpointDBWebService;
 
 namespace UnitTesting
 {
@@ -23,15 +24,15 @@ namespace UnitTesting
 
 
 
-        //    [TestMethod]
-        //    public void TestSerieWithoutName()
-        //    {
-        //    // Arrange 
+        [TestMethod]
+        public void TestSerieWithoutName()
+        {
+            // Arrange 
+            Serie
 
+            // Act 
 
-        //    // Act 
-
-        //    // Assert
-        //    }
+            // Assert
+        }
     }
 }

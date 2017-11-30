@@ -12,8 +12,8 @@ namespace TouchpointApp.ViewModel.Underviser
 {
     class UnderviserViewmodel
     {
-        public UnderviserData _underviserData;
-        public UnderviserCatalog _underviserCatalog;
+        private UnderviserData _underviserData;
+        private UnderviserCatalog _underviserCatalog;
 
         public UnderviserViewmodel()
         {
