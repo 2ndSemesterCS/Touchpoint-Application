@@ -21,7 +21,7 @@
         <StackPanel HorizontalAlignment="Left" Margin="51,192,0,255" Width="464">
             <TextBlock Height="112" Margin="10,0,0,0" TextWrapping="Wrap" Text="Oversigt over undervisningssteder" FontSize="36" Foreground="White"/>
             <ScrollViewer Height="245">
-                <ListView Height="244" Width="444"/>
+                <ListView Height="244" Width="444" FontSize="36" Foreground="#230101"/>
             </ScrollViewer>
         </StackPanel>
         <StackPanel Margin="594,192,130,255">

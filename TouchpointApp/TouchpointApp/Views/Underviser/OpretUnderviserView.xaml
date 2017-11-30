@@ -13,21 +13,21 @@
     </Page.DataContext>
 
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid Background="#fad8d1">
         <!-- Logo & Title -->
-        <StackPanel Height="86" VerticalAlignment="Top" d:LayoutOverrides="VerticalAlignment">
+        <StackPanel Height="110" VerticalAlignment="Top">
 
             <StackPanel>
-                <TextBlock FontSize="48px" FontWeight="Bold" Text="Touchpoint"/>
+                <Image Source="ms-appx:///Assets/Images/TouchPointFlotFinal.png" Height="100px" Margin="108,10,140,10" VerticalAlignment="Center" />
             </StackPanel>
             <!-- Content -->
         </StackPanel>
-        <Button Click="BackToUnderviserView" Content="Back" Margin="80,0,0,56" VerticalAlignment="Bottom" Height="48" Width="97"/>
-        <StackPanel x:Name="Holder_alt" HorizontalAlignment="Left" Height="493" Margin="62,158,0,0" VerticalAlignment="Top" Width="1208">
+        <Button Click="BackToUnderviserView" Content="Back" VerticalAlignment="Top" Background="#fad8d1" Foreground="White" FontSize="25px" Width="140" BorderBrush="White" BorderThickness="7"  Height="59" Margin="62,722,0,0"/>
+        <StackPanel x:Name="Holder_alt" HorizontalAlignment="Left" Height="526" Margin="62,158,0,0" VerticalAlignment="Top" Width="1208">
             <StackPanel x:Name="Navn" HorizontalAlignment="Left" Height="116" Margin="0,0,-58,0" VerticalAlignment="Top" Width="1245" Orientation="Horizontal">
-                <StackPanel x:Name="Addresse_Copy" HorizontalAlignment="Left" Height="116" Margin="0,0,-58,0" VerticalAlignment="Top" Width="1245" Orientation="Horizontal">
-                    <TextBlock HorizontalAlignment="Left" Height="100" TextWrapping="Wrap" Text="Navn" VerticalAlignment="Top" Width="315" FontSize="48"/>
-                    <TextBox TextWrapping="Wrap" Text="{Binding UnderviserData.Navn, Mode=TwoWay}" Margin="0,0.607,0,-2.575" Width="815" FontSize="48" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
+                <StackPanel x:Name="Addresse_Copy" HorizontalAlignment="Left" Height="158" Margin="0,0,-58,-42" VerticalAlignment="Top" Width="1245" Orientation="Horizontal">
+                    <TextBlock HorizontalAlignment="Left" Height="102" TextWrapping="Wrap" Text="Navn" VerticalAlignment="Top" Width="155" FontSize="36" Foreground="White" Margin="0,46,0,0"/>
+                    <TextBox TextWrapping="Wrap" Text="{Binding UnderviserData.Navn, Mode=TwoWay}" Foreground="#230101" Margin="0,28.591,0,25.409" Width="720" Height="62" FontSize="36" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
                         <TextBox.RenderTransform>
                             <CompositeTransform Rotation="0.128"/>
                         </TextBox.RenderTransform>
@@ -35,31 +35,31 @@
                 </StackPanel>
             </StackPanel>
             <StackPanel x:Name="Addresse" HorizontalAlignment="Left" Height="116" Margin="0,0,-58,0" VerticalAlignment="Top" Width="1245" Orientation="Horizontal">
-                <TextBlock HorizontalAlignment="Left" Height="100" TextWrapping="Wrap" Text="E-mail" VerticalAlignment="Top" Width="315" FontSize="48"/>
-                <TextBox TextWrapping="Wrap" Text="{Binding UnderviserData.Email, Mode=TwoWay }" Margin="0,0.607,0,-2.575" Width="815" FontSize="48" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
+                <TextBlock HorizontalAlignment="Left" Height="900" Foreground="White" TextWrapping="Wrap" Text="E-mail" VerticalAlignment="Top" Width="155" FontSize="36" Margin="0,22,0,0"/>
+                <TextBox TextWrapping="Wrap" Text="{Binding UnderviserData.Email, Mode=TwoWay }" Foreground="#230101" Margin="0,0.607,0,-2.575" Width="720" Height="62" FontSize="36" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
                     <TextBox.RenderTransform>
                         <CompositeTransform Rotation="0.128"/>
                     </TextBox.RenderTransform>
                 </TextBox>
             </StackPanel>
             <StackPanel x:Name="___Email_" HorizontalAlignment="Left" Height="116" Margin="0,0,-58,0" VerticalAlignment="Top" Width="1245" Orientation="Horizontal">
-                <TextBlock HorizontalAlignment="Left" Height="100" TextWrapping="Wrap" Text="Tlf" VerticalAlignment="Top" Width="315" FontSize="48"/>
-                <TextBox TextWrapping="Wrap"  Text="{Binding UnderviserData.Tlf, Mode=TwoWay}" Margin="0,0.211,0,-2.179" Width="815" FontSize="48" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
+                <TextBlock HorizontalAlignment="Left" Height="90" Foreground="White" TextWrapping="Wrap" Text="Telefon" VerticalAlignment="Top" Width="155" FontSize="36" Margin="0,8,0,0"/>
+                <TextBox TextWrapping="Wrap"  Text="{Binding UnderviserData.Tlf, Mode=TwoWay}" Foreground="#230101" Margin="0,0.108,0,33.718" Width="720" Height="62" FontSize="36" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
                     <TextBox.RenderTransform>
                         <CompositeTransform Rotation="0.128"/>
                     </TextBox.RenderTransform>
                 </TextBox>
             </StackPanel>
             <StackPanel x:Name="___Email__Copy" HorizontalAlignment="Left" Height="116" Margin="0,0,-37,0" VerticalAlignment="Top" Width="1245" Orientation="Horizontal">
-                <TextBlock HorizontalAlignment="Left" Height="100" TextWrapping="Wrap" Text="Adresse" VerticalAlignment="Top" Width="315" FontSize="48"/>
-                <TextBox TextWrapping="Wrap"  Text="{Binding UnderviserData.Adresse, Mode=TwoWay}" Margin="0,0.211,0,-2.179" Width="815" FontSize="48" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
+                <TextBlock HorizontalAlignment="Left" Height="100" Foreground="White" TextWrapping="Wrap" Text="Adresse" VerticalAlignment="Top" Width="155" FontSize="36" Margin="0,-5,0,0"/>
+                <TextBox TextWrapping="Wrap"  Text="{Binding UnderviserData.Adresse, Mode=TwoWay}" Foreground="#230101" Margin="0,0.106,0,53.694" Width="720" Height="62" FontSize="36" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
                     <TextBox.RenderTransform>
                         <CompositeTransform Rotation="0.128"/>
                     </TextBox.RenderTransform>
                 </TextBox>
             </StackPanel>
+            <Button Command="{Binding OpretNyUnderviserCommand}" Content="Opret" VerticalAlignment="Top" Background="#fad8d1" Foreground="White" FontSize="25px" Width="140" BorderBrush="White" BorderThickness="7"  Height="59" Margin="730,0,0,0"/>
         </StackPanel>
-        <Button Command="{Binding OpretNyUnderviserCommand}" Content="Opret" Margin="1046,0,0,29" VerticalAlignment="Bottom" Height="66" Width="168" d:LayoutOverrides="VerticalAlignment"/>
         <!--<Button Click="1" Content="Opret Underviser" Margin="966,0,0,343" VerticalAlignment="Bottom" Height="81" Width="214" FontSize="25"/>-->
     </Grid>
 </Page>
