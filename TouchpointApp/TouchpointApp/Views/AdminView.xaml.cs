@@ -57,7 +57,7 @@ namespace TouchpointApp.Views
 
         private void BackToMainPage(object sender, RoutedEventArgs e)
         {
-            this.Frame.GoBack();
+            Frame.GoBack() ;
         }
     }
 }
