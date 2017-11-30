@@ -9,23 +9,21 @@
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <!-- StackPanel surrounding full page.-->
-        <StackPanel RenderTransformOrigin="0.75,0.426">
+        <StackPanel Background="#fad8d1">
             <!-- Logo & Title -->
             <StackPanel>
-                <TextBlock FontSize="48px" FontWeight="Bold">
-                    <Run Text="Touchpoint"/>
-                </TextBlock>
+                <Image Source="ms-appx:///Assets/Images/TouchPointFlotFinal.png" Height="100px" Margin="108,10,140,10" VerticalAlignment="Center" />
             </StackPanel>
             <!-- Content -->
             <!-- Footer -->
         </StackPanel>
-        <Button Click="BackToUnderviserView" Content="Back" Margin="29,0,0,30" VerticalAlignment="Bottom" Width="139" Height="60" FontSize="36"/>
+        <Button Click="BackToUnderviserView" Content="Back" Margin="54,0,0,102" VerticalAlignment="Bottom" Width="148" Height="85" FontSize="36" Background="#fad8d1" Foreground="White" BorderBrush="White" BorderThickness="7"/>
         <StackPanel x:Name="ListViewStack" HorizontalAlignment="Left" Margin="51,139,0,336" Width="645">
-            <TextBlock Height="84" TextWrapping="Wrap" Text="Oversigt over Undervisere" Width="598" FontSize="36" SelectionChanged="TextBlock_SelectionChanged"/>
-            <ListView Height="519" Margin="0,0,10,0">
+            <TextBlock Height="84" TextWrapping="Wrap" Text="Oversigt over Undervisere" Width="598" FontSize="36" SelectionChanged="TextBlock_SelectionChanged" Foreground="White"/>
+            <ListView Height="519" Margin="0,0,10,0" FontSize="36" Foreground="White">
               
             </ListView>
         </StackPanel>
-           <Button Content="Slet" HorizontalAlignment="Right" Height="60" Margin="0,0,656,30" VerticalAlignment="Bottom" Width="216" FontSize="36"/>
+        <Button Content="Slet" Height="85" Margin="0,0,492,102" VerticalAlignment="Bottom" Width="148" FontSize="36" HorizontalAlignment="Right" Background="#fad8d1" Foreground="White" BorderBrush="White" BorderThickness="7"/>
     </Grid>
 </Page>

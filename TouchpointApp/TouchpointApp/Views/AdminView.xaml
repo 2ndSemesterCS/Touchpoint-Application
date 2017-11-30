@@ -5,17 +5,15 @@
     xmlns:local="using:TouchpointApp.Views"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d" Width="1280" Height="720">
+    mc:Ignorable="d" Width="1500" Height="1100">
 
-    <Grid  Background="#fad8d1">
-
-        <Button Background="#fad8d1" Foreground="White" FontSize="25px" Width="140" VerticalAlignment="Center" BorderBrush="White" BorderThickness="7"  Height="75" Click="BackToMainPage"  Margin="56,606,0,39" Content="Back"/>
+    <Grid>
 
         <!-- StackPanel surrounding full page.-->
-        <StackPanel>
+        <StackPanel Background="#fad8d1" HorizontalAlignment="Right" Width="1537" Margin="-37,0,0,0" >
             <!-- Logo & Title -->
             <StackPanel>
-                <Image Source="ms-appx:///Assets/Images/TouchPointFlotFinal.png" Height="100px" Margin="108,10,140,10" VerticalAlignment="Center" />
+                <Image Source="ms-appx:///Assets/Images/TouchPointFlotFinal.png" Height="100px" Margin="118,10,118,10" VerticalAlignment="Center" />
             </StackPanel>
             <StackPanel Orientation="Vertical" VerticalAlignment="Center" Margin="628,0,335,0" Height="640">
                 <StackPanel.Resources>
@@ -34,6 +32,7 @@
                 <Button Background="#fad8d1" Foreground="White" FontSize="25px" Width="250" Content="Invoice" BorderBrush="White" BorderThickness="7" Height="75"/>
 
             </StackPanel>
+            <Button Background="#fad8d1" Margin="75,-60,0,0" Foreground="White" FontSize="25px" Width="140" VerticalAlignment="Center" BorderBrush="White" BorderThickness="7"  Height="75" Click="BackToMainPage" Content="Back"/>
         </StackPanel>
     </Grid>
 </Page>

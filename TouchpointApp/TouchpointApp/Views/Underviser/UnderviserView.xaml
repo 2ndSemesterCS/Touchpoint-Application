@@ -7,12 +7,12 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid Background="#fad8d1">
         <!-- StackPanel surrounding full page.-->
         <StackPanel>
             <!-- Logo & Title -->
             <StackPanel>
-                <TextBlock FontSize="48px" FontWeight="Bold">Touchpoint</TextBlock>
+                <Image Source="ms-appx:///Assets/Images/TouchPointFlotFinal.png" Height="100px" Margin="108,10,140,10" VerticalAlignment="Center"/>
             </StackPanel>
             <!-- Navigation Bar -->
             <StackPanel Orientation="Vertical">
@@ -21,16 +21,16 @@
                         <Setter Property="Margin" Value="0,20,0,0" />
                     </Style>
                 </StackPanel.Resources>
-                <Button Click="OpretUnderviserViewClick">Opret Underviser</Button>
-                <Button Click="RedigerUnderviserViewClick">Rediger Underviser</Button>
-                <Button Click="SletUnderviserViewClick">Slet Underviser</Button>
+                <Button Margin="108,10,0,10" BorderBrush="White" BorderThickness="7" Height="75" Background="#fad8d1" Foreground="White" FontSize="25px" Click="OpretUnderviserViewClick" Width="240">Opret Underviser</Button>
+                <Button Margin="108,10,140,10" BorderBrush="White" BorderThickness="7" Height="75" Background="#fad8d1" Foreground="White" FontSize="25px" Click="RedigerUnderviserViewClick">Rediger Underviser</Button>
+                <Button Margin="108,10,0,10" BorderBrush="White" BorderThickness="7" Height="75" Background="#fad8d1" Foreground="White" FontSize="25px" Click="SletUnderviserViewClick" Width="240">Slet Underviser</Button>
             </StackPanel>
             <!-- Content -->
             <StackPanel>
             </StackPanel>
             <!-- Footer -->
             <StackPanel VerticalAlignment="Bottom">
-                <Button Click="BackToAdminView">Back</Button>
+                <Button Background="#fad8d1" Foreground="White" FontSize="25px" Width="140" VerticalAlignment="Center" BorderBrush="White" BorderThickness="7"  Height="75" Margin="30,100,140,10" Click="BackToAdminView">Back</Button>
             </StackPanel>
         </StackPanel>
     </Grid>

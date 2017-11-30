@@ -8,45 +8,43 @@
     mc:Ignorable="d">
 
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid Background="#fad8d1">
         <!-- StackPanel surrounding full page.-->
-        <StackPanel RenderTransformOrigin="0.75,0.426">
-            <!-- Logo & Title -->
-            <StackPanel>
-                <TextBlock FontSize="48px" FontWeight="Bold">
-                    <Run Text="Touchpoint"/>
-                </TextBlock>
-            </StackPanel>
-            <!-- Content -->
-            <!-- Footer -->
-        </StackPanel>
-        <Button Click="BackToUnderviserView" Content="Back" Margin="29,0,0,30" VerticalAlignment="Bottom" Width="139" Height="60" FontSize="36"/>
+
+        <!-- Logo & Title -->
+   
+            <Image Source="ms-appx:///Assets/Images/TouchPointFlotFinal.png" Height="100px" Margin="145,10,103,890" VerticalAlignment="Center" />
+     
+        <!-- Content -->
+        <!-- Footer -->
+
+        <Button Content="Gem" Background="#fad8d1" Foreground="White" FontSize="25px" Width="140" BorderBrush="White" BorderThickness="7"  Height="75" Margin="1310,602,0,323"/>
+        <Button Click="BackToUnderviserView" Content="Back" Background="#fad8d1" Foreground="White" FontSize="25px" Width="140" BorderBrush="White" BorderThickness="7"  Height="59" Margin="30,650,0,10"/>
         <StackPanel x:Name="ListViewStack" HorizontalAlignment="Left" Margin="51,139,0,115" Width="645">
             <ListView Height="503" Margin="0,0,10,0">
-                <TextBlock Height="60" TextWrapping="Wrap" Width="361" FontSize="30">
+                <TextBlock Height="60" TextWrapping="Wrap" Width="613" FontSize="36" Foreground="White">
                     <Run Text="Oversigt over "/>
                     <Run Text="undervisere "/>
                 </TextBlock>
             </ListView>
         </StackPanel>
-        <StackPanel x:Name="RedigerViewStack" HorizontalAlignment="Right" Margin="0,139,103,115" Width="733" Orientation="Vertical">
+        <StackPanel x:Name="RedigerViewStack" HorizontalAlignment="Right" Margin="0,139,103,459" Width="733" Orientation="Vertical" RenderTransformOrigin="0.5,0.5">
             <StackPanel x:Name="Navn" HorizontalAlignment="Right" Margin="0,0,0,0" Width="733" Orientation="Horizontal" Height="71">
-                <TextBlock Height="67" TextWrapping="Wrap" Text="Navn" VerticalAlignment="Top" Width="333" FontSize="36" Margin="0,0,0,0"/>
-                <TextBox Height="67" TextWrapping="Wrap" Text="Indtast navn" VerticalAlignment="Top" Width="399" FontSize="36"/>
+                <TextBlock Height="67" TextWrapping="Wrap" Text="Navn" VerticalAlignment="Top" Width="333" FontSize="36" Margin="0,0,0,0" Foreground="White"/>
+                <TextBox Height="67" TextWrapping="Wrap" Text="Indtast navn" VerticalAlignment="Top" Width="399" FontSize="36" Foreground="#230101"/>
             </StackPanel>
             <StackPanel x:Name="Adresse" HorizontalAlignment="Right" Margin="0,0,0,0" Width="733" Orientation="Horizontal" Height="71">
-                <TextBlock Height="67" TextWrapping="Wrap" Text="Adresse" VerticalAlignment="Top" Width="333" FontSize="36" Margin="0,0,0,0"/>
-                <TextBox Height="67" TextWrapping="Wrap" Text="Indtast adresse" VerticalAlignment="Top" Width="399" FontSize="36"/>
+                <TextBlock Height="67" TextWrapping="Wrap" Text="Adresse" VerticalAlignment="Top" Width="333" FontSize="36" Margin="0,0,0,0" Foreground="White"/>
+                <TextBox Height="67" TextWrapping="Wrap" Text="Indtast adresse" VerticalAlignment="Top" Width="399" FontSize="36" Foreground="#230101"/>
             </StackPanel>
             <StackPanel x:Name="Email" HorizontalAlignment="Right" Margin="0,0,0,0" Width="733" Orientation="Horizontal" Height="71">
-                <TextBlock Height="67" TextWrapping="Wrap" Text="Email" VerticalAlignment="Top" Width="333" FontSize="36" Margin="0,0,0,0"/>
-                <TextBox Height="67" TextWrapping="Wrap" Text="Indtast email" VerticalAlignment="Top" Width="399" FontSize="36"/>
+                <TextBlock Height="67" TextWrapping="Wrap" Text="Email" VerticalAlignment="Top" Width="333" FontSize="36" Margin="0,0,0,0" Foreground="White"/>
+                <TextBox Height="67" TextWrapping="Wrap" Text="Indtast email" VerticalAlignment="Top" Width="399" FontSize="36" Foreground="#230101"/>
             </StackPanel>
-            <StackPanel x:Name="Tlf" HorizontalAlignment="Right" Margin="0,0,0,0" Width="733" Orientation="Horizontal" Height="71">
-                <TextBlock Height="67" TextWrapping="Wrap" Text="Telefonnummer" VerticalAlignment="Top" Width="333" FontSize="36" Margin="0,0,0,0"/>
-                <TextBox Height="67" TextWrapping="Wrap" Text="Indtast Telefonnummer" VerticalAlignment="Top" Width="399" FontSize="36"/>
+            <StackPanel x:Name="Tlf" HorizontalAlignment="Right" Margin="0,0,0,0" Width="733" Orientation="Horizontal" Height="94">
+                <TextBlock Height="67" TextWrapping="Wrap" Text="Telefonnummer" VerticalAlignment="Top" Width="333" FontSize="36" Margin="0,0,0,0" Foreground="White"/>
+                <TextBox Height="67" TextWrapping="Wrap" Text="Indtast Telefonnummer" VerticalAlignment="Top" Width="399" FontSize="36" Foreground="#230101"/>
             </StackPanel>
         </StackPanel>
-        <Button Content="Gem" HorizontalAlignment="Right" Height="60" Margin="0,0,259,30" VerticalAlignment="Bottom" Width="216" FontSize="36"/>
     </Grid>
 </Page>

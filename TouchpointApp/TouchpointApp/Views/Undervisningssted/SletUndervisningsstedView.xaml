@@ -7,23 +7,23 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid Background="#fad8d1">
         <!-- StackPanel surrounding full page.-->
         <StackPanel>
             <!-- Logo & Title -->
             <StackPanel>
-                <TextBlock FontSize="48px" FontWeight="Bold">Touchpoint</TextBlock>
+                <Image Source="ms-appx:///Assets/Images/TouchPointFlotFinal.png" Height="100px" Margin="108,10,140,10" VerticalAlignment="Center" />
             </StackPanel>
             <!-- Content -->
             <!-- Footer -->
         </StackPanel>
-        <Button Click="BackToUndervisningsstedView" Content="Back" Margin="0,0,0,102" VerticalAlignment="Bottom" Width="148" Height="85" FontSize="36"/>
-        <StackPanel Margin="10,82,551,229" d:LayoutOverrides="LeftPosition, RightPosition">
-            <TextBlock Height="114" Margin="0,0,10,0" TextWrapping="Wrap" Text="Oversigt over undervisningssteder " FontSize="36"/>
+        <Button Click="BackToUndervisningsstedView" Content="Back" Margin="54,0,0,102" VerticalAlignment="Bottom" Width="148" Height="85" FontSize="36" Background="#fad8d1" Foreground="White" BorderBrush="White" BorderThickness="7"/>
+        <StackPanel Margin="10,82,551,229">
+            <TextBlock Height="114" Margin="0,50,10,0" TextWrapping="Wrap" Text="Oversigt over undervisningssteder " FontSize="36" Foreground="White" />
             <ScrollViewer Height="297" Margin="10,0,0,0">
-                <ListView Height="287" Width="699"/>
+                <ListView Height="287" Width="699" Foreground="White" FontSize="36px"/>
             </ScrollViewer>
         </StackPanel>
-        <Button Content="Slet" Height="85" Margin="0,0,492,102" VerticalAlignment="Bottom" Width="148" FontSize="36" HorizontalAlignment="Right"/>
+        <Button Content="Slet" Height="85" Margin="0,0,492,102" VerticalAlignment="Bottom" Width="148" FontSize="36" HorizontalAlignment="Right" Background="#fad8d1" Foreground="White" BorderBrush="White" BorderThickness="7"/>
     </Grid>
 </Page>
