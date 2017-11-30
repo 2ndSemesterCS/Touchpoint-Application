@@ -17,7 +17,7 @@
             <StackPanel>
                 <Image Source="ms-appx:///Assets/Images/TouchPointFlotFinal.png" Height="100px" Margin="108,10,140,10" VerticalAlignment="Center" />
             </StackPanel>
-            <StackPanel Orientation="Vertical" VerticalAlignment="Center" Margin="494,0,393,0" Height="586">
+            <StackPanel Orientation="Vertical" VerticalAlignment="Center" Margin="628,0,335,0" Height="640">
                 <StackPanel.Resources>
                     <Style TargetType="Button">
                         <Setter Property="Margin" Value="0,20,0,0" />
