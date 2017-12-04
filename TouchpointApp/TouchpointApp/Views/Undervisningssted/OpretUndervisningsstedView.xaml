@@ -7,9 +7,9 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid Background="#fad8d1">
         <!-- StackPanel surrounding full page.-->
-        <StackPanel Background="#fad8d1" RenderTransformOrigin="0.512,0.763" Margin="-10,0,10,0">
+        <StackPanel>
             <!-- Logo & Title -->
             <!-- Logo & Title -->
             <StackPanel x:Name="___StackPanel___titel" Height="131">
@@ -18,11 +18,11 @@
             <StackPanel x:Name="___StackPanel___ramme" HorizontalAlignment="Left" Height="380" Margin="320,0,0,0" Width="748">
                 <StackPanel Height="118" Margin="0,0,-18,0" Orientation="Horizontal">
                     <TextBlock Margin="0,10" TextWrapping="Wrap" Text="Lokale navn" Width="253" Height="98"  Foreground="White" FontSize="36px"/>
-                    <TextBox Margin="0,10" TextWrapping="Wrap" Text="Indtast lokale" Width="264" Foreground="#230101" FontSize="36px" />
+                    <TextBox Margin="0,10" TextWrapping="Wrap" Text="Indtast lokale" Width="372" Foreground="#230101" FontSize="36px" />
                 </StackPanel>
                 <StackPanel Height="147" Margin="0,0,10,0" Orientation="Horizontal">
                     <TextBlock HorizontalAlignment="Left" Height="98" Margin="0,-2,0,64" TextWrapping="Wrap" Text="Adresse" Width="253" RenderTransformOrigin="0.513,0.541" Foreground="White" FontSize="36px"/>
-                    <TextBox TextWrapping="Wrap" Text="Indtast adresse " Width="264" Height="98" VerticalAlignment="Top" Foreground="#230101" FontSize="36px"/>
+                    <TextBox TextWrapping="Wrap" Text="Indtast adresse " Width="372" Height="98" VerticalAlignment="Top" Foreground="#230101" FontSize="36px"/>
                 </StackPanel>
                 <Button Content="Opret" Background="#fad8d1" Foreground="White" FontSize="25px" Width="140" VerticalAlignment="Center" BorderBrush="White" BorderThickness="7"  Height="75"/>
             </StackPanel>
