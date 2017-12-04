@@ -1,24 +1,25 @@
-﻿using TouchpointApp.ViewModel;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using TouchpointApp.ViewModel;
 
 namespace TouchpointApp.DataStorage
 {
-    public class UndervisningsstedData : ViewModelBase
+    public class UndervisningsStedData : ViewModelBase
     {
-        #region Instance Fields
         private string _adresse;
         private string _lokale;
-        #endregion
 
-        #region Constructor
-        UndervisningsstedData()
+        public string Adresse
         {
-
+            get { return _adresse; } set { _adresse = value; OnPropertyChanged("Adresse"); }
         }
-        #endregion
 
-        #region Properties
-        public string Adresse { get { return _adresse; } set { value = _adresse; OnPropertyChanged("adresse"); } }
-        public string Lokale { get { return _lokale; } set { value = _lokale; OnPropertyChanged("lokale"); } }
-        #endregion
+        public string Lokale
+        {
+            get { return _lokale; } set { _lokale = value; OnPropertyChanged("Lokale"); }
+        }
     }
 }
