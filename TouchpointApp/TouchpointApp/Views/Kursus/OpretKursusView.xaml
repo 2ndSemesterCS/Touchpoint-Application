@@ -14,25 +14,23 @@
         <vm:KursusViewModel/>
     </Page.DataContext>
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Margin="0,0,0,-85">
+    <Grid Background="#fad8d1" Margin="0,0,0,-85">
         <!-- StackPanel surrounding full page.-->
-        <StackPanel Height="86" VerticalAlignment="Top" d:LayoutOverrides="VerticalAlignment">
-            <!-- Logo & Title -->
+        <StackPanel Height="145" VerticalAlignment="Top">
             <StackPanel>
-                <TextBlock FontSize="48px" FontWeight="Bold" Text="Touchpoint"/>
+                <Image Source="ms-appx:///Assets/Images/TouchPointFlotFinal.png" Height="100px" Margin="108,10,140,10" VerticalAlignment="Center" />
             </StackPanel>
+            <!-- Logo & Title -->
             <!-- Content -->
-
-
             <!-- Footer -->
+            <!-- Logo & Title -->
         </StackPanel>
-        <Button Click="BackToKursusView" Content="Back" Margin="444,0,0,150" VerticalAlignment="Bottom"/>
-        <ScrollViewer HorizontalScrollBarVisibility="Auto" Margin="131,86,0,187">
-            <StackPanel x:Name="Holder_alt" HorizontalAlignment="Left" Height="766" VerticalAlignment="Top" Width="1339">
+        <ScrollViewer HorizontalScrollBarVisibility="Auto" Margin="131,150,0,187">
+            <StackPanel x:Name="Holder_alt" HorizontalAlignment="Left" Height="844" VerticalAlignment="Top" Width="1339">
                 <StackPanel x:Name="Titel" HorizontalAlignment="Left" Height="75" Margin="0,0,-58,0" VerticalAlignment="Top" Width="1245" Orientation="Horizontal">
                     <StackPanel x:Name="Addresse_Copy" HorizontalAlignment="Left" Height="116" Margin="0,0,-58,0" VerticalAlignment="Top" Width="1245" Orientation="Horizontal">
-                        <TextBlock HorizontalAlignment="Left" Height="100" TextWrapping="Wrap" Text="Titel" VerticalAlignment="Top" Width="315" FontSize="30" SelectionChanged="TextBlock_SelectionChanged"/>
-                        <TextBox TextWrapping="Wrap" Text="{Binding kursusData.KursusDato , Mode=TwoWay}" Margin="0,0.607,0,39.877" Width="635" FontSize="30" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
+                        <TextBlock HorizontalAlignment="Left" Height="100" TextWrapping="Wrap" Text="Titel" VerticalAlignment="Top" Width="333" FontSize="36" Margin="0,0,0,0" Foreground="White"/>
+                        <TextBox TextWrapping="Wrap" Text="{Binding kursusData.KursusDato, Mode=TwoWay}" Foreground="#230101" Margin="0,0.607,0,39.877" Width="635" FontSize="30" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
                             <TextBox.RenderTransform>
                                 <CompositeTransform Rotation="0.128"/>
                             </TextBox.RenderTransform>
@@ -40,63 +38,63 @@
                     </StackPanel>
                 </StackPanel>
                 <StackPanel x:Name="Dato" HorizontalAlignment="Left" Height="75" Margin="0,0,-58,0" VerticalAlignment="Top" Width="1245" Orientation="Horizontal">
-                    <TextBlock HorizontalAlignment="Left" Height="100" TextWrapping="Wrap" Text="Dato" VerticalAlignment="Top" Width="315" FontSize="30"/>
-                    <TextBox TextWrapping="Wrap" Text="{Binding kursusData.Dato , Mode=TwoWay}" Margin="0,0.607,0,-2.575" Width="635" FontSize="30" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
+                    <TextBlock HorizontalAlignment="Left" Height="100" TextWrapping="Wrap" Text="Dato" VerticalAlignment="Top" Width="333" FontSize="36" Margin="0,0,0,0" Foreground="White"/>
+                    <TextBox TextWrapping="Wrap" Text="{Binding kursusData.Dato, Mode=TwoWay}" Margin="0,0.607,0,-2.575" Foreground="#230101" Width="635" FontSize="30" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
                         <TextBox.RenderTransform>
                             <CompositeTransform Rotation="0.128"/>
                         </TextBox.RenderTransform>
                     </TextBox>
                 </StackPanel>
                 <StackPanel x:Name="Tidspunkt" HorizontalAlignment="Left" Height="75" Margin="0,0,-58,0" VerticalAlignment="Top" Width="1245" Orientation="Horizontal">
-                    <TextBlock HorizontalAlignment="Left" Height="100" TextWrapping="Wrap" Text="Tidspunkt" VerticalAlignment="Top" Width="315" FontSize="30" Margin="0,0,0,-25"/>
-                    <TextBox TextWrapping="Wrap" Text="{Binding kursusData.Tidspunkt , Mode=TwoWay}" Margin="0,0.013,0,-1.981" Width="635" FontSize="30" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
+                    <TextBlock HorizontalAlignment="Left" Height="100" TextWrapping="Wrap" Text="Tidspunkt" VerticalAlignment="Top" Width="333" FontSize="36" Margin="0,0,0,0" Foreground="White"/>
+                    <TextBox TextWrapping="Wrap" Text="{Binding kursusData.Tidspunkt, Mode=TwoWay}" Margin="0,0.013,0,-1.981" Width="635" FontSize="30" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
                         <TextBox.RenderTransform>
                             <CompositeTransform Rotation="0.128"/>
                         </TextBox.RenderTransform>
                     </TextBox>
                 </StackPanel>
                 <StackPanel x:Name="Varighed" HorizontalAlignment="Left" Height="75" Margin="0,0,-37,0" VerticalAlignment="Top" Width="1245" Orientation="Horizontal">
-                    <TextBlock HorizontalAlignment="Left" Height="100" TextWrapping="Wrap" Text="Varighed" VerticalAlignment="Top" Width="315" FontSize="30"/>
-                    <TextBox TextWrapping="Wrap" Text="{Binding kursusData.Varighed , Mode=TwoWay}" Margin="0,0.211,0,-2.179" Width="635" FontSize="30" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
+                    <TextBlock HorizontalAlignment="Left" Height="100" TextWrapping="Wrap" Text="Varighed" VerticalAlignment="Top" Width="333" FontSize="36" Margin="0,0,0,0" Foreground="White"/>
+                    <TextBox TextWrapping="Wrap" Text="{Binding kursusData.Varighed, Mode=TwoWay}" Margin="0,0.211,0,-2.179" Width="635" FontSize="30" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
                         <TextBox.RenderTransform>
                             <CompositeTransform Rotation="0.128"/>
                         </TextBox.RenderTransform>
                     </TextBox>
                 </StackPanel>
                 <StackPanel x:Name="Pris" HorizontalAlignment="Left" Height="75" Margin="0,0,-58,0" VerticalAlignment="Top" Width="1245" Orientation="Horizontal">
-                    <TextBlock HorizontalAlignment="Left" Height="100" TextWrapping="Wrap" Text="Pris" VerticalAlignment="Top" Width="315" FontSize="30"/>
-                    <TextBox TextWrapping="Wrap" Text="{Binding kursusData.Pris , Mode=TwoWay}" Margin="0,0.211,0,-2.179" Width="635" FontSize="30" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
+                    <TextBlock HorizontalAlignment="Left" Height="100" TextWrapping="Wrap" Text="Pris" VerticalAlignment="Top" Width="333" FontSize="36" Margin="0,0,0,0" Foreground="White"/>
+                    <TextBox TextWrapping="Wrap" Text="{Binding kursusData.Pris, Mode=TwoWay}" Margin="0,0.211,0,-2.179" Width="635" FontSize="30" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
                         <TextBox.RenderTransform>
                             <CompositeTransform Rotation="0.128"/>
                         </TextBox.RenderTransform>
                     </TextBox>
                 </StackPanel>
                 <StackPanel x:Name="Sprog" HorizontalAlignment="Left" Height="75" Margin="0,0,-58,0" VerticalAlignment="Top" Width="1245" Orientation="Horizontal">
-                    <TextBlock HorizontalAlignment="Left" Height="100" TextWrapping="Wrap" Text="Sprog" VerticalAlignment="Top" Width="315" FontSize="30"/>
-                    <TextBox TextWrapping="Wrap" Text="{Binding kursusData.Sprog , Mode=TwoWay}" Margin="0,0.211,0,-2.179" Width="635" FontSize="30" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
+                    <TextBlock HorizontalAlignment="Left" Height="100" TextWrapping="Wrap" Text="Sprog" VerticalAlignment="Top" Width="333" FontSize="36" Margin="0,0,0,0" Foreground="White"/>
+                    <TextBox TextWrapping="Wrap" Text="{Binding kursusData.Sprog, Mode=TwoWay}" Margin="0,0.211,0,-2.179" Width="635" FontSize="30" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
                         <TextBox.RenderTransform>
                             <CompositeTransform Rotation="0.128"/>
                         </TextBox.RenderTransform>
                     </TextBox>
                 </StackPanel>
                 <StackPanel x:Name="Beskrivelse" HorizontalAlignment="Left" Height="75" Margin="0,0,-58,0" VerticalAlignment="Top" Width="1245" Orientation="Horizontal">
-                    <TextBlock HorizontalAlignment="Left" Height="100" TextWrapping="Wrap" Text="Beskrivelse" VerticalAlignment="Top" Width="315" FontSize="30"/>
-                    <TextBox TextWrapping="Wrap" Text="{Binding kursusData.Beskrivelse , Mode=TwoWay}" Margin="0,0.211,0,-2.179" Width="635" FontSize="30" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
+                    <TextBlock HorizontalAlignment="Left" Height="100" TextWrapping="Wrap" Text="Beskrivelse" VerticalAlignment="Top" Width="333" FontSize="36" Margin="0,0,0,0" Foreground="White"/>
+                    <TextBox TextWrapping="Wrap" Text="{Binding kursusData.Beskrivelse, Mode=TwoWay}" Margin="0,0.211,0,-2.179" Width="635" FontSize="30" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
                         <TextBox.RenderTransform>
                             <CompositeTransform Rotation="0.128"/>
                         </TextBox.RenderTransform>
                     </TextBox>
                 </StackPanel>
                 <StackPanel x:Name="Depositum" HorizontalAlignment="Left" Height="75" Margin="0,0,-58,0" VerticalAlignment="Top" Width="1245" Orientation="Horizontal">
-                    <TextBlock HorizontalAlignment="Left" Height="100" TextWrapping="Wrap" Text="Depositum" VerticalAlignment="Top" Width="315" FontSize="30"/>
-                    <TextBox TextWrapping="Wrap" Text="{Binding kursusData.Depositum , Mode=TwoWay}" Margin="0,0.211,0,-2.179" Width="635" FontSize="30" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
+                    <TextBlock HorizontalAlignment="Left" Height="100" TextWrapping="Wrap" Text="Depositum" VerticalAlignment="Top" Width="333" FontSize="36" Margin="0,0,0,0" Foreground="White"/>
+                    <TextBox TextWrapping="Wrap" Text="{Binding kursusData.Depositum, Mode=TwoWay}" Margin="0,0.211,0,-2.179" Width="635" FontSize="30" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
                         <TextBox.RenderTransform>
                             <CompositeTransform Rotation="0.128"/>
                         </TextBox.RenderTransform>
                     </TextBox>
                 </StackPanel>
                 <StackPanel x:Name="Underviser" HorizontalAlignment="Left" Height="75" Margin="0,0,0,0" VerticalAlignment="Top" Width="1245" Orientation="Horizontal">
-                    <TextBlock HorizontalAlignment="Left" Height="100" TextWrapping="Wrap" Text="Underviser" VerticalAlignment="Top" Width="315" FontSize="30"/>
+                    <TextBlock HorizontalAlignment="Left" Height="100" TextWrapping="Wrap" Text="Underviser" VerticalAlignment="Top" Width="333" FontSize="36" Margin="0,0,0,0" Foreground="White"/>
                     <ComboBox ItemsSource="{Binding kursusData.Underviser}" SelectedItem="{Binding kursusData.Underviser, Mode=TwoWay}" Margin="0,0.211,0,0" Width="635" FontSize="30" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto" Height="73.902">
                         <ComboBox.RenderTransform>
                             <CompositeTransform Rotation="0.128"/>
@@ -104,7 +102,7 @@
                     </ComboBox>
                 </StackPanel>
                 <StackPanel x:Name="Undervisningssted" HorizontalAlignment="Left" Height="75" Margin="0,0,-58,0" VerticalAlignment="Top" Width="1245" Orientation="Horizontal">
-                    <TextBlock HorizontalAlignment="Left" Height="100" TextWrapping="Wrap" Text="Undervisningssted" VerticalAlignment="Top" Width="315" FontSize="30"/>
+                    <TextBlock HorizontalAlignment="Left" Height="100" TextWrapping="Wrap" Text="Undervisningssted" VerticalAlignment="Top" Width="333" FontSize="36" Margin="0,0,0,0" Foreground="White"/>
                     <ComboBox ItemsSource="{Binding kursusData.Undervisningssted}" SelectedItem="{Binding kursusData.Undervisningssted, Mode=TwoWay}" Margin="0,0.211,0,0" Width="635" FontSize="30" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto" Height="73.902">
                         <ComboBox.RenderTransform>
                             <CompositeTransform Rotation="0.128"/>
@@ -114,6 +112,7 @@
 
             </StackPanel>
         </ScrollViewer>
-        <Button Command="{Binding OpretNytKursusCommand }" Content="Opret" HorizontalAlignment="Right" Height="32" Margin="0,0,197,150" VerticalAlignment="Bottom" Width="84"/>
+        <Button Click="BackToKursusView" Content="Back" Background="#fad8d1" Foreground="White" FontSize="25px" BorderBrush="White" BorderThickness="7" Margin="131,0,0,111" Height="76" Width="160" VerticalAlignment="Bottom"/>
+        <Button Command="{Binding OpretNytKursusCommand}" Content="Opret" Background="#fad8d1" Foreground="White" FontSize="25px" BorderBrush="White" BorderThickness="7" Margin="817,0,0,106" Height="76" Width="160" VerticalAlignment="Bottom"/>
     </Grid>
 </Page>

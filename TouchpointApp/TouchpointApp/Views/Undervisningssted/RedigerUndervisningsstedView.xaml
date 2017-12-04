@@ -17,7 +17,6 @@
             <!-- Content -->
             <!-- Footer -->
         </StackPanel>
-        <Button Click="BackToUndervisningsstedView" Content="Back" VerticalAlignment="Top" Background="#fad8d1" Foreground="White" FontSize="25px" Width="140" BorderBrush="White" BorderThickness="7"  Height="59" Margin="30,650,0,10"/>
         <StackPanel HorizontalAlignment="Left" Margin="51,192,0,255" Width="464">
             <TextBlock Height="112" Margin="10,0,0,0" TextWrapping="Wrap" Text="Oversigt over undervisningssteder" FontSize="36" Foreground="White"/>
             <ScrollViewer Height="245">
@@ -41,5 +40,6 @@
             </StackPanel>
         </StackPanel>
         <Button Content="Rediger" VerticalAlignment="Top" Background="#fad8d1" Foreground="White" FontSize="25px" Width="140" BorderBrush="White" BorderThickness="7"  Height="75" Margin="620,550,0,10"/>
+        <Button Click="BackToUndervisningsstedView" Content="Back" VerticalAlignment="Top" Background="#fad8d1" Foreground="White" FontSize="25px" Width="140" BorderBrush="White" BorderThickness="7"  Height="59" Margin="30,650,0,10"/>
     </Grid>
 </Page>
