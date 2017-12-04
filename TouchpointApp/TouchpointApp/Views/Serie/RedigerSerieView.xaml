@@ -5,23 +5,20 @@
     xmlns:local="using:TouchpointApp.Views.Serie"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d">
+    mc:Ignorable="d" Height="1345.41">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid Background="#fad8d1" Margin="0,0,0,461">
         <!-- StackPanel surrounding full page.-->
-        <StackPanel RenderTransformOrigin="0.75,0.426">
+        <StackPanel RenderTransformOrigin="0.75,0.426" Margin="0,0,0,692" d:LayoutOverrides="TopPosition, BottomPosition">
             <!-- Logo & Title -->
             <StackPanel>
-                <TextBlock FontSize="48px" FontWeight="Bold">
-                    <Run Text="Touchpoint"/>
-                </TextBlock>
+                <Image Source="ms-appx:///Assets/Images/TouchPointFlotFinal.png" Height="100px" Margin="108,10,140,10" VerticalAlignment="Center" />
             </StackPanel>
             <!-- Content -->
             <!-- Footer -->
         </StackPanel>
-        <Button Click="BackToSerieView" Content="Back" Margin="29,0,0,30" VerticalAlignment="Bottom" Width="139" Height="60" FontSize="36"/>
         <StackPanel x:Name="ListViewStack" HorizontalAlignment="Left" Margin="51,139,0,122" Width="374" d:LayoutOverrides="HorizontalAlignment">
-            <TextBlock Height="104" TextWrapping="Wrap" FontSize="36" Margin="0,0,36,0">
+            <TextBlock Height="60" TextWrapping="Wrap" Width="613" FontSize="36" Foreground="White">
                 <Run Text="Oversigt over "/>
                 <Run Text="serier"/>
             </TextBlock>
@@ -29,16 +26,17 @@
         </StackPanel>
         <StackPanel x:Name="RedigerViewStack" HorizontalAlignment="Right" Margin="0,139,103,154" Width="733" Orientation="Horizontal">
             <StackPanel x:Name="StackPanelBeskrivelse" Orientation="Horizontal" Margin="0,0,0,10">
-                <TextBlock Height="67" TextWrapping="Wrap" Text="Beskrivelse" VerticalAlignment="Top" Width="333" FontSize="36"/>
-                <TextBox Height="67" TextWrapping="Wrap" Text="Indtast Beskrivelse" VerticalAlignment="Top" Width="399" FontSize="36"/>
+                <TextBlock Height="57" TextWrapping="Wrap" Text="Beskrivelse" VerticalAlignment="Top" Width="333" FontSize="36" Foreground="White" Margin="0,85,0,0"/>
+                <TextBox Height="61" TextWrapping="Wrap" Text="Indtast Beskrivelse" VerticalAlignment="Top" Width="399" FontSize="36" Foreground="#230101"/>
             </StackPanel>
         </StackPanel>
         <StackPanel x:Name="RedigerViewStack2" HorizontalAlignment="Right" Margin="0,139,103,172" Width="733" Orientation="Horizontal">
             <StackPanel x:Name="StackPanelKursus" Orientation="Horizontal" Margin="0,0,0,255">
-                <TextBlock Height="74" TextWrapping="Wrap" Text="Kurser" VerticalAlignment="Top" Width="333" FontSize="36" Margin="0,67,0,0"/>
-                <TextBox Height="74" TextWrapping="Wrap" Text="Vælg Kurser" VerticalAlignment="Top" Width="399" FontSize="36" Margin="0,67,0,0"/>
+                <TextBlock Height="67" TextWrapping="Wrap" Text="Kurser" VerticalAlignment="Top" Width="333" FontSize="36" Margin="0,0,0,0" Foreground="White"/>
+                <TextBox Height="61" TextWrapping="Wrap" Text="Vælg Kurser" VerticalAlignment="Top" Width="399" FontSize="36" Margin="0,82,0,0" Foreground="#230101"/>
             </StackPanel>
         </StackPanel>
-        <Button Content="Gem" HorizontalAlignment="Right" Height="60" Margin="0,0,259,30" VerticalAlignment="Bottom" Width="216" FontSize="36"/>
+        <Button Content="Gem" Background="#fad8d1" Foreground="White" FontSize="25px" Width="155" BorderBrush="White" BorderThickness="7" Margin="1242,400,0,410" VerticalAlignment="Stretch"/>
+        <Button Click="BackToSerieView" Content="Back" Background="#fad8d1" Foreground="White" FontSize="25px" BorderBrush="White" BorderThickness="7" Margin="51,400,1294,410" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
     </Grid>
 </Page>

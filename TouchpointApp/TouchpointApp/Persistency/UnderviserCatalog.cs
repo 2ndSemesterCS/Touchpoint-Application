@@ -22,6 +22,12 @@ namespace TouchpointApp.Persistency
         }
         #endregion
 
+        public List<Underviser> Getlist
+        {
+            get { return _Ul; }
+            set { _Ul = value; }
+        }
+
         #region Metoder
         public void OpretKursus(string Navn, string Adresse, string email, string tlf)
         {
