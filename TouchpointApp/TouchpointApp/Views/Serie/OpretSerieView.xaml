@@ -7,22 +7,22 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid Background="#fad8d1">
         <!-- StackPanel surrounding full page.-->
-        <StackPanel Height="86" VerticalAlignment="Top" d:LayoutOverrides="VerticalAlignment">
+        <StackPanel Height="125" VerticalAlignment="Top">
             <!-- Logo & Title -->
-            <StackPanel>
-                <TextBlock FontSize="48px" FontWeight="Bold">Touchpoint</TextBlock>
-            </StackPanel>
+
+            <Image Source="ms-appx:///Assets/Images/TouchPointFlotFinal.png" Height="100px" Margin="108,10,140,10" VerticalAlignment="Center" />
+
             <!-- Content -->
 
 
             <!-- Footer -->
         </StackPanel>
-        <Button Click="BackToSerieView" Content="Back" Margin="80,0,0,56" VerticalAlignment="Bottom" Width="97" Height="57"/>
+        <Button Click="BackToSerieView" Content="Back" Background="#fad8d1" Foreground="White" FontSize="25px" Width="140" VerticalAlignment="Center" BorderBrush="White" BorderThickness="7"  Height="75" Margin="30,100,140,10"/>
         <StackPanel x:Name="Holder_alt" HorizontalAlignment="Left" Height="442" Margin="122,158,-175,0" VerticalAlignment="Top" Width="1333">
             <StackPanel x:Name="Beskrivelse" HorizontalAlignment="Left" Height="116" Margin="0,0,-58,0" VerticalAlignment="Top" Width="1245" Orientation="Horizontal">
-                <TextBlock HorizontalAlignment="Left" Height="100" TextWrapping="Wrap" Text="Beskrivelse" VerticalAlignment="Top" Width="315" FontSize="48"/>
+                <TextBlock HorizontalAlignment="Left" Height="100" TextWrapping="Wrap" Text="Beskrivelse" VerticalAlignment="Top" Width="315" FontSize="48" Foreground="White"/>
                 <TextBox TextWrapping="Wrap" Text="{Binding }" Margin="0,0.51,0,-2.478" Width="815" FontSize="48" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
                     <TextBox.RenderTransform>
                         <CompositeTransform Rotation="0.128"/>
@@ -30,10 +30,10 @@
                 </TextBox>
             </StackPanel>
             <StackPanel x:Name="Kursus" HorizontalAlignment="Left" Height="116" Margin="0,0,-58,0" VerticalAlignment="Top" Width="1245" Orientation="Horizontal">
-                <TextBlock HorizontalAlignment="Left" Height="100" TextWrapping="Wrap" Text="Kursus" VerticalAlignment="Bottom" Width="315" FontSize="48" Margin="0,0,0,16"/>
+                <TextBlock HorizontalAlignment="Left" Height="100" TextWrapping="Wrap" Text="Kursus" VerticalAlignment="Bottom" Width="315" FontSize="48" Margin="0,0,0,16" Foreground="White"/>
                 <ComboBox x:Name="comboBox" HorizontalAlignment="Stretch" Margin="0,10,0,0" VerticalAlignment="Stretch" Width="814"/>
             </StackPanel>
         </StackPanel>
-        <Button Content="Opret " HorizontalAlignment="Right" Height="57" Margin="0,0,255,56" VerticalAlignment="Bottom" Width="97"/>
+        <Button Content="Opret " Background="#fad8d1" Foreground="White" FontSize="25px" Width="140" VerticalAlignment="Center" BorderBrush="White" BorderThickness="7"  Height="75" Margin="1109,508,0,417"/>
     </Grid>
 </Page>
