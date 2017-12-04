@@ -21,7 +21,7 @@
         </StackPanel>
 
         <Button Click="BackToKursusView" Content="Back" Margin="29,0,0,30" VerticalAlignment="Bottom" Width="139" Height="60" FontSize="36"/>
-        <ScrollViewer HorizontalScrollBarVisibility="Auto" Margin="477,50,32,115">
+        <ScrollViewer HorizontalScrollBarVisibility="Auto" Margin="477,50,32,61">
             <StackPanel x:Name="RedigerViewStack" HorizontalAlignment="Right" Width="733" Orientation="Vertical">
                 <StackPanel x:Name="Titel" Margin="0,0,0,0" HorizontalAlignment="Right" Width="733" Orientation="Horizontal" Height="71">
                     <TextBlock Height="67" TextWrapping="Wrap" Text="Titel&#x9;" VerticalAlignment="Top" Width="209" FontSize="36" Margin="0,0,0,0"/>
@@ -58,7 +58,7 @@
 
             </StackPanel>
         </ScrollViewer>
-        <Button Content="Gem" HorizontalAlignment="Right" Height="60" Margin="0,0,259,30" VerticalAlignment="Bottom" Width="216" FontSize="36"/>
+        <Button Content="Gem" HorizontalAlignment="Right" Height="60" Margin="0,0,32,1" VerticalAlignment="Bottom" Width="216" FontSize="36"/>
         <TextBlock Height="84" TextWrapping="Wrap" Width="361" FontSize="36" HorizontalAlignment="Left" Margin="0,72,0,0" VerticalAlignment="Top" d:LayoutOverrides="Width">
             <Run Text="Oversigt over "/>
             <Run Text="kurser"/>

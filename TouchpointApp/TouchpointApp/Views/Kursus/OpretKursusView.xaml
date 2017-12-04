@@ -14,7 +14,7 @@
         <vm:KursusViewModel/>
     </Page.DataContext>
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Margin="0,0,0,-85">
         <!-- StackPanel surrounding full page.-->
         <StackPanel Height="86" VerticalAlignment="Top" d:LayoutOverrides="VerticalAlignment">
             <!-- Logo & Title -->
@@ -26,9 +26,9 @@
 
             <!-- Footer -->
         </StackPanel>
-        <Button Click="BackToKursusView" Content="Back" Margin="80,0,0,56" VerticalAlignment="Bottom"/>
-    <ScrollViewer HorizontalScrollBarVisibility="Auto" Margin="131,86,0,187">
-            <StackPanel x:Name="Holder_alt" HorizontalAlignment="Left" Height="724" VerticalAlignment="Top" Width="1339">
+        <Button Click="BackToKursusView" Content="Back" Margin="444,0,0,150" VerticalAlignment="Bottom"/>
+        <ScrollViewer HorizontalScrollBarVisibility="Auto" Margin="131,86,0,187">
+            <StackPanel x:Name="Holder_alt" HorizontalAlignment="Left" Height="766" VerticalAlignment="Top" Width="1339">
                 <StackPanel x:Name="Titel" HorizontalAlignment="Left" Height="75" Margin="0,0,-58,0" VerticalAlignment="Top" Width="1245" Orientation="Horizontal">
                     <StackPanel x:Name="Addresse_Copy" HorizontalAlignment="Left" Height="116" Margin="0,0,-58,0" VerticalAlignment="Top" Width="1245" Orientation="Horizontal">
                         <TextBlock HorizontalAlignment="Left" Height="100" TextWrapping="Wrap" Text="Titel" VerticalAlignment="Top" Width="315" FontSize="30" SelectionChanged="TextBlock_SelectionChanged"/>
@@ -95,25 +95,25 @@
                         </TextBox.RenderTransform>
                     </TextBox>
                 </StackPanel>
-                <StackPanel x:Name="Underviser" HorizontalAlignment="Left" Height="75" Margin="0,0,-58,0" VerticalAlignment="Top" Width="1245" Orientation="Horizontal">
+                <StackPanel x:Name="Underviser" HorizontalAlignment="Left" Height="75" Margin="0,0,0,0" VerticalAlignment="Top" Width="1245" Orientation="Horizontal">
                     <TextBlock HorizontalAlignment="Left" Height="100" TextWrapping="Wrap" Text="Underviser" VerticalAlignment="Top" Width="315" FontSize="30"/>
-                    <TextBox TextWrapping="Wrap" Text="{Binding kursusData.Underviser , Mode=TwoWay}" Margin="0,0.211,0,-2.179" Width="635" FontSize="30" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
-                        <TextBox.RenderTransform>
+                    <ComboBox ItemsSource="{Binding kursusData.Underviser}" SelectedItem="{Binding kursusData.Underviser, Mode=TwoWay}" Margin="0,0.211,0,0" Width="635" FontSize="30" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto" Height="73.902">
+                        <ComboBox.RenderTransform>
                             <CompositeTransform Rotation="0.128"/>
-                        </TextBox.RenderTransform>
-                    </TextBox>
+                        </ComboBox.RenderTransform>
+                    </ComboBox>
                 </StackPanel>
                 <StackPanel x:Name="Undervisningssted" HorizontalAlignment="Left" Height="75" Margin="0,0,-58,0" VerticalAlignment="Top" Width="1245" Orientation="Horizontal">
-                    <TextBlock HorizontalAlignment="Left" Height="100" TextWrapping="Wrap" Text="Lokation" VerticalAlignment="Top" Width="315" FontSize="30"/>
-                    <TextBox TextWrapping="Wrap" Text="{Binding kursusData.Undervisningssted , Mode=TwoWay}" Margin="0,0.211,0,-2.179" Width="635" FontSize="30" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
-                        <TextBox.RenderTransform>
+                    <TextBlock HorizontalAlignment="Left" Height="100" TextWrapping="Wrap" Text="Undervisningssted" VerticalAlignment="Top" Width="315" FontSize="30"/>
+                    <ComboBox ItemsSource="{Binding kursusData.Undervisningssted}" SelectedItem="{Binding kursusData.Undervisningssted, Mode=TwoWay}" Margin="0,0.211,0,0" Width="635" FontSize="30" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto" Height="73.902">
+                        <ComboBox.RenderTransform>
                             <CompositeTransform Rotation="0.128"/>
-                        </TextBox.RenderTransform>
-                    </TextBox>
+                        </ComboBox.RenderTransform>
+                    </ComboBox>
                 </StackPanel>
 
             </StackPanel>
         </ScrollViewer>
-        <Button Command="{Binding OpretNytKursusCommand }" Content="Opret" HorizontalAlignment="Right" Height="32" Margin="0,0,145,56" VerticalAlignment="Bottom" Width="84"/>
+        <Button Command="{Binding OpretNytKursusCommand }" Content="Opret" HorizontalAlignment="Right" Height="32" Margin="0,0,197,150" VerticalAlignment="Bottom" Width="84"/>
     </Grid>
 </Page>
