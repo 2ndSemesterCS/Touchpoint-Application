@@ -38,9 +38,9 @@ namespace Testing
         }
 
         [TestMethod]
-        public void TestMethod2()
+        public void OpretUnderviserUdenPersonligInfo()
         {
-
+            Assert.ThrowsException<ArgumentException>(() => { new Underviser("", "", "", ""); });
         }
     }
 }

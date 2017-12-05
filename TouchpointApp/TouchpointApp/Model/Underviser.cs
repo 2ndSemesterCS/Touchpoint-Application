@@ -11,6 +11,22 @@ namespace TouchpointApp.Model
 
         public Underviser(string navn, string addresse, string email, string tlf)
         {
+            if(String.IsNullOrEmpty(navn))
+            {
+                throw new ArgumentException("Navn mangler");
+            }
+            if (String.IsNullOrEmpty(addresse))
+            {
+                throw new ArgumentException("Adresse mangler");
+            }
+            if (String.IsNullOrEmpty(email))
+            {
+                throw new ArgumentException("Email mangler");
+            }
+            if (String.IsNullOrEmpty(tlf))
+            {
+                throw new ArgumentException("Telefonnummer mangler");
+            }
             _navn = navn;
             _addresse = addresse;
             _email = email;
