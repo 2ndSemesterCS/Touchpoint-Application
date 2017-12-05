@@ -8,22 +8,43 @@
     mc:Ignorable="d">
 
     <Grid Background="#fad8d1" BorderBrush="MistyRose" BorderThickness="10">
-        <!-- StackPanel surrounding full page.-->
-        <StackPanel RenderTransformOrigin="0.75,0.426">
-            <!-- Logo & Title -->
-            <StackPanel>
-                <Image Source="ms-appx:///Assets/Images/TouchPointFlotFinal.png" Height="100px" Margin="108,10,140,10" VerticalAlignment="Center" />
-            </StackPanel>
-            <!-- Content -->
-            <!-- Footer -->
-        </StackPanel>
-        <Button Click="BackToKursusView" Content="Back" Background="#fad8d1" Foreground="White" FontSize="25px" BorderBrush="White" BorderThickness="7" Margin="131,0,0,106" Height="81" Width="160" VerticalAlignment="Bottom"/>
-        <StackPanel x:Name="ListViewStack" HorizontalAlignment="Left" Margin="51,139,0,160" Width="645">
-            <TextBlock Height="84" TextWrapping="Wrap" Text="Oversigt over kurser" Width="598" FontSize="36" SelectionChanged="TextBlock_SelectionChanged" Foreground="White"/>
-            <ListView Height="336" Margin="0,0,10,0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="300"/>
+            <ColumnDefinition Width="880"/>
+            <ColumnDefinition Width="300"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="500"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
 
-            </ListView>
+        <!-- Grid Stackpanel Venstre 0.0-->
+        <StackPanel Grid.Column="0" Grid.Row="0">
         </StackPanel>
-        <Button Content="Delete" HorizontalAlignment="Right" Background="#fad8d1" Foreground="White" FontSize="25px" BorderBrush="White" BorderThickness="7" Margin="0,0,345,106" Height="76" Width="160" VerticalAlignment="Bottom"/>
+
+        <!-- Grid Stackpanel Venstre 1.0-->
+        <StackPanel Grid.Column="1" Grid.Row="0">
+            <Image Source="ms-appx:///Assets/Images/TouchPointFlotFinal.png" Height="100px" Margin="108,10,140,10" VerticalAlignment="Center" />
+            <TextBlock Height="66" Margin="0,50,0,0" TextWrapping="Wrap" Text="Oversigt over Kurser" FontSize="25px" Foreground="White" HorizontalAlignment="Center" SelectionChanged="TextBlock_SelectionChanged"/>
+            <ListView Height="259" Width="400" FontSize="25" Foreground="White" BorderBrush="White" BorderThickness="7"/>
+        </StackPanel>
+
+        <!-- Grid Stackpanel Venstre 2.0-->
+        <StackPanel Grid.Column="2" Grid.Row="0">
+        </StackPanel>
+
+        <!-- Grid Stackpanel Venstre 0.1-->
+        <StackPanel Grid.Column="0" Margin="-10,490,10,10" Grid.RowSpan="2">
+            <Button Click="BackToKursusView" Content="Back" HorizontalAlignment="Center" Background="#fad8d1" Foreground="White" FontSize="25px" Width="140" BorderBrush="White" BorderThickness="7"  Height="75" />
+        </StackPanel>
+
+        <!-- Grid Stackpanel Venstre 1.2-->
+        <StackPanel Grid.Column="1" Grid.Row="1" Margin="0,90,0,0">
+        </StackPanel>
+
+        <!-- Grid Stackpanel Venstre 2.2-->
+        <StackPanel Grid.Column="1" Grid.ColumnSpan="2" Margin="870,490,10,10" Grid.RowSpan="2">
+            <Button Content="Slet" HorizontalAlignment="Center" Background="#fad8d1" Foreground="White" FontSize="25px" Width="140" BorderBrush="White" BorderThickness="7"  Height="75"/>
+        </StackPanel>
     </Grid>
 </Page>

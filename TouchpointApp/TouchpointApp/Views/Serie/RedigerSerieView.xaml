@@ -9,7 +9,7 @@
 
     <Grid Background="#fad8d1" >
         <!-- StackPanel surrounding full page.-->
-        <StackPanel RenderTransformOrigin="0.75,0.426" Margin="0,0,0,692" d:LayoutOverrides="TopPosition, BottomPosition">
+        <StackPanel RenderTransformOrigin="0.75,0.426" Margin="0,0,0,692">
             <!-- Logo & Title -->
             <StackPanel>
                 <Image Source="ms-appx:///Assets/Images/TouchPointFlotFinal.png" Height="100px" Margin="108,10,140,10" VerticalAlignment="Center" />

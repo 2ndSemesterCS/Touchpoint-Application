@@ -8,18 +8,18 @@ using TouchpointApp.Persistency;
 
 namespace TouchpointApp.ViewModel.Underviser
 {
-    class UnderviserViewmodelCollectionRediger
-    {
-        public UnderviserCatalog _underviserCatalog;
+    //class UnderviserViewmodelCollectionRediger
+    //{
+    //    public UnderviserCatalog _underviserCatalog;
 
-        public ObservableCollection<Model.Underviser> CreateObservableCollection()
-        {
-            var Collection = new ObservableCollection<Model.Underviser>();
-            foreach (var item in _underviserCatalog)
-            {
-                Collection.Add(item);
-            }
-            return Collection;
-        }
+    //    public ObservableCollection<Model.Underviser> CreateObservableCollection()
+    //    {
+    //        var Collection = new ObservableCollection<Model.Underviser>();
+    //        foreach (var item in _underviserCatalog)
+    //        {
+    //            Collection.Add(item);
+    //        }
+    //        return Collection;
+    //    }
     }
 }

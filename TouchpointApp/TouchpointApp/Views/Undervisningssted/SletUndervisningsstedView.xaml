@@ -7,23 +7,47 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="#fad8d1">
-        <!-- StackPanel surrounding full page.-->
-        <StackPanel>
-            <!-- Logo & Title -->
-            <StackPanel>
-                <Image Source="ms-appx:///Assets/Images/TouchPointFlotFinal.png" Height="100px" Margin="108,10,140,10" VerticalAlignment="Center" />
-            </StackPanel>
-            <!-- Content -->
-            <!-- Footer -->
+    <Grid Background="#fad8d1" BorderBrush="MistyRose" BorderThickness="10">
+
+        <!-- Grids --><Grid.ColumnDefinitions>
+            <ColumnDefinition Width="300"/>
+            <ColumnDefinition Width="880"/>
+            <ColumnDefinition Width="300"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="500"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <!-- Grid Stackpanel Venstre 0.0-->
+        <StackPanel Grid.Column="0" Grid.Row="0">
         </StackPanel>
-        <Button Click="BackToUndervisningsstedView" Content="Back" Margin="54,0,0,102" VerticalAlignment="Bottom" Width="148" Height="85" FontSize="36" Background="#fad8d1" Foreground="White" BorderBrush="White" BorderThickness="7"/>
-        <StackPanel Margin="10,126,551,229">
-            <TextBlock Height="114" Margin="0,50,10,0" TextWrapping="Wrap" Text="Oversigt over undervisningssteder " FontSize="36" Foreground="White"  />
-            <ScrollViewer Height="297" Margin="10,0,0,0">
-                <ListView Height="287" Width="804" Foreground="#230101" FontSize="36px"/>
-            </ScrollViewer>
+
+        <!-- Grid Stackpanel Venstre 1.0-->
+        <StackPanel Grid.Column="1" Grid.Row="0">
+            <Image Source="ms-appx:///Assets/Images/TouchPointFlotFinal.png" Height="100px" Margin="108,10,140,10" VerticalAlignment="Center" />
+            <TextBlock Height="66" Margin="0,50,0,0" TextWrapping="Wrap" Text="Oversigt over undervisningssteder " FontSize="25px" Foreground="White" HorizontalAlignment="Center" />
+            <ListView Height="259" Width="400" FontSize="25" Foreground="White" BorderBrush="White" BorderThickness="7"/>
         </StackPanel>
-        <Button Content="Slet" Height="85" Margin="0,0,492,102" VerticalAlignment="Bottom" Width="148" FontSize="36" HorizontalAlignment="Right" Background="#fad8d1" Foreground="White" BorderBrush="White" BorderThickness="7"/>
+
+        <!-- Grid Stackpanel Venstre 2.0-->
+        <StackPanel Grid.Column="2" Grid.Row="0">
+        </StackPanel>
+
+        <!-- Grid Stackpanel Venstre 0.1-->
+        <StackPanel Grid.Column="0" Grid.Row="1" >
+            <Button Click="BackToUndervisningsstedView" Content="Back" HorizontalAlignment="Center" Background="#fad8d1" Foreground="White" FontSize="25px" Width="140" BorderBrush="White" BorderThickness="7"  Height="75" />
+        </StackPanel>
+
+        <!-- Grid Stackpanel Venstre 1.2-->
+        <StackPanel Grid.Column="1" Grid.Row="1" Margin="0,90,0,0">
+        </StackPanel>
+
+        <!-- Grid Stackpanel Venstre 2.2-->
+        <StackPanel Grid.Column="2" Grid.Row="2">
+            <Button Content="Slet" HorizontalAlignment="Center" Background="#fad8d1" Foreground="White" FontSize="25px" Width="140" BorderBrush="White" BorderThickness="7"  Height="75"/>
+        </StackPanel>
+        
+        
     </Grid>
 </Page>
