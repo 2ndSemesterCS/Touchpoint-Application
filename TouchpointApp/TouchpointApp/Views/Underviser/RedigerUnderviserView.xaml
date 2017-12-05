@@ -8,7 +8,7 @@
     mc:Ignorable="d">
 
 
-    <Grid Background="#fad8d1">
+    <Grid Background="#fad8d1" BorderBrush="MistyRose" BorderThickness="10">
         <!-- StackPanel surrounding full page.-->
 
         <!-- Logo & Title -->

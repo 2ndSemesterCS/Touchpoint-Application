@@ -7,19 +7,15 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid Background="#fad8d1" Margin="0,0,0,0" BorderBrush="MistyRose" BorderThickness="10">
         <!-- StackPanel surrounding full page.-->
-        <StackPanel Background="#fad8d1">
+        <StackPanel>
             <!-- Logo & Title -->
+            
             <StackPanel  >
                 <Image    Source="Assets/Images/TouchPointFlotFinal.png" Height="100px" Margin="108,10,140,10"/>
-
             </StackPanel>
-            <!-- Navigation Bar -->
-            <!-- Content -->
-            <StackPanel>
-            </StackPanel>
-            <StackPanel Orientation="Horizontal" Margin="101,0,108,0" Height="77" BorderBrush="White" BorderThickness="7">
+            <StackPanel Orientation="Horizontal" Margin="101,0,108,0" BorderBrush="White" BorderThickness="7" CornerRadius="10" >
                 <StackPanel.Resources>
                     <Style TargetType="Button">
                         <Setter Property="Margin" Value="0,0,20,0" />
@@ -33,7 +29,9 @@
                 <Button Background="#fad8d1" Foreground="White" Width="136" FontSize="25px" Content="Webshop" Margin="0,9,20,8"/>
                 <Button Background="#fad8d1" Foreground="White" Click="AdminViewClick" FontSize="25px" Content="Administrator" Margin="0,9,20,8"/>
             </StackPanel>
-            <StackPanel Height="779">
+            <!-- Navigation Bar -->
+            <!-- Content -->
+            <StackPanel Height="419">
                 <Image Source="Assets\Images\TouchMinePoints.png" Height="404" Margin="390,50,380,30"/>
             </StackPanel>
         </StackPanel>
