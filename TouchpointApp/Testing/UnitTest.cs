@@ -1,7 +1,7 @@
 ﻿
 using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
- 
+using TouchpointApp.Model;
 
 namespace Testing
 {
@@ -12,6 +12,8 @@ namespace Testing
         public void TestMethod1()
         {
             // Arrange
+            Underviser h = new Underviser(); 
+            S
             
 
 
