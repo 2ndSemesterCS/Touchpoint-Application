@@ -24,7 +24,7 @@ using System;
 
         public void OpretUndervisningssted(string lokale, string adresse)
         {
-            Undervisningssted us1 = new Undervisningssted(lokale, adresse);
+            Undervisningssted us1 = new Undervisningssted("", "");
 
 
             { 

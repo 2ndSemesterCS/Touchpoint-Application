@@ -17,7 +17,7 @@ namespace Testing
             //testobjekt = new Undervisningssted("","");
         }
         [TestMethod]
-        public void OpretUndervisingsstedUdenAdresseOgLokale()
+        public void OpretUndervisingsstedUdenAdresse()
         {
 
             // arrange 
@@ -38,11 +38,9 @@ namespace Testing
         }
 
         [TestMethod]
-        public void OpretunderviserUdenInformation()
+        public void TestMethod2()
         {
 
-
-            Assert.ThrowsException<ArgumentException>(() => { new Underviser("", "","",""); });
         }
     }
 }
