@@ -15,13 +15,14 @@ namespace TouchpointApp.Model
 
         public Undervisningssted(string lokale, string adresse)
         {
+
             if( String.IsNullOrEmpty(lokale) || adresse == null)
             {
-                throw new ArgumentException("Name must contain at least two characters");
+                throw new ArgumentException("Adresse eller lokale mangler");
             }
-          
-            _lokale = lokale;
-            _adresse = adresse;
+
+            lokale = _lokale;
+            adresse = _adresse;
         }
    
 
