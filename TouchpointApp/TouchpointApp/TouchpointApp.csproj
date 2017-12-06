@@ -121,6 +121,7 @@
     <Compile Include="ViewModel\Serie\SerieViewModel.cs" />
     <Compile Include="ViewModel\Underviser\UnderviserViewmodel.cs" />
     <Compile Include="ViewModel\Underviser\UnderviserViewmodelCollectionRediger.cs" />
+    <Compile Include="ViewModel\Underviser\UnderviserViewmodelSlet.cs" />
     <Compile Include="ViewModel\Undervisningssted\UndervisningsstedViewModel.cs" />
     <Compile Include="ViewModel\ViewModelBase.cs" />
     <Compile Include="Views\AdminView.xaml.cs">
