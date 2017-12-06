@@ -16,7 +16,7 @@
             <ColumnDefinition Width="280"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="400"/>
+            <RowDefinition Height="450"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
 
@@ -47,7 +47,7 @@
 
         <!-- Grid Stackpanel Venstre 0.1-->
         <StackPanel Grid.Column="0" Margin="-10,390,10,10" Grid.RowSpan="2">
-            <Button Background="#fad8d1" Foreground="White" FontSize="20px" Width="140" HorizontalAlignment="Center" BorderBrush="White" BorderThickness="7"  Height="50" Click="BackToMainPage" Content="Back" Margin="0,100,0,0"/>
+            <Button Background="#fad8d1" Foreground="White" FontSize="20px" Width="140" HorizontalAlignment="Center" BorderBrush="White" BorderThickness="7"  Height="50" Click="BackToMainPage" Content="Back" Margin="0,200,0,0"/>
         </StackPanel>
 
 
