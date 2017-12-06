@@ -42,10 +42,9 @@ namespace TouchpointApp.Model
         {
             
             if (tlf.Length < 8 || tlf.Length > 8)
-            {
-                throw new ArgumentException("Invalid telefonnummer");
-            }
-
+                {
+                    throw new ArgumentException("Invalid telefonnummer");
+                }
                 
         }
 
