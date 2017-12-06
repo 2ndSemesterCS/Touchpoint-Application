@@ -5,9 +5,9 @@
     xmlns:local="using:TouchpointApp.Views.Serie"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d">
+    mc:Ignorable="d" Height="1345.41">
 
-    <Grid Background="#fad8d1" >
+    <Grid Background="#fad8d1" Margin="0,0,0,461">
         <!-- StackPanel surrounding full page.-->
         <StackPanel RenderTransformOrigin="0.75,0.426" Margin="0,0,0,692" d:LayoutOverrides="TopPosition, BottomPosition">
             <!-- Logo & Title -->
@@ -36,7 +36,7 @@
                 <TextBox Height="61" TextWrapping="Wrap" Text="Vælg Kurser" VerticalAlignment="Top" Width="399" FontSize="36" Margin="0,82,0,0" Foreground="#230101"/>
             </StackPanel>
         </StackPanel>
-        <Button Content="Gem" Background="#fad8d1" Foreground="White" FontSize="25px" Width="155" BorderBrush="White" BorderThickness="7" Margin="1242,540,0,381" VerticalAlignment="Stretch"/>
-        <Button Click="BackToSerieView" Content="Back" Background="#fad8d1" Foreground="White" FontSize="25px" BorderBrush="White" BorderThickness="7" Margin="51,540,1294,381" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+        <Button Content="Gem" Background="#fad8d1" Foreground="White" FontSize="25px" Width="155" BorderBrush="White" BorderThickness="7" Margin="1242,400,0,410" VerticalAlignment="Stretch"/>
+        <Button Click="BackToSerieView" Content="Back" Background="#fad8d1" Foreground="White" FontSize="25px" BorderBrush="White" BorderThickness="7" Margin="51,400,1294,410" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
     </Grid>
 </Page>

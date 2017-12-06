@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 namespace TouchpointApp.Model
 {
     public class Serie
+
     {
         private List<Kursus> _kursusSerie;
         private string _beskrivelse;

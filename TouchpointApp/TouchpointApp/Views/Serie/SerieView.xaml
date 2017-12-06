@@ -7,29 +7,31 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="#fad8d1" BorderBrush="MistyRose" BorderThickness="10">
+    <Grid Background="#fad8d1">
         <!-- StackPanel surrounding full page.-->
-        <StackPanel >
+        <StackPanel>
             <!-- Logo & Title -->
             <StackPanel>
                 <Image Source="ms-appx:///Assets/Images/TouchPointFlotFinal.png" Height="100px" Margin="108,10,140,10" VerticalAlignment="Center"/>
             </StackPanel>
             <!-- Navigation Bar -->
-            <StackPanel Orientation="Vertical" Margin="468,50,405,0" Height="385">
+            <StackPanel Orientation="Vertical">
                 <StackPanel.Resources>
                     <Style TargetType="Button">
                         <Setter Property="Margin" Value="0,20,0,0" />
                     </Style>
                 </StackPanel.Resources>
-                 <Button Width="325" Margin="108,10,140,10" BorderBrush="White" BorderThickness="7" Height="75" Background="#fad8d1" Foreground="White" FontSize="25px" Click="OpretLokaleViewClick" >Opret Serie</Button>
-                 <Button Width="325" Margin="108,10,140,10" BorderBrush="White" BorderThickness="7" Height="75" Background="#fad8d1" Foreground="White" FontSize="25px" Click="RedigerLokaleViewClick">Rediger Serie</Button>
-                 <Button Width="325" Margin="108,10,140,10" BorderBrush="White" BorderThickness="7" Height="75" Background="#fad8d1" Foreground="White" FontSize="25px" Click="SletLokaleViewClick" >Slet Serie</Button>
+                <Button Margin="108,10,0,10" BorderBrush="White" BorderThickness="7" Height="75" Background="#fad8d1" Foreground="White" FontSize="25px" Click="OpretLokaleViewClick" Width="176">Opret Serie</Button>
+                <Button Margin="108,10,0,10" BorderBrush="White" BorderThickness="7" Height="75" Background="#fad8d1" Foreground="White" FontSize="25px" Click="RedigerLokaleViewClick">Rediger Serie</Button>
+                <Button Margin="108,10,0,10" BorderBrush="White" BorderThickness="7" Height="75" Background="#fad8d1" Foreground="White" FontSize="25px" Click="SletLokaleViewClick" Width="176">Slet Serie</Button>
             </StackPanel>
             <!-- Content -->
             <StackPanel>
             </StackPanel>
             <!-- Footer -->
+            <StackPanel>
+                <Button Background="#fad8d1" Foreground="White" FontSize="25px" Width="140" VerticalAlignment="Center" BorderBrush="White" BorderThickness="7"  Height="75" Margin="30,100,140,10" Click="BackToAdminView">Back</Button>
+            </StackPanel>
         </StackPanel>
-        <Button Background="#fad8d1" Foreground="White" FontSize="25px" Width="140" VerticalAlignment="Center" BorderBrush="White" BorderThickness="7"  Height="75" Margin="30,400,140,10" Click="BackToAdminView">Back</Button>
     </Grid>
 </Page>
