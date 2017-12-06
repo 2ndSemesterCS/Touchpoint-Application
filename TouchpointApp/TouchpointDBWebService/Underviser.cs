@@ -36,10 +36,5 @@ namespace TouchpointDBWebService
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<UnderviserPåKursus> UnderviserPåKursus { get; set; }
-
-        public override string ToString()
-        {
-            return $"{Navn}, er nu underviser.";
-        }
     }
 }
