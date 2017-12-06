@@ -72,7 +72,7 @@
                 </TextBox>
             </StackPanel>
         </StackPanel>
-        <Button Command="{Binding OpretNyUnderviserCommand}" Content="Opret" Margin="1012,0,0,43" VerticalAlignment="Bottom" Height="66" Width="168"/>
+        <Button Command="{Binding OpretNyKursistCommand}" Content="Opret" Margin="1012,0,0,43" VerticalAlignment="Bottom" Height="66" Width="168"/>
         <!--<Button Click="1" Content="Opret Underviser" Margin="966,0,0,343" VerticalAlignment="Bottom" Height="81" Width="214" FontSize="25"/>-->
     </Grid>
 </Page>
