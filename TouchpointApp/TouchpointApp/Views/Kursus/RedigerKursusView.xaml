@@ -5,15 +5,16 @@
     xmlns:local="using:TouchpointApp.Views"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d">
-    
-    <Grid Background="#fad8d1" BorderBrush="MistyRose" BorderThickness="10">
+    mc:Ignorable="d" Height="720">
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <!-- StackPanel surrounding full page.-->
         <!-- StackPanel surrounding full page.-->
-        <StackPanel >
+        <StackPanel RenderTransformOrigin="0.75,0.426">
             <!-- Logo & Title -->
             <StackPanel>
-                <Image Source="ms-appx:///Assets/Images/TouchPointFlotFinal.png" Height="100px" Margin="108,10,140,10" VerticalAlignment="Center" />
+                <TextBlock FontSize="48px" FontWeight="Bold">
+                    <Run Text="Touchpoint"/>
+                </TextBlock>
             </StackPanel>
             <!-- Content -->
             <!-- Footer -->

@@ -15,14 +15,9 @@ namespace TouchpointApp.Model
 
         public Undervisningssted(string lokale, string adresse)
         {
-
-            if (String.IsNullOrEmpty(lokale) || String.IsNullOrEmpty(adresse))
-            {
-                throw new ArgumentException("Adresse eller lokale mangler");
-            }
-
-            lokale = _lokale;
-            adresse = _adresse;
+          
+            _lokale = lokale;
+            _adresse = adresse;
         }
    
 
