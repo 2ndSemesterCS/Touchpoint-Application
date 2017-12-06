@@ -17,17 +17,19 @@ namespace TouchpointApp.ViewModel.Underviser
 
         public UnderviserViewmodel()
         {
-            _underviserCatalog = new UnderviserCatalog();
+            //singelton methon is used. 
+            _underviserCatalog = UnderviserCatalog.Instance();
             _underviserData = new UnderviserData();
             OpretNyUnderviserCommand = new RelayCommand(OpretNyUnderviser);
         }
 
+        //Propperty with type relaycommand, so we can bind our creat method to a buttom. 
         public RelayCommand OpretNyUnderviserCommand { get; set; }
         public UnderviserData UnderviserData { get { return _underviserData; } set { _underviserData = value; } }
 
         public void OpretNyUnderviser()
         {
-            _underviserCatalog.OpretKursus(_underviserData.Navn, _underviserData.Adresse, _underviserData.Email, _underviserData.Tlf);
+            _underviserCatalog.OpretUnderviser(_underviserData.Navn, _underviserData.Adresse, _underviserData.Email, _underviserData.Tlf);
         }
     }
 }

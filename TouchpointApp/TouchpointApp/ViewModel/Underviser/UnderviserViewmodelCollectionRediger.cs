@@ -12,7 +12,6 @@ namespace TouchpointApp.ViewModel.Underviser
 {
     public class UnderviserViewmodelCollectionRediger : ViewModelBase
     {
-        private UnderviserCatalog _underviserCatalog;
         private Model.Underviser _ItemIsSeleceted;
         private ObservableCollection<Model.Underviser> _observableCollection;
 
@@ -20,6 +19,7 @@ namespace TouchpointApp.ViewModel.Underviser
         public UnderviserViewmodelCollectionRediger()
         {
             CreateObservableCollection();
+
         }
 
 
@@ -29,7 +29,10 @@ namespace TouchpointApp.ViewModel.Underviser
             //Der oprettes et ObservableCollection 
             var Collection = new ObservableCollection<Model.Underviser>();
 
-            foreach (var item in _underviserCatalog.Getlist)
+
+            // UnderviserCatalog.Instance().Getlist   --> UnderviserCatalog.Instance(), because we allready have an instandse of UnderviserCatalog
+            // it will return the objenct instead and therefore we can call .getlist.
+            foreach (var item in UnderviserCatalog.Instance().Getlist)
             {
                 Collection.Add(item);
             }
