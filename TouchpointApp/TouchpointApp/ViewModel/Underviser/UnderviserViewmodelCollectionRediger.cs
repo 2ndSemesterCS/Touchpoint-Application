@@ -19,7 +19,6 @@ namespace TouchpointApp.ViewModel.Underviser
         public UnderviserViewmodelCollectionRediger()
         {
             CreateObservableCollection();
-
         }
 
 
