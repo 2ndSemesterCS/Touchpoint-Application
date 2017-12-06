@@ -12,24 +12,42 @@ namespace TouchpointApp.Persistency
     {
         #region Instance Fields
         private List<Underviser> _Ul;
+
+        //singelton instandsfield
+        private static UnderviserCatalog _UnderviserCatalog;
         #endregion
 
         #region Constructor
-        public UnderviserCatalog()
+        private UnderviserCatalog()
         {
             _Ul = new List<Underviser>();
-
         }
         #endregion
+        
+        //singelton implentering  public method and private constructor
+        public static UnderviserCatalog Instance()
+        {
+            if (_UnderviserCatalog == null)
+            {
+                _UnderviserCatalog = new UnderviserCatalog();
 
+            }
+            return _UnderviserCatalog;
+        } 
+
+        //propperti for getting our list.
         public List<Underviser> Getlist
         {
             get { return _Ul; }
             set { _Ul = value; }
         }
 
+        public List<Underviser> All
+        { get; set; }
+
+
         #region Metoder
-        public void OpretKursus(string Navn, string Adresse, string email, string tlf)
+        public void OpretUnderviser(string Navn, string Adresse, string email, string tlf)
         {
               Underviser U1 = new Underviser(Navn, Adresse, email, tlf);
             _Ul.Add(U1);

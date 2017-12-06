@@ -109,6 +109,8 @@
     <Compile Include="Model\Serie.cs" />
     <Compile Include="Model\Underviser.cs" />
     <Compile Include="Model\Undervisningssted.cs" />
+    <Compile Include="Persistency\UnderviserSource.cs" />
+    <Compile Include="Persistency\FilePersistency.cs" />
     <Compile Include="Persistency\KursistCatalog.cs" />
     <Compile Include="Persistency\KursusCatalog.cs" />
     <Compile Include="Persistency\UnderviserCatalog.cs" />
@@ -301,6 +303,9 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
       <Version>6.0.1</Version>
+    </PackageReference>
+    <PackageReference Include="Newtonsoft.Json">
+      <Version>10.0.3</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup />
