@@ -19,7 +19,7 @@ namespace TouchpointApp.Persistency
         public async Task Load(UnderviserCatalog model)
         {
             List<Underviser> underviserList = await _filePersistor.Load();
-            foreach(Underviser u in underviserList)
+            foreach (Underviser u in underviserList)
             {
                 model.Getlist.Add(u);
             }

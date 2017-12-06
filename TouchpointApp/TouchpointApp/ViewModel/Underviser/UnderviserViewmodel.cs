@@ -15,13 +15,15 @@ namespace TouchpointApp.ViewModel.Underviser
 
         public UnderviserViewmodel()
         {
-            _underviserCatalog = new UnderviserCatalog();
+            //singelton methon is used. 
+            _underviserCatalog = UnderviserCatalog.Instance();
             _underviserData = new UnderviserData();
             OpretNyUnderviserCommand = new RelayCommand(OpretNyUnderviser);
             _loadCommand = new RelayCommand(Load);
             _saveCommand = new RelayCommand(Save);
         }
 
+        //Propperty with type relaycommand, so we can bind our creat method to a buttom. 
         public RelayCommand OpretNyUnderviserCommand { get; set; }
         public ICommand LoadCommand { get { return _loadCommand; } }
         public ICommand SaveCommand { get { return _saveCommand; } }
@@ -31,7 +33,7 @@ namespace TouchpointApp.ViewModel.Underviser
 
         public void OpretNyUnderviser()
         {
-            _underviserCatalog.OpretKursus(_underviserData.Navn, _underviserData.Adresse, _underviserData.Email, _underviserData.Tlf);
+            _underviserCatalog.OpretUnderviser(_underviserData.Navn, _underviserData.Adresse, _underviserData.Email, _underviserData.Tlf);
         }
 
         private async void Load()
