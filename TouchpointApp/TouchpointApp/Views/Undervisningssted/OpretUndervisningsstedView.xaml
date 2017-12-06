@@ -27,7 +27,7 @@
                 </StackPanel>
                 <StackPanel Height="147" Margin="0,0,10,0" Orientation="Horizontal">
                     <TextBlock HorizontalAlignment="Left" Height="98" Margin="0,-2,0,64" TextWrapping="Wrap" Text="Adresse" Width="253" RenderTransformOrigin="0.513,0.541" Foreground="White" FontSize="36px"/>
-                    <TextBox TextWrapping="Wrap" Text="{Binding GetUndervisningsStedData.Adresse , Mode=TwoWay}" Width="264" Height="98" VerticalAlignment="Top" Foreground="#230101" FontSize="36px"/>
+                    <TextBox TextWrapping="Wrap" Text="{Binding UndervisningsstedData.Adresse , Mode=TwoWay}" Width="264" Height="98" VerticalAlignment="Top" Foreground="#230101" FontSize="36px"/>
                 </StackPanel>
                 <Button Command="{Binding OpretNytUndervisningsstedCommand}" Content="Opret" Background="#fad8d1" Foreground="White" FontSize="25px" Width="140" VerticalAlignment="Center" BorderBrush="White" BorderThickness="7"  Height="75"/>
             </StackPanel>

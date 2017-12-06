@@ -35,5 +35,10 @@ namespace TouchpointApp.Views
         {
 
         }
+
+        private void ScrollViewer_ViewChanged(object sender, ScrollViewerViewChangedEventArgs e)
+        {
+
+        }
     }
 }
