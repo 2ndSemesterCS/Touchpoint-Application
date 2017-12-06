@@ -5,12 +5,12 @@
     xmlns:local="using:TouchpointApp.Views"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d">
+    mc:Ignorable="d" Width="1500" Height="1100">
 
-    <Grid Background="#fad8d1" BorderBrush="MistyRose" BorderThickness="10">
+    <Grid>
 
         <!-- StackPanel surrounding full page.-->
-        <StackPanel>
+        <StackPanel Background="#fad8d1" HorizontalAlignment="Right" Width="1537" Margin="-37,0,0,0" >
             <!-- Logo & Title -->
             <StackPanel>
                 <Image Source="ms-appx:///Assets/Images/TouchPointFlotFinal.png" Height="100px" Margin="118,10,118,10" VerticalAlignment="Center" />
@@ -24,7 +24,7 @@
                     </Style>
                 </StackPanel.Resources>
 
-                <Button Background="#fad8d1" Foreground="White" FontSize="25px" Click="KursistViewClick" Width="250" VerticalAlignment="Center" Content="Kursist" BorderBrush="White" BorderThickness="7" Height="75" />
+                <Button Background="#fad8d1" Foreground="White" FontSize="25px" Click="KursistViewClick" Width="250" VerticalAlignment="Center" Content="Kursist" BorderBrush="White" BorderThickness="7" Height="75"/>
                 <Button Background="#fad8d1" Foreground="White" FontSize="25px" Click="KursusViewClick" Width="250" VerticalAlignment="Center" Content="Kursus" BorderBrush="White" BorderThickness="7" Height="75" />
                 <Button Background="#fad8d1" Foreground="White" FontSize="25px" Click="SerieViewClick" Width="250" VerticalAlignment="Center" Content="Serie" BorderBrush="White" BorderThickness="7" Height="75"/>
                 <Button Background="#fad8d1" Foreground="White" FontSize="25px" Click="UnderviserViewClick" Width="250" VerticalAlignment="Center" Content="Underviser" BorderBrush="White" BorderThickness="7" Height="75"/>
@@ -32,7 +32,7 @@
                 <Button Background="#fad8d1" Foreground="White" FontSize="25px" Width="250" Content="Invoice" BorderBrush="White" BorderThickness="7" Height="75"/>
 
             </StackPanel>
-            <Button Background="#fad8d1" Margin="60,-80,0,0" Foreground="White" FontSize="25px" Width="140" VerticalAlignment="Center" BorderBrush="White" BorderThickness="7"  Height="75" Click="BackToMainPage" Content="Back"/>
+            <Button Background="#fad8d1" Margin="75,-60,0,0" Foreground="White" FontSize="25px" Width="140" VerticalAlignment="Center" BorderBrush="White" BorderThickness="7"  Height="75" Click="BackToMainPage" Content="Back"/>
         </StackPanel>
     </Grid>
 </Page>

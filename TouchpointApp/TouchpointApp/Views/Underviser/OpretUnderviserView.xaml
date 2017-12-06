@@ -13,7 +13,7 @@
     </Page.DataContext>
 
 
-    <Grid Background="#fad8d1" BorderBrush="MistyRose" BorderThickness="10">
+    <Grid Background="#fad8d1">
         <!-- Logo & Title -->
         <StackPanel Height="110" VerticalAlignment="Top">
 

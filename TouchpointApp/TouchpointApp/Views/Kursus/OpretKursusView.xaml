@@ -14,7 +14,7 @@
         <vm:KursusViewModel/>
     </Page.DataContext>
 
-    <Grid Background="#fad8d1" BorderBrush="MistyRose" BorderThickness="10">
+    <Grid Background="#fad8d1" Margin="0,0,0,-85">
         <!-- StackPanel surrounding full page.-->
         <StackPanel Height="145" VerticalAlignment="Top">
             <StackPanel>
@@ -112,7 +112,7 @@
 
             </StackPanel>
         </ScrollViewer>
-        <Button Click="BackToKursusView" Content="Back" Background="#fad8d1" Foreground="White" FontSize="25px" BorderBrush="White" BorderThickness="7" Margin="131,0,0,106" Height="81" Width="160" VerticalAlignment="Bottom"/>
-        <Button Command="{Binding OpretNytKursusCommand}" Content="Opret" Background="#fad8d1" Foreground="White" FontSize="25px" BorderBrush="White" BorderThickness="7" Margin="782,0,0,106" Height="76" Width="160" VerticalAlignment="Bottom"/>
+        <Button Click="BackToKursusView" Content="Back" Background="#fad8d1" Foreground="White" FontSize="25px" BorderBrush="White" BorderThickness="7" Margin="131,0,0,111" Height="76" Width="160" VerticalAlignment="Bottom"/>
+        <Button Command="{Binding OpretNytKursusCommand}" Content="Opret" Background="#fad8d1" Foreground="White" FontSize="25px" BorderBrush="White" BorderThickness="7" Margin="817,0,0,106" Height="76" Width="160" VerticalAlignment="Bottom"/>
     </Grid>
 </Page>

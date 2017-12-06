@@ -12,12 +12,12 @@
         <vm:KursistViewModel/>
     </Page.DataContext>
 
-    <Grid Background="#fad8d1" Margin="0,0,-10,0" BorderBrush="MistyRose" BorderThickness="10">
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <!-- Logo & Title -->
         <StackPanel Height="86" VerticalAlignment="Top" d:LayoutOverrides="VerticalAlignment">
 
             <StackPanel>
-                <Image Source="ms-appx:///Assets/Images/TouchPointFlotFinal.png" Height="100px" Margin="108,10,140,10" VerticalAlignment="Center" />
+                <TextBlock FontSize="48px" FontWeight="Bold" Text="Touchpoint" SelectionChanged="TextBlock_SelectionChanged"/>
             </StackPanel>
             <!-- Content -->
         </StackPanel>
