@@ -19,7 +19,7 @@
         <!-- Footer -->
 
         <Button Content="Gem" Background="#fad8d1" Foreground="White" FontSize="25px" Width="140" BorderBrush="White" BorderThickness="7"  Height="75" Margin="1037,458,0,187"/>
-        <Button Click="BackToUnderviserView" Content="Back" Background="#fad8d1" Foreground="White" FontSize="25px" Width="140" BorderBrush="White" BorderThickness="7"  Height="59" Margin="30,650,0,10"/>
+        <Button Click="BackToUnderviserView" Content="Back" Background="#fad8d1" Foreground="White" FontSize="25px" Width="140" BorderBrush="White" BorderThickness="7"  Height="59" Margin="434,466,0,195"/>
         <StackPanel x:Name="ListViewStack" HorizontalAlignment="Left" Margin="51,139,0,115" Width="645">
             <ListView Height="503" Margin="0,0,10,0"
                 ItemsSource="{Binding ItemViewModelCollection}" 
