@@ -68,6 +68,6 @@ namespace TouchpointApp.ViewModel.Underviser
         //private void DeleteCommand()
         //{
         //    _catalog.Getlist.Remove;
-        //}
+        //} 
     }
 }
