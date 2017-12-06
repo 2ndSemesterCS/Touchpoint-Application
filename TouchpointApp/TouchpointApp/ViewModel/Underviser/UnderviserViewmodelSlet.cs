@@ -4,19 +4,20 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using TouchpointApp.DataStorage;
+using TouchpointApp.Command;
 using TouchpointApp.Persistency;
-using TouchpointApp.Model;
 
 namespace TouchpointApp.ViewModel.Underviser
 {
-    public class UnderviserViewmodelCollectionRediger : ViewModelBase
+    class UnderviserViewmodelSlet : ViewModelBase
     {
         private Model.Underviser _ItemIsSeleceted;
         private ObservableCollection<Model.Underviser> _observableCollection;
 
+        private UnderviserCatalog _catalog = UnderviserCatalog.Instance();
 
-        public UnderviserViewmodelCollectionRediger()
+
+        public UnderviserViewmodelSlet()
         {
             CreateObservableCollection();
         }
@@ -55,10 +56,18 @@ namespace TouchpointApp.ViewModel.Underviser
             get { return _observableCollection; }
         }
 
-        // skal bindes til details viewet på rediger siden, skal være OnPropertyChanged da de vil ændre værdier. 
-        public string Name { get { return _ItemIsSeleceted.Navn; } set { _ItemIsSeleceted.Navn = value; OnPropertyChanged(""); } }
-        public string Email { get { return _ItemIsSeleceted.Email; } set { _ItemIsSeleceted.Email = value; OnPropertyChanged(""); } }
-        public string Adresse { get { return _ItemIsSeleceted.Addresse; } set { _ItemIsSeleceted.Addresse = value; OnPropertyChanged(""); } }
-        public string Tlf { get { return _ItemIsSeleceted.Tlf; } set { _ItemIsSeleceted.Tlf = value; OnPropertyChanged(""); } }
+        private bool CanDelete()
+        {
+            if (_catalog.Getlist.Count < 0)
+            {
+                throw new Exception();
+            }
+            return true;
+        }
+
+        //private void DeleteCommand()
+        //{
+        //    _catalog.Getlist.Remove;
+        //}
     }
 }
