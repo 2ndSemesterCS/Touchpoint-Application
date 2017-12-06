@@ -26,6 +26,10 @@ namespace TouchpointApp.Model
 
         public Serie(List<Kursus> kursusSerie, string beskrivelse)
         {
+            if(String.IsNullOrEmpty(beskrivelse) || kursusSerie == null)
+            {
+                throw new ArgumentException("Intet kursus er valgt og information mangler");
+            }
             _kursusSerie = kursusSerie;
             _beskrivelse = beskrivelse;
         }
