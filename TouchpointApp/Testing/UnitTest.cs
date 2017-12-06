@@ -33,7 +33,7 @@ namespace Testing
 
         public void OpretKursusMedManglendeInformation()
         {
-            Assert.ThrowsException<ArgumentException>(() => { new Kursus("", "", "", "", "", ""); });
+            Assert.ThrowsException<ArgumentException>(() => { new Kursus("","","","",0 ,null,null,"","",0); });
         }
     }
 }
