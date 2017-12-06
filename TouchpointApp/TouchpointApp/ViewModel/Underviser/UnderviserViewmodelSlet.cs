@@ -65,9 +65,9 @@ namespace TouchpointApp.ViewModel.Underviser
             return true;
         }
 
-        //private void DeleteCommand()
-        //{
-        //    _catalog.Getlist.Remove;
-        //} 
+        private void DeleteCommand()
+        {
+            _catalog.Getlist.Remove()
+        }
     }
 }

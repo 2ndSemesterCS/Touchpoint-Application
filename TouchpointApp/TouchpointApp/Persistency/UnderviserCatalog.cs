@@ -39,7 +39,7 @@ namespace TouchpointApp.Persistency
         public List<Underviser> Getlist
         {
             get { return _Ul; }
-            set { _Ul = value; }
+            set { _Ul = value;}
         }
 
         public List<Underviser> All

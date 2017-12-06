@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel;
+using System.Runtime.CompilerServices;
 
 namespace TouchpointApp.ViewModel
 {
@@ -6,12 +7,12 @@ namespace TouchpointApp.ViewModel
     {
         public event PropertyChangedEventHandler PropertyChanged;
 
-        protected void OnPropertyChanged(string info)
+        protected virtual void OnPropertyChanged
+        ([CallerMemberName] string propertyName = null)
         {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
+            PropertyChanged?.Invoke(this,
+            new PropertyChangedEventArgs(propertyName));
         }
+
     }
 }

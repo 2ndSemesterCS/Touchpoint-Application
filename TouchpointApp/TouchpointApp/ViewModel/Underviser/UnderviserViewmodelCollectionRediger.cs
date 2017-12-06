@@ -43,9 +43,9 @@ namespace TouchpointApp.ViewModel.Underviser
         {
             get { return _ItemIsSeleceted; }
             set
-            {
+             {
                 _ItemIsSeleceted = value;
-                OnPropertyChanged("Seleceted item er opdateret");
+                OnPropertyChanged();
             }
         }
 
@@ -53,12 +53,11 @@ namespace TouchpointApp.ViewModel.Underviser
         public ObservableCollection<Model.Underviser> Collection
         {
             get { return _observableCollection; }
+            set
+            {
+                _observableCollection = value;
+                OnPropertyChanged();
+            }
         }
-
-        // skal bindes til details viewet på rediger siden, skal være OnPropertyChanged da de vil ændre værdier. 
-        public string Name { get { return _ItemIsSeleceted.Navn; } set { _ItemIsSeleceted.Navn = value; OnPropertyChanged(""); } }
-        public string Email { get { return _ItemIsSeleceted.Email; } set { _ItemIsSeleceted.Email = value; OnPropertyChanged(""); } }
-        public string Adresse { get { return _ItemIsSeleceted.Addresse; } set { _ItemIsSeleceted.Addresse = value; OnPropertyChanged(""); } }
-        public string Tlf { get { return _ItemIsSeleceted.Tlf; } set { _ItemIsSeleceted.Tlf = value; OnPropertyChanged(""); } }
     }
 }
