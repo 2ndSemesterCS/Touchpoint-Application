@@ -99,5 +99,9 @@ namespace TouchpointApp.Model
 
         }
         #endregion  
+        public override string ToString()
+        {
+            return $"{_titel}";
+        }
     }
 }

@@ -63,5 +63,10 @@ namespace TouchpointApp.Model
             _adresse = adresse;
             _tlf = tlf;
         }
+
+        public override string ToString()
+        {
+            return $"{_navn}";
+        }
     }
 }

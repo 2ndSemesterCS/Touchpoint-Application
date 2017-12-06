@@ -37,5 +37,9 @@ namespace TouchpointApp.Model
             get { return _lokale; }
             set { _lokale = value; }
         }
+        public override string ToString()
+        {
+            return $"{_adresse}, {_lokale}";
+        }
     }
 }

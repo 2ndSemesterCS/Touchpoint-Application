@@ -48,9 +48,6 @@ namespace TouchpointApp.Model
                 
         }
 
-       
-
-       
         public string Navn
         {
             get { return _navn; }
@@ -72,6 +69,11 @@ namespace TouchpointApp.Model
         {
             get { return _tlf; }
             set { _tlf = value; }
+        }
+
+        public override string ToString()
+        {
+            return $"{_navn}";
         }
     }
 }

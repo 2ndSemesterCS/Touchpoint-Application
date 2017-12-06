@@ -33,5 +33,10 @@ namespace TouchpointApp.Model
             _kursusSerie = kursusSerie;
             _beskrivelse = beskrivelse;
         }
+
+        public override string ToString()
+        {
+            return $"{_kursusSerie}";
+        }
     }
 }
