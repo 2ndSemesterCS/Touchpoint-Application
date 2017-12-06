@@ -12,35 +12,35 @@ namespace Testing
     {
         
 
-        public UnitTest1()
-        {
-            //testobjekt = new Undervisningssted("","");
-        }
+      
         [TestMethod]
         public void OpretUndervisingsstedUdenAdresse()
-        {
-
-            // arrange 
-           
-
-
-
-
-
+        { 
             Assert.ThrowsException<ArgumentException>(() => { new Undervisningssted("", ""); });
-
-
-
-
-
-            //Assert.ThrowsException<ArgumentException>(() => { Undervisningssted us1 = new Undervisningssted(lokale, adresse); });
-
         }
 
         [TestMethod]
         public void OpretUnderviserUdenPersonligInfo()
         {
             Assert.ThrowsException<ArgumentException>(() => { new Underviser("", "", "", ""); });
+        }
+
+        [TestMethod]
+        public void OpretKursistUdenPersonligInfo()
+        {
+            Assert.ThrowsException<ArgumentException>(() => { new Kursist("", "", "", "", "", ""); });
+        }
+
+        [TestMethod]
+        public void OpretKursusMedManglendeInformation()
+        {
+            Assert.ThrowsException<ArgumentException>(() => { new Kursus("","","","",0 ,null,null,"","",0); });
+        }
+        
+        [TestMethod]
+        public void OpretSerieUdenValgAfKurser()
+        {
+            Assert.ThrowsException<ArgumentException>(() => { new Serie(null,""); });
         }
     }
 }

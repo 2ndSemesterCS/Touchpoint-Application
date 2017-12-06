@@ -19,6 +19,12 @@ namespace TouchpointApp.Persistency
         }
         #endregion
 
+        public List<Kursist> Getlist
+        {
+            get { return _kursistList; }
+            set { _kursistList = value; }
+        }
+
 
         public void OpretKursist(string navn, string email, string by, string land, string adresse, string tlf)
         {

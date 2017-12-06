@@ -1,5 +1,6 @@
-﻿using TouchpointApp.Persistency;
+﻿
 using TouchpointApp.ViewModel;
+
 namespace TouchpointApp.DataStorage
 {
     public class KursistData : ViewModelBase

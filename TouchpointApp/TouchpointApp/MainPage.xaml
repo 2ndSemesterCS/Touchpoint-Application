@@ -8,32 +8,57 @@
     mc:Ignorable="d">
 
     <Grid Background="#fad8d1" Margin="0,0,0,0" BorderBrush="MistyRose" BorderThickness="10">
-        <!-- StackPanel surrounding full page.-->
-        <StackPanel>
-            <!-- Logo & Title -->
-            
-            <StackPanel  >
-                <Image    Source="Assets/Images/TouchPointFlotFinal.png" Height="100px" Margin="108,10,140,10"/>
-            </StackPanel>
-            <StackPanel Orientation="Horizontal" Margin="101,0,108,0" BorderBrush="White" BorderThickness="7" CornerRadius="10" >
-                <StackPanel.Resources>
-                    <Style TargetType="Button">
-                        <Setter Property="Margin" Value="0,0,20,0" />
-                    </Style>
-                </StackPanel.Resources>
-                <Button Background="#fad8d1" Foreground="White" Width="105" FontSize="25px" Content="Kurser" Margin="120,9,20,8"/>
-                <Button Background="#fad8d1" Foreground="White" Width="100" FontSize="25px" Content="Klinik" Margin="0,9,20,8"/>
-                <Button Background="#fad8d1" Foreground="White" Width="161" FontSize="25px" Content="Hvem er vi?"/>
-                <Button Background="#fad8d1" Foreground="White" Width="106" FontSize="25px" Content="Artikler" Margin="0,9,20,8"/>
-                <Button Background="#fad8d1" Foreground="White" Width="124" FontSize="25px" Content="Kontakt" Margin="0,9,20,8"/>
-                <Button Background="#fad8d1" Foreground="White" Width="136" FontSize="25px" Content="Webshop" Margin="0,9,20,8"/>
-                <Button Background="#fad8d1" Foreground="White" Click="AdminViewClick" FontSize="25px" Content="Administrator" Margin="0,9,20,8"/>
-            </StackPanel>
-            <!-- Navigation Bar -->
-            <!-- Content -->
-            <StackPanel Height="419">
-                <Image Source="Assets\Images\TouchMinePoints.png" Height="404" Margin="390,50,380,30"/>
-            </StackPanel>
+
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="280"/>
+            <ColumnDefinition Width="720"/>
+            <ColumnDefinition Width="280"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="400"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <!-- Grid Stackpanel Venstre 0.0-->
+        <StackPanel Grid.Column="0" Grid.Row="0">
         </StackPanel>
+
+        <!-- Grid Stackpanel Venstre 1.0-->
+        <StackPanel Grid.Row="0" Margin="290,0,10,287" Grid.ColumnSpan="2" >
+            <Image Source="ms-appx:///Assets/Images/TouchPointFlotFinal.png" Height="100px" Margin="108,10,140,10" VerticalAlignment="Center"/>
+        </StackPanel>
+
+        <!-- Grid Stackpanel Venstre 1.0-->
+        <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="0,123,10,209" Grid.Column="1" BorderBrush="White" BorderThickness="5" CornerRadius="10">
+            <Button Background="#fad8d1" Foreground="White"  FontSize="20px" Content="Kurser" />
+            <Button Background="#fad8d1" Foreground="White"  FontSize="20px" Content="Klinik" />
+            <Button Background="#fad8d1" Foreground="White"  FontSize="20px" Content="Hvem er vi?"/>
+            <Button Background="#fad8d1" Foreground="White"  FontSize="20px" Content="Artikler" />
+            <Button Background="#fad8d1" Foreground="White"  FontSize="20px" Content="Kontakt" />
+            <Button Background="#fad8d1" Foreground="White"  FontSize="20px" Content="Webshop" />
+            <Button Background="#fad8d1" Foreground="White" Click="AdminViewClick" FontSize="20px" Content="Administrator" />
+
+
+        </StackPanel>
+
+        <!-- Grid Stackpanel Venstre 2.0-->
+        <StackPanel Grid.Column="2" Grid.Row="0">
+        </StackPanel>
+
+        <!-- Grid Stackpanel Venstre 0.1-->
+        <StackPanel Grid.Column="0" Margin="-10,490,10,10" Grid.RowSpan="2">
+        </StackPanel>
+
+        <!-- Grid Stackpanel Venstre 1.2-->
+        <StackPanel Margin="10,245,10,-20" Grid.RowSpan="2" Grid.Column="1">
+            <Image Source="Assets\Images\TouchMinePoints.png" Height="328" HorizontalAlignment="Center" Margin="217,0" />
+        </StackPanel>
+
+
+        <!-- Grid Stackpanel Venstre 2.2-->
+        <StackPanel Grid.Column="1" Grid.ColumnSpan="2" Margin="870,490,10,10" Grid.RowSpan="2">
+        </StackPanel>
+
     </Grid>
 </Page>
