@@ -18,8 +18,8 @@
             <!-- Footer -->
         </StackPanel>
         <Button Click="BackToUndervisningsstedView" Content="Back" Margin="54,0,0,102" VerticalAlignment="Bottom" Width="148" Height="85" FontSize="36" Background="#fad8d1" Foreground="White" BorderBrush="White" BorderThickness="7"/>
-        <StackPanel Margin="10,82,551,229">
-            <TextBlock Height="114" Margin="0,50,10,0" TextWrapping="Wrap" Text="Oversigt over undervisningssteder " FontSize="36" Foreground="White" />
+        <StackPanel Margin="10,126,551,229">
+            <TextBlock Height="114" Margin="0,50,10,0" TextWrapping="Wrap" Text="Oversigt over undervisningssteder " FontSize="36" Foreground="White"  />
             <ScrollViewer Height="297" Margin="10,0,0,0">
                 <ListView Height="287" Width="804" Foreground="#230101" FontSize="36px"/>
             </ScrollViewer>
