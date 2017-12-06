@@ -7,29 +7,55 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="#fad8d1" BorderBrush="MistyRose" BorderThickness="10">
-        <!-- StackPanel surrounding full page.-->
-        <StackPanel>
-            <!-- Logo & Title -->
-            <StackPanel>
-                <Image Source="ms-appx:///Assets/Images/TouchPointFlotFinal.png" Height="100px" Margin="108,10,140,10" VerticalAlignment="Center"/>
-            </StackPanel>
-            <!-- Navigation Bar -->
-            <StackPanel Orientation="Vertical" Margin="468,50,405,0" Height="385">
-                <StackPanel.Resources>
-                    <Style TargetType="Button">
-                        <Setter Property="Margin" Value="0,20,0,0" />
-                    </Style>
-                </StackPanel.Resources>
-                <Button Width="325" Margin="108,10,140,10" BorderBrush="White" BorderThickness="7" Height="75" Background="#fad8d1" Foreground="White" FontSize="25px"  Click="OpretUnderviserViewClick" >Opret Underviser</Button>
-                <Button Width="325" Margin="108,10,140,10" BorderBrush="White" BorderThickness="7" Height="75" Background="#fad8d1" Foreground="White" FontSize="25px"  Click="RedigerUnderviserViewClick">Rediger Underviser</Button>
-                <Button Width="325" Margin="108,10,140,10" BorderBrush="White" BorderThickness="7" Height="75" Background="#fad8d1" Foreground="White" FontSize="25px"  Click="SletUnderviserViewClick" >Slet Underviser</Button>
-            </StackPanel>
-            <!-- Content -->
-            <StackPanel>
-            </StackPanel>
-            <!-- Footer -->
+    <Grid Background="#fad8d1" Margin="0,0,0,0" BorderBrush="MistyRose" BorderThickness="10">
+
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="280"/>
+            <ColumnDefinition Width="720"/>
+            <ColumnDefinition Width="280"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="450"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <!-- Grid Stackpanel Venstre 0.0-->
+        <StackPanel Grid.Column="0" Grid.Row="0">
         </StackPanel>
-        <Button Background="#fad8d1" Foreground="White" FontSize="25px" Width="140" VerticalAlignment="Center" BorderBrush="White" BorderThickness="7"  Height="75" Margin="30,400,140,10" Click="BackToAdminView">Back</Button>
+
+        <!-- Grid Stackpanel Venstre 1.0-->
+        <StackPanel Grid.Row="0" Margin="290,0,10,287" Grid.ColumnSpan="2" >
+            <Image Source="ms-appx:///Assets/Images/TouchPointFlotFinal.png" Height="100px" Margin="108,10,140,10" VerticalAlignment="Center"/>
+        </StackPanel>
+
+        <!-- Grid Stackpanel Venstre 1.0-->
+        <StackPanel Grid.Row="0" Orientation="Vertical" CornerRadius="10" Margin="10,138,270,10" Grid.Column="1" Grid.ColumnSpan="2">
+
+            <Button Width="325" Margin="108,10,140,10" HorizontalAlignment="Center" BorderBrush="White" BorderThickness="7" Height="75" Background="#fad8d1" Foreground="White" FontSize="20px"  Click="OpretUnderviserViewClick" >Opret Underviser</Button>
+            <Button Width="325" Margin="108,10,140,10" HorizontalAlignment="Center" BorderBrush="White" BorderThickness="7" Height="75" Background="#fad8d1" Foreground="White" FontSize="20px"  Click="RedigerUnderviserViewClick">Rediger Underviser</Button>
+            <Button Width="325" Margin="108,10,140,10" HorizontalAlignment="Center" BorderBrush="White" BorderThickness="7" Height="75" Background="#fad8d1" Foreground="White" FontSize="20px"  Click="SletUnderviserViewClick" >Slet Underviser</Button>
+
+        </StackPanel>
+
+        <!-- Grid Stackpanel Venstre 2.0-->
+        <StackPanel Grid.Column="2" Grid.Row="0">
+        </StackPanel>
+
+        <!-- Grid Stackpanel Venstre 0.1-->
+        <StackPanel Grid.Column="0" Margin="-10,390,10,10" Grid.RowSpan="2">
+            <Button Background="#fad8d1" Foreground="White" FontSize="20px" Width="140" HorizontalAlignment="Center" BorderBrush="White" BorderThickness="7"  Height="50" Click="BackToAdminView" Content="Back" Margin="0,200,0,0"/>
+        </StackPanel>
+
+
+        <!-- Grid Stackpanel Venstre 1.2-->
+        <StackPanel Margin="10,174,10,-30" Grid.Column="1" Grid.Row="1">
+            <Image Source="Assets\Images\TouchMinePoints.png" Height="200" HorizontalAlignment="Center" Margin="217,0" />
+        </StackPanel>
+
+
+        <!-- Grid Stackpanel Venstre 2.2-->
+        <StackPanel Grid.Column="1" Margin="718,0,12,0" Grid.Row="1" Grid.ColumnSpan="2"/>
+
     </Grid>
 </Page>
