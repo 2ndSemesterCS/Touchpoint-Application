@@ -49,8 +49,8 @@
 
 
         <!-- Grid Stackpanel Venstre 1.2-->
-        <StackPanel Margin="10,174,10,-30" Grid.Column="1" Grid.Row="1">
-            <Image Source="Assets\Images\TouchMinePoints.png" Height="200" HorizontalAlignment="Center" Margin="217,0" />
+        <StackPanel Grid.Column="1" Grid.Row="1">
+            <Image Source="ms-appx:///Assets/Images/TouchMinePoints.png" Height="150" HorizontalAlignment="Center" Margin="0,30"  />
         </StackPanel>
 
 
