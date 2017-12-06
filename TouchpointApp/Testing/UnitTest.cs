@@ -42,5 +42,11 @@ namespace Testing
         {
             Assert.ThrowsException<ArgumentException>(() => { new Serie(null,""); });
         }
+
+        [TestMethod]
+        public void OpretUnderviserMedTal()
+        {
+            Assert.ThrowsException<ArgumentException>(() => { new Underviser("","","",""); });
+        }
     }
 }
