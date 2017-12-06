@@ -10,6 +10,7 @@ using TouchpointApp.Model;
 
 namespace TouchpointApp.ViewModel.Underviser
 {
+<<<<<<< HEAD
    public class UnderviserViewmodelCollectionRediger : ViewModelBase
     {
         private UnderviserCatalog underviserCatalog;
@@ -44,4 +45,20 @@ namespace TouchpointApp.ViewModel.Underviser
 
 
     }
+=======
+//    public class UnderviserViewmodelCollectionRediger
+//    {
+//        public UnderviserCatalog _underviserCatalog;
+
+//        public ObservableCollection<Model.Underviser> CreateObservableCollection()
+//        {
+//            var Collection = new ObservableCollection<Model.Underviser>();
+//            foreach (var item in _underviserCatalog)
+//            {
+//                Collection.Add(item);
+//            }
+//            return Collection;
+//        }
+//    }
+>>>>>>> edc27d607db0a48d9ecf25ff32f45bad1c4e7f37
 }
