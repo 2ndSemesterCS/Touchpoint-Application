@@ -13,6 +13,7 @@ namespace TouchpointDBWebService
         public Underviser()
         {
             UnderviserPåKursus = new HashSet<UnderviserPåKursus>();
+            
         }
 
         public int UnderviserID { get; set; }

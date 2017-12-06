@@ -2,8 +2,10 @@
 using System.Net.NetworkInformation;
 using TouchpointApp.Views.Undervisningssted;
 using TouchpointApp.Model;
-namespace TouchpointApp.Persistency
-{
+using TouchpointApp.Persistency;
+using System;
+
+
     public class UndervisningsstedCatalog
     {
         #region Instance Fields
@@ -13,20 +15,27 @@ namespace TouchpointApp.Persistency
         #region Constructor
         public UndervisningsstedCatalog()
         {
+            
             __usl = new List<Undervisningssted>();
         }
         #endregion
 
         #region Metoder
 
-        public void OpretUndervisningssted(string adresse, string lokale)
+        public void OpretUndervisningssted(string lokale, string adresse)
         {
-            Undervisningssted u1 = new Undervisningssted(adresse, lokale);
-            __usl.Add(u1);
+            Undervisningssted us1 = new Undervisningssted("", "");
+
+
+            { 
+                __usl.Add(us1);
+            }
+            
         }
 
         #endregion
 
 
     }
-}
+
+
