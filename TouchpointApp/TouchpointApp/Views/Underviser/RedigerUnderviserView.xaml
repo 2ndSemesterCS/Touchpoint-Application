@@ -26,7 +26,7 @@
         <Button Click="BackToUnderviserView" Content="Back" Background="#fad8d1" Foreground="White" FontSize="25px" Width="140" BorderBrush="White" BorderThickness="7"  Height="59" Margin="30,650,0,10"/>
         <StackPanel x:Name="ListViewStack" HorizontalAlignment="Left" Margin="51,139,0,115" Width="645">
             <ListView Height="503" Margin="0,0,10,0"
-                ItemsSource="{Binding }" 
+                ItemsSource="{Binding  Collection}" 
                 SelectedItem="{Binding SelectedItemListview, Mode=TwoWay}" >
                 <TextBlock Text="{Binding }" Height="60" TextWrapping="Wrap" Width="613" FontSize="36" Foreground="White">
                    
@@ -36,19 +36,19 @@
         <StackPanel x:Name="RedigerViewStack" HorizontalAlignment="Right" Margin="0,139,103,267" Width="733" Orientation="Vertical" RenderTransformOrigin="0.5,0.5">
             <StackPanel x:Name="Navn" HorizontalAlignment="Right" Margin="0,0,0,0" Width="733" Orientation="Horizontal" Height="71">
                 <TextBlock Height="67" TextWrapping="Wrap" Text="Navn" VerticalAlignment="Top" Width="333" FontSize="36" Margin="0,0,0,0" Foreground="White"/>
-                <TextBox Height="67" TextWrapping="Wrap" Text="{Binding}" VerticalAlignment="Top" Width="399" FontSize="36" Foreground="#230101"/>
+                <TextBox Height="67" TextWrapping="Wrap" Text="{Binding Name}" VerticalAlignment="Top" Width="399" FontSize="36" Foreground="#230101"/>
             </StackPanel>
             <StackPanel x:Name="Adresse" HorizontalAlignment="Right" Margin="0,0,0,0" Width="733" Orientation="Horizontal" Height="71">
                 <TextBlock Height="67" TextWrapping="Wrap" Text="Adresse" VerticalAlignment="Top" Width="333" FontSize="36" Margin="0,0,0,0" Foreground="White"/>
-                <TextBox Height="67" TextWrapping="Wrap" Text="Indtast adresse" VerticalAlignment="Top" Width="399" FontSize="36" Foreground="#230101"/>
+                <TextBox Height="67" TextWrapping="Wrap" Text="{Binding Adresse}" VerticalAlignment="Top" Width="399" FontSize="36" Foreground="#230101"/>
             </StackPanel>
             <StackPanel x:Name="Email" HorizontalAlignment="Right" Margin="0,0,0,0" Width="733" Orientation="Horizontal" Height="71">
                 <TextBlock Height="67" TextWrapping="Wrap" Text="Email" VerticalAlignment="Top" Width="333" FontSize="36" Margin="0,0,0,0" Foreground="White"/>
-                <TextBox Height="67" TextWrapping="Wrap" Text="Indtast email" VerticalAlignment="Top" Width="399" FontSize="36" Foreground="#230101"/>
+                <TextBox Height="67" TextWrapping="Wrap" Text="{Binding Email}" VerticalAlignment="Top" Width="399" FontSize="36" Foreground="#230101"/>
             </StackPanel>
             <StackPanel x:Name="Tlf" HorizontalAlignment="Right" Margin="0,0,0,0" Width="733" Orientation="Horizontal" Height="94">
                 <TextBlock Height="67" TextWrapping="Wrap" Text="Telefonnummer" VerticalAlignment="Top" Width="333" FontSize="36" Margin="0,0,0,0" Foreground="White"/>
-                <TextBox Height="67" TextWrapping="Wrap" Text="Indtast Telefonnummer" VerticalAlignment="Top" Width="399" FontSize="36" Foreground="#230101"/>
+                <TextBox Height="67" TextWrapping="Wrap" Text="{Binding Tlf}" VerticalAlignment="Top" Width="399" FontSize="36" Foreground="#230101"/>
             </StackPanel>
         </StackPanel>
     </Grid>

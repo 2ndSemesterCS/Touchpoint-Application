@@ -10,32 +10,49 @@ using TouchpointApp.Model;
 
 namespace TouchpointApp.ViewModel.Underviser
 {
-<<<<<<< HEAD
    public class UnderviserViewmodelCollectionRediger : ViewModelBase
     {
-        private UnderviserCatalog underviserCatalog;
+        private UnderviserCatalog _underviserCatalog;
         private Model.Underviser _ItemIsSeleceted;
-        private ObservableCollection<Model.Underviser> observableCollection;
+        private ObservableCollection<Model.Underviser> _observableCollection;
+
+
+        public UnderviserViewmodelCollectionRediger()
+        {
+            CreateObservableCollection();
+        }
+
 
         //Skal lave vores katalog om til en obserablecollection, som vi kan bind vores listviews ItemsSource til. 
-        public ObservableCollection<Model.Underviser> CreateObservableCollection()
+        public void CreateObservableCollection()
         {
             //Der oprettes et ObservableCollection 
             var Collection = new ObservableCollection<Model.Underviser>();
 
-            foreach (var item in underviserCatalog.Getlist)
+            foreach (var item in _underviserCatalog.Getlist)
             {
                 Collection.Add(item);
             }
-            return Collection;
+            _observableCollection = Collection;
         }
 
         //Propperti til at binde listviewets isSeleceted propperty til. 
         public Model.Underviser SelectedItemListview
         {
             get { return _ItemIsSeleceted; }
-            set { _ItemIsSeleceted = value; }
+            set
+            {
+                _ItemIsSeleceted = value;
+                OnPropertyChanged("Seleceted item er opdateret");
+            }
         }
+
+        //propperty der skal bindes til listviewets ItemsSource
+        public ObservableCollection<Model.Underviser> Collection
+        {
+            get { return _observableCollection; }
+        }
+
 
         // skal bindes til details viewet på rediger siden
         public string Name { get { return _ItemIsSeleceted.Navn; } set { _ItemIsSeleceted.Navn = value; } }
@@ -45,7 +62,7 @@ namespace TouchpointApp.ViewModel.Underviser
 
 
     }
-=======
+
 //    public class UnderviserViewmodelCollectionRediger
 //    {
 //        public UnderviserCatalog _underviserCatalog;
@@ -60,5 +77,5 @@ namespace TouchpointApp.ViewModel.Underviser
 //            return Collection;
 //        }
 //    }
->>>>>>> edc27d607db0a48d9ecf25ff32f45bad1c4e7f37
+
 }

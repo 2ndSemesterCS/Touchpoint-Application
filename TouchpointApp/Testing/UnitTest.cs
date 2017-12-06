@@ -2,11 +2,9 @@
 using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using TouchpointApp.Model;
-<<<<<<< HEAD
-=======
 using System.Collections.Generic;
 
->>>>>>> edc27d607db0a48d9ecf25ff32f45bad1c4e7f37
+
 
 namespace Testing
 {
@@ -22,15 +20,12 @@ namespace Testing
         [TestMethod]
         public void OpretUndervisingsstedUdenAdresse()
         {
-<<<<<<< HEAD
+
             // Arrange
             Underviser h = new Underviser(); 
-            S
             
-=======
->>>>>>> edc27d607db0a48d9ecf25ff32f45bad1c4e7f37
+            
 
-            // arrange 
            
 
 
