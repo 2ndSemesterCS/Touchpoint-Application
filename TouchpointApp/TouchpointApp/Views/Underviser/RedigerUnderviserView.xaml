@@ -13,45 +13,85 @@
     </Page.DataContext>
 
 
-    <Grid Background="#fad8d1" BorderBrush="MistyRose" BorderThickness="10">
-        <!-- StackPanel surrounding full page.-->
+    <Grid Background="#fad8d1" Margin="0,0,0,0" BorderBrush="MistyRose" BorderThickness="10">
 
-        <!-- Logo & Title -->
-   
-            <Image Source="ms-appx:///Assets/Images/TouchPointFlotFinal.png" Height="100px" Margin="145,10,103,890" VerticalAlignment="Center" />
-     
-        <!-- Content -->
-        <!-- Footer -->
 
-        <Button Content="Gem" Background="#fad8d1" Foreground="White" FontSize="25px" Width="140" BorderBrush="White" BorderThickness="7"  Height="75" Margin="1037,458,0,187"/>
-        <Button Click="BackToUnderviserView" Content="Back" Background="#fad8d1" Foreground="White" FontSize="25px" Width="140" BorderBrush="White" BorderThickness="7"  Height="59" Margin="434,466,0,195"/>
-        <StackPanel x:Name="ListViewStack" HorizontalAlignment="Left" Margin="51,139,0,115" Width="645">
-            <ListView Height="503" Margin="0,0,10,0"
-                ItemsSource="{Binding ItemViewModelCollection}" 
-                SelectedItem="{Binding ItemViewModelSelected, Mode=TwoWay}" >
-                <TextBlock Height="60" TextWrapping="Wrap" Width="613" FontSize="36" Foreground="White">
-                    <Run Text="Oversigt over "/>
-                    <Run Text="undervisere "/>
-                </TextBlock>
-            </ListView>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="280"/>
+            <ColumnDefinition Width="720"/>
+            <ColumnDefinition Width="280"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="450"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <!-- Grid Stackpanel Venstre 0.0-->
+        <StackPanel Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" Margin="30,126,521,220" Grid.RowSpan="2">
+            <Border BorderBrush="White" BorderThickness="5" Width="280">
+                <TextBlock Height="59" Margin="55,0,45,0" TextWrapping="Wrap" HorizontalAlignment="Center" Text="Oversigt over Undervisere" FontSize="20" Foreground="White"/>
+            </Border>
+            <ScrollViewer Height="245">
+                <ListView Height="221" Width="280" FontSize="36" Foreground="#230101" BorderBrush="White" BorderThickness="5"/>
+            </ScrollViewer>
         </StackPanel>
-        <StackPanel x:Name="RedigerViewStack" HorizontalAlignment="Right" Margin="0,139,103,267" Width="733" Orientation="Vertical" RenderTransformOrigin="0.5,0.5">
-            <StackPanel x:Name="Navn" HorizontalAlignment="Right" Margin="0,0,0,0" Width="733" Orientation="Horizontal" Height="71">
-                <TextBlock Height="67" TextWrapping="Wrap" Text="Navn" VerticalAlignment="Top" Width="333" FontSize="36" Margin="0,0,0,0" Foreground="White"/>
-                <TextBox Height="67" TextWrapping="Wrap" Text="Indtast navn" VerticalAlignment="Top" Width="399" FontSize="36" Foreground="#230101"/>
-            </StackPanel>
-            <StackPanel x:Name="Adresse" HorizontalAlignment="Right" Margin="0,0,0,0" Width="733" Orientation="Horizontal" Height="71">
-                <TextBlock Height="67" TextWrapping="Wrap" Text="Adresse" VerticalAlignment="Top" Width="333" FontSize="36" Margin="0,0,0,0" Foreground="White"/>
-                <TextBox Height="67" TextWrapping="Wrap" Text="Indtast adresse" VerticalAlignment="Top" Width="399" FontSize="36" Foreground="#230101"/>
-            </StackPanel>
-            <StackPanel x:Name="Email" HorizontalAlignment="Right" Margin="0,0,0,0" Width="733" Orientation="Horizontal" Height="71">
-                <TextBlock Height="67" TextWrapping="Wrap" Text="Email" VerticalAlignment="Top" Width="333" FontSize="36" Margin="0,0,0,0" Foreground="White"/>
-                <TextBox Height="67" TextWrapping="Wrap" Text="Indtast email" VerticalAlignment="Top" Width="399" FontSize="36" Foreground="#230101"/>
-            </StackPanel>
-            <StackPanel x:Name="Tlf" HorizontalAlignment="Right" Margin="0,0,0,0" Width="733" Orientation="Horizontal" Height="94">
-                <TextBlock Height="67" TextWrapping="Wrap" Text="Telefonnummer" VerticalAlignment="Top" Width="333" FontSize="36" Margin="0,0,0,0" Foreground="White"/>
-                <TextBox Height="67" TextWrapping="Wrap" Text="Indtast Telefonnummer" VerticalAlignment="Top" Width="399" FontSize="36" Foreground="#230101"/>
-            </StackPanel>
+
+        <!-- Grid Stackpanel Venstre 1.0-->
+        <StackPanel Grid.Row="0" Margin="290,0,10,287" Grid.ColumnSpan="2" >
+            <Image Source="ms-appx:///Assets/Images/TouchPointFlotFinal.png" Height="100px" Margin="108,10,140,10" VerticalAlignment="Center"/>
         </StackPanel>
+
+        <!-- Grid Stackpanel Venstre 1.0 KOPI-->
+        <StackPanel Grid.Row="0" Orientation="Vertical" CornerRadius="10" Margin="50,150,329,230" Grid.Column="1" Grid.RowSpan="2">
+            <TextBlock TextWrapping="Wrap" Width="180" Foreground="White" FontSize="20" HorizontalAlignment="Right" Margin="0,7,0,0">
+                    <Run Text="Navn"/>
+            </TextBlock>
+
+            <TextBlock HorizontalAlignment="Right" TextWrapping="Wrap" Width="180" FontSize="20" Foreground="White"  Margin="0,23,0,0">
+                    <Run Text="Adresse"/>
+            </TextBlock>
+
+            <TextBlock HorizontalAlignment="Right" TextWrapping="Wrap" Width="180" FontSize="20" Foreground="White"  Margin="0,23,0,0">
+                    <Run Text="Email "/>
+            </TextBlock>
+
+            <TextBlock HorizontalAlignment="Right" TextWrapping="Wrap" Width="180" FontSize="20" Foreground="White"  Margin="0,23,0,0">
+                    <Run Text="Telefonnummer "/>
+            </TextBlock>
+
+        </StackPanel>
+
+        <!-- Grid Stackpanel Venstre 1.0 KOPI-->
+        <StackPanel Grid.Row="0" Orientation="Vertical" CornerRadius="10" Margin="194,142,77,200" Grid.Column="1" Grid.ColumnSpan="2" Grid.RowSpan="2">
+            <TextBox TextWrapping="Wrap" Height="40" Text="Indtast Navn" Width="362" FontSize="20" Margin="0,5,0,0" Foreground="#230101"/>
+            <TextBox TextWrapping="Wrap" Text="Indtast Adresse" Width="362" FontSize="20" Height="40" Foreground="#230101" Margin="0,10,0,0"/>
+            <TextBox TextWrapping="Wrap" Text="Indtast Email" Width="362" FontSize="20" Height="40" Foreground="#230101" Margin="0,10,0,0"/>
+            <TextBox TextWrapping="Wrap" Text="Indtast Telefonnummer" Width="362" FontSize="20" Height="40" Foreground="#230101" Margin="0,10,0,0"/>
+        </StackPanel>
+
+    
+        <!-- Grid Stackpanel Venstre 2.0-->
+        <StackPanel Grid.Column="2" Grid.Row="0">
+        </StackPanel>
+
+    
+        <!-- Grid Stackpanel Venstre 0.1-->
+        <StackPanel Grid.Column="0" Margin="10,440,10,10" Grid.RowSpan="2">
+            <Button Click="BackToUnderviserView" Content="Back" Background="#fad8d1" Foreground="White" FontSize="20px" Width="140" HorizontalAlignment="Center" BorderBrush="White" BorderThickness="7"  Height="50"  Margin="0,100,0,0" RenderTransformOrigin="0.611,-1.1"/>
+        </StackPanel>
+
+
+        <!-- Grid Stackpanel Venstre 1.2-->
+        <StackPanel Grid.ColumnSpan="2" Margin="270,301,10,-20" Grid.RowSpan="2">
+            
+        </StackPanel>
+
+
+        <!-- Grid Stackpanel Venstre 2.2-->
+        <StackPanel Grid.Column="2" Margin="0,440,10,10" Grid.RowSpan="2">
+            <Button Content="Rediger" Background="#fad8d1" Foreground="White" FontSize="20px" Width="140" HorizontalAlignment="Center" BorderBrush="White" BorderThickness="7"  Height="50"  Margin="0,100,0,0"/>
+        </StackPanel>
+
+
     </Grid>
 </Page>

@@ -7,6 +7,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
+    
     <Grid Background="#fad8d1" Margin="0,0,0,0" BorderBrush="MistyRose" BorderThickness="10">
 
 
@@ -21,7 +22,13 @@
         </Grid.RowDefinitions>
 
         <!-- Grid Stackpanel Venstre 0.0-->
-        <StackPanel Grid.Column="0" Grid.Row="0">
+        <StackPanel Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" Margin="30,126,521,220" Grid.RowSpan="2">
+            <Border BorderBrush="White" BorderThickness="5" Width="280">
+                <TextBlock Height="59" Margin="55,0,45,0" TextWrapping="Wrap" HorizontalAlignment="Center" Text="Oversigt over Undervisere" FontSize="20" Foreground="White"/>
+            </Border>
+            <ScrollViewer Height="245">
+                <ListView Height="221" Width="280" FontSize="36" Foreground="#230101" BorderBrush="White" BorderThickness="5"/>
+            </ScrollViewer>
         </StackPanel>
 
         <!-- Grid Stackpanel Venstre 1.0-->
@@ -30,26 +37,38 @@
         </StackPanel>
 
         <!-- Grid Stackpanel Venstre 1.0 KOPI-->
-        <StackPanel Grid.Row="0" Orientation="Vertical" CornerRadius="10" Margin="40,173,385,240" Grid.Column="1" Grid.RowSpan="2">
+        <StackPanel Grid.Row="0" Orientation="Vertical" CornerRadius="10" Margin="50,150,329,230" Grid.Column="1" Grid.RowSpan="2">
             <TextBlock TextWrapping="Wrap" Width="180" Foreground="White" FontSize="20" HorizontalAlignment="Right" Margin="0,7,0,0">
-                    <Run Text="Lokale"/>
+                    <Run Text="Navn"/>
             </TextBlock>
 
             <TextBlock HorizontalAlignment="Right" TextWrapping="Wrap" Width="180" FontSize="20" Foreground="White"  Margin="0,23,0,0">
                     <Run Text="Adresse"/>
             </TextBlock>
 
+            <TextBlock HorizontalAlignment="Right" TextWrapping="Wrap" Width="180" FontSize="20" Foreground="White"  Margin="0,23,0,0">
+                    <Run Text="Email "/>
+            </TextBlock>
+
+            <TextBlock HorizontalAlignment="Right" TextWrapping="Wrap" Width="180" FontSize="20" Foreground="White"  Margin="0,23,0,0">
+                    <Run Text="Telefonnummer "/>
+            </TextBlock>
+
         </StackPanel>
 
         <!-- Grid Stackpanel Venstre 1.0 KOPI-->
-        <StackPanel Grid.Row="0" Orientation="Vertical" CornerRadius="10" Margin="174,178,235,220" Grid.Column="1" Grid.ColumnSpan="2" Grid.RowSpan="2">
-            <TextBox TextWrapping="Wrap" Height="40" Text="Indtast lokale" Width="362" FontSize="20" Margin="0,5,0,0" Foreground="#230101"/>
-            <TextBox TextWrapping="Wrap" Text="Indtast adresse" Width="362" FontSize="20" Height="40" Foreground="#230101" Margin="0,10,0,0"/>
+        <StackPanel Grid.Row="0" Orientation="Vertical" CornerRadius="10" Margin="194,142,77,200" Grid.Column="1" Grid.ColumnSpan="2" Grid.RowSpan="2">
+            <TextBox TextWrapping="Wrap" Height="40" Text="Indtast Navn" Width="362" FontSize="20" Margin="0,5,0,0" Foreground="#230101"/>
+            <TextBox TextWrapping="Wrap" Text="Indtast Adresse" Width="362" FontSize="20" Height="40" Foreground="#230101" Margin="0,10,0,0"/>
+            <TextBox TextWrapping="Wrap" Text="Indtast Email" Width="362" FontSize="20" Height="40" Foreground="#230101" Margin="0,10,0,0"/>
+            <TextBox TextWrapping="Wrap" Text="Indtast Telefonnummer" Width="362" FontSize="20" Height="40" Foreground="#230101" Margin="0,10,0,0"/>
         </StackPanel>
+
 
         <!-- Grid Stackpanel Venstre 2.0-->
         <StackPanel Grid.Column="2" Grid.Row="0">
         </StackPanel>
+
 
         <!-- Grid Stackpanel Venstre 0.1-->
         <StackPanel Grid.Column="0" Margin="10,440,10,10" Grid.RowSpan="2">
@@ -59,12 +78,7 @@
 
         <!-- Grid Stackpanel Venstre 1.2-->
         <StackPanel Grid.ColumnSpan="2" Margin="270,301,10,-20" Grid.RowSpan="2">
-            <Border BorderBrush="White" BorderThickness="5" Width="280">
-                <TextBlock Height="59" Margin="55,0,45,0" TextWrapping="Wrap" HorizontalAlignment="Center" Text="Oversigt over Undervisningssteder" FontSize="20" Foreground="White"/>
-            </Border>
-            <ScrollViewer Height="245">
-                <ListView Height="221" Width="280" FontSize="36" Foreground="#230101" BorderBrush="White" BorderThickness="5"/>
-            </ScrollViewer>
+
         </StackPanel>
 
 
@@ -76,4 +90,3 @@
 
     </Grid>
 </Page>
-
