@@ -8,6 +8,7 @@ using TouchpointApp.Model;
 
 namespace TouchpointApp.Persistency
 {
+
     public class UnderviserCatalog
     {
         #region Instance Fields
@@ -51,6 +52,21 @@ namespace TouchpointApp.Persistency
         {
               Underviser U1 = new Underviser(Navn, Adresse, email, tlf);
             _Ul.Add(U1);
+        }
+
+        public void Create()
+        {
+
+        }
+
+        public void Read()
+        {
+
+        }
+
+        public void Update()
+        {
+
         }
         #endregion
     }

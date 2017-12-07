@@ -109,7 +109,6 @@
     <Compile Include="Model\Serie.cs" />
     <Compile Include="Model\Underviser.cs" />
     <Compile Include="Model\Undervisningssted.cs" />
-    <Compile Include="Persistency\UnderviserSource.cs" />
     <Compile Include="Persistency\FilePersistency.cs" />
     <Compile Include="Persistency\KursistCatalog.cs" />
     <Compile Include="Persistency\KursusCatalog.cs" />
@@ -188,6 +187,8 @@
     <Compile Include="Views\Undervisningssted\UndervisningsstedView.xaml.cs">
       <DependentUpon>UndervisningsstedView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Web\IWebAPIAsync.cs" />
+    <Compile Include="Web\WebAPIAsync.cs" />
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -302,6 +303,9 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="Microsoft.AspNet.WebApi.Client">
+      <Version>5.2.3</Version>
+    </PackageReference>
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
       <Version>6.0.1</Version>
     </PackageReference>
