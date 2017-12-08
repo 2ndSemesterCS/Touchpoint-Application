@@ -7,23 +7,61 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="#fad8d1" BorderBrush="MistyRose" BorderThickness="10">
-        <!-- StackPanel surrounding full page.-->
-        <StackPanel RenderTransformOrigin="0.75,0.426">
-            <!-- Logo & Title -->
-            <StackPanel>
-                <Image Source="ms-appx:///Assets/Images/TouchPointFlotFinal.png" Height="100px" Margin="108,10,140,10" VerticalAlignment="Center" />
-            </StackPanel>
-            <!-- Content -->
-            <!-- Footer -->
-        </StackPanel>
-        <Button Click="BackToKursusView" Content="Back" Background="#fad8d1" Foreground="White" FontSize="25px" BorderBrush="White" BorderThickness="7" Margin="131,0,0,106" Height="81" Width="160" VerticalAlignment="Bottom"/>
-        <StackPanel x:Name="ListViewStack" HorizontalAlignment="Left" Margin="51,139,0,160" Width="645">
-            <TextBlock Height="84" TextWrapping="Wrap" Text="Oversigt over kurser" Width="598" FontSize="36" SelectionChanged="TextBlock_SelectionChanged" Foreground="White"/>
-            <ListView Height="336" Margin="0,0,10,0">
+    <Grid Background="#fad8d1" Margin="0,0,0,0" BorderBrush="MistyRose" BorderThickness="10">
 
-            </ListView>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="280"/>
+            <ColumnDefinition Width="720"/>
+            <ColumnDefinition Width="280"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="450"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <!-- Grid Stackpanel Venstre 0.0-->
+        <StackPanel Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" Margin="30,126,521,220" Grid.RowSpan="2">
         </StackPanel>
-        <Button Content="Delete" HorizontalAlignment="Right" Background="#fad8d1" Foreground="White" FontSize="25px" BorderBrush="White" BorderThickness="7" Margin="0,0,345,106" Height="76" Width="160" VerticalAlignment="Bottom"/>
+
+        <!-- Grid Stackpanel Venstre 1.0-->
+        <StackPanel Grid.Row="0" Margin="290,0,10,287" Grid.ColumnSpan="2" >
+            <Image Source="ms-appx:///Assets/Images/TouchPointFlotFinal.png" Height="100px" Margin="108,10,140,10" VerticalAlignment="Center"/>
+        </StackPanel>
+
+        <!-- Grid Stackpanel Venstre 1.0 KOPI-->
+        <StackPanel Grid.Row="0" Orientation="Vertical" CornerRadius="10" Margin="270,140,10,240" Grid.RowSpan="2" Grid.ColumnSpan="2">
+            <Border BorderBrush="White" BorderThickness="5" Width="380">
+                <TextBlock Text="Oversigt over Kurser" Height="59" Margin="55,0,45,0" TextWrapping="Wrap" HorizontalAlignment="Center" FontSize="20" Foreground="White" />
+            </Border>
+            <ScrollViewer>
+                <ListView Height="221" Width="380" FontSize="20" Foreground="#230101" BorderBrush="White" BorderThickness="5" HorizontalAlignment="Center" Margin="0,10,0,0"/>
+            </ScrollViewer>
+        </StackPanel>
+
+
+
+
+        <!-- Grid Stackpanel Venstre 2.0-->
+        <StackPanel Grid.Column="2" Grid.Row="0">
+        </StackPanel>
+
+
+        <!-- Grid Stackpanel Venstre 0.1-->
+        <StackPanel Grid.Column="0" Margin="10,440,10,10" Grid.RowSpan="2">
+            <Button Click="BackToKursusView" Content="Back" Background="#fad8d1" Foreground="White" FontSize="20px" Width="140" HorizontalAlignment="Center" BorderBrush="White" BorderThickness="7"  Height="50"  Margin="0,100,0,0" RenderTransformOrigin="0.611,-1.1"/>
+        </StackPanel>
+
+
+        <!-- Grid Stackpanel Venstre 1.2-->
+        <StackPanel Margin="0,15,0,-30" Grid.Column="1" Grid.Row="1"/>
+
+
+        <!-- Grid Stackpanel Venstre 2.2-->
+        <StackPanel Grid.Column="2" Margin="0,440,10,10" Grid.RowSpan="2">
+            <Button Content="Slet" Background="#fad8d1" Foreground="White" FontSize="20px" Width="140" HorizontalAlignment="Center" BorderBrush="White" BorderThickness="7"  Height="50"  Margin="0,100,0,0"/>
+        </StackPanel>
+
+
     </Grid>
 </Page>

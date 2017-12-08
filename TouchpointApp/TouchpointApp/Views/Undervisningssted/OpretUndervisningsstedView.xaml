@@ -14,7 +14,7 @@
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <!-- StackPanel surrounding full page.-->
-        <StackPanel Background="#fad8d1" RenderTransformOrigin="0.512,0.763" Margin="-10,0,10,0">
+        <StackPanel Background="#fad8d1" RenderTransformOrigin="0.512,0.763">
             <!-- Logo & Title -->
             <!-- Logo & Title -->
             <StackPanel x:Name="___StackPanel___titel" Height="131">
