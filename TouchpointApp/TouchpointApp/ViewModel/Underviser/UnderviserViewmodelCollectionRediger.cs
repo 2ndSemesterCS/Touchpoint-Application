@@ -14,13 +14,22 @@ namespace TouchpointApp.ViewModel.Underviser
     {
         private Model.Underviser _ItemIsSeleceted;
         private ObservableCollection<Model.Underviser> _observableCollection;
+        private UnderviserData _UnderviserData;
 
 
         public UnderviserViewmodelCollectionRediger()
         {
             CreateObservableCollection();
+            _UnderviserData = new UnderviserData();
         }
 
+        //Bindes til knappen "rediger" Det er først når der trykke på knappen at der bliver lavet ændringer, hvis vi ikke havde sådan en, 
+        // Så ville vi rette direkt i model klasse, det var hvad vi gjorde til at starte med.  
+        public void RedigerMetode()
+        {
+            Collection.Remove(_ItemIsSeleceted);
+            Collection.Add(new Model.Underviser(_UnderviserData.Navn, _UnderviserData.Adresse, _UnderviserData.Email, _UnderviserData.Tlf));
+        }
 
         //Skal lave vores katalog om til en obserablecollection, som vi kan bind vores listviews ItemsSource til. 
         public void CreateObservableCollection()
