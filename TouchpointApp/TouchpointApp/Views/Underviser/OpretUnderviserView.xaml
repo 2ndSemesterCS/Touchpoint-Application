@@ -13,69 +13,88 @@
     </Page.DataContext>
 
 
-    <Grid Background="#fad8d1" BorderBrush="MistyRose" BorderThickness="10">
-        <!-- Logo & Title -->
-        <StackPanel Height="110" VerticalAlignment="Top">
+    <Grid Background="#fad8d1" Margin="0,0,0,0" BorderBrush="MistyRose" BorderThickness="10">
 
-            <StackPanel>
-                <Image Source="ms-appx:///Assets/Images/TouchPointFlotFinal.png" Height="100px" Margin="108,10,140,10" VerticalAlignment="Center" />
-            </StackPanel>
-            <!-- Content -->
-        </StackPanel>
-        <Button Click="BackToUnderviserView" Content="Back" VerticalAlignment="Top" Background="#fad8d1" Foreground="White" FontSize="25px" Width="140" BorderBrush="White" BorderThickness="7"  Height="59" Margin="217,617,0,0"/>
-        <StackPanel x:Name="Holder_alt" HorizontalAlignment="Left" Height="345" Margin="57,220,0,0" VerticalAlignment="Top" Width="686">
-            <StackPanel x:Name="Navn" HorizontalAlignment="Left" Height="69" VerticalAlignment="Top" Width="676" Orientation="Horizontal">
-                <StackPanel x:Name="Addresse_Copy" HorizontalAlignment="Left" Height="60" VerticalAlignment="Top" Width="694" Orientation="Horizontal">
-                    <TextBlock HorizontalAlignment="Left" Height="51" TextWrapping="Wrap" Text="Navn" VerticalAlignment="Top" Width="132" FontSize="36" Foreground="White"/>
-                    <TextBox TextWrapping="Wrap" Text="{Binding UnderviserData.Navn, Mode=TwoWay}" Foreground="#230101" Margin="0,0,0,2.998" Width="503.041" FontSize="36" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
-                        <TextBox.RenderTransform>
-                            <CompositeTransform Rotation="0.128"/>
-                        </TextBox.RenderTransform>
-                    </TextBox>
-                </StackPanel>
-            </StackPanel>
-            <StackPanel x:Name="Navn_Copy" HorizontalAlignment="Left" Height="69" VerticalAlignment="Top" Width="676" Orientation="Horizontal">
-                <StackPanel x:Name="Addresse_Copy1" HorizontalAlignment="Left" Height="60" VerticalAlignment="Top" Width="694" Orientation="Horizontal">
-                    <TextBlock HorizontalAlignment="Left" Height="51" TextWrapping="Wrap" Text="Adresse" VerticalAlignment="Top" Width="132" FontSize="36" Foreground="White" SelectionChanged="TextBlock_SelectionChanged"/>
-                    <TextBox TextWrapping="Wrap" Text="{Binding UnderviserData.Adresse, Mode=TwoWay}" Foreground="#230101" Margin="0,0,0,2.998" Width="503.041" FontSize="36" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
-                        <TextBox.RenderTransform>
-                            <CompositeTransform Rotation="0.128"/>
-                        </TextBox.RenderTransform>
-                    </TextBox>
-                </StackPanel>
-            </StackPanel>
-            <StackPanel x:Name="Navn_Copy1" HorizontalAlignment="Left" Height="69" VerticalAlignment="Top" Width="676" Orientation="Horizontal">
-                <StackPanel x:Name="Addresse_Copy2" HorizontalAlignment="Left" Height="60" VerticalAlignment="Top" Width="694" Orientation="Horizontal">
-                    <TextBlock HorizontalAlignment="Left" Height="51" TextWrapping="Wrap" Text="Email" VerticalAlignment="Top" Width="132" FontSize="36" Foreground="White"/>
-                    <TextBox TextWrapping="Wrap" Text="{Binding UnderviserData.Email, Mode=TwoWay}" Foreground="#230101" Margin="0,0,0,2.998" Width="503.041" FontSize="36" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
-                        <TextBox.RenderTransform>
-                            <CompositeTransform Rotation="0.128"/>
-                        </TextBox.RenderTransform>
-                    </TextBox>
-                </StackPanel>
-            </StackPanel>
-            <StackPanel x:Name="Navn_Copy2" HorizontalAlignment="Left" Height="69" VerticalAlignment="Top" Width="676" Orientation="Horizontal">
-                <StackPanel x:Name="Addresse_Copy3" HorizontalAlignment="Left" Height="60" VerticalAlignment="Top" Width="694" Orientation="Horizontal">
-                    <TextBlock HorizontalAlignment="Left" Height="51" TextWrapping="Wrap" Text="Tlf" VerticalAlignment="Top" Width="132" FontSize="36" Foreground="White"/>
-                    <TextBox TextWrapping="Wrap" Text="{Binding UnderviserData.Tlf, Mode=TwoWay}" Foreground="#230101" Margin="0,0,0,2.998" Width="503.041" FontSize="36" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
-                        <TextBox.RenderTransform>
-                            <CompositeTransform Rotation="0.128"/>
-                        </TextBox.RenderTransform>
-                    </TextBox>
-                </StackPanel>
-            </StackPanel>
-        </StackPanel>
-        <StackPanel Grid.Column="0" Grid.Row="0" Margin="660,152,-49,207">
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="280"/>
+            <ColumnDefinition Width="720"/>
+            <ColumnDefinition Width="280"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="450"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <!-- Grid Stackpanel Venstre 0.0-->
+        <StackPanel Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" Margin="30,126,521,220" Grid.RowSpan="2">
             <Border BorderBrush="White" BorderThickness="5" Width="280">
                 <TextBlock Height="59" Margin="55,0,45,0" TextWrapping="Wrap" HorizontalAlignment="Center" Text="Oversigt over Undervisere" FontSize="20" Foreground="White"/>
             </Border>
-            <ScrollViewer Height="279">
-                <ListView Height="252" Width="280" FontSize="20" Foreground="#230101" BorderBrush="White" BorderThickness="5" 
+            <ScrollViewer Height="245">
+                <ListView Height="221" Width="280" FontSize="20" Foreground="#230101" BorderBrush="White" BorderThickness="5" 
+                          SelectedItem="{Binding SelectedItemListview, Mode=TwoWay}"
                           ItemsSource="{Binding Collection, Mode=TwoWay}"
                           />
             </ScrollViewer>
         </StackPanel>
-        <Button Command="{Binding OpretNyUnderviserCommand}" Content="Opret" VerticalAlignment="Top" Background="#fad8d1" Foreground="White" FontSize="25px" Width="140" BorderBrush="White" BorderThickness="7"  Height="59" Margin="511,615,0,0"/>
-        <!--<Button Click="1" Content="Opret Underviser" Margin="966,0,0,343" VerticalAlignment="Bottom" Height="81" Width="214" FontSize="25"/>-->
+
+        <!-- Grid Stackpanel Venstre 1.0-->
+        <StackPanel Grid.Row="0" Margin="290,0,10,287" Grid.ColumnSpan="2" >
+            <Image Source="ms-appx:///Assets/Images/TouchPointFlotFinal.png" Height="100px" Margin="108,10,140,10" VerticalAlignment="Center"/>
+        </StackPanel>
+
+        <!-- Grid Stackpanel Venstre 1.0 KOPI-->
+        <StackPanel Grid.Row="0" Orientation="Vertical" CornerRadius="10" Margin="50,150,329,230" Grid.Column="1" Grid.RowSpan="2">
+            <TextBlock TextWrapping="Wrap" Width="180" Foreground="White" FontSize="20" HorizontalAlignment="Right" Margin="0,7,0,0">
+                    <Run Text="Navn"/>
+            </TextBlock>
+
+            <TextBlock HorizontalAlignment="Right" TextWrapping="Wrap" Width="180" FontSize="20" Foreground="White"  Margin="0,23,0,0">
+                    <Run Text="Adresse"/>
+            </TextBlock>
+
+            <TextBlock HorizontalAlignment="Right" TextWrapping="Wrap" Width="180" FontSize="20" Foreground="White"  Margin="0,23,0,0">
+                    <Run Text="Email "/>
+            </TextBlock>
+
+            <TextBlock HorizontalAlignment="Right" TextWrapping="Wrap" Width="180" FontSize="20" Foreground="White"  Margin="0,23,0,0">
+                    <Run Text="Telefonnummer "/>
+            </TextBlock>
+
+        </StackPanel>
+
+        <!-- Grid Stackpanel Venstre 1.0 KOPI-->
+        <StackPanel Grid.Row="0" Orientation="Vertical" CornerRadius="10" Margin="194,142,77,200" Grid.Column="1" Grid.ColumnSpan="2" Grid.RowSpan="2">
+            <TextBox TextWrapping="Wrap" Height="40" Text="{Binding UnderviserData.Navn, Mode=TwoWay}" Width="362" FontSize="20" Margin="0,5,0,0" Foreground="#230101"/>
+            <TextBox TextWrapping="Wrap" Text="{Binding UnderviserData.Adresse, Mode=TwoWay}" Width="362" FontSize="20" Height="40" Foreground="#230101" Margin="0,10,0,0"/>
+            <TextBox TextWrapping="Wrap" Text="{Binding UnderviserData.Email, Mode=TwoWay}" Width="362" FontSize="20" Height="40" Foreground="#230101" Margin="0,10,0,0"/>
+            <TextBox TextWrapping="Wrap" Text="{Binding UnderviserData.Tlf, Mode=TwoWay}" Width="362" FontSize="20" Height="40" Foreground="#230101" Margin="0,10,0,0"/>
+        </StackPanel>
+
+
+        <!-- Grid Stackpanel Venstre 2.0-->
+        <StackPanel Grid.Column="2" Grid.Row="0">
+        </StackPanel>
+
+
+        <!-- Grid Stackpanel Venstre 0.1-->
+        <StackPanel Grid.Column="0" Margin="10,440,10,10" Grid.RowSpan="2">
+            <Button Click="BackToUnderviserView" Content="Back" Background="#fad8d1" Foreground="White" FontSize="20px" Width="140" HorizontalAlignment="Center" BorderBrush="White" BorderThickness="7"  Height="50"  Margin="0,100,0,0" RenderTransformOrigin="0.611,-1.1"/>
+        </StackPanel>
+
+
+        <!-- Grid Stackpanel Venstre 1.2-->
+        <StackPanel Grid.ColumnSpan="2" Margin="270,301,10,-20" Grid.RowSpan="2">
+
+        </StackPanel>
+
+
+        <!-- Grid Stackpanel Venstre 2.2-->
+        <StackPanel Grid.Column="2" Margin="0,440,10,10" Grid.RowSpan="2">
+            <Button Command="{Binding OpretNyUnderviserCommand}" Content="Opret " Background="#fad8d1" Foreground="White" FontSize="20px" Width="140" HorizontalAlignment="Center" BorderBrush="White" BorderThickness="7"  Height="50"  Margin="0,100,0,0"/>
+        </StackPanel>
+
+
     </Grid>
 </Page>
