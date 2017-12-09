@@ -56,6 +56,10 @@ namespace TouchpointApp.Model
             {
                 throw new ArgumentException("Personlig information mangler");
             }
+
+            CheckForTal(navn,by,land);
+            CheckTlfLængde(tlf);
+            
             _navn = navn ;
             _email = email;
             _by = by;
@@ -64,6 +68,38 @@ namespace TouchpointApp.Model
             _tlf = tlf;
         }
 
+        public void CheckForTal(string navn, string by, string land)
+        {
+            int value;
+
+
+            if (int.TryParse(navn, out value))
+
+            {
+                throw new ArgumentException("Der kan ikke indtastes tal i navn");
+            }
+
+            if(int.TryParse(by, out value))
+            {
+                throw new ArgumentException("Der kan ikke indtastes tal i by");
+            }
+
+            if(int.TryParse(land,out value))
+            {
+                throw new ArgumentException("Der kan ikke indtastes tal i land");
+            }
+
+        }
+
+        public void CheckTlfLængde(string tlf)
+        {
+
+            if (tlf.Length < 8 || tlf.Length > 8)
+            {
+                throw new ArgumentException("Invalid telefonnummer");
+            }
+
+        }
         public override string ToString()
         {
             return $"{_navn}";
