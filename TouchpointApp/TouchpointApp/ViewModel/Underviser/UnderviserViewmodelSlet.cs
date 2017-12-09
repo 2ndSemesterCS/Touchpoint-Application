@@ -4,6 +4,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Input;
 using TouchpointApp.Command;
 using TouchpointApp.Persistency;
 
@@ -20,7 +21,10 @@ namespace TouchpointApp.ViewModel.Underviser
         public UnderviserViewmodelSlet()
         {
             CreateObservableCollection();
+            SletCommand = new RelayCommand(DeleteCommand);
         }
+
+        public RelayCommand SletCommand { get; set; }
 
 
         //Skal lave vores katalog om til en obserablecollection, som vi kan bind vores listviews ItemsSource til. 
@@ -56,18 +60,10 @@ namespace TouchpointApp.ViewModel.Underviser
             get { return _observableCollection; }
         }
 
-        private bool CanDelete()
+        public void DeleteCommand()
         {
-            if (_catalog.Getlist.Count < 0)
-            {
-                throw new Exception();
-            }
-            return true;
+            _catalog.Getlist.Remove(_ItemIsSeleceted);
         }
-
-        //private void DeleteCommand()
-        //{
-        //    _catalog.Getlist.Remove();
-        //}
     }
 }
+ 

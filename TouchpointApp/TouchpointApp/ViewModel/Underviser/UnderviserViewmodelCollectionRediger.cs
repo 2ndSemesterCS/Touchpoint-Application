@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using TouchpointApp.DataStorage;
 using TouchpointApp.Persistency;
 using TouchpointApp.Model;
+using TouchpointApp.Command;
 
 namespace TouchpointApp.ViewModel.Underviser
 {
@@ -21,6 +22,7 @@ namespace TouchpointApp.ViewModel.Underviser
         {
             CreateObservableCollection();
             _UnderviserData = new UnderviserData();
+            RedigerCommand = new RelayCommand(RedigerMetode);
         }
 
         //Bindes til knappen "rediger" Det er først når der trykke på knappen at der bliver lavet ændringer, hvis vi ikke havde sådan en, 
@@ -30,6 +32,7 @@ namespace TouchpointApp.ViewModel.Underviser
             Collection.Remove(_ItemIsSeleceted);
             Collection.Add(new Model.Underviser(_UnderviserData.Navn, _UnderviserData.Adresse, _UnderviserData.Email, _UnderviserData.Tlf));
         }
+        public RelayCommand RedigerCommand { get; set; }
 
         //Skal lave vores katalog om til en obserablecollection, som vi kan bind vores listviews ItemsSource til. 
         public void CreateObservableCollection()
