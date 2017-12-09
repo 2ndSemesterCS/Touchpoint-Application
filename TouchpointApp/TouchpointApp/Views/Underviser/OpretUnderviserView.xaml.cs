@@ -30,5 +30,10 @@ namespace TouchpointApp.Views.Underviser
         {
             this.Frame.GoBack();
         }
+
+        private void TextBlock_SelectionChanged(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
