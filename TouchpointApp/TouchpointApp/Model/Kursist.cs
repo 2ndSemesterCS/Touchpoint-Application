@@ -11,6 +11,7 @@ namespace TouchpointApp.Model
         private string _land;
         private string _adresse;
         private string _tlf;
+        private string lolian;
 
         // Properties
 
