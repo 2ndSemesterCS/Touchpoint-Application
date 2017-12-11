@@ -16,8 +16,8 @@ namespace TouchpointApp.Model
                 throw new ArgumentException("Adresse eller lokale mangler");
             }
 
-            lokale = _lokale;
-            adresse = _adresse;
+            _lokale = lokale;
+            _adresse = adresse;
         }
    
 

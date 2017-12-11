@@ -44,31 +44,21 @@ public class UndervisningsstedCatalog
     #region Metoder
 
     public void OpretUndervisningssted(string lokale, string adresse)
-        {
-            Undervisningssted us1 = new Undervisningssted("", "");
+    {
+
+        //Undervisningssted us1 = new Undervisningssted("", "")
+        //{ 
+        //    __usl.Add(us1);
+        //}
 
 
-            { 
-                __usl.Add(us1);
-            }
-            
-        }
+        Undervisningssted undervisningssted = new Undervisningssted(lokale, adresse);
+        __usl.Add(undervisningssted);
+
+    }
 
     #endregion
-    public void Create()
-    {
 
-    }
-
-    public void Read()
-    {
-
-    }
-
-    public void Update()
-    {
-
-    }
 
 }
 

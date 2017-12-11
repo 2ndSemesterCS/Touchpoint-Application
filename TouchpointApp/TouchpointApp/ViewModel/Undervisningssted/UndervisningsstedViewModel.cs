@@ -27,6 +27,10 @@ namespace TouchpointApp.ViewModel.Undervisningssted
             OpretNytUndervisningsstedCommand = new RelayCommand(OpretNytUndervisningssted); 
         }
 
+        public RelayCommand OpretNytUndervisningsstedCommand { get; set; }
+        public UndervisningsStedData UndervisningsStedData { get { return _undervisningsstedData; } set { _undervisningsstedData = value; } }
+
+
         public ObservableCollection<Model.Undervisningssted> CreateObservableCollection()
         {
             var Collection = new ObservableCollection<Model.Undervisningssted>();
@@ -42,14 +46,10 @@ namespace TouchpointApp.ViewModel.Undervisningssted
             get { return CreateObservableCollection(); }
         }
 
-        public RelayCommand OpretNytUndervisningsstedCommand { get; set; }
-        public UndervisningsStedData UndervisningsStedData { get { return _undervisningsstedData; } set { _undervisningsstedData = value; } }
-
-
-
         public void OpretNytUndervisningssted()
         {
             _undervisningsstedCatalog.OpretUndervisningssted(_undervisningsstedData.Lokale, _undervisningsstedData.Adresse);
+            OnPropertyChanged(nameof(Collection));
         }
 
     }
