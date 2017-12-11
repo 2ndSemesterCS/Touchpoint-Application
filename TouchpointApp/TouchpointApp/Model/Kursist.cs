@@ -62,6 +62,7 @@ namespace TouchpointApp.Model
 
             CheckForTal(navn, by, land);
             CheckTlfLængde(tlf);
+            CheckForTalITlf(tlf);
 
             _navn = navn ;
             _email = email;
@@ -94,6 +95,15 @@ namespace TouchpointApp.Model
 
         }
 
+        public void CheckForTalITlf(string Tlf)
+        {
+            int value;
+            if(!int.TryParse(Tlf, out value))
+            {
+                throw new ArgumentException("Kun tal i telefonnummer");
+            }
+        }
+
         public void CheckTlfLængde(string tlf)
         {
 
@@ -102,7 +112,9 @@ namespace TouchpointApp.Model
                 throw new ArgumentException("Invalid telefonnummer");
             }
 
+
         }
+
         public override string ToString()
         {
             return $"{_navn}";

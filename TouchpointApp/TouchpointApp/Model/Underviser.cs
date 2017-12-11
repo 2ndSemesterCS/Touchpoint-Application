@@ -20,11 +20,21 @@ namespace TouchpointApp.Model
 
             CheckForTal(navn);
             CheckTlfLængde(tlf);
-            
+            CheckForTalITlf(tlf);
+
             _navn = navn;
             _addresse = addresse;
             _email = email;
             _tlf = tlf;
+        }
+
+        public void CheckForTalITlf(string Tlf)
+        {
+            int value;
+            if (!int.TryParse(Tlf, out value))
+            {
+                throw new ArgumentException("Kun tal i telefonnummer");
+            }
         }
 
         public void CheckForTal(string navn)
