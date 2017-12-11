@@ -2,7 +2,7 @@
 using TouchpointApp.Persistency;
 using TouchpointApp.Model;
 using TouchpointApp.DataStorage;
-
+  
 namespace TouchpointApp.ViewModel.Kursist
 {
     public class KursistViewModel : ViewModelBase

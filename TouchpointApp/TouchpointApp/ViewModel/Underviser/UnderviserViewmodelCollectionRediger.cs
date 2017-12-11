@@ -14,28 +14,54 @@ namespace TouchpointApp.ViewModel.Underviser
     public class UnderviserViewmodelCollectionRediger : ViewModelBase
     {
         private Model.Underviser _ItemIsSeleceted;
-        private ObservableCollection<Model.Underviser> _observableCollection;
         private UnderviserData _UnderviserData;
 
 
         public UnderviserViewmodelCollectionRediger()
         {
-            CreateObservableCollection();
             _UnderviserData = new UnderviserData();
-            RedigerCommand = new RelayCommand(RedigerMetode);
+            RedigerCommand = new RelayCommand(RedigerMetode, () => { return _ItemIsSeleceted != null; });
         }
+
+        public RelayCommand RedigerCommand { get; set; }
+        public UnderviserData UnderviserData { get { return _UnderviserData; } set { _UnderviserData = value; } }
 
         //Bindes til knappen "rediger" Det er først når der trykke på knappen at der bliver lavet ændringer, hvis vi ikke havde sådan en, 
         // Så ville vi rette direkt i model klasse, det var hvad vi gjorde til at starte med.  
         public void RedigerMetode()
         {
-            Collection.Remove(_ItemIsSeleceted);
-            Collection.Add(new Model.Underviser(_UnderviserData.Navn, _UnderviserData.Adresse, _UnderviserData.Email, _UnderviserData.Tlf));
+            UnderviserCatalog.Instance().Getlist.Remove(_ItemIsSeleceted);
+            UnderviserCatalog.Instance().OpretUnderviser(_UnderviserData.Navn, _UnderviserData.Adresse, _UnderviserData.Email, _UnderviserData.Tlf);
+            OnPropertyChanged(nameof(Collection));
         }
-        public RelayCommand RedigerCommand { get; set; }
+       
+        //Propperti til at binde listviewets isSeleceted propperty til. 
+        public Model.Underviser SelectedItemListview
+        {
+            get { return _ItemIsSeleceted; }
+            set
+             {
+                _ItemIsSeleceted = value;
+                if (_ItemIsSeleceted != null)
+                {
+                    _UnderviserData.Navn = _ItemIsSeleceted.Navn;
+                    _UnderviserData.Email = _ItemIsSeleceted.Email;
+                    _UnderviserData.Adresse = _ItemIsSeleceted.Addresse;
+                    _UnderviserData.Tlf = _ItemIsSeleceted.Tlf;
+                }
+                OnPropertyChanged(nameof(UnderviserData));
+                RedigerCommand.RaiseCanExecuteChanged();
+            }
+        }
+
+        //propperty der skal bindes til listviewets ItemsSource
+        public ObservableCollection<Model.Underviser> Collection
+        {
+            get { return CreateObservableCollection(); }
+        }
 
         //Skal lave vores katalog om til en obserablecollection, som vi kan bind vores listviews ItemsSource til. 
-        public void CreateObservableCollection()
+        public ObservableCollection<Model.Underviser> CreateObservableCollection()
         {
             //Der oprettes et ObservableCollection 
             var Collection = new ObservableCollection<Model.Underviser>();
@@ -46,29 +72,7 @@ namespace TouchpointApp.ViewModel.Underviser
             {
                 Collection.Add(item);
             }
-            _observableCollection = Collection;
-        }
-
-        //Propperti til at binde listviewets isSeleceted propperty til. 
-        public Model.Underviser SelectedItemListview
-        {
-            get { return _ItemIsSeleceted; }
-            set
-             {
-                _ItemIsSeleceted = value;
-                OnPropertyChanged();
-            }
-        }
-
-        //propperty der skal bindes til listviewets ItemsSource
-        public ObservableCollection<Model.Underviser> Collection
-        {
-            get { return _observableCollection; }
-            set
-            {
-                _observableCollection = value;
-                OnPropertyChanged();
-            }
+            return Collection;
         }
     }
 }

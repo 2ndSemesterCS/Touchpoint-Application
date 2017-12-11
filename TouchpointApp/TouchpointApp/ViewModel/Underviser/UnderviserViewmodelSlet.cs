@@ -33,7 +33,6 @@ namespace TouchpointApp.ViewModel.Underviser
             //Der oprettes et ObservableCollection 
             var Collection = new ObservableCollection<Model.Underviser>();
 
-
             // UnderviserCatalog.Instance().Getlist   --> UnderviserCatalog.Instance(), because we allready have an instandse of UnderviserCatalog
             // it will return the objenct instead and therefore we can call .getlist.
             foreach (var item in UnderviserCatalog.Instance().Getlist)
@@ -63,6 +62,7 @@ namespace TouchpointApp.ViewModel.Underviser
         public void DeleteCommand()
         {
             _catalog.Getlist.Remove(_ItemIsSeleceted);
+            OnPropertyChanged(nameof(Collection));
         }
     }
 }
