@@ -28,7 +28,7 @@ namespace TouchpointApp.Web
             _httpClientHandler = new HttpClientHandler();
             _httpClientHandler.UseDefaultCredentials = true;
             _httpClient = new HttpClient();
-            _httpClient.BaseAddress = new Uri(_serverURL);
+            _httpClient.BaseAddress = new Uri("http://touchpointdbwebservice.azurewebsites.net/api/underviser/");
         }
         #endregion
 
