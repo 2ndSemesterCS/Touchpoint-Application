@@ -1,15 +1,16 @@
-﻿using System.Collections.Generic;
-using System.Net.NetworkInformation;
-using TouchpointApp.Views.Undervisningssted;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using TouchpointApp.Command;
 using TouchpointApp.Model;
-using TouchpointApp.Persistency;
-using System;
 
 
-    public class UndervisningsstedCatalog
+public class UndervisningsstedCatalog
     {
         #region Instance Fields
-        private List<Undervisningssted> __usl;
+    private List<Undervisningssted> __usl;
     private static UndervisningsstedCatalog _UndervisningsstedCatalog;
         #endregion
 
@@ -29,11 +30,20 @@ using System;
             
             __usl = new List<Undervisningssted>();
         }
-        #endregion
+    #endregion
+    public List<Undervisningssted> Getlist
+    {
+        get { return __usl; }
+        set { __usl = value; }
+    }
 
-        #region Metoder
+    public List<Undervisningssted> All
+    { get; set; }
 
-        public void OpretUndervisningssted(string lokale, string adresse)
+
+    #region Metoder
+
+    public void OpretUndervisningssted(string lokale, string adresse)
         {
             Undervisningssted us1 = new Undervisningssted("", "");
 
@@ -44,9 +54,22 @@ using System;
             
         }
 
-        #endregion
-
+    #endregion
+    public void Create()
+    {
 
     }
+
+    public void Read()
+    {
+
+    }
+
+    public void Update()
+    {
+
+    }
+
+}
 
 

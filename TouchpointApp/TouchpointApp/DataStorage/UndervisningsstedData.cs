@@ -12,6 +12,8 @@ namespace TouchpointApp.DataStorage
         private string _adresse;
         private string _lokale;
 
+        
+
         public string Adresse
         {
             get { return _adresse; } set { _adresse = value; OnPropertyChanged("Adresse"); }

@@ -37,7 +37,7 @@
         <!-- Grid Stackpanel Venstre 1.0 KOPI-->
         <StackPanel Grid.Row="0" Orientation="Vertical" CornerRadius="10" Margin="143,152,516,228" Grid.RowSpan="2" Grid.ColumnSpan="2">
             <TextBlock TextWrapping="Wrap" Width="180" Foreground="White" FontSize="20" HorizontalAlignment="Right" Margin="0,7,0,0">
-                    <Run Text="Navn"/>
+                    <Run Text="Lokale"/>
             </TextBlock>
 
             <TextBlock HorizontalAlignment="Right" TextWrapping="Wrap" Width="180" FontSize="20" Foreground="White"  Margin="0,23,0,0">
@@ -49,15 +49,15 @@
 
         <!-- Grid Stackpanel Venstre 1.0 KOPI-->
         <StackPanel Grid.Row="0" Orientation="Vertical" CornerRadius="10" Margin="0,143,271,199" Grid.Column="1" Grid.ColumnSpan="2" Grid.RowSpan="2">
-            <TextBox TextWrapping="Wrap" Height="40" Text="{Binding UnderviserData.Navn, Mode=TwoWay}" Width="362" FontSize="20" Margin="0,5,0,0" Foreground="#230101"/>
-            <TextBox TextWrapping="Wrap" Text="{Binding UnderviserData.Adresse, Mode=TwoWay}" Width="362" FontSize="20" Height="40" Foreground="#230101" Margin="0,10,0,0"/>
+            <TextBox TextWrapping="Wrap" Height="40" Text="{Binding UndervisningsStedData.Lokale, Mode=TwoWay}" Width="362" FontSize="20" Margin="0,5,0,0" Foreground="#230101"/>
+            <TextBox TextWrapping="Wrap" Text="{Binding UndervisningsStedData.Adresse, Mode=TwoWay}" Width="362" FontSize="20" Height="40" Foreground="#230101" Margin="0,10,0,0"/>
         </StackPanel>
 
 
         <!-- Grid Stackpanel Venstre 2.0-->
         <StackPanel Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="2" Margin="642,126,78,124" Grid.RowSpan="2">
             <Border BorderBrush="White" BorderThickness="5" Width="280">
-                <TextBlock Height="59" Margin="55,0,45,0" TextWrapping="Wrap" HorizontalAlignment="Center" Text="Oversigt over Undervisere" FontSize="20" Foreground="White"/>
+                <TextBlock Height="59" Margin="59,0,23,0" TextWrapping="Wrap" HorizontalAlignment="Center" Text="Oversigt over Undervisningssteder" FontSize="20" Foreground="White" Width="188"/>
             </Border>
             <ScrollViewer Height="245">
                 <ListView Height="221" Width="280" FontSize="20" Foreground="#230101" BorderBrush="White" BorderThickness="5" 
