@@ -5,6 +5,7 @@ using TouchpointApp.Web;
 using System.Windows.Input;
 using System.Collections.ObjectModel;
 
+
 namespace TouchpointApp.ViewModel.Underviser
 {
     class UnderviserViewmodel :ViewModelBase
@@ -21,6 +22,7 @@ namespace TouchpointApp.ViewModel.Underviser
             _underviserCatalog = UnderviserCatalog.Instance();
             _underviserData = new UnderviserData();
             OpretNyUnderviserCommand = new RelayCommand(OpretNyUnderviser);
+            CreateObservableCollection();
         }
 
 
@@ -55,8 +57,12 @@ namespace TouchpointApp.ViewModel.Underviser
         public void OpretNyUnderviser()
         {
             _underviserCatalog.OpretUnderviser(_underviserData.Navn, _underviserData.Adresse, _underviserData.Email, _underviserData.Tlf);
-            CreateObservableCollection();
         }
+
+
+
+
+
 
     }
 }
