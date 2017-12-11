@@ -22,7 +22,7 @@ namespace TouchpointApp.ViewModel.Underviser
             _underviserCatalog = UnderviserCatalog.Instance();
             _underviserData = new UnderviserData();
             OpretNyUnderviserCommand = new RelayCommand(OpretNyUnderviser);
-            CreateObservableCollection();
+       
         }
 
 

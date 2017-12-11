@@ -26,7 +26,7 @@ namespace TouchpointApp.Persistency
         }
 
 
-        public void OpretKursist(string navn, string email, string by, string land, string adresse, string tlf)
+        public void OpretKursist(string navn, string adresse, string email, string tlf, string land, string by)
         {
             Kursist kursist1 = new Kursist(navn, email, by, land, adresse, tlf);
             _kursistList.Add(kursist1);
