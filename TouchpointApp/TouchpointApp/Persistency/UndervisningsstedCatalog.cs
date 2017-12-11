@@ -8,28 +8,29 @@ using TouchpointApp.Model;
 
 
 public class UndervisningsstedCatalog
-    {
-        #region Instance Fields
+{
+    #region Instance Fields
     private List<Undervisningssted> __usl;
     private static UndervisningsstedCatalog _UndervisningsstedCatalog;
-        #endregion
+    #endregion
 
+    private UndervisningsstedCatalog()
+    {
+
+        __usl = new List<Undervisningssted>();
+    }
 
     public static UndervisningsstedCatalog Instance()
     {
-        if(_UndervisningsstedCatalog == null)
+        if (_UndervisningsstedCatalog == null)
         {
             _UndervisningsstedCatalog = new UndervisningsstedCatalog();
 
         }
         return _UndervisningsstedCatalog;
     }
-        #region Constructor
-        public UndervisningsstedCatalog()
-        {
-            
-            __usl = new List<Undervisningssted>();
-        }
+    #region Constructor
+ 
     #endregion
     public List<Undervisningssted> Getlist
     {
@@ -45,21 +46,12 @@ public class UndervisningsstedCatalog
 
     public void OpretUndervisningssted(string lokale, string adresse)
     {
-
-        //Undervisningssted us1 = new Undervisningssted("", "")
-        //{ 
-        //    __usl.Add(us1);
-        //}
-
-
         Undervisningssted undervisningssted = new Undervisningssted(lokale, adresse);
         __usl.Add(undervisningssted);
-
     }
-
     #endregion
 
-
 }
+
 
 

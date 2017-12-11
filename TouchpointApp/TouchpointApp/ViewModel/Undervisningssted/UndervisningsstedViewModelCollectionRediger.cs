@@ -8,6 +8,7 @@ using TouchpointApp.DataStorage;
 using TouchpointApp.Persistency;
 using TouchpointApp.Model;
 using TouchpointApp.Command;
+using TouchpointApp.ViewModel;
 
 namespace TouchpointApp.ViewModel.Undervisningssted
 {
@@ -32,7 +33,6 @@ namespace TouchpointApp.ViewModel.Undervisningssted
         // Så ville vi rette direkt i model klasse, det var hvad vi gjorde til at starte med.  
         public void RedigerMetode()
         {
-            
             UndervisningsstedCatalog.Instance().Getlist.Remove(_ItemIsSeleceted);
             UndervisningsstedCatalog.Instance().OpretUndervisningssted(_UndervisningsstedData.Lokale, _UndervisningsstedData.Adresse);
             OnPropertyChanged(nameof(Collection));
@@ -50,7 +50,7 @@ namespace TouchpointApp.ViewModel.Undervisningssted
                     _UndervisningsstedData.Adresse = _ItemIsSeleceted.Adresse;
                     _UndervisningsstedData.Lokale = _ItemIsSeleceted.Lokale;
                 }
-                OnPropertyChanged(nameof(UndervisningsStedData));
+                OnPropertyChanged(nameof(undervisningstedData));
                 RedigerCommand.RaiseCanExecuteChanged();
             }
         }
@@ -64,11 +64,7 @@ namespace TouchpointApp.ViewModel.Undervisningssted
         //Skal lave vores katalog om til en obserablecollection, som vi kan bind vores listviews ItemsSource til. 
         public ObservableCollection<Model.Undervisningssted> CreateObservableCollection()
         {
-            //Der oprettes et ObservableCollection 
             var Collection = new ObservableCollection<Model.Undervisningssted>();
-
-            // UnderviserCatalog.Instance().Getlist   --> UnderviserCatalog.Instance(), because we allready have an instandse of UnderviserCatalog
-            // it will return the objenct instead and therefore we can call .getlist.
             foreach (var item in UndervisningsstedCatalog.Instance().Getlist)
             {
                 Collection.Add(item);
