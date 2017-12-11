@@ -13,22 +13,18 @@ namespace TouchpointApp.ViewModel.Underviser
     class UnderviserViewmodelSlet : ViewModelBase
     {
         private Model.Underviser _ItemIsSeleceted;
-        private ObservableCollection<Model.Underviser> _observableCollection;
-
-        private UnderviserCatalog _catalog = UnderviserCatalog.Instance();
-
 
         public UnderviserViewmodelSlet()
         {
             CreateObservableCollection();
-            SletCommand = new RelayCommand(DeleteCommand);
+            SletCommand = new RelayCommand(DeleteCommand, ()=> { return _ItemIsSeleceted != null; });
         }
 
         public RelayCommand SletCommand { get; set; }
 
 
         //Skal lave vores katalog om til en obserablecollection, som vi kan bind vores listviews ItemsSource til. 
-        public void CreateObservableCollection()
+        public ObservableCollection<Model.Underviser> CreateObservableCollection()
         {
             //Der oprettes et ObservableCollection 
             var Collection = new ObservableCollection<Model.Underviser>();
@@ -39,7 +35,7 @@ namespace TouchpointApp.ViewModel.Underviser
             {
                 Collection.Add(item);
             }
-            _observableCollection = Collection;
+            return Collection;
         }
 
         //Propperti til at binde listviewets isSeleceted propperty til. 
@@ -49,19 +45,20 @@ namespace TouchpointApp.ViewModel.Underviser
             set
             {
                 _ItemIsSeleceted = value;
-                OnPropertyChanged("Seleceted item er opdateret");
+                SletCommand.RaiseCanExecuteChanged();
+                OnPropertyChanged();
             }
         }
 
         //propperty der skal bindes til listviewets ItemsSource
         public ObservableCollection<Model.Underviser> Collection
         {
-            get { return _observableCollection; }
+            get { return CreateObservableCollection(); }
         }
 
         public void DeleteCommand()
         {
-            _catalog.Getlist.Remove(_ItemIsSeleceted);
+            UnderviserCatalog.Instance().Getlist.Remove(_ItemIsSeleceted);
             OnPropertyChanged(nameof(Collection));
         }
     }

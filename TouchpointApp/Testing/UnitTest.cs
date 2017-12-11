@@ -10,12 +10,12 @@ namespace Testing
     [TestClass]
     public class UnitTest1
     {
-        
 
-      
+
+
         [TestMethod]
         public void OpretUndervisingsstedUdenAdresse()
-        { 
+        {
             Assert.ThrowsException<ArgumentException>(() => { new Undervisningssted("", ""); });
         }
 
@@ -36,17 +36,17 @@ namespace Testing
         //{
         //    Assert.ThrowsException<ArgumentException>(() => { new Kursus("","","","",0 ,null,null,"","",0); });
         //}
-        
+
         [TestMethod]
         public void OpretSerieUdenValgAfKurser()
         {
-            Assert.ThrowsException<ArgumentException>(() => { new Serie(null,""); });
+            Assert.ThrowsException<ArgumentException>(() => { new Serie(null, ""); });
         }
 
         [TestMethod]
         public void OpretUnderviserMedTal()
         {
-            Assert.ThrowsException<ArgumentException>(() => { new Underviser("","","",""); });
+            Assert.ThrowsException<ArgumentException>(() => { new Underviser("", "", "", ""); });
         }
     }
 }

@@ -12,7 +12,6 @@ namespace TouchpointApp.ViewModel.Underviser
     {
         private UnderviserData _underviserData;
         private UnderviserCatalog _underviserCatalog;
-        private ObservableCollection<Model.Underviser> _observableCollection;
         private RelayCommand _loadCommand;
         private RelayCommand _saveCommand;
 
@@ -26,24 +25,19 @@ namespace TouchpointApp.ViewModel.Underviser
         }
 
 
-        public void CreateObservableCollection()
+        public ObservableCollection<Model.Underviser> CreateObservableCollection()
         {
             var Collection = new ObservableCollection<Model.Underviser>();
-
             foreach (var item in UnderviserCatalog.Instance().Getlist)
             {
                 Collection.Add(item);
             }
-            _observableCollection = Collection;
+            return Collection;
         }
+
         public ObservableCollection<Model.Underviser> Collection
         {
-            get { return _observableCollection; }
-            set
-            {
-                _observableCollection = value;
-                OnPropertyChanged();
-            }
+            get { return CreateObservableCollection(); }
         }
 
 
@@ -57,8 +51,16 @@ namespace TouchpointApp.ViewModel.Underviser
         public void OpretNyUnderviser()
         {
             _underviserCatalog.OpretUnderviser(_underviserData.Navn, _underviserData.Adresse, _underviserData.Email, _underviserData.Tlf);
+            OnPropertyChanged(nameof(Collection));
         }
 
+        //private bool CheckBoxIsNotNull()
+        //{
+        //    if (_underviserData.Navn.Length > 0 || _underviserData.Adresse.Length >0 || _underviserData.Email.Length >0 || _underviserData.Tlf.Length > 0) 
+        //    return true;
+
+        //    return false;
+        //}
 
 
 
