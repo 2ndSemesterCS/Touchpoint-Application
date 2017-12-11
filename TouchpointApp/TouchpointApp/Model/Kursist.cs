@@ -11,7 +11,7 @@ namespace TouchpointApp.Model
         private string _land;
         private string _adresse;
         private string _tlf;
-        private string lolian;
+   
 
         // Properties
 
@@ -53,14 +53,16 @@ namespace TouchpointApp.Model
 
         public Kursist(string navn, string email, string by, string land, string adresse, string tlf)
         {
-            if(String.IsNullOrEmpty(navn) || String.IsNullOrEmpty(email) || String.IsNullOrEmpty(by) || String.IsNullOrEmpty(land) || String.IsNullOrEmpty(adresse) || String.IsNullOrEmpty(tlf))
+            if (String.IsNullOrEmpty(navn) || String.IsNullOrEmpty(email)
+                || String.IsNullOrEmpty(by) || String.IsNullOrEmpty(land)
+                || String.IsNullOrEmpty(adresse) || String.IsNullOrEmpty(tlf))
             {
                 throw new ArgumentException("Personlig information mangler");
             }
 
-            CheckForTal(navn,by,land);
+            CheckForTal(navn, by, land);
             CheckTlfLængde(tlf);
-            
+
             _navn = navn ;
             _email = email;
             _by = by;
