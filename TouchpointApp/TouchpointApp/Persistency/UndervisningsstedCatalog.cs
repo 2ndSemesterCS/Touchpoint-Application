@@ -10,8 +10,19 @@ using System;
     {
         #region Instance Fields
         private List<Undervisningssted> __usl;
+    private static UndervisningsstedCatalog _UndervisningsstedCatalog;
         #endregion
 
+
+    public static UndervisningsstedCatalog Instance()
+    {
+        if(_UndervisningsstedCatalog == null)
+        {
+            _UndervisningsstedCatalog = new UndervisningsstedCatalog();
+
+        }
+        return _UndervisningsstedCatalog;
+    }
         #region Constructor
         public UndervisningsstedCatalog()
         {

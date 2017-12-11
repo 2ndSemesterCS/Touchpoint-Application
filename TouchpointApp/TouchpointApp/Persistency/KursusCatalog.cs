@@ -12,8 +12,20 @@ namespace TouchpointApp.Persistency
     {
         #region Instance Fields
         private List<Kursus> _kl;
+
+        private static KursusCatalog _Kursuscatalog;
         #endregion
 
+
+        public static KursusCatalog Instance()
+        {
+            if (_Kursuscatalog == null)
+            {
+                _Kursuscatalog = new KursusCatalog();
+
+            }
+            return _Kursuscatalog;
+        }
         #region Constructor
         public KursusCatalog()
         {

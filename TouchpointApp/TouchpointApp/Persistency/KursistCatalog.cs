@@ -8,6 +8,8 @@ namespace TouchpointApp.Persistency
 
         #region Instance Field
         private List<Kursist> _kursistList;
+
+        private static KursistCatalog _KursistCatalog;
         #endregion
 
 
@@ -23,6 +25,15 @@ namespace TouchpointApp.Persistency
         {
             get { return _kursistList; }
             set { _kursistList = value; }
+        }
+
+        public static KursistCatalog Instance()
+        {
+            if(_KursistCatalog == null)
+            {
+                _KursistCatalog = new KursistCatalog();
+            }
+            return _KursistCatalog;
         }
 
 
