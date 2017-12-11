@@ -29,9 +29,7 @@ public class UndervisningsstedCatalog
         }
         return _UndervisningsstedCatalog;
     }
-    #region Constructor
  
-    #endregion
     public List<Undervisningssted> Getlist
     {
         get { return __usl; }

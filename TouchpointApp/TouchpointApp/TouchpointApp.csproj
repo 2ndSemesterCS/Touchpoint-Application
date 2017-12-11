@@ -118,6 +118,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Setup\Setup.cs" />
     <Compile Include="ViewModel\Kursist\KursistViewModel.cs" />
+    <Compile Include="ViewModel\Kursist\KursistViewmodelCollectionRediger.cs" />
+    <Compile Include="ViewModel\Kursist\KursistViewmodelSlet.cs" />
     <Compile Include="ViewModel\Kursus\KursusViewModel.cs" />
     <Compile Include="ViewModel\Serie\SerieViewModel.cs" />
     <Compile Include="ViewModel\Underviser\UnderviserViewmodel.cs" />

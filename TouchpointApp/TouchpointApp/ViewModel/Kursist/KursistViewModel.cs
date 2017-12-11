@@ -1,8 +1,10 @@
-﻿using TouchpointApp.Command;
+﻿using TouchpointApp.DataStorage;
 using TouchpointApp.Persistency;
-using TouchpointApp.Model;
-using TouchpointApp.DataStorage;
-  
+using TouchpointApp.Command;
+using TouchpointApp.Web;
+using System.Windows.Input;
+using System.Collections.ObjectModel;
+
 namespace TouchpointApp.ViewModel.Kursist
 {
     public class KursistViewModel : ViewModelBase
@@ -11,8 +13,32 @@ namespace TouchpointApp.ViewModel.Kursist
 
         private KursistCatalog _kc;
         private KursistData _kd;
-
+        private RelayCommand _loadCommand;
+        private RelayCommand _saveCommand;
         #endregion
+
+        public KursistViewModel()
+        {
+                _kc = KursistCatalog.Instance();
+                _kd = new KursistData();
+               
+            OpretNyKursistCommand = new RelayCommand(OpretNyKursist);
+        }
+
+        public ObservableCollection<Model.Kursist> CreateObservableCollection()
+        {
+            var Collection = new ObservableCollection<Model.Kursist>();
+            foreach (var item in KursistCatalog.Instance().Getlist)
+            {
+                Collection.Add(item);
+            }
+            return Collection;
+        }
+
+        public ObservableCollection<Model.Kursist> Collection
+        {
+            get { return CreateObservableCollection(); }
+        }
 
         #region Commands
         public RelayCommand OpretNyKursistCommand { get; set; }
@@ -22,13 +48,7 @@ namespace TouchpointApp.ViewModel.Kursist
 
         #region Constructor
 
-        public KursistViewModel()
-        {
-            _kc = new KursistCatalog();
-            _kd = new KursistData();
-
-            OpretNyKursistCommand = new RelayCommand(OpretNyKursist);
-        }
+       
         #endregion
 
         #region Metoder
@@ -36,8 +56,9 @@ namespace TouchpointApp.ViewModel.Kursist
         public void OpretNyKursist()
         {
             _kc.OpretKursist(_kd.Navn, _kd.Adresse, _kd.Email,_kd.Tlf, _kd.Land, _kd.By);
+            OnPropertyChanged(nameof(Collection));
         }
-
+      
         #endregion
     }
 }
