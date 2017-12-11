@@ -14,7 +14,7 @@ namespace TouchpointApp.Persistency
         #region Instance Fields
         private List<Underviser> _Ul;
 
-        //singelton instandsfield
+        //singelton instancesfield
         private static UnderviserCatalog _UnderviserCatalog;
         #endregion
 

@@ -1,10 +1,9 @@
 ﻿using TouchpointApp.ViewModel;
 
-namespace TouchpointApp.DataStorage 
+namespace TouchpointApp.DataStorage
 {
     public class KursusData : ViewModelBase
-    {
-        #region Instance Fields
+    { 
         private string _titel;
         private string _dato;
         private string _tidspunkt;
@@ -16,7 +15,8 @@ namespace TouchpointApp.DataStorage
 
         private Model.Underviser _underviser;
         private Model.Undervisningssted _undervisningssted;
-        #endregion
+
+        
 
         #region Constructor
         public KursusData()
@@ -26,16 +26,23 @@ namespace TouchpointApp.DataStorage
         #endregion
 
         #region Properties
-        public string Titel { get { return _titel; } set { value = _titel; OnPropertyChanged("titel");}}
-        public string Dato { get { return _dato; } set { value = _dato; OnPropertyChanged("dato");}}
-        public string Tidspunkt { get { return _tidspunkt; } set { value = _tidspunkt; OnPropertyChanged("tidspunkt");}}
-        public string Varighed { get { return _varighed; } set { value = _varighed; OnPropertyChanged("varighed");}}
-        public double Pris { get { return _pris; } set { value = _pris; OnPropertyChanged("pris");}}
-        public string Sprog { get { return _sprog;} set { value = _sprog; OnPropertyChanged("sprog");}}
-        public string Beskrivelse { get { return _beskrivelse; } set { value = _beskrivelse; OnPropertyChanged("beskrivelse");}}
-        public double Depositum { get { return _depositum; } set { value = _depositum; OnPropertyChanged("depositum"); } }
-        public Model.Underviser Underviser { get { return _underviser; } set { value = _underviser; OnPropertyChanged("underviser");}}
-        public Model.Undervisningssted Undervisningssted { get { return _undervisningssted; } set { value = _undervisningssted; OnPropertyChanged("undervisningssted");}}
+
+
+
+
+
+        public string Titel { get { return _titel; } set { _titel = value; OnPropertyChanged("titel"); } }
+
+        public string Dato { get { return _dato; } set {_dato = value; OnPropertyChanged("dato"); } }
+
+        public string Tidspunkt { get { return _tidspunkt; } set {_tidspunkt = value; OnPropertyChanged("tidspunkt"); } }
+        public string Varighed { get { return _varighed; } set {_varighed = value; OnPropertyChanged("varighed"); } }
+        public double Pris { get { return _pris; } set {_pris = value; OnPropertyChanged("pris"); } }
+        public string Sprog { get { return _sprog; } set {_sprog = value; OnPropertyChanged("sprog"); } }
+        public string Beskrivelse { get { return _beskrivelse; } set {_beskrivelse = value; OnPropertyChanged("beskrivelse"); } }
+        public double Depositum { get { return _depositum; } set {_depositum = value; OnPropertyChanged("depositum"); } }
+        public Model.Underviser Underviser { get { return _underviser; } set {_underviser = value; OnPropertyChanged("underviser"); } }
+        public Model.Undervisningssted Undervisningssted { get { return _undervisningssted; } set {_undervisningssted = value; OnPropertyChanged("undervisningssted"); } }
         #endregion
     }
 }

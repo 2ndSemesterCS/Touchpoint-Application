@@ -85,16 +85,16 @@
 
         <!-- Grid Stackpanel Venstre 1.0 KOPI-->
         <StackPanel Grid.Row="0" Orientation="Vertical" CornerRadius="10" Margin="5,148,177,-30" Grid.ColumnSpan="2" Grid.RowSpan="2" Grid.Column="1">
-            <TextBox TextWrapping="Wrap" Height="40" Text="{Binding UnderviserData.Beskrivelse, Mode=TwoWay}" Width="362" FontSize="20" Margin="0,0,0,0" Foreground="#230101"/>
-            <TextBox TextWrapping="Wrap" Height="40" Text="{Binding UnderviserData.Titel, Mode=TwoWay}" Width="362" FontSize="20"  Foreground="#230101" Margin="0,10,0,0"/>
-            <TextBox TextWrapping="Wrap" Height="40" Text="{Binding UnderviserData.Dato, Mode=TwoWay}" Width="362" FontSize="20" Margin="0,10,0,0" Foreground="#230101"/>
-            <TextBox TextWrapping="Wrap" Height="40" Text="{Binding UnderviserData.Tidspunkt, Mode=TwoWay}" Width="362" FontSize="20" Margin="0,10,0,0" Foreground="#230101"/>
-            <TextBox TextWrapping="Wrap" Height="40" Text="{Binding UnderviserData.Varighed, Mode=TwoWay}" Width="362" FontSize="20" Margin="0,10,0,0" Foreground="#230101"/>
-            <TextBox TextWrapping="Wrap" Height="40" Text="{Binding UnderviserData.Pris, Mode=TwoWay}" Width="362" FontSize="20" Margin="0,10,0,0" Foreground="#230101"/>
-            <TextBox TextWrapping="Wrap" Height="40" Text="{Binding UnderviserData.Sprog, Mode=TwoWay}" Width="362" FontSize="20" Margin="0,10,0,0" Foreground="#230101"/>
-            <TextBox TextWrapping="Wrap" Height="40" Text="{Binding UnderviserData.Depositum, Mode=TwoWay}" Width="362" FontSize="20" Margin="0,10,0,0" Foreground="#230101"/>
-            <TextBox TextWrapping="Wrap" Height="40" Text="{Binding UnderviserData.Underviser, Mode=TwoWay}" Width="362" FontSize="20" Margin="0,10,0,0" Foreground="#230101"/>
-            <TextBox TextWrapping="Wrap" Height="40" Text="{Binding UnderviserData.Undervisningssted, Mode=TwoWay}" Width="362" FontSize="20" Margin="0,10,0,0" Foreground="#230101"/>
+            <TextBox TextWrapping="Wrap" Height="40" Text="{Binding kursusData.Titel, Mode=TwoWay}" Width="362" FontSize="20" Margin="0,0,0,0" Foreground="#230101"/>
+            <TextBox TextWrapping="Wrap" Height="40" Text="{Binding kursusData.Dato, Mode=TwoWay}" Width="362" FontSize="20"  Foreground="#230101" Margin="0,10,0,0"/>
+            <TextBox TextWrapping="Wrap" Height="40" Text="{Binding kursusData.Tidspunkt, Mode=TwoWay}" Width="362" FontSize="20" Margin="0,10,0,0" Foreground="#230101"/>
+            <TextBox TextWrapping="Wrap" Height="40" Text="{Binding kursusData.Varighed, Mode=TwoWay}" Width="362" FontSize="20" Margin="0,10,0,0" Foreground="#230101"/>
+            <TextBox TextWrapping="Wrap" Height="40" Text="{Binding kursusData.Pris, Mode=TwoWay}" Width="362" FontSize="20" Margin="0,10,0,0" Foreground="#230101"/>
+            <TextBox TextWrapping="Wrap" Height="40" Text="{Binding kursusData.Sprog, Mode=TwoWay}" Width="362" FontSize="20" Margin="0,10,0,0" Foreground="#230101"/>
+            <TextBox TextWrapping="Wrap" Height="40" Text="{Binding kursusData.Beskrivelse, Mode=TwoWay}" Width="362" FontSize="20" Margin="0,10,0,0" Foreground="#230101"/>
+            <TextBox TextWrapping="Wrap" Height="40" Text="{Binding kursusData.Depositum, Mode=TwoWay}" Width="362" FontSize="20" Margin="0,10,0,0" Foreground="#230101"/>
+            <TextBox TextWrapping="Wrap" Height="40" Text="{Binding kursusData.Underviser, Mode=TwoWay}" Width="362" FontSize="20" Margin="0,10,0,0" Foreground="#230101"/>
+            <TextBox TextWrapping="Wrap" Height="40" Text="{Binding kursusData.Undervisningssted, Mode=TwoWay}" Width="362" FontSize="20" Margin="0,10,0,0" Foreground="#230101"/>
         </StackPanel>
 
 

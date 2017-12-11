@@ -79,8 +79,7 @@ namespace TouchpointApp.Model
 
         #region Constructor
         public Kursus(string titel, string dato, string tidspunkt, string varighed, 
-            double pris, Underviser underviser, Undervisningssted undervisningssted,
-            string sprog, string beskrivelse, double depositum )
+            double pris, string sprog, string beskrivelse, double depositum, Underviser underviser, Undervisningssted undervisningssted)
         {
             if (String.IsNullOrEmpty(titel) || String.IsNullOrEmpty(dato) || String.IsNullOrEmpty(tidspunkt) || String.IsNullOrEmpty(varighed) || String.IsNullOrEmpty(sprog) || String.IsNullOrEmpty(beskrivelse) || pris > 0 || underviser == null || undervisningssted == null || depositum >0)
             { 
@@ -99,6 +98,15 @@ namespace TouchpointApp.Model
 
         }
         #endregion  
+
+        //public void KunTalIPris(double pris)
+        //{
+        //    int value;
+        //    if(!int.TryParse(pris, out value))
+        //    {
+
+        //    }
+        //}
         public override string ToString()
         {
             return $"{_titel}";

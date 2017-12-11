@@ -12,7 +12,7 @@ namespace TouchpointApp.Web
         private enum APIMethod { Load, Create, Read, Update, Delete }
 
         #region Instance Fields
-        private string _serverURL;
+        private string _serverURL = "touchpoint.database.windows.net";
         private string _apiPrefix;
         private string _apiID;
         private HttpClientHandler _httpClientHandler;
@@ -28,7 +28,7 @@ namespace TouchpointApp.Web
             _httpClientHandler = new HttpClientHandler();
             _httpClientHandler.UseDefaultCredentials = true;
             _httpClient = new HttpClient();
-            _httpClient.BaseAddress = new Uri(_serverURL);
+            _httpClient.BaseAddress = new Uri("http://touchpointdbwebservice.azurewebsites.net/api/underviser/");
         }
         #endregion
 
