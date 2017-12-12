@@ -36,7 +36,7 @@ namespace TouchpointApp.ViewModel.Kursus
         }
 
         //Propperti til at binde listviewets isSeleceted propperty til. 
-        public Model.Kursus SelectedItemListview
+        public Model.Kursus SelectedItem
         {
             get { return _itemIsSeleceted; }
             set

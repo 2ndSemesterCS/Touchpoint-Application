@@ -5,7 +5,12 @@
     xmlns:local="using:TouchpointApp.Views"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:vm="using:TouchpointApp.ViewModel.Kursus"
     mc:Ignorable="d">
+
+    <Page.DataContext>
+        <vm:KursusViewmodelCollectionRediger/>
+    </Page.DataContext>
 
     <Grid Background="#fad8d1" Margin="0,0,0,0" BorderBrush="MistyRose" BorderThickness="10">
 
@@ -26,7 +31,9 @@
                 <TextBlock Height="59" Margin="55,0,45,0" TextWrapping="Wrap" HorizontalAlignment="Center" Text="Oversigt over Kurser" FontSize="20" Foreground="White"/>
             </Border>
             <ScrollViewer Height="245">
-                <ListView Height="221" Width="280" FontSize="20" Foreground="#230101" BorderBrush="White" BorderThickness="5"/>
+                <ListView Height="221" Width="280" FontSize="20" Foreground="#230101" BorderBrush="White" BorderThickness="5"
+                      ItemsSource="{Binding Collection, Mode=TwoWay}"
+                      SelectedItem="{Binding SelectedItem, Mode=TwoWay}"/>
             </ScrollViewer>
         </StackPanel>
 
@@ -74,7 +81,7 @@
 
         <!-- Grid Stackpanel Venstre 1.0 KOPI-->
         <StackPanel Grid.Row="0" Orientation="Vertical" CornerRadius="10" Margin="97,136,-10,64" Grid.Column="1" Grid.ColumnSpan="2" Grid.RowSpan="2">
-            <TextBox TextWrapping="Wrap" Height="40" Text="{Binding SelectedItemListview.Titel , Mode=TwoWay}" Width="362" FontSize="20" Margin="0,5,0,0" Foreground="#230101"/>
+            <TextBox TextWrapping="Wrap" Text="{Binding SelectedItemListview.Titel , Mode=TwoWay}" Height="40" Width="362" FontSize="20" Margin="0,5,0,0" Foreground="#230101"/>
             <TextBox TextWrapping="Wrap" Text="{Binding SelectedItemListview.Dato, Mode=TwoWay}" Width="362" FontSize="20" Height="40" Foreground="#230101" Margin="0,10,0,0"/>
             <TextBox TextWrapping="Wrap" Text="{Binding SelectedItemListview.Tidspunkt, Mode=TwoWay}" Width="362" FontSize="20" Height="40" Foreground="#230101" Margin="0,10,0,0"/>
             <TextBox TextWrapping="Wrap" Text="{Binding SelectedItemListview.Varighed, Mode=TwoWay}" Width="362" FontSize="20" Height="40" Foreground="#230101" Margin="0,10,0,0"/>
@@ -103,7 +110,7 @@
 
         <!-- Grid Stackpanel Venstre 2.2-->
         <StackPanel Grid.Column="2" Margin="0,440,10,10" Grid.RowSpan="2">
-            <Button Content="Gem" Background="#fad8d1" Foreground="White" FontSize="20px" Width="140" HorizontalAlignment="Center" BorderBrush="White" BorderThickness="7"  Height="50"  Margin="0,100,0,0"/>
+            <Button Content="Gem" Command="{Binding RedigerCommand}" Background="#fad8d1" Foreground="White" FontSize="20px" Width="140" HorizontalAlignment="Center" BorderBrush="White" BorderThickness="7"  Height="50"  Margin="0,100,0,0"/>
         </StackPanel>
 
 
