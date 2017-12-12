@@ -114,6 +114,7 @@
     <Compile Include="Persistency\FilePersistency.cs" />
     <Compile Include="Persistency\KursistCatalog.cs" />
     <Compile Include="Persistency\KursusCatalog.cs" />
+    <Compile Include="Persistency\SerieCatalog.cs" />
     <Compile Include="Persistency\UnderviserCatalog.cs" />
     <Compile Include="Persistency\UndervisningsstedCatalog.cs" />
     <Compile Include="Persistency\WebAPICatalog.cs" />
@@ -207,6 +208,7 @@
     <None Include="TouchpointApp_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\Images\HomeIconFinal.png" />
     <Content Include="Assets\Images\TouchMinePoints.png" />
     <Content Include="Assets\Images\TouchPointFlotFinal.png" />
     <Content Include="Properties\Default.rd.xml" />

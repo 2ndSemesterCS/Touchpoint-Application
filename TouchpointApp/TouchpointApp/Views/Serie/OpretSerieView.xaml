@@ -3,12 +3,15 @@
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:TouchpointApp.Views.Serie"
+    xmlns:vm="using:TouchpointApp.ViewModel.Serie"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    
-    
+    <Page.DataContext>
+        <vm:SerieViewModel/>
+    </Page.DataContext>
+
     <Grid Background="#fad8d1" Margin="0,0,0,0" BorderBrush="MistyRose" BorderThickness="10">
 
 
@@ -47,7 +50,8 @@
         <!-- Grid Stackpanel Venstre 1.0 KOPI-->
         <StackPanel Grid.Row="0" Orientation="Vertical" CornerRadius="10" Margin="0,143,271,199" Grid.Column="1" Grid.ColumnSpan="2" Grid.RowSpan="2">
             <TextBox TextWrapping="Wrap" Height="40" Text="{Binding UnderviserData.Beskrivelse, Mode=TwoWay}" Width="362" FontSize="20" Margin="0,5,0,0" Foreground="#230101"/>
-            <TextBox TextWrapping="Wrap" Text="{Binding UnderviserData.Kursus, Mode=TwoWay}" Width="362" FontSize="20" Height="40" Foreground="#230101" Margin="0,10,0,0"/>
+            <ListBox SelectionMode="Multiple" Height="40" Margin="184,10,183.333,0" Foreground="#230101"
+                      ItemsSource="{Binding CollectionKursus, Mode=TwoWay}"/>
         </StackPanel>
 
 
@@ -62,6 +66,13 @@
                           ItemsSource="{Binding Collection, Mode=TwoWay}"
                           />
             </ScrollViewer>
+        </StackPanel>
+
+        <!-- Grid Stackpanel Venstre 2.0-->
+        <StackPanel Grid.Column="2" Grid.Row="0">
+            <Button  Width="90" HorizontalAlignment="Center"   Height="90" Click="BackToAdminView"  Margin="70,10,120,0" Background="#fad8d1">
+                <Image Source="ms-appx:///Assets/Images/HomeIconFinal.png" Margin="-35,-14,-28,-14" HorizontalAlignment="Center" VerticalAlignment="Center" Height="90" Width="133"></Image>
+            </Button>
         </StackPanel>
 
 

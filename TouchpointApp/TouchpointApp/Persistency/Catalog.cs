@@ -1,23 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using TouchpointApp.PersistencyInterfaces;
+﻿using System.Collections.Generic;
 using TouchpointApp.Web;
 
 namespace TouchpointApp.Persistency
 {
-    public class Catalog
+    public class Catalog<T> where T : class 
     {
-        private List<int> _coll;
-        //private IDataSource _source;
+        private List<T> _coll;
+        private WebAPISource<T> _source;
 
-        public Catalog(List<int> coll /*,IDataSource source*/)
+        public Catalog(List<T> coll, WebAPISource<T> source)
         {
             _coll = coll;
-            //_source = source;
+            _source = source;
         }
-        
+
+         
+
     }
 }

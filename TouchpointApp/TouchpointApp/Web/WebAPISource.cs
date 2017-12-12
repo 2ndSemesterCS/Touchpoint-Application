@@ -20,19 +20,19 @@ namespace TouchpointApp.Web
         #endregion
 
         #region Constructor
-        public WebAPISource(string serverURL, string apiPrefix, string apiID)
+        public WebAPISource(string serverURL, string apiID)
         {
             _serverURL = serverURL;
             _apiID = apiID;
-            _apiPrefix = apiPrefix;
-            _httpClientHandler = new HttpClientHandler();
-            _httpClientHandler.UseDefaultCredentials = true;
-            _httpClient = new HttpClient();
-            _httpClient.BaseAddress = new Uri("http://touchpointdbwebservice.azurewebsites.net/api/underviser/");
+            _httpClientHandler = new HttpClientHandler {UseDefaultCredentials = true};
+            _httpClient = new HttpClient
+            {
+                BaseAddress = new Uri("http://touchpointdbwebservice.azurewebsites.net/api/")
+            };
         }
         #endregion
 
-        #region Implementation of IWebAPIAsync
+        #region Implementation of IDataSource
         public async Task<List<T>> Load()
         {
             return await InvokeAPIWithReturnValueAsync<List<T>>(() => _httpClient.GetAsync(BuildRequestURI(APIMethod.Load)));

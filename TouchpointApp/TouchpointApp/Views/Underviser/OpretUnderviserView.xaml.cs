@@ -35,5 +35,11 @@ namespace TouchpointApp.Views.Underviser
         {
 
         }
+
+        private void BackToAdminView(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(AdminView), null);
+        }
+
     }
 }
