@@ -50,7 +50,7 @@
         <!-- Grid Stackpanel Venstre 1.0 KOPI-->
         <StackPanel Grid.Row="0" Orientation="Vertical" CornerRadius="10" Margin="0,143,271,199" Grid.Column="1" Grid.ColumnSpan="2" Grid.RowSpan="2">
             <TextBox TextWrapping="Wrap" Height="40" Text="{Binding UnderviserData.Beskrivelse, Mode=TwoWay}" Width="362" FontSize="20" Margin="0,5,0,0" Foreground="#230101"/>
-            <ComboBox Height="40" Width="363" Margin="183,10,0,0" Foreground="#230101"
+            <ListBox SelectionMode="Multiple" Height="40" Margin="184,10,183.333,0" Foreground="#230101"
                       ItemsSource="{Binding CollectionKursus, Mode=TwoWay}"/>
         </StackPanel>
 

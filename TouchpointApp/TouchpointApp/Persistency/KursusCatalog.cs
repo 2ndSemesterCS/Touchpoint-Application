@@ -30,6 +30,7 @@ namespace TouchpointApp.Persistency
         private KursusCatalog()
         {
             _kl = new List<Kursus>();
+         
         }
         #endregion
 
