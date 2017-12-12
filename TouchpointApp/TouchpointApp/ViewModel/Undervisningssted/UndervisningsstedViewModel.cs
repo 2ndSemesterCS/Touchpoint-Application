@@ -4,8 +4,7 @@ using TouchpointApp.Command;
 using TouchpointApp.Web;
 using System.Windows.Input;
 using System.Collections.ObjectModel;
-
-
+using Windows.UI.Xaml.Controls;
 
 namespace TouchpointApp.ViewModel.Undervisningssted
 {
@@ -52,5 +51,8 @@ namespace TouchpointApp.ViewModel.Undervisningssted
             OnPropertyChanged(nameof(Collection));
         }
 
+
+      
+      
     }
 }
