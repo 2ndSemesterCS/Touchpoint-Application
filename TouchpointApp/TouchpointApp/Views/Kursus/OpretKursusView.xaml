@@ -93,10 +93,10 @@
             <TextBox TextWrapping="Wrap" Height="40" Text="{Binding kursusData.Sprog, Mode=TwoWay}" Width="362" FontSize="20" Margin="0,10,0,0" Foreground="#230101"/>
             <TextBox TextWrapping="Wrap" Height="40" Text="{Binding kursusData.Beskrivelse, Mode=TwoWay}" Width="362" FontSize="20" Margin="0,10,0,0" Foreground="#230101"/>
             <TextBox TextWrapping="Wrap" Height="40" Text="{Binding kursusData.Depositum, Mode=TwoWay}" Width="362" FontSize="20" Margin="0,10,0,0" Foreground="#230101"/>
+            <ComboBox ItemsSource="{Binding , Mode=TwoWay}" Height="40" Width="362" FontSize="20" Margin="228,10,0,0" Foreground="#230101"/>
+            <ComboBox ItemsSource="{Binding kursusData.Undervisningssted, Mode=TwoWay}" Height="40" Width="362" FontSize="20" Margin="228,10,0,0" Foreground="#230101"/>
 
             <!--combobokse-->
-            <TextBox TextWrapping="Wrap" Height="40" Text="{Binding kursusData.Underviser, Mode=TwoWay}" Width="362" FontSize="20" Margin="0,10,0,0" Foreground="#230101"/>
-            <TextBox TextWrapping="Wrap" Height="40" Text="{Binding kursusData.Undervisningssted, Mode=TwoWay}" Width="362" FontSize="20" Margin="0,10,0,0" Foreground="#230101"/>
         </StackPanel>
 
 
