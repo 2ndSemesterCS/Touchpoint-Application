@@ -110,11 +110,13 @@
     <Compile Include="Model\Underviser.cs" />
     <Compile Include="Model\Undervisningssted.cs" />
     <Compile Include="PersistencyInterfaces\IDataSource.cs" />
+    <Compile Include="Persistency\Catalog.cs" />
     <Compile Include="Persistency\FilePersistency.cs" />
     <Compile Include="Persistency\KursistCatalog.cs" />
     <Compile Include="Persistency\KursusCatalog.cs" />
     <Compile Include="Persistency\UnderviserCatalog.cs" />
     <Compile Include="Persistency\UndervisningsstedCatalog.cs" />
+    <Compile Include="Persistency\WebAPICatalog.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Setup\Setup.cs" />
     <Compile Include="ViewModel\Kursist\KursistViewModel.cs" />
@@ -193,8 +195,8 @@
     <Compile Include="Views\Undervisningssted\UndervisningsstedView.xaml.cs">
       <DependentUpon>UndervisningsstedView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Web\IWebAPIAsync.cs" />
-    <Compile Include="Web\WebAPIAsync.cs" />
+    <Compile Include="Web\IDataSource.cs" />
+    <Compile Include="Web\WebAPISource.cs" />
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
