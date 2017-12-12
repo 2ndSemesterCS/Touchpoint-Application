@@ -22,6 +22,7 @@ namespace TouchpointApp.Persistency
         private UnderviserCatalog()
         {
             _Ul = new List<Underviser>();
+            _Ul.Add(new Underviser("Jonas", "Kildevej 19", "Jonaspedersen@live.dk", "11223344"));  //Hard coded objeket. 
         }
         #endregion
         

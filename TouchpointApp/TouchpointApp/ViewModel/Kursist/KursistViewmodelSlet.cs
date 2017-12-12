@@ -22,18 +22,10 @@ namespace TouchpointApp.ViewModel.Kursist
 
         public RelayCommand SletCommand { get; set; }
 
-        
-        public ObservableCollection<Model.Kursist> CreateObservableCollection()
-        {
-         
-            var Collection = new ObservableCollection<Model.Kursist>();
 
-       
-            foreach (var item in KursistCatalog.Instance().Getlist)
-            {
-                Collection.Add(item);
-            }
-            return Collection;
+        public ObservableCollection<Model.Kursist> Collection
+        {
+            get { return CreateObservableCollection(); }
         }
 
         public Model.Kursist SelectedItemListview
@@ -47,10 +39,14 @@ namespace TouchpointApp.ViewModel.Kursist
             }
         }
 
-        //propperty der skal bindes til listviewets ItemsSource
-        public ObservableCollection<Model.Kursist> Collection
+        public ObservableCollection<Model.Kursist> CreateObservableCollection()
         {
-            get { return CreateObservableCollection(); }
+            var Collection = new ObservableCollection<Model.Kursist>();
+            foreach (var item in KursistCatalog.Instance().Getlist)
+            {
+                Collection.Add(item);
+            }
+            return Collection;
         }
 
         public void DeleteCommand()
