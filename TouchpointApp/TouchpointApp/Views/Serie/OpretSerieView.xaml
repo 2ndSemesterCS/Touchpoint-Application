@@ -58,11 +58,11 @@
         <!-- Grid Stackpanel Venstre 2.0-->
         <StackPanel Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="2" Margin="642,126,78,124" Grid.RowSpan="2">
             <Border BorderBrush="White" BorderThickness="5" Width="280">
-                <TextBlock Height="59" Margin="55,0,45,0" TextWrapping="Wrap" HorizontalAlignment="Center" Text="Oversigt over Undervisere" FontSize="20" Foreground="White"/>
+                <TextBlock Height="31" Margin="56,0,5,0" TextWrapping="Wrap" HorizontalAlignment="Center" Text="Oversigt over Serier" FontSize="20" Foreground="White" Width="209" SelectionChanged="TextBlock_SelectionChanged"/>
             </Border>
             <ScrollViewer Height="245">
                 <ListView Height="221" Width="280" FontSize="20" Foreground="#230101" BorderBrush="White" BorderThickness="5" 
-                          SelectedItem="{Binding SelectedItemListview, Mode=TwoWay}"
+                          SelectedItem="{Binding SelectedItemListviewSerie, Mode=TwoWay}"
                           ItemsSource="{Binding Collection, Mode=TwoWay}"
                           />
             </ScrollViewer>
