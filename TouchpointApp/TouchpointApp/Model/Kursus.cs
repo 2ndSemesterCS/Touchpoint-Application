@@ -81,7 +81,9 @@ namespace TouchpointApp.Model
         public Kursus(string titel, DateTime dato, DateTime tidspunkt, string varighed, 
             double pris, string sprog, string beskrivelse, double depositum, Underviser underviser, Undervisningssted undervisningssted)
         {
-            if (String.IsNullOrEmpty(titel)|| String.IsNullOrEmpty(varighed) || String.IsNullOrEmpty(sprog) || String.IsNullOrEmpty(beskrivelse) || pris > 0 || underviser == null || undervisningssted == null || depositum >0)
+            if (String.IsNullOrEmpty(titel)|| String.IsNullOrEmpty(varighed) || String.IsNullOrEmpty(sprog) 
+                || String.IsNullOrEmpty(beskrivelse) || pris < 0 || underviser == null 
+                || undervisningssted == null || depositum < 0)
             { 
                 throw new ArgumentException("Information mangler");
             }

@@ -27,11 +27,17 @@ namespace TouchpointApp.Persistency
             return _Kursuscatalog;
         }
         #region Constructor
-        public KursusCatalog()
+        private KursusCatalog()
         {
             _kl = new List<Kursus>();
         }
         #endregion
+
+        public List<Kursus> Getlist
+        {
+            get { return _kl; }
+            set { _kl = value; }
+        }
 
         #region Metoder
         public void OpretKursus(string titel, DateTime dato, DateTime tidspunkt, string varighed, double pris, string sprog, string beskrivelse, double depositum,  Underviser underviser, Undervisningssted undervisningssted)

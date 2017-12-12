@@ -6,8 +6,6 @@ namespace TouchpointApp.DataStorage
     public class KursusData : ViewModelBase
     { 
         private string _titel;
-        //private string _dato;
-        //private string _tidspunkt;
         private string _varighed;
         private double _pris;
         private string _sprog;
