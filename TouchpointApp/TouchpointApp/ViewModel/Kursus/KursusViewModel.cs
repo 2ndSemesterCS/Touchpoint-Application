@@ -1,7 +1,8 @@
-﻿using TouchpointApp.Command;
+﻿using System;
+using TouchpointApp.Command;
 using TouchpointApp.DataStorage;
 using TouchpointApp.Persistency;
-
+using Windows.UI.Xaml.Controls;
 
 namespace TouchpointApp.ViewModel.Kursus
 {
@@ -9,6 +10,8 @@ namespace TouchpointApp.ViewModel.Kursus
     {
         private KursusCatalog _kursusCatalog;
         private KursusData _kursusData;
+  
+
 
         public KursusViewModel()
         {
@@ -19,7 +22,6 @@ namespace TouchpointApp.ViewModel.Kursus
 
         public KursusData kursusData { get { return _kursusData; } set { _kursusData = value; } }
         public RelayCommand OpretNytKursusCommand { get; set; }
-
 
 
         public void OpretNytKursus()

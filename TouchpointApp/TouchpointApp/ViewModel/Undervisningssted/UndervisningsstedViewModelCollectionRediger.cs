@@ -9,6 +9,7 @@ using TouchpointApp.Persistency;
 using TouchpointApp.Model;
 using TouchpointApp.Command;
 using TouchpointApp.ViewModel;
+using Windows.UI.Xaml.Controls;
 
 namespace TouchpointApp.ViewModel.Undervisningssted
 {
@@ -71,6 +72,9 @@ namespace TouchpointApp.ViewModel.Undervisningssted
             }
             return Collection;
         }
+
+
+        
     }
 }
 

@@ -6,8 +6,8 @@ namespace TouchpointApp.Model
     {
         #region Instance Fields
         private string _titel;
-        private string _dato;
-        private string _tidspunkt;
+        private DateTime _dato;
+        private DateTime _tidspunkt;
         private string _varighed;
         private double _pris;
         private string _sprog;
@@ -25,13 +25,13 @@ namespace TouchpointApp.Model
             set { _titel = value; }
         }
 
-        public string Dato
+        public DateTime Dato
         {
             get { return _dato; }
             set { _dato = value; }
         }
 
-        public string Tidspunkt
+        public DateTime Tidspunkt
         {
             get { return _tidspunkt; }
             set { _tidspunkt = value; }
@@ -78,10 +78,10 @@ namespace TouchpointApp.Model
         #endregion
 
         #region Constructor
-        public Kursus(string titel, string dato, string tidspunkt, string varighed, 
+        public Kursus(string titel, DateTime dato, DateTime tidspunkt, string varighed, 
             double pris, string sprog, string beskrivelse, double depositum, Underviser underviser, Undervisningssted undervisningssted)
         {
-            if (String.IsNullOrEmpty(titel) || String.IsNullOrEmpty(dato) || String.IsNullOrEmpty(tidspunkt) || String.IsNullOrEmpty(varighed) || String.IsNullOrEmpty(sprog) || String.IsNullOrEmpty(beskrivelse) || pris > 0 || underviser == null || undervisningssted == null || depositum >0)
+            if (String.IsNullOrEmpty(titel)|| String.IsNullOrEmpty(varighed) || String.IsNullOrEmpty(sprog) || String.IsNullOrEmpty(beskrivelse) || pris > 0 || underviser == null || undervisningssted == null || depositum >0)
             { 
                 throw new ArgumentException("Information mangler");
             }

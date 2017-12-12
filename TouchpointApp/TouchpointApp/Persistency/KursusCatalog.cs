@@ -34,7 +34,7 @@ namespace TouchpointApp.Persistency
         #endregion
 
         #region Metoder
-        public void OpretKursus(string titel, string dato, string tidspunkt, string varighed, double pris, string sprog, string beskrivelse, double depositum,  Underviser underviser, Undervisningssted undervisningssted)
+        public void OpretKursus(string titel, DateTime dato, DateTime tidspunkt, string varighed, double pris, string sprog, string beskrivelse, double depositum,  Underviser underviser, Undervisningssted undervisningssted)
         {
             Kursus k1 = new Kursus(titel, dato, tidspunkt, varighed, pris, sprog ,beskrivelse,depositum ,underviser, undervisningssted);
             _kl.Add(k1);
