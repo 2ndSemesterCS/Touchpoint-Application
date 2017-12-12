@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TouchpointApp.Web
 {
-    public class WebAPIAsync<T> : IWebAPIAsync<T>
+    public class WebAPISource<T> : IDataSource<T>
         where T : class
     {
         private enum APIMethod { Load, Create, Read, Update, Delete }
@@ -20,7 +20,7 @@ namespace TouchpointApp.Web
         #endregion
 
         #region Constructor
-        public WebAPIAsync(string serverURL, string apiPrefix, string apiID)
+        public WebAPISource(string serverURL, string apiPrefix, string apiID)
         {
             _serverURL = serverURL;
             _apiID = apiID;

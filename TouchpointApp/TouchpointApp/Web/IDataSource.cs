@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TouchpointApp.Web
 {
-    public interface IWebAPIAsync<T>
+    public interface IDataSource<T>
     {
         Task<List<T>> Load();
         Task Create(T obj);

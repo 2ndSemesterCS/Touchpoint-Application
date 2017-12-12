@@ -41,32 +41,18 @@ namespace TouchpointApp.Persistency
         {
             get { return _Ul; }
             set { _Ul = value;}
+            
         }
 
         public List<Underviser> All
         { get; set; }
 
-
+        
         #region Metoder
         public void OpretUnderviser(string Navn, string Adresse, string email, string tlf)
         {
               Underviser U1 = new Underviser(Navn, Adresse, email, tlf);
             _Ul.Add(U1);
-        }
-
-        public void Create()
-        {
-
-        }
-
-        public void Read()
-        {
-
-        }
-
-        public void Update()
-        {
-
         }
         #endregion
     }
