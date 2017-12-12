@@ -109,7 +109,6 @@
     <Compile Include="Model\Serie.cs" />
     <Compile Include="Model\Underviser.cs" />
     <Compile Include="Model\Undervisningssted.cs" />
-    <Compile Include="PersistencyInterfaces\IDataSource.cs" />
     <Compile Include="Persistency\Catalog.cs" />
     <Compile Include="Persistency\FilePersistency.cs" />
     <Compile Include="Persistency\KursistCatalog.cs" />
@@ -325,7 +324,9 @@
       <Version>10.0.3</Version>
     </PackageReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="PersistencyInterfaces\" />
+  </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>
