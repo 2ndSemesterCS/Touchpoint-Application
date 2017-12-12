@@ -77,6 +77,13 @@
             </ScrollViewer>
         </StackPanel>
 
+        <!-- Grid Stackpanel Venstre 2.0-->
+        <StackPanel Grid.Column="2" Grid.Row="0">
+            <Button  Width="90" HorizontalAlignment="Center"   Height="90" Click="BackToAdminView"  Margin="70,10,120,0" Background="#fad8d1">
+                <Image Source="ms-appx:///Assets/Images/HomeIconFinal.png" Margin="-35,-14,-28,-14" HorizontalAlignment="Center" VerticalAlignment="Center" Height="90" Width="133"></Image>
+            </Button>
+        </StackPanel>
+
 
         <!-- Grid Stackpanel Venstre 0.1-->
         <StackPanel Grid.Column="0" Margin="10,440,10,10" Grid.RowSpan="2">

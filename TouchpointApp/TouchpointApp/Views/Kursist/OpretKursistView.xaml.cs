@@ -41,5 +41,9 @@ namespace TouchpointApp.Views.Kursist
         {
 
         }
+        private void BackToAdminView(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(AdminView), null);
+        }
     }
 }

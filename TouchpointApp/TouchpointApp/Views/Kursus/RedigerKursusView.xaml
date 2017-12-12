@@ -36,8 +36,7 @@
         </StackPanel>
 
         <!-- Grid Stackpanel Venstre 1.0 KOPI-->
-        <ScrollViewer Grid.Column="1" Margin="117,-12,270,50" Grid.ColumnSpan="2" Grid.RowSpan="2">
-            <StackPanel Grid.Row="0" Orientation="Vertical" CornerRadius="10" Margin="50,150,329,230" Grid.Column="1" Grid.RowSpan="2">
+            <StackPanel Grid.Row="0" Orientation="Vertical" CornerRadius="10" Margin="70,136,309,141" Grid.Column="1" Grid.RowSpan="2">
                 <TextBlock TextWrapping="Wrap" Width="180" Foreground="White" FontSize="20" HorizontalAlignment="Right" Margin="0,7,0,0">
                     <Run Text="Titel"/>
                 </TextBlock>
@@ -70,7 +69,7 @@
                     <Run Text="Depositum "/>
                 </TextBlock>
             </StackPanel>
-        </ScrollViewer>
+       
 
 
         <!-- Grid Stackpanel Venstre 1.0 KOPI-->
@@ -89,6 +88,9 @@
 
         <!-- Grid Stackpanel Venstre 2.0-->
         <StackPanel Grid.Column="2" Grid.Row="0">
+            <Button  Width="90" HorizontalAlignment="Center"   Height="90" Click="BackToAdminView"  Margin="70,10,120,0" Background="#fad8d1">
+                <Image Source="ms-appx:///Assets/Images/HomeIconFinal.png" Margin="-35,-14,-28,-14" HorizontalAlignment="Center" VerticalAlignment="Center" Height="90" Width="133"></Image>
+            </Button>
         </StackPanel>
 
 

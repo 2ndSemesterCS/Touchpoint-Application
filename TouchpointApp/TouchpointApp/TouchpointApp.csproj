@@ -205,6 +205,7 @@
     <None Include="TouchpointApp_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\Images\HomeIconFinal.png" />
     <Content Include="Assets\Images\TouchMinePoints.png" />
     <Content Include="Assets\Images\TouchPointFlotFinal.png" />
     <Content Include="Properties\Default.rd.xml" />
