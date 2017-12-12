@@ -111,6 +111,7 @@ namespace TouchpointApp.ViewModel.Kursus
         public void OpretNytKursus()
         {
             _kursusCatalog.OpretKursus(_kursusData.Titel, _kursusData.Dato, _kursusData.Tidspunkt, _kursusData.Varighed, _kursusData.Pris, _kursusData.Sprog, _kursusData.Beskrivelse, _kursusData.Depositum, _selectedUnderviser, _selectedUnderviserssted);
+            OnPropertyChanged(nameof(CollectionKursus));
         }
     }
 }
