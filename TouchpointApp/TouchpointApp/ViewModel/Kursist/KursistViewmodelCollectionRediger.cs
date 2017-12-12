@@ -20,7 +20,7 @@ namespace TouchpointApp.ViewModel.Kursist
         }
 
         public RelayCommand RedigerCommand { get; set; }
-        public KursistData UnderviserData { get { return _KursistData; } set { _KursistData = value; } }
+        public KursistData KursistData { get { return _KursistData; } set { _KursistData = value; } }
 
         
         public void RedigerMetode()
@@ -45,7 +45,7 @@ namespace TouchpointApp.ViewModel.Kursist
                     _KursistData.Land = _ItemIsSeleceted.Land;
                     _KursistData.By = _ItemIsSeleceted.By;
                 }
-                OnPropertyChanged(nameof(UnderviserData));
+                OnPropertyChanged(nameof(KursistData));
                 RedigerCommand.RaiseCanExecuteChanged();
             }
         }

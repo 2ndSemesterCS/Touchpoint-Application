@@ -54,13 +54,6 @@ namespace TouchpointApp.ViewModel.Underviser
             OnPropertyChanged(nameof(Collection));
         }
 
-        //private bool CheckBoxIsNotNull()
-        //{
-        //    if (_underviserData.Navn.Length > 0 || _underviserData.Adresse.Length >0 || _underviserData.Email.Length >0 || _underviserData.Tlf.Length > 0) 
-        //    return true;
-
-        //    return false;
-        //}
 
 
 
