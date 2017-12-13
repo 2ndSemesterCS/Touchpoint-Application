@@ -126,6 +126,8 @@
     <Compile Include="ViewModel\Kursus\KursusViewmodelCollectionRediger.cs" />
     <Compile Include="ViewModel\Kursus\KursusViewmodelSlet.cs" />
     <Compile Include="ViewModel\Serie\SerieViewModel.cs" />
+    <Compile Include="ViewModel\Serie\SerieViewmodelCollectionRediger.cs" />
+    <Compile Include="ViewModel\Serie\SerieViewModelSlet.cs" />
     <Compile Include="ViewModel\Underviser\UnderviserViewmodel.cs" />
     <Compile Include="ViewModel\Underviser\UnderviserViewmodelCollectionRediger.cs" />
     <Compile Include="ViewModel\Underviser\UnderviserViewmodelSlet.cs" />
