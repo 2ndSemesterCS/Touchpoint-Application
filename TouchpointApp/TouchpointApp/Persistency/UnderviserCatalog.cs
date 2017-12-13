@@ -9,62 +9,64 @@ using TouchpointApp.Model;
 namespace TouchpointApp.Persistency
 {
 
-    public class UnderviserCatalog : WebAPICatalog<Underviser>
-
+    public class UnderviserCatalog
     {
+        #region Instance Fields
+        private List<Underviser> _Ul;
 
-    #region Instance Fields
+        //singelton instancesfield
+        private static UnderviserCatalog _UnderviserCatalog;
+        #endregion
 
-    private List<Underviser> _Ul;
-
-    //singelton instancefield
-    private static UnderviserCatalog _UnderviserCatalog;
-
-    #endregion
-
-    #region Constructor
-
-    public UnderviserCatalog() : base ("http://touchpointdbwebservice.azurewebsites.net/api/", "underviser")
-    {
-        _Ul = new List<Underviser>();
-        _Ul.Add(new Underviser("Jonas", "Kildevej 19", "Jonaspedersen@live.dk", "11223344")); //Hard coded objeket. 
-        
-    }
-
-    #endregion
-
-    //singelton implentering  public method and private constructor
-    public static UnderviserCatalog Instance()
-    {
-        if (_UnderviserCatalog == null)
+        #region Constructor
+        private UnderviserCatalog()
         {
-            _UnderviserCatalog = new UnderviserCatalog();
-
+            _Ul = new List<Underviser>();
+            _Ul.Add(new Underviser("Jonas", "Kildevej 19", "Jonaspedersen@live.dk", "11223344"));  //Hard coded objeket. 
         }
-        return _UnderviserCatalog;
-    }
+        #endregion
 
-    //propperti for getting our list.
-    public List<Underviser> Getlist
-    {
-        get { return _Ul; }
-        set { _Ul = value; }
+        #region Singleton
+        //singelton implentering  public method and private constructor
+        public static UnderviserCatalog Instance()
+        {
+            if (_UnderviserCatalog == null)
+            {
+                _UnderviserCatalog = new UnderviserCatalog();
 
-    }
+            }
+            return _UnderviserCatalog;
+        }
+        #endregion
 
-    public List<Underviser> All { get; set; }
+        #region Property for at modtage vores liste
+        public List<Underviser> Getlist
+        {
+            get { return _Ul; }
+            set { _Ul = value;}
+            
+        }
+        #endregion
 
+        #region Liste af Undervisere
+        public List<Underviser> All
+        { get; set; }
+        #endregion
 
-    #region Metoder
-
-    public void OpretUnderviser(string Navn, string Adresse, string email, string tlf)
-    {
-        Underviser U1 = new Underviser(Navn, Adresse, email, tlf);
-        _Ul.Add(U1);
-    }
-
-    #endregion
-
+        #region Metoder
+        public void OpretUnderviser(string Navn, string Adresse, string email, string tlf)
+        {
+            foreach (var item in Getlist)
+            {
+               if( item.Email == email)
+                {
+                    throw new ArgumentException("Email eksisterer allerede i systemet");
+                }
+            }
+              Underviser U1 = new Underviser(Navn, Adresse, email, tlf);
+            _Ul.Add(U1);
+        }
+        #endregion
     }
 }
 

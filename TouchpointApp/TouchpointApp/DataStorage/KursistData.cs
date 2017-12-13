@@ -14,7 +14,6 @@ namespace TouchpointApp.DataStorage
         private string _adresse;
         #endregion
 
-
         #region Constructor
         public KursistData ()
         {

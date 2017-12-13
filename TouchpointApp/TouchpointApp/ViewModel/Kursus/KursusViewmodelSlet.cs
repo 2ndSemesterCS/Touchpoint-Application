@@ -12,20 +12,26 @@ using TouchpointApp.Persistency;
 namespace TouchpointApp.ViewModel.Kursus
 {
     public class KursusViewmodelSlet : ViewModelBase
-    { 
-            private Model.Kursus _itemIsSeleceted;
+    {
+        #region Instance fields
+        private Model.Kursus _itemIsSeleceted;
+        #endregion
 
-            public KursusViewmodelSlet()
+        #region Constructor
+        public KursusViewmodelSlet()
             {
                 CreateObservableCollection();
                 SletCommand = new RelayCommand(DeleteCommand, () => { return _itemIsSeleceted != null; });
             }
+        #endregion
 
-            public RelayCommand SletCommand { get; set; }
+        #region Commands
+        public RelayCommand SletCommand { get; set; }
+        #endregion
 
-
-            //Skal lave vores katalog om til en obserablecollection, som vi kan bind vores listviews ItemsSource til. 
-            public ObservableCollection<Model.Kursus> CreateObservableCollection()
+        #region ObservableCollections
+        //Skal lave vores katalog om til en obserablecollection, som vi kan bind vores listviews ItemsSource til. 
+        public ObservableCollection<Model.Kursus> CreateObservableCollection()
             {
                 //Der oprettes et ObservableCollection 
                 var Collection = new ObservableCollection<Model.Kursus>();
@@ -38,9 +44,15 @@ namespace TouchpointApp.ViewModel.Kursus
                 }
                 return Collection;
             }
+        public ObservableCollection<Model.Kursus> Collection
+        {
+            get { return CreateObservableCollection(); }
+        }
+        #endregion
 
-            //Propperti til at binde listviewets isSeleceted propperty til. 
-            public Model.Kursus SelectedItem
+        #region Property
+        //Propperti til at binde listviewets isSeleceted propperty til. 
+        public Model.Kursus SelectedItem
             {
                 get { return _itemIsSeleceted; }
                 set
@@ -50,18 +62,15 @@ namespace TouchpointApp.ViewModel.Kursus
                 OnPropertyChanged();
             }
             }
+        #endregion
 
-            //propperty der skal bindes til listviewets ItemsSource
-            public ObservableCollection<Model.Kursus> Collection
-            {
-                get { return CreateObservableCollection(); }
-            }
-
-            public void DeleteCommand()
+        #region SletMetode
+        public void DeleteCommand()
             {
                 KursusCatalog.Instance().Getlist.Remove(_itemIsSeleceted);
                 OnPropertyChanged(nameof(Collection));
             }
         }
-    }
+         #endregion
+}
 

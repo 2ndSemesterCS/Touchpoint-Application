@@ -9,6 +9,7 @@ namespace TouchpointApp.ViewModel.Kursus
 {
     public class KursusViewModel : ViewModelBase
     {
+        #region Instance fields
         private KursusCatalog _kursusCatalog;
         private KursusData _kursusData;
         private Model.Kursus _selectedKurus;
@@ -18,7 +19,9 @@ namespace TouchpointApp.ViewModel.Kursus
 
         private UndervisningsstedCatalog _undervisersstedsCatalog;
         private Model.Undervisningssted _selectedUnderviserssted;
+        #endregion
 
+        #region Constructor
         public KursusViewModel()
         {
             _kursusCatalog = KursusCatalog.Instance();
@@ -28,11 +31,12 @@ namespace TouchpointApp.ViewModel.Kursus
             _kursusData = new KursusData();
             OpretNytKursusCommand = new RelayCommand(OpretNytKursus);
         }
+        #endregion
 
+        #region Commands
         public KursusData kursusData { get { return _kursusData; } set { _kursusData = value; } }
         public RelayCommand OpretNytKursusCommand { get; set; }
-
-
+        #endregion
 
         #region CollectionKurus
         public ObservableCollection<Model.Kursus> CreateObservableCollectionKursus()
@@ -56,11 +60,6 @@ namespace TouchpointApp.ViewModel.Kursus
             set { _selectedKurus = value; }
         }
         #endregion
-
-
-
-
-
 
         #region CollectionUnderviser
         public ObservableCollection<Model.Underviser> CreateObservableCollectionUnderviser()
@@ -108,10 +107,12 @@ namespace TouchpointApp.ViewModel.Kursus
         }
         #endregion
 
+        #region Opret metode
         public void OpretNytKursus()
         {
             _kursusCatalog.OpretKursus(_kursusData.Titel, _kursusData.Dato, _kursusData.Tidspunkt, _kursusData.Varighed, _kursusData.Pris, _kursusData.Sprog, _kursusData.Beskrivelse, _kursusData.Depositum, _selectedUnderviser, _selectedUnderviserssted);
             OnPropertyChanged(nameof(CollectionKursus));
         }
+        #endregion
     }
 }

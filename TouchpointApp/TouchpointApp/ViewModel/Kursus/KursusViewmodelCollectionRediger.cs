@@ -12,20 +12,25 @@ namespace TouchpointApp.ViewModel.Kursus
 {
      public class KursusViewmodelCollectionRediger :ViewModelBase
     {
-
+        #region Instance fields
         private Model.Kursus _itemIsSeleceted;
         private KursusData _kursusData;
+        #endregion
 
-
+        #region Constructor
         public KursusViewmodelCollectionRediger()
         {
             _kursusData = new KursusData();
             RedigerCommand = new RelayCommand(RedigerMetode, () => { return _itemIsSeleceted != null; });
         }
+        #endregion
 
+        #region Commands
         public RelayCommand RedigerCommand { get; set; }
         public KursusData KursusData { get { return _kursusData; } set { _kursusData = value; } }
+        #endregion
 
+        #region RedigerMetode
         public void RedigerMetode()
         {
             KursusCatalog.Instance().Getlist.Remove(_itemIsSeleceted);
@@ -34,8 +39,10 @@ namespace TouchpointApp.ViewModel.Kursus
                 _kursusData.Beskrivelse, _kursusData.Depositum, _kursusData.Underviser, _kursusData.Undervisningssted);
             OnPropertyChanged(nameof(Collection));
         }
+        #endregion
 
-        //Propperti til at binde listviewets isSeleceted propperty til. 
+        #region Properties
+        
         public Model.Kursus SelectedItem
         {
             get { return _itemIsSeleceted; }
@@ -59,13 +66,14 @@ namespace TouchpointApp.ViewModel.Kursus
                 RedigerCommand.RaiseCanExecuteChanged();
             }
         }
+        #endregion
 
-        //propperty der skal bindes til listviewets ItemsSource
+        #region ObsercableCollection
         public ObservableCollection<Model.Kursus> Collection
         {
             get { return CreateObservableCollection(); }
         }
-
+        
         //Skal lave vores katalog om til en obserablecollection, som vi kan bind vores listviews ItemsSource til. 
         public ObservableCollection<Model.Kursus> CreateObservableCollection()
         {
@@ -76,6 +84,7 @@ namespace TouchpointApp.ViewModel.Kursus
             }
             return Collection;
         }
+        #endregion
 
     }
 }

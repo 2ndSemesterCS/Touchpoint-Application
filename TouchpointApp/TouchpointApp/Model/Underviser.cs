@@ -4,11 +4,14 @@ namespace TouchpointApp.Model
 {
     public class Underviser 
     {
+        #region Instance fields
         private string _navn;
         private string _addresse;
         private string _email;
         private string _tlf;
+        #endregion
 
+        #region Constructor
         public Underviser(string navn, string addresse, string email, string tlf)
         {
             if(String.IsNullOrEmpty(navn) || String.IsNullOrEmpty(addresse) 
@@ -27,7 +30,9 @@ namespace TouchpointApp.Model
             _email = email;
             _tlf = tlf;
         }
+        #endregion
 
+        #region Metoder med exceptions
         public void CheckForTalITlf(string Tlf)
         {
             int value;
@@ -57,7 +62,9 @@ namespace TouchpointApp.Model
                 }
                 
         }
+        #endregion
 
+        #region Properties
         public string Navn
         {
             get { return _navn; }
@@ -80,10 +87,14 @@ namespace TouchpointApp.Model
             get { return _tlf; }
             set { _tlf = value; }
         }
-
+        #endregion
+ 
+        #region ToString metode
         public override string ToString()
         {
             return $"{_navn}";
         }
+        #endregion
+
     }
 }

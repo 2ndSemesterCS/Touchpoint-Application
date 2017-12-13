@@ -22,8 +22,8 @@ namespace TouchpointApp.DataStorage
         #endregion
 
         #region Properties
-        public string Beskrivelse { get { return _beskrivelse; } set { _beskrivelse = value; OnPropertyChanged("beskrivelse");}}
-        public List<Model.Kursus> KursusSerie { get { return _kursusSerie; } set { _kursusSerie = value; OnPropertyChanged("kursusserie");}}
+        public string Beskrivelse { get { return _beskrivelse; } set { value = _beskrivelse; OnPropertyChanged("beskrivelse");}}
+        public List<Model.Kursus> KursusSerie { get { return _kursusSerie; } set { value = _kursusSerie; OnPropertyChanged("kursusserie");}}
         #endregion
     }
 }

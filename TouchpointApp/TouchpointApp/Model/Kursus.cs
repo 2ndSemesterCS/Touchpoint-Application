@@ -99,7 +99,7 @@ namespace TouchpointApp.Model
             _depositum = depositum;
 
         }
-        #endregion  
+        #endregion
 
         //public void KunTalIPris(double pris)
         //{
@@ -109,9 +109,13 @@ namespace TouchpointApp.Model
 
         //    }
         //}
+
+        #region Metode
         public override string ToString()
         {
             return $"{_titel}";
         }
+        #endregion
+
     }
 }

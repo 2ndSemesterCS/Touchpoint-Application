@@ -12,22 +12,32 @@ namespace TouchpointApp.ViewModel.Kursist
 {
     class KursistViewmodelSlet : ViewModelBase
     {
+        #region Instance fields
         private Model.Kursist _ItemIsSeleceted;
+        #endregion
 
+        #region Slet Metode
         public KursistViewmodelSlet()
         {
             CreateObservableCollection();
             SletCommand = new RelayCommand(DeleteCommand, () => { return _ItemIsSeleceted != null; });
         }
+        public void DeleteCommand()
+        {
+            KursistCatalog.Instance().Getlist.Remove(_ItemIsSeleceted);
+            OnPropertyChanged(nameof(Collection));
+        }
+        #endregion
 
+        #region Commands
         public RelayCommand SletCommand { get; set; }
-
-
         public ObservableCollection<Model.Kursist> Collection
         {
             get { return CreateObservableCollection(); }
         }
+        #endregion
 
+        #region SelectedItemListView
         public Model.Kursist SelectedItemListview
         {
             get { return _ItemIsSeleceted; }
@@ -38,7 +48,9 @@ namespace TouchpointApp.ViewModel.Kursist
                 OnPropertyChanged();
             }
         }
+        #endregion
 
+        #region ObservableCollection
         public ObservableCollection<Model.Kursist> CreateObservableCollection()
         {
             var Collection = new ObservableCollection<Model.Kursist>();
@@ -48,11 +60,7 @@ namespace TouchpointApp.ViewModel.Kursist
             }
             return Collection;
         }
+        #endregion
 
-        public void DeleteCommand()
-        {
-            KursistCatalog.Instance().Getlist.Remove(_ItemIsSeleceted);
-            OnPropertyChanged(nameof(Collection));
-        }
     }
 }
