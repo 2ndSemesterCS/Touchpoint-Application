@@ -95,6 +95,7 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Command\CreateCommand.cs" />
     <Compile Include="Command\RelayCommand.cs" />
     <Compile Include="DataStorage\KursistData.cs" />
     <Compile Include="DataStorage\KursusData.cs" />
@@ -113,7 +114,6 @@
     <Compile Include="Persistency\FilePersistency.cs" />
     <Compile Include="Persistency\KursistCatalog.cs" />
     <Compile Include="Persistency\KursusCatalog.cs" />
-    <Compile Include="Persistency\SerieCatalog.cs" />
     <Compile Include="Persistency\UnderviserCatalog.cs" />
     <Compile Include="Persistency\UndervisningsstedCatalog.cs" />
     <Compile Include="Persistency\WebAPICatalog.cs" />
@@ -123,8 +123,11 @@
     <Compile Include="ViewModel\Kursist\KursistViewmodelCollectionRediger.cs" />
     <Compile Include="ViewModel\Kursist\KursistViewmodelSlet.cs" />
     <Compile Include="ViewModel\Kursus\KursusViewModel.cs" />
+<<<<<<< HEAD
+=======
     <Compile Include="ViewModel\Kursus\KursusViewmodelCollectionRediger.cs" />
     <Compile Include="ViewModel\Kursus\KursusViewmodelSlet.cs" />
+>>>>>>> af9a38e0e536514dde165767b1aa142950b814c4
     <Compile Include="ViewModel\Serie\SerieViewModel.cs" />
     <Compile Include="ViewModel\Underviser\UnderviserViewmodel.cs" />
     <Compile Include="ViewModel\Underviser\UnderviserViewmodelCollectionRediger.cs" />
