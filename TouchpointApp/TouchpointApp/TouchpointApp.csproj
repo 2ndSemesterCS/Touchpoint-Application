@@ -209,6 +209,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\Images\HomeIconFinal.png" />
+    <Content Include="Assets\Images\leftArrow.png" />
+    <Content Include="Assets\Images\rightArrow.png" />
     <Content Include="Assets\Images\TouchMinePoints.png" />
     <Content Include="Assets\Images\TouchPointFlotFinal.png" />
     <Content Include="Properties\Default.rd.xml" />
