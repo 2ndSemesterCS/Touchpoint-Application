@@ -41,5 +41,10 @@ namespace TouchpointApp.Views.Serie
         {
 
         }
+
+        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }
