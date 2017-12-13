@@ -40,7 +40,6 @@ namespace TouchpointApp.Command
 
         public void Execute(object parameter)
         {
-            UnderviserCatalog.Instance().Create(new Underviser());
             _execute();
         }
 
