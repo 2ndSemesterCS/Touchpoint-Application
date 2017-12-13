@@ -95,6 +95,7 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Command\CreateCommand.cs" />
     <Compile Include="Command\RelayCommand.cs" />
     <Compile Include="DataStorage\KursistData.cs" />
     <Compile Include="DataStorage\KursusData.cs" />

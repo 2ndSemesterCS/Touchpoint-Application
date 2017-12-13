@@ -36,7 +36,7 @@ namespace TouchpointApp.Model
 
         public override string ToString()
         {
-            return $"{_kursusSerie}";
+            return $"{_beskrivelse}";
         }
     }
 }

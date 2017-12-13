@@ -8,7 +8,7 @@ using System.Collections.ObjectModel;
 
 namespace TouchpointApp.ViewModel.Underviser
 {
-    class UnderviserViewmodel :ViewModelBase
+    public class UnderviserViewmodel : ViewModelBase
     {
         #region Instance fields
         private UnderviserData _underviserData;
