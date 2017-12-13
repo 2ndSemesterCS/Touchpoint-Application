@@ -12,7 +12,7 @@ namespace TouchpointApp.Persistency
         where T : class
     {
         public WebAPICatalog(string URL, string apiID)
-            : base(new List<T>(), new WebAPISource<T>(URL, apiID))
+            : base(new Dictionary<int, T>(), new WebAPISource<T>(URL, apiID))
         {
 
         }

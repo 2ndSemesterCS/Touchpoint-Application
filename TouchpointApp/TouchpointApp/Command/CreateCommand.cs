@@ -4,24 +4,28 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using TouchpointApp.Model;
 using TouchpointApp.Persistency;
+using TouchpointApp.ViewModel.Underviser;
 
 namespace TouchpointApp.Command
 {
-    public class RelayCommand : ICommand
+    public class CreateCommand : ICommand
     {
 
         private readonly Action _execute;
         private readonly Func<bool> _canExecute;
+        private UnderviserViewmodel _uVM;
 
         public event EventHandler CanExecuteChanged;
 
-        public RelayCommand(Action execute)
+        public CreateCommand(Action execute)
             : this(execute, null)
         {
+
         }
 
-        public RelayCommand(Action execute, Func<bool> canExecute)
+        public CreateCommand(Action execute, Func<bool> canExecute)
         {
             if (execute == null)
                 throw new ArgumentNullException(nameof(execute));
@@ -36,7 +40,7 @@ namespace TouchpointApp.Command
 
         public void Execute(object parameter)
         {
-            
+            UnderviserCatalog.Instance().Create(new Underviser());
             _execute();
         }
 
@@ -44,7 +48,5 @@ namespace TouchpointApp.Command
         {
             CanExecuteChanged?.Invoke(this, EventArgs.Empty);
         }
-
-
     }
 }
