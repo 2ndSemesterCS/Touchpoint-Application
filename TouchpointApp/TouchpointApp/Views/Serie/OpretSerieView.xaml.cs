@@ -31,5 +31,15 @@ namespace TouchpointApp.Views.Serie
         {
             this.Frame.GoBack();
         }
+
+        private void BackToAdminView(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(AdminView), null);
+        }
+
+        private void TextBlock_SelectionChanged(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

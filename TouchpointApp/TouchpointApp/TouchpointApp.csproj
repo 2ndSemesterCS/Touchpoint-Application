@@ -123,6 +123,11 @@
     <Compile Include="ViewModel\Kursist\KursistViewmodelCollectionRediger.cs" />
     <Compile Include="ViewModel\Kursist\KursistViewmodelSlet.cs" />
     <Compile Include="ViewModel\Kursus\KursusViewModel.cs" />
+<<<<<<< HEAD
+=======
+    <Compile Include="ViewModel\Kursus\KursusViewmodelCollectionRediger.cs" />
+    <Compile Include="ViewModel\Kursus\KursusViewmodelSlet.cs" />
+>>>>>>> af9a38e0e536514dde165767b1aa142950b814c4
     <Compile Include="ViewModel\Serie\SerieViewModel.cs" />
     <Compile Include="ViewModel\Underviser\UnderviserViewmodel.cs" />
     <Compile Include="ViewModel\Underviser\UnderviserViewmodelCollectionRediger.cs" />
@@ -205,6 +210,7 @@
     <None Include="TouchpointApp_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\Images\HomeIconFinal.png" />
     <Content Include="Assets\Images\TouchMinePoints.png" />
     <Content Include="Assets\Images\TouchPointFlotFinal.png" />
     <Content Include="Properties\Default.rd.xml" />
@@ -321,7 +327,9 @@
       <Version>10.0.3</Version>
     </PackageReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="PersistencyInterfaces\" />
+  </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>
