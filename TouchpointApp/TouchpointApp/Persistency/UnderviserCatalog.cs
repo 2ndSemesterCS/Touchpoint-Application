@@ -9,6 +9,7 @@ using TouchpointApp.Model;
 namespace TouchpointApp.Persistency
 {
 
+    public class UnderviserCatalog
     {
         #region Instance Fields
         private List<Underviser> _Ul;
@@ -17,7 +18,6 @@ namespace TouchpointApp.Persistency
         private static UnderviserCatalog _UnderviserCatalog;
         #endregion
 
-<<<<<<< HEAD
         #region Constructor
         private UnderviserCatalog()
         {
@@ -65,8 +65,6 @@ namespace TouchpointApp.Persistency
             }
               Underviser U1 = new Underviser(Navn, Adresse, email, tlf);
             _Ul.Add(U1);
-=======
->>>>>>> dba6ef57147ab91cf11a196dfe209acf2ed49ce5
         }
         #endregion
     }

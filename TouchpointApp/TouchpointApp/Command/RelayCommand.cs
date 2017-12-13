@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
-using TouchpointApp.Persistency;
 
 namespace TouchpointApp.Command
 {
@@ -36,7 +35,6 @@ namespace TouchpointApp.Command
 
         public void Execute(object parameter)
         {
-            
             _execute();
         }
 

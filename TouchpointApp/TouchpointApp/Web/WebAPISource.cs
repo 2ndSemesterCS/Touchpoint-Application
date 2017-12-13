@@ -27,7 +27,7 @@ namespace TouchpointApp.Web
             _httpClientHandler = new HttpClientHandler {UseDefaultCredentials = true};
             _httpClient = new HttpClient
             {
-                BaseAddress = new Uri("http://touchpointdbwebservice.azurewebsites.net/")
+                BaseAddress = new Uri("http://touchpointdbwebservice.azurewebsites.net/api/")
             };
         }
         #endregion
