@@ -9,27 +9,34 @@ namespace TouchpointApp.ViewModel.Kursist
 {
     class KursistViewmodelCollectionRediger : ViewModelBase
     {
+        #region Instance fields
         private Model.Kursist _ItemIsSeleceted;
         private KursistData _KursistData;
+        #endregion
 
-
+        #region Constructor
         public KursistViewmodelCollectionRediger()
         {
             _KursistData = new KursistData();
             RedigerCommand = new RelayCommand(RedigerMetode, () => { return _ItemIsSeleceted != null; });
         }
+        #endregion
 
+        #region Commands
         public RelayCommand RedigerCommand { get; set; }
         public KursistData KursistData { get { return _KursistData; } set { _KursistData = value; } }
+        #endregion
 
-        
+        #region Metode
         public void RedigerMetode()
         {
             KursistCatalog.Instance().Getlist.Remove(_ItemIsSeleceted);
             KursistCatalog.Instance().OpretKursist(_KursistData.Navn, _KursistData.Adresse, _KursistData.Email, _KursistData.Tlf, _KursistData.Land, _KursistData.By);
             OnPropertyChanged(nameof(Collection));
         }
- 
+        #endregion
+
+        #region SelectedItemListView
         public Model.Kursist SelectedItemListview
         {
             get { return _ItemIsSeleceted; }
@@ -49,8 +56,9 @@ namespace TouchpointApp.ViewModel.Kursist
                 RedigerCommand.RaiseCanExecuteChanged();
             }
         }
+        #endregion
 
-       
+        #region ObservableCollection
         public ObservableCollection<Model.Kursist> Collection
         {
             get { return CreateObservableCollection(); }
@@ -68,5 +76,7 @@ namespace TouchpointApp.ViewModel.Kursist
             }
             return Collection;
         }
+        #endregion
+
     }
 }

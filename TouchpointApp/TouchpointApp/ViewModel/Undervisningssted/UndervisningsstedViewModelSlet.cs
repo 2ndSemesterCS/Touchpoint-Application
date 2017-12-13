@@ -12,16 +12,23 @@ namespace TouchpointApp.ViewModel.Undervisningssted
 {
     class UndervisningsstedViewModelSlet :ViewModelBase
     {
+        #region Instance fields
         private Model.Undervisningssted _ItemIsSeleceted;
+        #endregion
 
+        #region Constructor
         public UndervisningsstedViewModelSlet()
         {
             CreateObservableCollection();
             SletCommand = new RelayCommand(DeleteCommand, () => { return _ItemIsSeleceted != null; });
         }
+        #endregion
 
+        #region Command
         public RelayCommand SletCommand { get; set; }
+        #endregion
 
+        #region ObservableCollection
 
         //Skal lave vores katalog om til en obserablecollection, som vi kan bind vores listviews ItemsSource til. 
         public ObservableCollection<Model.Undervisningssted> CreateObservableCollection()
@@ -37,7 +44,14 @@ namespace TouchpointApp.ViewModel.Undervisningssted
             }
             return Collection;
         }
+        //propperty der skal bindes til listviewets ItemsSource
+        public ObservableCollection<Model.Undervisningssted> Collection
+        {
+            get { return CreateObservableCollection(); }
+        }
+        #endregion
 
+        #region Property
         //Propperti til at binde listviewets isSeleceted propperty til. 
         public Model.Undervisningssted SelectedItemListview
         {
@@ -49,18 +63,15 @@ namespace TouchpointApp.ViewModel.Undervisningssted
                 OnPropertyChanged();
             }
         }
+        #endregion
 
-        //propperty der skal bindes til listviewets ItemsSource
-        public ObservableCollection<Model.Undervisningssted> Collection
-        {
-            get { return CreateObservableCollection(); }
-        }
-
+        #region Slet Metode
         public void DeleteCommand()
         {
             UndervisningsstedCatalog.Instance().Getlist.Remove(_ItemIsSeleceted);
             OnPropertyChanged(nameof(Collection));
         }
+        #endregion
     }
 }
 

@@ -16,7 +16,7 @@ namespace TouchpointApp.Persistency
         private static KursusCatalog _Kursuscatalog;
         #endregion
 
-
+        #region Singleton
         public static KursusCatalog Instance()
         {
             if (_Kursuscatalog == null)
@@ -26,6 +26,8 @@ namespace TouchpointApp.Persistency
             }
             return _Kursuscatalog;
         }
+        #endregion
+
         #region Constructor
         private KursusCatalog()
         {
@@ -34,11 +36,13 @@ namespace TouchpointApp.Persistency
         }
         #endregion
 
+        #region Liste af kurser
         public List<Kursus> Getlist
         {
             get { return _kl; }
             set { _kl = value; }
         }
+        #endregion
 
         #region Metoder
         public void OpretKursus(string titel, DateTime dato, DateTime tidspunkt, string varighed, double pris, string sprog, string beskrivelse, double depositum,  Underviser underviser, Undervisningssted undervisningssted)

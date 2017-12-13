@@ -12,17 +12,23 @@ namespace TouchpointApp.ViewModel.Underviser
 {
     class UnderviserViewmodelSlet : ViewModelBase
     {
+        #region Instance fields
         private Model.Underviser _ItemIsSeleceted;
+        #endregion
 
+        #region Constructor
         public UnderviserViewmodelSlet()
         {
             CreateObservableCollection();
             SletCommand = new RelayCommand(DeleteCommand, ()=> { return _ItemIsSeleceted != null; });
         }
+        #endregion
 
+        #region Command
         public RelayCommand SletCommand { get; set; }
+        #endregion
 
-
+        #region ObservableCollection
         //Skal lave vores katalog om til en obserablecollection, som vi kan bind vores listviews ItemsSource til. 
         public ObservableCollection<Model.Underviser> CreateObservableCollection()
         {
@@ -37,7 +43,14 @@ namespace TouchpointApp.ViewModel.Underviser
             }
             return Collection;
         }
+        public ObservableCollection<Model.Underviser> Collection
+        {
+            get { return CreateObservableCollection(); }
+        }
 
+        #endregion
+
+        #region Property
         //Propperti til at binde listviewets isSeleceted propperty til. 
         public Model.Underviser SelectedItemListview
         {
@@ -49,18 +62,16 @@ namespace TouchpointApp.ViewModel.Underviser
                 OnPropertyChanged();
             }
         }
+        #endregion
 
+        #region Command
         //propperty der skal bindes til listviewets ItemsSource
-        public ObservableCollection<Model.Underviser> Collection
-        {
-            get { return CreateObservableCollection(); }
-        }
-
         public void DeleteCommand()
         {
             UnderviserCatalog.Instance().Getlist.Remove(_ItemIsSeleceted);
             OnPropertyChanged(nameof(Collection));
         }
+        #endregion
     }
 }
  

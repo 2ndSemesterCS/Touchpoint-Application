@@ -13,19 +13,25 @@ namespace TouchpointApp.ViewModel.Underviser
 {
     public class UnderviserViewmodelCollectionRediger : ViewModelBase
     {
+        #region Instance fields
         private Model.Underviser _ItemIsSeleceted;
         private UnderviserData _UnderviserData;
+        #endregion
 
-
+        #region Constructor
         public UnderviserViewmodelCollectionRediger()
         {
             _UnderviserData = new UnderviserData();
             RedigerCommand = new RelayCommand(RedigerMetode, () => { return _ItemIsSeleceted != null; });
         }
+        #endregion
 
+        #region Commands
         public RelayCommand RedigerCommand { get; set; }
         public UnderviserData UnderviserData { get { return _UnderviserData; } set { _UnderviserData = value; } }
+        #endregion
 
+        #region RedigerMetode
         //Bindes til knappen "rediger" Det er først når der trykke på knappen at der bliver lavet ændringer, hvis vi ikke havde sådan en, 
         // Så ville vi rette direkt i model klasse, det var hvad vi gjorde til at starte med.  
         public void RedigerMetode()
@@ -34,7 +40,9 @@ namespace TouchpointApp.ViewModel.Underviser
             UnderviserCatalog.Instance().OpretUnderviser(_UnderviserData.Navn, _UnderviserData.Adresse, _UnderviserData.Email, _UnderviserData.Tlf);
             OnPropertyChanged(nameof(Collection));
         }
-       
+        #endregion
+
+        #region Property
         //Propperti til at binde listviewets isSeleceted propperty til. 
         public Model.Underviser SelectedItemListview
         {
@@ -53,7 +61,9 @@ namespace TouchpointApp.ViewModel.Underviser
                 RedigerCommand.RaiseCanExecuteChanged();
             }
         }
+        #endregion
 
+        #region ObservableCollection
         //propperty der skal bindes til listviewets ItemsSource
         public ObservableCollection<Model.Underviser> Collection
         {
@@ -74,5 +84,6 @@ namespace TouchpointApp.ViewModel.Underviser
             }
             return Collection;
         }
+        #endregion
     }
 }

@@ -15,21 +15,26 @@ namespace TouchpointApp.ViewModel.Undervisningssted
 {
     class UndervisningsstedViewModelCollectionRediger : ViewModelBase
     {
-
+        #region Instance fields
         private Model.Undervisningssted _ItemIsSeleceted;
         private UndervisningsStedData _UndervisningsstedData;
+        #endregion
 
-
+        #region Constructor
         public UndervisningsstedViewModelCollectionRediger()
         {
             _UndervisningsstedData = new UndervisningsStedData();
             RedigerCommand = new RelayCommand(RedigerMetode, () => { return _ItemIsSeleceted != null; });
         }
+        #endregion
 
+        #region Commands
         public RelayCommand RedigerCommand { get; set; }
        
         public UndervisningsStedData undervisningstedData { get { return _UndervisningsstedData; } set { _UndervisningsstedData = value; } }
+        #endregion
 
+        #region RedigerMetode
         //Bindes til knappen "rediger" Det er først når der trykke på knappen at der bliver lavet ændringer, hvis vi ikke havde sådan en, 
         // Så ville vi rette direkt i model klasse, det var hvad vi gjorde til at starte med.  
         public void RedigerMetode()
@@ -38,7 +43,9 @@ namespace TouchpointApp.ViewModel.Undervisningssted
             UndervisningsstedCatalog.Instance().OpretUndervisningssted(_UndervisningsstedData.Lokale, _UndervisningsstedData.Adresse);
             OnPropertyChanged(nameof(Collection));
         }
+        #endregion
 
+        #region Property
         //Propperti til at binde listviewets isSeleceted propperty til. 
         public Model.Undervisningssted SelectedItemListview
         {
@@ -55,7 +62,9 @@ namespace TouchpointApp.ViewModel.Undervisningssted
                 RedigerCommand.RaiseCanExecuteChanged();
             }
         }
+        #endregion
 
+        #region ObservableCollection
         //propperty der skal bindes til listviewets ItemsSource
         public ObservableCollection<Model.Undervisningssted> Collection
         {
@@ -72,9 +81,7 @@ namespace TouchpointApp.ViewModel.Undervisningssted
             }
             return Collection;
         }
-
-
-        
+        #endregion
     }
 }
 

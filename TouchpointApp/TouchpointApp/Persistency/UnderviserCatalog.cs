@@ -25,7 +25,8 @@ namespace TouchpointApp.Persistency
             _Ul.Add(new Underviser("Jonas", "Kildevej 19", "Jonaspedersen@live.dk", "11223344"));  //Hard coded objeket. 
         }
         #endregion
-        
+
+        #region Singleton
         //singelton implentering  public method and private constructor
         public static UnderviserCatalog Instance()
         {
@@ -35,23 +36,33 @@ namespace TouchpointApp.Persistency
 
             }
             return _UnderviserCatalog;
-        } 
+        }
+        #endregion
 
-        //propperti for getting our list.
+        #region Property for at modtage vores liste
         public List<Underviser> Getlist
         {
             get { return _Ul; }
             set { _Ul = value;}
             
         }
+        #endregion
 
+        #region Liste af Undervisere
         public List<Underviser> All
         { get; set; }
+        #endregion
 
-        
         #region Metoder
         public void OpretUnderviser(string Navn, string Adresse, string email, string tlf)
         {
+            foreach (var item in Getlist)
+            {
+               if( item.Email == email)
+                {
+                    throw new ArgumentException("Email eksisterer allerede i systemet");
+                }
+            }
               Underviser U1 = new Underviser(Navn, Adresse, email, tlf);
             _Ul.Add(U1);
         }

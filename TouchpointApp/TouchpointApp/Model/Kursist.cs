@@ -1,19 +1,20 @@
 ﻿using System;
+using TouchpointApp.DataStorage;
 namespace TouchpointApp.Model
 {
     public class Kursist
     {
-        // Instance Fields
-
+       #region Instance Fields
         private string _navn;
         private string _email;
         private string _by;
         private string _land;
         private string _adresse;
         private string _tlf;
-   
+        #endregion
 
-        // Properties
+
+       #region Properties
 
         public string Navn
         {
@@ -48,8 +49,10 @@ namespace TouchpointApp.Model
             get { return _tlf; }
             set { _tlf = value; }
         }
+        #endregion
 
-        // Constructor
+
+       #region Constructor
 
         public Kursist(string navn, string email, string by, string land, string adresse, string tlf)
         {
@@ -60,6 +63,7 @@ namespace TouchpointApp.Model
                 throw new ArgumentException("Personlig information mangler");
             }
 
+            
             CheckForTal(navn, by, land);
             CheckTlfLængde(tlf);
             CheckForTalITlf(tlf);
@@ -71,7 +75,9 @@ namespace TouchpointApp.Model
             _adresse = adresse;
             _tlf = tlf;
         }
+        #endregion
 
+       #region Metoder med exceptions
         public void CheckForTal(string navn, string by, string land)
         {
             int value;
@@ -114,10 +120,14 @@ namespace TouchpointApp.Model
 
 
         }
+        #endregion
 
+       #region Metode Tostring
         public override string ToString()
         {
             return $"{_navn}";
         }
+        #endregion
+
     }
 }

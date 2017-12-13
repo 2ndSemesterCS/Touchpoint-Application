@@ -17,6 +17,7 @@ namespace TouchpointApp.ViewModel.Kursist
         private RelayCommand _saveCommand;
         #endregion
 
+        #region Constructor
         public KursistViewModel()
         {
                 _kc = KursistCatalog.Instance();
@@ -24,7 +25,9 @@ namespace TouchpointApp.ViewModel.Kursist
                
             OpretNyKursistCommand = new RelayCommand(OpretNyKursist);
         }
+        #endregion
 
+        #region ObservableCollection
         public ObservableCollection<Model.Kursist> CreateObservableCollection()
         {
             var Collection = new ObservableCollection<Model.Kursist>();
@@ -39,6 +42,7 @@ namespace TouchpointApp.ViewModel.Kursist
         {
             get { return CreateObservableCollection(); }
         }
+        #endregion
 
         #region Commands
         public RelayCommand OpretNyKursistCommand { get; set; }
@@ -46,19 +50,12 @@ namespace TouchpointApp.ViewModel.Kursist
         public KursistData KursistData { get { return _kd; } set { _kd = value; } }
         #endregion
 
-        #region Constructor
-
-       
-        #endregion
-
         #region Metoder
-
         public void OpretNyKursist()
         {
             _kc.OpretKursist(_kd.Navn, _kd.Adresse, _kd.Email,_kd.Tlf, _kd.Land, _kd.By);
             OnPropertyChanged(nameof(Collection));
         }
-      
         #endregion
     }
 }
