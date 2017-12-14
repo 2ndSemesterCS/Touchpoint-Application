@@ -9,16 +9,15 @@ using TouchpointApp.Persistency;
 
 namespace TouchpointApp.ViewModel.Serie
 {
-    class SerieViewModelSlet
+    public class SerieViewModelSlet : ViewModelBase
     {
-        public class KursusViewmodelSlet : ViewModelBase
-        {
+       
             #region Instance fields
             private Model.Serie _itemIsSeleceted;
             #endregion
 
             #region Constructor
-            public KursusViewmodelSlet()
+            public SerieViewModelSlet()
             {
                 CreateObservableCollection();
                 SletCommand = new RelayCommand(DeleteCommand, () => { return _itemIsSeleceted != null; });
@@ -68,5 +67,4 @@ namespace TouchpointApp.ViewModel.Serie
             }
         }
         #endregion
-    }
 }

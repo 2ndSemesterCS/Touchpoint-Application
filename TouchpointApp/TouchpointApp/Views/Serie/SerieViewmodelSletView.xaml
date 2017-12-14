@@ -1,12 +1,13 @@
 ﻿<Page
-    x:Class="TouchpointApp.Views.Serie.SletSerieViewxaml"
+    x:Class="TouchpointApp.Views.Serie.SerieViewmodelSletView"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:TouchpointApp.Views.Serie"
+    xmlns:vm="using:TouchpointApp.ViewModel.Serie"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-     xmlns:vm="using:TouchpointApp.ViewModel.Serie"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
+
 
     <Page.DataContext>
         <vm:SerieViewModelSlet/>
@@ -39,8 +40,8 @@
             </Border>
             <ScrollViewer>
                 <ListView Height="221" Width="380" FontSize="20" Foreground="#230101" BorderBrush="White" BorderThickness="5" HorizontalAlignment="Center" Margin="0,10,0,0"
-                          ItemsSource="{Binding Collection, Mode=TwoWay}"
-                          SelectedItem="{Binding SelectedItem, Mode=TwoWay}"/>
+                  ItemsSource="{Binding Collection,Mode=TwoWay}"
+                  SelectedItem="{Binding SelectedItem, Mode=TwoWay}"/>
             </ScrollViewer>
         </StackPanel>
 

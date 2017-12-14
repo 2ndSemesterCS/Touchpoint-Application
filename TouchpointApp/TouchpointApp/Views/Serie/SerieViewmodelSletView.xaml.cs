@@ -20,9 +20,9 @@ namespace TouchpointApp.Views.Serie
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class SletSerieViewxaml : Page
+    public sealed partial class SerieViewmodelSletView : Page
     {
-        public SletSerieViewxaml()
+        public SerieViewmodelSletView()
         {
             this.InitializeComponent();
         }
@@ -35,6 +35,5 @@ namespace TouchpointApp.Views.Serie
         {
             this.Frame.Navigate(typeof(AdminView), null);
         }
-
     }
 }
