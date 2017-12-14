@@ -84,8 +84,8 @@
         <!-- Grid Stackpanel Venstre 1.0 KOPI-->
         <StackPanel Grid.Row="0" Orientation="Vertical" CornerRadius="10" Margin="5,148,177,-30" Grid.ColumnSpan="2" Grid.RowSpan="2" Grid.Column="1">
             <TextBox TextWrapping="Wrap" Height="40" Text="{Binding kursusData.Titel, Mode=TwoWay}" Width="362" FontSize="20" Margin="0,0,0,0" Foreground="#230101"/>
-            <CalendarDatePicker DataContext="{Binding kursusData.Dato}" x:Name="arrivalCalendarDatePicker" Header="" Width="174" HorizontalAlignment="Right" Margin="0,0,416,0"/>
-            <TimePicker  DataContext="{Binding kursusData.Tidspunkt}" x:Name="Time" Header="" Width="263" HorizontalAlignment="Right" Margin="0,0,327,0"/>
+            <CalendarDatePicker DataContext="{Binding kursusData.Dato}" x:Name="arrivalCalendarDatePicker" Header="" Width="362" HorizontalAlignment="Right" Margin="0,0,228,0"/>
+            <TimePicker  DataContext="{Binding kursusData.Tidspunkt}" x:Name="Time" Header="" Width="362" HorizontalAlignment="Right" Margin="0,0,228,0"/>
             <TextBox TextWrapping="Wrap" Height="40" Text="{Binding kursusData.Varighed, Mode=TwoWay}" Width="362" FontSize="20" Margin="0,10,0,0" Foreground="#230101"/>
             <TextBox TextWrapping="Wrap" Height="40" Text="{Binding kursusData.Pris, Mode=TwoWay}" Width="362" FontSize="20" Margin="0,10,0,0" Foreground="#230101"/>
             <TextBox TextWrapping="Wrap" Height="40" Text="{Binding kursusData.Sprog, Mode=TwoWay}" Width="362" FontSize="20" Margin="0,10,0,0" Foreground="#230101"/>
@@ -108,7 +108,7 @@
                 <TextBlock Height="59" Margin="55,0,45,0" TextWrapping="Wrap" HorizontalAlignment="Center" Text="Oversigt over Undervisere" FontSize="20" Foreground="White"/>
             </Border>
             <ScrollViewer Height="245">
-                <ListView Height="221" Width="280" FontSize="20" Foreground="#230101" BorderBrush="White" BorderThickness="5" 
+                <ListView Height="221" Background="MistyRose" Width="280" FontSize="20" Foreground="#230101" BorderBrush="White" BorderThickness="5" 
                           ItemsSource="{Binding CollectionKursus, Mode=TwoWay}"
                           />
             </ScrollViewer>

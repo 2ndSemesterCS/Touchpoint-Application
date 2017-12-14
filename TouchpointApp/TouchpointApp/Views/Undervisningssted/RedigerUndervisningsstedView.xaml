@@ -31,7 +31,7 @@
                 <TextBlock Height="59" Margin="55,0,45,0" TextWrapping="Wrap" HorizontalAlignment="Center" Text="Oversigt over Undervisere" FontSize="20" Foreground="White"/>
             </Border>
             <ScrollViewer Height="245">
-                <ListView Height="221" Width="280" FontSize="20" Foreground="#230101" BorderBrush="White" BorderThickness="5"
+                <ListView Background="MistyRose" Height="221" Width="280" FontSize="20" Foreground="#230101" BorderBrush="White" BorderThickness="5"
                           SelectedItem="{Binding  SelectedItemListview, Mode=TwoWay}"
                           ItemsSource="{Binding Collection, Mode=TwoWay}"
                           />
