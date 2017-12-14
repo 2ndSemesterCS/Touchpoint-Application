@@ -8,7 +8,7 @@ using TouchpointApp.Model;
 
 namespace TouchpointApp.Persistency
 {
-    class SerieCatalog
+   public class SerieCatalog
     {
         #region Instance fields
         private List<Serie> _sl;

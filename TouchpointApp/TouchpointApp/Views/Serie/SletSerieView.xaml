@@ -4,12 +4,15 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:TouchpointApp.Views.Serie"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+     xmlns:vm="using:TouchpointApp.ViewModel.Serie"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
+    <Page.DataContext>
+        <vm:SerieViewModelSlet/>
+    </Page.DataContext>
+
     <Grid Background="#fad8d1" Margin="0,0,0,0" BorderBrush="MistyRose" BorderThickness="10">
-
-
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="280"/>
             <ColumnDefinition Width="720"/>
@@ -35,7 +38,9 @@
                 <TextBlock Text="Oversigt over Serier" Height="59" Margin="55,0,45,0" TextWrapping="Wrap" HorizontalAlignment="Center" FontSize="20" Foreground="White" />
             </Border>
             <ScrollViewer>
-                <ListView Height="221" Width="380" FontSize="20" Foreground="#230101" BorderBrush="White" BorderThickness="5" HorizontalAlignment="Center" Margin="0,10,0,0"/>
+                <ListView Height="221" Width="380" FontSize="20" Foreground="#230101" BorderBrush="White" BorderThickness="5" HorizontalAlignment="Center" Margin="0,10,0,0"
+                          ItemsSource="{Binding Collection, Mode=TwoWay}"
+                          SelectedItem="{Binding SelectedItem, Mode=TwoWay}"/>
             </ScrollViewer>
         </StackPanel>
 
@@ -66,7 +71,7 @@
 
         <!-- Grid Stackpanel Venstre 2.2-->
         <StackPanel Grid.Column="2" Margin="0,440,10,10" Grid.RowSpan="2">
-            <Button Content="Slet" Background="#fad8d1" Foreground="White" FontSize="20px" Width="140" HorizontalAlignment="Center" BorderBrush="White" BorderThickness="7"  Height="50"  Margin="0,100,0,0"/>
+            <Button Content="Slet" Command="{Binding SletCommand}" Background="#fad8d1" Foreground="White" FontSize="20px" Width="140" HorizontalAlignment="Center" BorderBrush="White" BorderThickness="7"  Height="50"  Margin="0,100,0,0"/>
         </StackPanel>
 
 

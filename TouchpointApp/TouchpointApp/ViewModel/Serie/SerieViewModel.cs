@@ -31,6 +31,7 @@ namespace TouchpointApp.ViewModel.Serie
             _serieCatalog = SerieCatalog.Instance();
             _kursusCatalog = KursusCatalog.Instance();
 
+            _kursusSerie = new List<Model.Kursus>();
             _serieData = new SerieData();
             OpretNySerieCommand = new RelayCommand(OpretNySerie);
             addSerie = new RelayCommand(AddKursusTilSerie);
@@ -112,13 +113,36 @@ namespace TouchpointApp.ViewModel.Serie
         }
 
         #endregion
+
+
+        #region CollectionKursusTilSerie
+        public ObservableCollection<Model.Kursus> CreateObservableCollectionKursusTilSerie()
+        {
+            var Collection = new ObservableCollection<Model.Kursus>();
+            foreach (var item in _kursusSerie)
+            {
+                Collection.Add(item);
+            }
+            return Collection;
+        }
+
+        public ObservableCollection<Model.Kursus> CollectionKursusTilserie
+        {
+            get { return CreateObservableCollectionKursusTilSerie(); }
+        }
+
+#endregion
+
+
+
+
+
         public void AddKursusTilSerie()
         {
             _serieData.KursusSerie = _kursusSerie;
-
             _kursusSerie.Add(_selectedKursus);
-            CreateObservableCollectionKursusSerie();
-            OnPropertyChanged(nameof(CollectionKursusTilSerie));
+            CreateObservableCollectionKursusTilSerie();
+            OnPropertyChanged(nameof(CollectionKursusTilserie));
         }
 
         public void OpretNySerie()
