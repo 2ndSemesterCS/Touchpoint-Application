@@ -57,7 +57,7 @@
         </StackPanel>
 
         <!-- Grid Stackpanel Venstre 1.0 KOPI-->
-        <StackPanel Grid.Row="0" CornerRadius="10" Margin="108,269,281,192" Grid.Column="1" Grid.RowSpan="2">
+        <StackPanel Grid.Row="0" CornerRadius="10" Margin="109,259,280,202" Grid.Column="1" Grid.RowSpan="2">
             <ListView Height="144" FontSize="20" Foreground="#230101" BorderBrush="White" BorderThickness="5" 
                       ItemsSource="{Binding CollectionIndeholderKurser, Mode=TwoWay}" Margin="41,0,164,0"
                       SelectedItem="{Binding SelectedItemFjernEtKurus,Mode=TwoWay}"
@@ -82,11 +82,9 @@
         </StackPanel>
 
         <!-- Grid Stackpanel Venstre 0.1-->
-        <StackPanel Grid.Column="1" Margin="300,289,291,100">
-            <Button Command="{Binding FjernKurus}" Background="#fad8d1" Foreground="White" FontSize="20px" Width="109" HorizontalAlignment="Right"  Height="26"  Margin="0,0,10,0">
-                <Image Source="ms-appx:///Assets/Images/rightArrow.png" Margin="-55,4,-74,-63"/>
-
-            </Button>
+        <StackPanel Margin="1,279,0,37" Grid.Column="1" VerticalAlignment="Center" Height="134">
+            <Button Command="{Binding FjernKurus}" Content="Fjern" Background="#fad8d1" Foreground="White" FontSize="20px" Width="140" HorizontalAlignment="Center" BorderBrush="White" BorderThickness="5"  Height="50"  Margin="0,5,10,0"/>
+            <Button Command="{Binding FjernKurus}" Content="Tilføj" Background="#fad8d1" Foreground="White" FontSize="20px" Width="140" HorizontalAlignment="Center" BorderBrush="White" BorderThickness="5"  Height="50"  Margin="0,5,10,0"/>
 
         </StackPanel>
 
