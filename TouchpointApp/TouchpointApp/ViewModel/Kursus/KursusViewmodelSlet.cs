@@ -38,7 +38,7 @@ namespace TouchpointApp.ViewModel.Kursus
 
                 // UnderviserCatalog.Instance().Getlist   --> UnderviserCatalog.Instance(), because we allready have an instandse of UnderviserCatalog
                 // it will return the objenct instead and therefore we can call .getlist.
-                foreach (var item in KursusCatalog.Instance().Getlist)
+                foreach (var item in KursusCatalog.Instance().All)
                 {
                     Collection.Add(item);
                 }
@@ -67,7 +67,7 @@ namespace TouchpointApp.ViewModel.Kursus
         #region SletMetode
         public void DeleteCommand()
             {
-                KursusCatalog.Instance().Getlist.Remove(_itemIsSeleceted);
+                KursusCatalog.Instance().All.Remove(_itemIsSeleceted);
                 OnPropertyChanged(nameof(Collection));
             }
         }

@@ -54,7 +54,7 @@ namespace TouchpointApp.ViewModel.Kursist
         public ObservableCollection<Model.Kursist> CreateObservableCollection()
         {
             var Collection = new ObservableCollection<Model.Kursist>();
-            foreach (var item in KursistCatalog.Instance().Getlist)
+            foreach (var item in KursistCatalog.Instance().All)
             {
                 Collection.Add(item);
             }

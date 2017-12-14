@@ -42,7 +42,7 @@ namespace TouchpointApp.ViewModel.Kursus
         public ObservableCollection<Model.Kursus> CreateObservableCollectionKursus()
         {
             var Collection = new ObservableCollection<Model.Kursus>();
-            foreach (var item in KursusCatalog.Instance().Getlist)
+            foreach (var item in KursusCatalog.Instance().All)
             {
                 Collection.Add(item);
             }
@@ -65,7 +65,7 @@ namespace TouchpointApp.ViewModel.Kursus
         public ObservableCollection<Model.Underviser> CreateObservableCollectionUnderviser()
         {
             var Collection = new ObservableCollection<Model.Underviser>();
-            foreach (var item in UnderviserCatalog.Instance().Getlist)
+            foreach (var item in UnderviserCatalog.Instance().All)
             {
                 Collection.Add(item);
             }

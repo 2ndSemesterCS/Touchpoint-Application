@@ -2,7 +2,7 @@
 namespace TouchpointApp.Model
    
 {
-    public class Kursus
+    public class Kursus : IKey
     {
         #region Instance Fields
         private string _titel;
@@ -117,5 +117,6 @@ namespace TouchpointApp.Model
         }
         #endregion
 
+        public int Key { get; set; }
     }
 }

@@ -37,7 +37,7 @@ namespace TouchpointApp.ViewModel.Underviser
 
             // UnderviserCatalog.Instance().Getlist   --> UnderviserCatalog.Instance(), because we allready have an instandse of UnderviserCatalog
             // it will return the objenct instead and therefore we can call .getlist.
-            foreach (var item in UnderviserCatalog.Instance().Getlist)
+            foreach (var item in UnderviserCatalog.Instance().All)
             {
                 Collection.Add(item);
             }
@@ -68,7 +68,7 @@ namespace TouchpointApp.ViewModel.Underviser
         //propperty der skal bindes til listviewets ItemsSource
         public void DeleteCommand()
         {
-            UnderviserCatalog.Instance().Getlist.Remove(_ItemIsSeleceted);
+            UnderviserCatalog.Instance().All.Remove(_ItemIsSeleceted);
             OnPropertyChanged(nameof(Collection));
         }
         #endregion

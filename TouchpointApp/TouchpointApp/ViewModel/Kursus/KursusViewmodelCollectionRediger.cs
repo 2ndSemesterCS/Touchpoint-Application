@@ -33,7 +33,7 @@ namespace TouchpointApp.ViewModel.Kursus
         #region RedigerMetode
         public void RedigerMetode()
         {
-            KursusCatalog.Instance().Getlist.Remove(_itemIsSeleceted);
+            KursusCatalog.Instance().All.Remove(_itemIsSeleceted);
             KursusCatalog.Instance().OpretKursus(_kursusData.Titel, _kursusData.Dato, 
                 _kursusData.Tidspunkt, _kursusData.Varighed, _kursusData.Pris, _kursusData.Sprog,
                 _kursusData.Beskrivelse, _kursusData.Depositum, _kursusData.Underviser, _kursusData.Undervisningssted);
@@ -78,7 +78,7 @@ namespace TouchpointApp.ViewModel.Kursus
         public ObservableCollection<Model.Kursus> CreateObservableCollection()
         {
             var Collection = new ObservableCollection<Model.Kursus>();
-            foreach (var item in KursusCatalog.Instance().Getlist)
+            foreach (var item in KursusCatalog.Instance().All)
             {
                 Collection.Add(item);
             }

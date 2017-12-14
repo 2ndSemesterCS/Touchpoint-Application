@@ -2,7 +2,7 @@
 using TouchpointApp.DataStorage;
 namespace TouchpointApp.Model
 {
-    public class Kursist
+    public class Kursist : IKey
     {
        #region Instance Fields
         private string _navn;
@@ -129,5 +129,6 @@ namespace TouchpointApp.Model
         }
         #endregion
 
+        public int Key { get; set; }
     }
 }

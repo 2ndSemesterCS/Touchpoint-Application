@@ -1,61 +1,38 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using TouchpointApp.Command;
 using TouchpointApp.Model;
 
 namespace TouchpointApp.Persistency
 {
-    public class KursusCatalog
+    public class KursusCatalog : Catalog<Kursus>
     {
         #region Instance Fields
-        private List<Kursus> _kl;
-
-        private static KursusCatalog _Kursuscatalog;
+        private static KursusCatalog _kursuscatalog;
         #endregion
 
         #region Singleton
         public static KursusCatalog Instance()
         {
-            if (_Kursuscatalog == null)
+            if (_kursuscatalog == null)
             {
-                _Kursuscatalog = new KursusCatalog();
+                _kursuscatalog = new KursusCatalog("http://touchpointdbwebservice.azurewebsites.net");
 
             }
-            return _Kursuscatalog;
+            return _kursuscatalog;
         }
         #endregion
 
         #region Constructor
-        private KursusCatalog()
+        private KursusCatalog(string url) : base(url, "Kursus")
         {
-            _kl = new List<Kursus>();
-            _kl.Add(new Kursus("Fodterapi", new DateTime(2018, 02, 29), new DateTime(2018, 02, 29, 16, 30, 00), "2 Timer", 10000, "Dansk", "Dette er et kursus om fodterapi", 1000, new Underviser("John", "FugleBakken 4", "John@post9.tele.dk", "44957212"), new Undervisningssted("B112", "Jernbanegade 4")));
         }
         #endregion
 
-        #region Liste af kurser
-        public List<Kursus> Getlist
-        {
-            get { return _kl; }
-            set { _kl = value; }
-        }
-        #endregion
 
         #region Metoder
         public void OpretKursus(string titel, DateTime dato, DateTime tidspunkt, string varighed, double pris, string sprog, string beskrivelse, double depositum,  Underviser underviser, Undervisningssted undervisningssted)
         {
-            Kursus k1 = new Kursus(titel, dato, tidspunkt, varighed, pris, sprog ,beskrivelse,depositum ,underviser, undervisningssted);
-            _kl.Add(k1);
+            Create(new Kursus(titel, dato, tidspunkt, varighed, pris, sprog, beskrivelse, depositum, underviser, undervisningssted));
         }
-
-        public void Create()
-        {
-
-        }
-
         #endregion 
     }
 }

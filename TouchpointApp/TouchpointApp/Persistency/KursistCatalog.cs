@@ -4,46 +4,36 @@ using System;
 
 namespace TouchpointApp.Persistency
 {
-    public class KursistCatalog
+    public class KursistCatalog : Catalog<Kursist>
     {
 
         #region Instance Field
-        private List<Kursist> _kursistList;
-
-        private static KursistCatalog _KursistCatalog;
+        private static KursistCatalog _kursistCatalog;
         #endregion
 
         #region Constructor
 
-        public KursistCatalog()
+        public KursistCatalog(string url) : base(url, "Kursist")
         {
-            _kursistList = new List<Kursist>();
-        }
-        #endregion
 
-        #region Liste af kursister
-        public List<Kursist> Getlist
-        {
-            get { return _kursistList; }
-            set { _kursistList = value; }
         }
         #endregion
 
         #region SingleTon
         public static KursistCatalog Instance()
         {
-            if(_KursistCatalog == null)
+            if(_kursistCatalog == null)
             {
-                _KursistCatalog = new KursistCatalog();
+                _kursistCatalog = new KursistCatalog("http://touchpointdbwebservice.azurewebsites.net");
             }
-            return _KursistCatalog;
+            return _kursistCatalog;
         }
         #endregion
 
         #region Metode
         public void OpretKursist(string navn, string adresse, string email, string tlf, string land, string by)
         {
-            foreach (var item in _kursistList)
+            foreach (var item in All)
             {
                 if (item.EMail == email)
                 {
@@ -51,11 +41,8 @@ namespace TouchpointApp.Persistency
                 }
             }
 
-            Kursist kursist1 = new Kursist(navn, email, by, land, adresse, tlf);
-            _kursistList.Add(kursist1);
+            Create(new Kursist(navn, email, by, land, adresse, tlf));
         }
         #endregion
-
-
     }
 }

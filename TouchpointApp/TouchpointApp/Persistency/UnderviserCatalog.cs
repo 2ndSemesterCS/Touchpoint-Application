@@ -4,25 +4,26 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TouchpointApp.Command;
+using TouchpointApp.DataStorage;
 using TouchpointApp.Model;
 
 namespace TouchpointApp.Persistency
 {
 
-    public class UnderviserCatalog
+    public class UnderviserCatalog : WebAPICatalog<Underviser>
     {
         #region Instance Fields
-        private List<Underviser> _Ul;
 
         //singelton instancesfield
         private static UnderviserCatalog _UnderviserCatalog;
         #endregion
 
         #region Constructor
-        private UnderviserCatalog()
+        private UnderviserCatalog(string url)
+            : base(url, "Underviser")
         {
-            _Ul = new List<Underviser>();
-            _Ul.Add(new Underviser("Jonas", "Kildevej 19", "Jonaspedersen@live.dk", "11223344"));  //Hard coded objeket. 
+            //_Ul = new List<Underviser>();
+            //_Ul.Add(new Underviser("Jonas", "Kildevej 19", "Jonaspedersen@live.dk", "11223344"));  //Hard coded objeket. 
         }
         #endregion
 
@@ -32,21 +33,13 @@ namespace TouchpointApp.Persistency
         {
             if (_UnderviserCatalog == null)
             {
-                _UnderviserCatalog = new UnderviserCatalog();
+                _UnderviserCatalog = new UnderviserCatalog("http://touchpointdbwebservice.azurewebsites.net");
 
             }
             return _UnderviserCatalog;
         }
         #endregion
 
-        #region Property for at modtage vores liste
-        public List<Underviser> Getlist
-        {
-            get { return _Ul; }
-            set { _Ul = value;}
-            
-        }
-        #endregion
 
         #region Liste af Undervisere
         public List<Underviser> All
@@ -56,15 +49,15 @@ namespace TouchpointApp.Persistency
         #region Metoder
         public void OpretUnderviser(string Navn, string Adresse, string email, string tlf)
         {
-            foreach (var item in Getlist)
+            foreach (var item in All)
             {
                if( item.Email == email)
                 {
                     throw new ArgumentException("Email eksisterer allerede i systemet");
                 }
             }
-              Underviser U1 = new Underviser(Navn, Adresse, email, tlf);
-            _Ul.Add(U1);
+            
+            
         }
         #endregion
     }

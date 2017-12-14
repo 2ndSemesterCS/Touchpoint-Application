@@ -8,7 +8,7 @@ using System.Collections.ObjectModel;
 
 namespace TouchpointApp.ViewModel.Underviser
 {
-    class UnderviserViewmodel :ViewModelBase
+    public class UnderviserViewmodel : ViewModelBase
     {
         #region Instance fields
         private UnderviserData _underviserData;
@@ -31,7 +31,7 @@ namespace TouchpointApp.ViewModel.Underviser
         public ObservableCollection<Model.Underviser> CreateObservableCollection()
         {
             var Collection = new ObservableCollection<Model.Underviser>();
-            foreach (var item in UnderviserCatalog.Instance().Getlist)
+            foreach (var item in UnderviserCatalog.Instance().All)
             {
                 Collection.Add(item);
             }

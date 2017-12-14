@@ -95,6 +95,7 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Command\CreateUnderviserCommand.cs" />
     <Compile Include="Command\RelayCommand.cs" />
     <Compile Include="DataStorage\KursistData.cs" />
     <Compile Include="DataStorage\KursusData.cs" />
@@ -104,6 +105,7 @@
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Model\IKey.cs" />
     <Compile Include="Model\Kursist.cs" />
     <Compile Include="Model\Kursus.cs" />
     <Compile Include="Model\Serie.cs" />

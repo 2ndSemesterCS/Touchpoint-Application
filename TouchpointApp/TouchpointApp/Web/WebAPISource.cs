@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Threading.Tasks;
+using TouchpointApp.Model;
 
 namespace TouchpointApp.Web
 {
-    public class WebAPISource<T> : IDataSource<T>
-        where T : class
+    public class WebAPISource<T> : IDataSource<T> where T : class, IKey
     {
         private enum APIMethod { Load, Create, Read, Update, Delete }
 
@@ -43,9 +43,11 @@ namespace TouchpointApp.Web
             return await InvokeAPIWithReturnValueAsync<T>(() => _httpClient.GetAsync(BuildRequestURI(APIMethod.Read, key)));
         }
 
-        public async Task Create(T obj)
+        public async Task<int> Create(T obj)
         {
-            await InvokeAPINoReturnValueAsync(() => _httpClient.PostAsJsonAsync(BuildRequestURI(APIMethod.Create), obj));
+            HttpResponseMessage response = await InvokeAPIAsync(() => _httpClient.PostAsJsonAsync(BuildRequestURI(APIMethod.Create), obj));
+            T createdObj = await response.Content.ReadAsAsync<T>();
+            return createdObj.Key;
         }
 
         public async Task Update(int key, T obj)

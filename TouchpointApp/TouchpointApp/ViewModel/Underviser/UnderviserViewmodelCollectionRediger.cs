@@ -36,7 +36,7 @@ namespace TouchpointApp.ViewModel.Underviser
         // Så ville vi rette direkt i model klasse, det var hvad vi gjorde til at starte med.  
         public void RedigerMetode()
         {
-            UnderviserCatalog.Instance().Getlist.Remove(_ItemIsSeleceted);
+            UnderviserCatalog.Instance().All.Remove(_ItemIsSeleceted);
             UnderviserCatalog.Instance().OpretUnderviser(_UnderviserData.Navn, _UnderviserData.Adresse, _UnderviserData.Email, _UnderviserData.Tlf);
             OnPropertyChanged(nameof(Collection));
         }
@@ -78,7 +78,7 @@ namespace TouchpointApp.ViewModel.Underviser
 
             // UnderviserCatalog.Instance().Getlist   --> UnderviserCatalog.Instance(), because we allready have an instandse of UnderviserCatalog
             // it will return the objenct instead and therefore we can call .getlist.
-            foreach (var item in UnderviserCatalog.Instance().Getlist)
+            foreach (var item in UnderviserCatalog.Instance().All)
             {
                 Collection.Add(item);
             }
