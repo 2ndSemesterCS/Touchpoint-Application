@@ -32,7 +32,7 @@ namespace TouchpointApp.Persistency
         private KursusCatalog()
         {
             _kl = new List<Kursus>();
-         
+            _kl.Add(new Kursus("Fodterapi", new DateTime(2018, 02, 29), new DateTime(2018, 02, 29, 16, 30, 00), "2 Timer", 10000, "Dansk", "Dette er et kursus om fodterapi", 1000, new Underviser("John", "FugleBakken 4", "John@post9.tele.dk", "44957212"), new Undervisningssted("B112", "Jernbanegade 4")));
         }
         #endregion
 
