@@ -19,12 +19,13 @@ namespace TouchpointApp.ViewModel.Kursist
         #region Slet Metode
         public KursistViewmodelSlet()
         {
+            KursistCatalog.Instance().Load();
             CreateObservableCollection();
             SletCommand = new RelayCommand(DeleteCommand, () => { return _ItemIsSeleceted != null; });
         }
         public void DeleteCommand()
         {
-            KursistCatalog.Instance().Getlist.Remove(_ItemIsSeleceted);
+            KursistCatalog.Instance().All.Remove(_ItemIsSeleceted);
             OnPropertyChanged(nameof(Collection));
         }
         #endregion

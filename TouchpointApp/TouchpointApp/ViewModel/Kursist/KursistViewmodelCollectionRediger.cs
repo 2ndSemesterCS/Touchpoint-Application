@@ -30,7 +30,7 @@ namespace TouchpointApp.ViewModel.Kursist
         #region Metode
         public void RedigerMetode()
         {
-            KursistCatalog.Instance().Getlist.Remove(_ItemIsSeleceted);
+            KursistCatalog.Instance().All.Remove(_ItemIsSeleceted);
             KursistCatalog.Instance().OpretKursist(_KursistData.Navn, _KursistData.Adresse, _KursistData.Email, _KursistData.Tlf, _KursistData.Land, _KursistData.By);
             OnPropertyChanged(nameof(Collection));
         }

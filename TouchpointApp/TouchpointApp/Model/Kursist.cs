@@ -56,12 +56,12 @@ namespace TouchpointApp.Model
 
         public Kursist(string navn, string email, string by, string land, string adresse, string tlf)
         {
-            if (String.IsNullOrEmpty(navn) || String.IsNullOrEmpty(email)
-                || String.IsNullOrEmpty(by) || String.IsNullOrEmpty(land)
-                || String.IsNullOrEmpty(adresse) || String.IsNullOrEmpty(tlf))
-            {
-                throw new ArgumentException("Personlig information mangler");
-            }
+            //if (String.IsNullOrEmpty(navn) || String.IsNullOrEmpty(email)
+            //    || String.IsNullOrEmpty(by) || String.IsNullOrEmpty(land)
+            //    || String.IsNullOrEmpty(adresse) || String.IsNullOrEmpty(tlf))
+            //{
+            //    throw new ArgumentException("Personlig information mangler");
+            //}
 
             
             CheckForTal(navn, by, land);

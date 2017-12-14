@@ -20,14 +20,15 @@ namespace TouchpointApp.Web
         #endregion
 
         #region Constructor
-        public WebAPISource(string serverURL, string apiID)
+        public WebAPISource(string serverURL, string apiID, string apiPrefix = "api")
         {
             _serverURL = serverURL;
             _apiID = apiID;
+            _apiPrefix = apiPrefix;
             _httpClientHandler = new HttpClientHandler {UseDefaultCredentials = true};
             _httpClient = new HttpClient
             {
-                BaseAddress = new Uri("http://touchpointdbwebservice.azurewebsites.net/api/")
+                BaseAddress = new Uri(_serverURL)
             };
         }
         #endregion

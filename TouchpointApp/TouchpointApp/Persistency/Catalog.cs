@@ -34,5 +34,14 @@ namespace TouchpointApp.Persistency
             await _source.Delete(key);
         }
 
+        public async void Load()
+        {
+            List<T> data = await _source.Load();
+            foreach (var item in data)
+            {
+                _coll.Add(item.Key, item);
+            }
+        }
+
     }
 }
