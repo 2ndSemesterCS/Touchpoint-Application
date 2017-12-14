@@ -40,7 +40,7 @@
                 <TextBlock Text="Oversigt over Undervisere" Height="59" Margin="55,0,45,0" TextWrapping="Wrap" HorizontalAlignment="Center" FontSize="20" Foreground="White" />
             </Border>
             <ScrollViewer>
-                <ListView Height="221" Width="380" FontSize="20" Foreground="#230101" BorderBrush="White" BorderThickness="5" HorizontalAlignment="Center" Margin="0,10,0,0"
+                <ListView Background="MistyRose" Height="221" Width="380" FontSize="20" Foreground="#230101" BorderBrush="White" BorderThickness="5" HorizontalAlignment="Center" Margin="0,10,0,0"
                           SelectedItem="{Binding SelectedItemListview, Mode=TwoWay}"
                           ItemsSource="{Binding Collection, Mode=TwoWay}"/>
             </ScrollViewer>
