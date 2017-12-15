@@ -5,9 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using TouchpointApp.Command;
 using TouchpointApp.Model;
+using TouchpointApp.Persistency;
 
-
-public class UndervisningsstedCatalog
+public class UndervisningsstedCatalog : Catalog<Undervisningssted>
 {
     #region Instance Fields
     private List<Undervisningssted> _usl;
@@ -15,11 +15,10 @@ public class UndervisningsstedCatalog
     #endregion
 
     #region Constructor
-    private UndervisningsstedCatalog()
+    private UndervisningsstedCatalog(string url) : base(url, "Undervisningssted")
     {
 
-        _usl = new List<Undervisningssted>();
-        _usl.Add(new Undervisningssted("Lokale 207", "Hovedvejen 172, 2600 Glostrup"));  //Hard coded objeket. 
+        
     }
     #endregion
 
@@ -28,7 +27,7 @@ public class UndervisningsstedCatalog
     {
         if (_UndervisningsstedCatalog == null)
         {
-            _UndervisningsstedCatalog = new UndervisningsstedCatalog();
+            _UndervisningsstedCatalog = new UndervisningsstedCatalog("http://touchpointdbwebservice.azurewebsites.net/");
 
         }
         return _UndervisningsstedCatalog;
@@ -36,17 +35,13 @@ public class UndervisningsstedCatalog
     #endregion
 
 
-    #region Liste for undervisningssteder
-    public List<Undervisningssted> All
-    { get; set; }
-    #endregion
+
 
     #region Metoder
 
     public void OpretUndervisningssted(string lokale, string adresse)
     {
-        Undervisningssted undervisningssted = new Undervisningssted(lokale, adresse);
-        _usl.Add(undervisningssted);
+       Create(new Undervisningssted(lokale, adresse));
     }
     #endregion
 
