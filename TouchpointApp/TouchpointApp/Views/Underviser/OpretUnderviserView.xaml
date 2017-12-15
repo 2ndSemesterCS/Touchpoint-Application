@@ -57,7 +57,7 @@
 
         <!-- Grid Stackpanel Venstre 1.0 KOPI-->
         <StackPanel Grid.Row="0" Orientation="Vertical" CornerRadius="10" Margin="0,143,271,199" Grid.Column="1" Grid.ColumnSpan="2" Grid.RowSpan="2">
-            <TextBox TextWrapping="Wrap" Height="40" Text="{Binding UnderviserData.Navn, Mode=TwoWay}" Width="362" FontSize="20" Margin="0,5,0,0" Foreground="#230101"/>
+            <TextBox TextWrapping="Wrap" Text="{Binding UnderviserData.Navn, Mode=TwoWay}"  Height="40" Width="362" FontSize="20" Margin="0,5,0,0" Foreground="#230101"/>
             <TextBox TextWrapping="Wrap" Text="{Binding UnderviserData.Adresse, Mode=TwoWay}" Width="362" FontSize="20" Height="40" Foreground="#230101" Margin="0,10,0,0"/>
             <TextBox TextWrapping="Wrap" Text="{Binding UnderviserData.Email, Mode=TwoWay}" Width="362" FontSize="20" Height="40" Foreground="#230101" Margin="0,10,0,0"/>
             <TextBox TextWrapping="Wrap" Text="{Binding UnderviserData.Tlf, Mode=TwoWay}" Width="362" FontSize="20" Height="40" Foreground="#230101" Margin="0,10,0,0"/>

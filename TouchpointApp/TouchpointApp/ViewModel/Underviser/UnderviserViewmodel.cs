@@ -13,8 +13,7 @@ namespace TouchpointApp.ViewModel.Underviser
         #region Instance fields
         private UnderviserData _underviserData;
         private UnderviserCatalog _underviserCatalog;
-        private RelayCommand _loadCommand;
-        private RelayCommand _saveCommand;
+
         #endregion
 
         #region Constructor
@@ -23,6 +22,10 @@ namespace TouchpointApp.ViewModel.Underviser
             //singelton method is used. 
             _underviserCatalog = UnderviserCatalog.Instance();
             _underviserData = new UnderviserData();
+            if(_underviserCatalog.All.Count == 0)
+            {
+                _underviserCatalog.Load();
+            }
             OpretNyUnderviserCommand = new RelayCommand(OpretNyUnderviser);
         }
         #endregion
@@ -31,7 +34,7 @@ namespace TouchpointApp.ViewModel.Underviser
         public ObservableCollection<Model.Underviser> CreateObservableCollection()
         {
             var Collection = new ObservableCollection<Model.Underviser>();
-            foreach (var item in UnderviserCatalog.Instance().All)
+            foreach (var item in _underviserCatalog.All)
             {
                 Collection.Add(item);
             }
