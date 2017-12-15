@@ -19,11 +19,9 @@ namespace TouchpointApp.Persistency
         #endregion
 
         #region Constructor
-        private UnderviserCatalog(string url)
-            : base(url, "Underviser")
+        private UnderviserCatalog(string url)  : base(url, "Underviser")
         {
-            //_Ul = new List<Underviser>();
-            //_Ul.Add(new Underviser("Jonas", "Kildevej 19", "Jonaspedersen@live.dk", "11223344"));  //Hard coded objeket. 
+
         }
         #endregion
 
@@ -33,18 +31,13 @@ namespace TouchpointApp.Persistency
         {
             if (_UnderviserCatalog == null)
             {
-                _UnderviserCatalog = new UnderviserCatalog("http://touchpointdbwebservice.azurewebsites.net");
+                _UnderviserCatalog = new UnderviserCatalog("http://touchpointdbwebservice.azurewebsites.net/");
 
             }
             return _UnderviserCatalog;
         }
         #endregion
 
-
-        #region Liste af Undervisere
-        public List<Underviser> All
-        { get; set; }
-        #endregion
 
         #region Metoder
         public void OpretUnderviser(string Navn, string Adresse, string email, string tlf)
@@ -55,6 +48,8 @@ namespace TouchpointApp.Persistency
                 {
                     throw new ArgumentException("Email eksisterer allerede i systemet");
                 }
+
+                Create(new Underviser(Navn, Adresse, email, tlf));
             }
             
             

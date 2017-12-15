@@ -87,8 +87,10 @@ namespace TouchpointApp.Model
             get { return _tlf; }
             set { _tlf = value; }
         }
+
+        public int Key { get; set; }
         #endregion
- 
+
         #region ToString metode
         public override string ToString()
         {
@@ -96,6 +98,6 @@ namespace TouchpointApp.Model
         }
         #endregion
 
-        public int Key { get; set; }
+      
     }
 }

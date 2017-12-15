@@ -2,7 +2,7 @@
 
 namespace TouchpointApp.Model
 {
-    public class Undervisningssted
+    public class Undervisningssted : IKey
     {
         #region Instance fields
         private string _adresse;
@@ -35,6 +35,8 @@ namespace TouchpointApp.Model
             get { return _lokale; }
             set { _lokale = value; }
         }
+
+        public int Key { get; set; }
         #endregion
 
         #region ToString Metode

@@ -35,13 +35,6 @@ public class UndervisningsstedCatalog
     }
     #endregion
 
-    #region Property liste for undervisningssted
-    public List<Undervisningssted> Getlist
-    {
-        get { return _usl; }
-        set { _usl = value; }
-    }
-    #endregion
 
     #region Liste for undervisningssteder
     public List<Undervisningssted> All
