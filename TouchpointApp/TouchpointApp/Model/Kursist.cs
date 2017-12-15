@@ -4,7 +4,8 @@ namespace TouchpointApp.Model
 {
     public class Kursist : IKey
     {
-       #region Instance Fields
+        #region Instance Fields
+        private int _kursistID;
         private string _navn;
         private string _email;
         private string _by;
@@ -15,6 +16,12 @@ namespace TouchpointApp.Model
 
 
        #region Properties
+
+        public int KursistID
+        {
+            get { return _kursistID; }
+            set { _kursistID = value; }
+        }
 
         public string Navn
         {
@@ -80,43 +87,43 @@ namespace TouchpointApp.Model
        #region Metoder med exceptions
         public void CheckForTal(string navn, string by, string land)
         {
-            int value;
+            //int value;
 
 
-            if (int.TryParse(navn, out value))
+            //if (int.TryParse(navn, out value))
 
-            {
-                throw new ArgumentException("Der kan ikke indtastes tal i navn");
-            }
+            //{
+            //    throw new ArgumentException("Der kan ikke indtastes tal i navn");
+            //}
 
-            if(int.TryParse(by, out value))
-            {
-                throw new ArgumentException("Der kan ikke indtastes tal i by");
-            }
+            //if(int.TryParse(by, out value))
+            //{
+            //    throw new ArgumentException("Der kan ikke indtastes tal i by");
+            //}
 
-            if(int.TryParse(land,out value))
-            {
-                throw new ArgumentException("Der kan ikke indtastes tal i land");
-            }
+            //if(int.TryParse(land,out value))
+            //{
+            //    throw new ArgumentException("Der kan ikke indtastes tal i land");
+            //}
 
         }
 
         public void CheckForTalITlf(string Tlf)
         {
-            int value;
-            if(!int.TryParse(Tlf, out value))
-            {
-                throw new ArgumentException("Kun tal i telefonnummer");
-            }
+            //int value;
+            //if(!int.TryParse(Tlf, out value))
+            //{
+            //    throw new ArgumentException("Kun tal i telefonnummer");
+            //}
         }
 
         public void CheckTlfLængde(string tlf)
         {
 
-            if (tlf.Length < 8 || tlf.Length > 8)
-            {
-                throw new ArgumentException("Invalid telefonnummer");
-            }
+            //if (tlf.Length < 8 || tlf.Length > 8)
+            //{
+            //    throw new ArgumentException("Invalid telefonnummer");
+            //}
 
 
         }
@@ -129,6 +136,10 @@ namespace TouchpointApp.Model
         }
         #endregion
 
-        public int Key { get; set; }
+        public int Key
+        {
+            get { return _kursistID; }
+            set { _kursistID = value; }
+        }
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TouchpointApp.Model
 {
-    public class Serie
+    public class Serie : IKey
     {
         private List<Kursus> _kursusSerie;
         private string _beskrivelse;
@@ -23,6 +23,8 @@ namespace TouchpointApp.Model
             get { return _beskrivelse; }
             set { _beskrivelse = value; }
         }
+
+        public int Key { get; set; }
 
         public Serie(List<Kursus> kursusSerie, string beskrivelse)
         {

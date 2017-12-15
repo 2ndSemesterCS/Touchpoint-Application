@@ -13,7 +13,7 @@ namespace TouchpointApp.Persistency
 
         #region Constructor
 
-        public KursistCatalog(string url) : base(url, "Kursist")
+        public KursistCatalog(string url) : base(url, "Kursists")
         {
 
         }
@@ -40,9 +40,9 @@ namespace TouchpointApp.Persistency
             //        throw new ArgumentException("Email eksisterer allerede i systemet");
             //    }
             //}
-
             Create(new Kursist(navn, email, by, land, adresse, tlf));
         }
+     
         #endregion
     }
 }

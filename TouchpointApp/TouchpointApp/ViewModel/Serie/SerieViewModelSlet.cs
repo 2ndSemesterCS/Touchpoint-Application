@@ -17,11 +17,11 @@ namespace TouchpointApp.ViewModel.Serie
             #endregion
 
             #region Constructor
-            public SerieViewModelSlet()
-            {
-                CreateObservableCollection();
-                SletCommand = new RelayCommand(DeleteCommand, () => { return _itemIsSeleceted != null; });
-            }
+            //public SerieViewModelSlet()
+            //{
+            //    CreateObservableCollection();
+            //    SletCommand = new RelayCommand(DeleteCommand, () => { return _itemIsSeleceted != null; });
+            //}
             #endregion
 
             #region Commands
@@ -33,7 +33,7 @@ namespace TouchpointApp.ViewModel.Serie
             public ObservableCollection<Model.Serie> CreateObservableCollection()
             {
                 var Collection = new ObservableCollection<Model.Serie>();
-                foreach (var item in SerieCatalog.Instance().GetList)
+                foreach (var item in SerieCatalog.Instance().All)
                 {
                     Collection.Add(item);
                 }
@@ -60,11 +60,11 @@ namespace TouchpointApp.ViewModel.Serie
             #endregion
 
             #region SletMetode
-            public void DeleteCommand()
-            {
-                SerieCatalog.Instance().GetList.Remove(_itemIsSeleceted);
-                OnPropertyChanged(nameof(Collection));
-            }
+            //public void DeleteCommand()
+            //{
+            //    SerieCatalog.Instance().GetList.Remove(_itemIsSeleceted);
+            //    OnPropertyChanged(nameof(Collection));
+            //}
         }
         #endregion
 }

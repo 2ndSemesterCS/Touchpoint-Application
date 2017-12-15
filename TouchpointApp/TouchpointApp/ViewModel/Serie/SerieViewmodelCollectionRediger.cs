@@ -108,7 +108,7 @@ namespace TouchpointApp.ViewModel.Serie
         public ObservableCollection<Model.Serie> CreateObservableCollectionSerie()
         {
             var Collection = new ObservableCollection<Model.Serie>();
-            foreach (var item in SerieCatalog.Instance().GetList)
+            foreach (var item in SerieCatalog.Instance().All)
             {
                 Collection.Add(item);
             }

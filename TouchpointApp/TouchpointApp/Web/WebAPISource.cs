@@ -81,7 +81,7 @@ namespace TouchpointApp.Web
 
             // Invoke the method - the method will at some point 
             // return an HttpResponseMessage 
-            HttpResponseMessage response = await apiMethod();
+            HttpResponseMessage response = await apiMethod().ConfigureAwait(false);
 
             // Throw exception if the invocation was unsuccessful
             if (!response.IsSuccessStatusCode)

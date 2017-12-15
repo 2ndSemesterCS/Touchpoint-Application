@@ -20,8 +20,9 @@ namespace TouchpointApp.ViewModel.Kursist
         #region Constructor
         public KursistViewModel()
         {
-                _kc = KursistCatalog.Instance();
-                _kd = new KursistData();
+            _kc = KursistCatalog.Instance();
+            _kc.Load();
+            _kd = new KursistData();
                
             OpretNyKursistCommand = new RelayCommand(OpretNyKursist);
         }
@@ -30,6 +31,7 @@ namespace TouchpointApp.ViewModel.Kursist
         #region ObservableCollection
         public ObservableCollection<Model.Kursist> CreateObservableCollection()
         {
+   
             var Collection = new ObservableCollection<Model.Kursist>();
             foreach (var item in KursistCatalog.Instance().All)
             {

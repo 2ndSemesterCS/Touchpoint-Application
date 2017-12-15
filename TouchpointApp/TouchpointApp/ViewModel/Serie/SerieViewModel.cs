@@ -51,7 +51,7 @@ namespace TouchpointApp.ViewModel.Serie
         public ObservableCollection<Model.Serie> CreateObservableCollectionSerie()
         {
             var Collection = new ObservableCollection<Model.Serie>();
-            foreach (var item in SerieCatalog.Instance().GetList)
+            foreach (var item in SerieCatalog.Instance().All)
             {
                 Collection.Add(item);
             }
@@ -147,7 +147,7 @@ namespace TouchpointApp.ViewModel.Serie
 
         public void OpretNySerie()
         {
-            _serieCatalog.OpretSerie(_serieData.KursusSerie, _serieData.Beskrivelse);
+            _serieCatalog.Create(_serieData.KursusSerie, _serieData.Beskrivelse);
             CreateObservableCollectionSerie();
             OnPropertyChanged(nameof(CollectionSerie));
 
