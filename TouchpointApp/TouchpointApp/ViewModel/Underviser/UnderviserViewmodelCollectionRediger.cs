@@ -16,12 +16,14 @@ namespace TouchpointApp.ViewModel.Underviser
         #region Instance fields
         private Model.Underviser _ItemIsSeleceted;
         private UnderviserData _UnderviserData;
+        private UnderviserCatalog _underviserCatalog;
         #endregion
 
         #region Constructor
         public UnderviserViewmodelCollectionRediger()
         {
             _UnderviserData = new UnderviserData();
+            _underviserCatalog = UnderviserCatalog.Instance() ;
             RedigerCommand = new RelayCommand(RedigerMetode, () => { return _ItemIsSeleceted != null; });
         }
         #endregion
@@ -36,8 +38,10 @@ namespace TouchpointApp.ViewModel.Underviser
         // Så ville vi rette direkt i model klasse, det var hvad vi gjorde til at starte med.  
         public void RedigerMetode()
         {
-            UnderviserCatalog.Instance().All.Remove(_ItemIsSeleceted);
-            UnderviserCatalog.Instance().OpretUnderviser(_UnderviserData.Navn, _UnderviserData.Adresse, _UnderviserData.Email, _UnderviserData.Tlf);
+            int key = _ItemIsSeleceted.Key;
+            _underviserCatalog.Delete(key);
+            Model.Underviser Underviser = new Model.Underviser(_UnderviserData.Navn, _UnderviserData.Adresse, _UnderviserData.Email, _UnderviserData.Tlf));
+            Underviser.Key = key;
             OnPropertyChanged(nameof(Collection));
         }
         #endregion

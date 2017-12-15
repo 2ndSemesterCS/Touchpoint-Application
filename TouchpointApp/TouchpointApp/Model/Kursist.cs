@@ -17,7 +17,8 @@ namespace TouchpointApp.Model
 
        #region Properties
 
-        public int KursistID
+
+        public int Key
         {
             get { return _kursistID; }
             set { _kursistID = value; }
@@ -56,10 +57,11 @@ namespace TouchpointApp.Model
             get { return _tlf; }
             set { _tlf = value; }
         }
+     
         #endregion
 
 
-       #region Constructor
+        #region Constructor
 
         public Kursist(string navn, string email, string by, string land, string adresse, string tlf)
         {
@@ -136,10 +138,6 @@ namespace TouchpointApp.Model
         }
         #endregion
 
-        public int Key
-        {
-            get { return _kursistID; }
-            set { _kursistID = value; }
-        }
+       
     }
 }

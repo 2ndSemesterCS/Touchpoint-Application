@@ -9,6 +9,7 @@ namespace TouchpointApp.Model
         private string _addresse;
         private string _email;
         private string _tlf;
+        private int _underviserID;
         #endregion
 
         #region Constructor
@@ -88,7 +89,11 @@ namespace TouchpointApp.Model
             set { _tlf = value; }
         }
 
-        public int Key { get; set; }
+        public int Key
+        {
+            get { return _underviserID; }
+            set { _underviserID = value; }
+        }
         #endregion
 
         #region ToString metode
