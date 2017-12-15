@@ -18,13 +18,20 @@ namespace TouchpointApp.ViewModel.Undervisningssted
         #region Instance fields
         private Model.Undervisningssted _ItemIsSeleceted;
         private UndervisningsStedData _UndervisningsstedData;
+        private UndervisningsstedCatalog _undervisningsStedCatalog;
         #endregion
 
         #region Constructor
         public UndervisningsstedViewModelCollectionRediger()
         {
             _UndervisningsstedData = new UndervisningsStedData();
+            _undervisningsStedCatalog = UndervisningsstedCatalog.Instance();
             RedigerCommand = new RelayCommand(RedigerMetode, () => { return _ItemIsSeleceted != null; });
+
+            if (_undervisningsStedCatalog.All.Count == 0)
+            {
+                _undervisningsStedCatalog.Load();
+            }
         }
         #endregion
 
@@ -39,8 +46,12 @@ namespace TouchpointApp.ViewModel.Undervisningssted
         // Så ville vi rette direkt i model klasse, det var hvad vi gjorde til at starte med.  
         public void RedigerMetode()
         {
-            UndervisningsstedCatalog.Instance().All.Remove(_ItemIsSeleceted);
-            UndervisningsstedCatalog.Instance().OpretUndervisningssted(_UndervisningsstedData.Lokale, _UndervisningsstedData.Adresse);
+            int keyDB = _ItemIsSeleceted.Key;
+            Model.Undervisningssted undervisningssted = new Model.Undervisningssted(_UndervisningsstedData.Lokale, _UndervisningsstedData.Adresse);
+            _undervisningsStedCatalog.Delete(keyDB);
+
+            undervisningssted.UndervisningsStedID = keyDB;
+            _undervisningsStedCatalog.Create(undervisningssted);
             OnPropertyChanged(nameof(Collection));
         }
         #endregion
@@ -84,4 +95,8 @@ namespace TouchpointApp.ViewModel.Undervisningssted
         #endregion
     }
 }
+
+
+
+
 

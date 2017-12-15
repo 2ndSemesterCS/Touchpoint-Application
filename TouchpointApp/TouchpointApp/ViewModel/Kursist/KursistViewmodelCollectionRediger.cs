@@ -20,6 +20,9 @@ namespace TouchpointApp.ViewModel.Kursist
         public KursistViewmodelCollectionRediger()
         {
             _kursistCatalog = KursistCatalog.Instance();
+            _KursistData = new KursistData(); 
+            RedigerCommand = new RelayCommand(RedigerMetode, () => { return _ItemIsSeleceted != null; });
+
             // Metoden load, skal kun kaldes en gang, da den ellers vi fejle hvis man går ud af siden og ind igen.
             // Eftersom den så vil prøve at smidde de samme objekter ind (som medfører at der vil prøve at sætte 
             // den samme nøgle ind 2 gange, dette giver en fejl)
@@ -27,8 +30,6 @@ namespace TouchpointApp.ViewModel.Kursist
             {
                 _kursistCatalog.Load();
             }
-            _KursistData = new KursistData(); 
-            RedigerCommand = new RelayCommand(RedigerMetode, () => { return _ItemIsSeleceted != null; });
         }
         #endregion
 
@@ -40,11 +41,11 @@ namespace TouchpointApp.ViewModel.Kursist
         #region Metode
         public void RedigerMetode()
         {
-            int keyDB = _ItemIsSeleceted.Key;
+            int keyDB = _ItemIsSeleceted.KursistID;
             Model.Kursist kursist = new Model.Kursist(_KursistData.Navn, _KursistData.Adresse, _KursistData.Email, _KursistData.Tlf, _KursistData.Land, _KursistData.By);
 
             _kursistCatalog.Delete(keyDB);
-            kursist.Key = keyDB;
+            kursist.KursistID = keyDB;
             _kursistCatalog.Create(kursist);
 
             OnPropertyChanged(nameof(Collection));  

@@ -16,6 +16,8 @@ namespace TouchpointApp.Model
 
         private Underviser _underviser;
         private Undervisningssted _undervisningssted;
+
+        private int _KursusID;
         #endregion
 
         #region Properties
@@ -75,28 +77,38 @@ namespace TouchpointApp.Model
             get { return _undervisningssted; }
             set { _undervisningssted = value; }
         }
+        public int Key
+        {
+            get { return _KursusID; }
+            set { _KursusID = value; }
+        }
+        public int KursusID
+        {
+            get { return _KursusID; }
+            set { _KursusID = value; }
+        }
         #endregion
 
         #region Constructor
         public Kursus(string titel, DateTime dato, DateTime tidspunkt, string varighed, 
             double pris, string sprog, string beskrivelse, double depositum, Underviser underviser, Undervisningssted undervisningssted)
         {
-            if (String.IsNullOrEmpty(titel)|| String.IsNullOrEmpty(varighed) || String.IsNullOrEmpty(sprog) 
-                || String.IsNullOrEmpty(beskrivelse) || pris < 0 || underviser == null 
-                || undervisningssted == null || depositum < 0)
-            { 
-                throw new ArgumentException("Information mangler");
-            }
-            _titel = titel;
-            _dato = dato;
-            _tidspunkt = tidspunkt;
-            _varighed = varighed;
-            _pris = pris;
-            _underviser = underviser;
-            _undervisningssted = undervisningssted;
-            _sprog = sprog;
-            _beskrivelse = beskrivelse;
-            _depositum = depositum;
+            //if (String.IsNullOrEmpty(titel)|| String.IsNullOrEmpty(varighed) || String.IsNullOrEmpty(sprog) 
+            //    || String.IsNullOrEmpty(beskrivelse) || pris < 0 || underviser == null 
+            //    || undervisningssted == null || depositum < 0)
+            //{ 
+            //    throw new ArgumentException("Information mangler");
+            //}
+            //_titel = titel;
+            //_dato = dato;
+            //_tidspunkt = tidspunkt;
+            //_varighed = varighed;
+            //_pris = pris;
+            //_underviser = underviser;
+            //_undervisningssted = undervisningssted;
+            //_sprog = sprog;
+            //_beskrivelse = beskrivelse;
+            //_depositum = depositum;
 
         }
         #endregion
@@ -117,6 +129,6 @@ namespace TouchpointApp.Model
         }
         #endregion
 
-        public int Key { get; set; }
+        
     }
 }

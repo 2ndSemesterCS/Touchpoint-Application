@@ -14,19 +14,42 @@ namespace TouchpointApp.ViewModel.Underviser
     {
         #region Instance fields
         private Model.Underviser _ItemIsSeleceted;
+        private UnderviserCatalog _underviserCatalog;
         #endregion
 
         #region Constructor
         public UnderviserViewmodelSlet()
         {
+           
+            SletCommand = new RelayCommand(DeleteMetode, ()=> { return _ItemIsSeleceted != null; });
+
+            _underviserCatalog = UnderviserCatalog.Instance();
+            if (_underviserCatalog.All.Count == 0)
+            {
+                _underviserCatalog.Load();
+            }
             CreateObservableCollection();
-            SletCommand = new RelayCommand(DeleteCommand, ()=> { return _ItemIsSeleceted != null; });
         }
         #endregion
 
         #region Command
         public RelayCommand SletCommand { get; set; }
         #endregion
+
+        #region Property
+        //Propperti til at binde listviewets isSeleceted propperty til. 
+        public Model.Underviser SelectedItemListview
+        {
+            get { return _ItemIsSeleceted; }
+            set
+            {
+                _ItemIsSeleceted = value;
+                SletCommand.RaiseCanExecuteChanged();
+                OnPropertyChanged();
+            }
+        }
+        #endregion
+
 
         #region ObservableCollection
         //Skal lave vores katalog om til en obserablecollection, som vi kan bind vores listviews ItemsSource til. 
@@ -50,25 +73,11 @@ namespace TouchpointApp.ViewModel.Underviser
 
         #endregion
 
-        #region Property
-        //Propperti til at binde listviewets isSeleceted propperty til. 
-        public Model.Underviser SelectedItemListview
-        {
-            get { return _ItemIsSeleceted; }
-            set
-            {
-                _ItemIsSeleceted = value;
-                SletCommand.RaiseCanExecuteChanged();
-                OnPropertyChanged();
-            }
-        }
-        #endregion
-
         #region Command
         //propperty der skal bindes til listviewets ItemsSource
-        public void DeleteCommand()
+        public void DeleteMetode()
         {
-            UnderviserCatalog.Instance().All.Remove(_ItemIsSeleceted);
+           _underviserCatalog.Delete(_ItemIsSeleceted.Key);
             OnPropertyChanged(nameof(Collection));
         }
         #endregion

@@ -16,10 +16,10 @@ namespace TouchpointApp.ViewModel.Serie
     {
         #region Instance Fields
         private SerieCatalog _serieCatalog;
+        private KursusCatalog _kursusCatalog;
+
         private SerieData _serieData;
         private List<Model.Kursus> _kursusSerie;
-
-        private KursusCatalog _kursusCatalog;
         private Model.Kursus _selectedKursus;
 
         #endregion
@@ -35,6 +35,15 @@ namespace TouchpointApp.ViewModel.Serie
             _serieData = new SerieData();
             OpretNySerieCommand = new RelayCommand(OpretNySerie);
             addSerie = new RelayCommand(AddKursusTilSerie);
+
+            if (_serieCatalog.All.Count == 0)
+            {
+                _serieCatalog.Load();
+            }
+            if (_kursusCatalog.All.Count == 0)
+            {
+                _kursusCatalog.Load();
+            }
         }
 
         #endregion
@@ -155,3 +164,60 @@ namespace TouchpointApp.ViewModel.Serie
 
     }
 }
+
+
+//    public class KursistViewModel : ViewModelBase
+//    {
+//        #region Instance Fields
+
+//        private KursistCatalog _kursistCatalog;
+//        private KursistData _kd;
+//        #endregion
+
+//        #region Constructor
+//        public KursistViewModel()
+//        {
+//            _kursistCatalog = KursistCatalog.Instance();
+//            if (_kursistCatalog.All.Count == 0)
+//            {
+//                _kursistCatalog.Load();
+//            }
+//            _kd = new KursistData();
+
+//            OpretNyKursistCommand = new RelayCommand(OpretNyKursist);
+//        }
+//        #endregion
+
+//        #region ObservableCollection
+//        public ObservableCollection<Model.Kursist> CreateObservableCollection()
+//        {
+
+//            var Collection = new ObservableCollection<Model.Kursist>();
+//            foreach (var item in _kursistCatalog.All)
+//            {
+//                Collection.Add(item);
+//            }
+//            return Collection;
+//        }
+
+//        public ObservableCollection<Model.Kursist> Collection
+//        {
+//            get { return CreateObservableCollection(); }
+//        }
+//        #endregion
+
+//        #region Commands
+//        public RelayCommand OpretNyKursistCommand { get; set; }
+
+//        public KursistData KursistData { get { return _kd; } set { _kd = value; } }
+//        #endregion
+
+//        #region Metoder
+//        public void OpretNyKursist()
+//        {
+//            _kursistCatalog.Create(new Model.Kursist(_kd.Navn, _kd.Adresse, _kd.Email, _kd.Tlf, _kd.Land, _kd.By));
+//            OnPropertyChanged(nameof(Collection));
+//        }
+//        #endregion
+//    }
+//}

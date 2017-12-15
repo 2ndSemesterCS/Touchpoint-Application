@@ -17,8 +17,15 @@ namespace TouchpointApp.Model
 
        #region Properties
 
-
+        //Nøglen som vi får fra vores Interface
         public int Key
+        {
+            get { return _kursistID; }
+            set { _kursistID = value; }
+        }
+
+        // en propperty vi bruger til at gemme KursistID (som kommer fra databasen) 
+         public int KursistID
         {
             get { return _kursistID; }
             set { _kursistID = value; }
@@ -73,9 +80,9 @@ namespace TouchpointApp.Model
             //}
 
             
-            CheckForTal(navn, by, land);
-            CheckTlfLængde(tlf);
-            CheckForTalITlf(tlf);
+            //CheckForTal(navn, by, land);
+            //CheckTlfLængde(tlf);
+            //CheckForTalITlf(tlf);
 
             _navn = navn ;
             _email = email;
@@ -86,52 +93,52 @@ namespace TouchpointApp.Model
         }
         #endregion
 
-       #region Metoder med exceptions
-        public void CheckForTal(string navn, string by, string land)
-        {
-            //int value;
+        #region Metoder med exceptions
+        //public void CheckForTal(string navn, string by, string land)
+        //{
+        //    int value;
 
 
-            //if (int.TryParse(navn, out value))
+        //    if (int.TryParse(navn, out value))
 
-            //{
-            //    throw new ArgumentException("Der kan ikke indtastes tal i navn");
-            //}
+        //    {
+        //        throw new ArgumentException("Der kan ikke indtastes tal i navn");
+        //    }
 
-            //if(int.TryParse(by, out value))
-            //{
-            //    throw new ArgumentException("Der kan ikke indtastes tal i by");
-            //}
+        //    if (int.TryParse(by, out value))
+        //    {
+        //        throw new ArgumentException("Der kan ikke indtastes tal i by");
+        //    }
 
-            //if(int.TryParse(land,out value))
-            //{
-            //    throw new ArgumentException("Der kan ikke indtastes tal i land");
-            //}
+        //    if (int.TryParse(land, out value))
+        //    {
+        //        throw new ArgumentException("Der kan ikke indtastes tal i land");
+        //    }
 
-        }
+        //}
 
-        public void CheckForTalITlf(string Tlf)
-        {
-            //int value;
-            //if(!int.TryParse(Tlf, out value))
-            //{
-            //    throw new ArgumentException("Kun tal i telefonnummer");
-            //}
-        }
+        //public void CheckForTalITlf(string Tlf)
+        //{
+        //    int value;
+        //    if (!int.TryParse(Tlf, out value))
+        //    {
+        //        throw new ArgumentException("Kun tal i telefonnummer");
+        //    }
+        //}
 
-        public void CheckTlfLængde(string tlf)
-        {
+        //public void CheckTlfLængde(string tlf)
+        //{
 
-            //if (tlf.Length < 8 || tlf.Length > 8)
-            //{
-            //    throw new ArgumentException("Invalid telefonnummer");
-            //}
+        //    if (tlf.Length < 8 || tlf.Length > 8)
+        //    {
+        //        throw new ArgumentException("Invalid telefonnummer");
+        //    }
 
 
-        }
+        //}
         #endregion
 
-       #region Metode Tostring
+        #region Metode Tostring
         public override string ToString()
         {
             return $"{_navn}";

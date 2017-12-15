@@ -21,11 +21,11 @@ namespace TouchpointApp.ViewModel.Underviser
         {
             //singelton method is used. 
             _underviserCatalog = UnderviserCatalog.Instance();
-            _underviserData = new UnderviserData();
-            if(_underviserCatalog.All.Count == 0)
+            if (_underviserCatalog.All.Count == 0)
             {
                 _underviserCatalog.Load();
             }
+            _underviserData = new UnderviserData();
             OpretNyUnderviserCommand = new RelayCommand(OpretNyUnderviser);
         }
         #endregion
@@ -56,7 +56,7 @@ namespace TouchpointApp.ViewModel.Underviser
         #region Opret metode
         public void OpretNyUnderviser()
         {
-            _underviserCatalog.OpretUnderviser(_underviserData.Navn, _underviserData.Adresse, _underviserData.Email, _underviserData.Tlf);
+            _underviserCatalog.Create(new Model.Underviser(_underviserData.Navn, _underviserData.Adresse, _underviserData.Email, _underviserData.Tlf));
             OnPropertyChanged(nameof(Collection));
         }
         #endregion

@@ -12,12 +12,11 @@ namespace TouchpointApp.ViewModel.Kursus
         #region Instance fields
         private KursusCatalog _kursusCatalog;
         private KursusData _kursusData;
-        private Model.Kursus _selectedKurus;
-
         private UnderviserCatalog _underviserCatalog;
-        private Model.Underviser _selectedUnderviser;
-
         private UndervisningsstedCatalog _undervisersstedsCatalog;
+
+        private Model.Kursus _selectedKurus;
+        private Model.Underviser _selectedUnderviser;
         private Model.Undervisningssted _selectedUnderviserssted;
         #endregion
 
@@ -27,9 +26,21 @@ namespace TouchpointApp.ViewModel.Kursus
             _kursusCatalog = KursusCatalog.Instance();
             _underviserCatalog = UnderviserCatalog.Instance();
             _undervisersstedsCatalog = UndervisningsstedCatalog.Instance();
-
             _kursusData = new KursusData();
             OpretNytKursusCommand = new RelayCommand(OpretNytKursus);
+
+            if (_kursusCatalog.All.Count == 0)
+            {
+                _kursusCatalog.Load();
+            }
+            if (_underviserCatalog.All.Count == 0)
+            {
+                _underviserCatalog.Load();
+            }
+            if (_undervisersstedsCatalog.All.Count == 0)
+            {
+                _undervisersstedsCatalog.Load();
+            }
         }
         #endregion
 
@@ -110,9 +121,10 @@ namespace TouchpointApp.ViewModel.Kursus
         #region Opret metode
         public void OpretNytKursus()
         {
-            _kursusCatalog.OpretKursus(_kursusData.Titel, _kursusData.Dato, _kursusData.Tidspunkt, _kursusData.Varighed, _kursusData.Pris, _kursusData.Sprog, _kursusData.Beskrivelse, _kursusData.Depositum, _selectedUnderviser, _selectedUnderviserssted);
+           _kursusCatalog.Create(new Model.Kursus(_kursusData.Titel, _kursusData.Dato, _kursusData.Tidspunkt, _kursusData.Varighed, _kursusData.Pris, _kursusData.Sprog, _kursusData.Beskrivelse, _kursusData.Depositum, _selectedUnderviser, _selectedUnderviserssted));
             OnPropertyChanged(nameof(CollectionKursus));
         }
         #endregion
     }
 }
+

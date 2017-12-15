@@ -15,7 +15,7 @@ public class UndervisningsstedCatalog : Catalog<Undervisningssted>
     #endregion
 
     #region Constructor
-    private UndervisningsstedCatalog(string url) : base(url, "Undervisningssted")
+    private UndervisningsstedCatalog(string url) : base(url, "Undervisningssteds")
     {
 
         

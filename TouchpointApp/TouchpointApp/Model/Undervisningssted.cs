@@ -7,6 +7,8 @@ namespace TouchpointApp.Model
         #region Instance fields
         private string _adresse;
         private string _lokale;
+
+        private int _undervisningsStedID;
         #endregion
 
         #region Constructor
@@ -35,8 +37,16 @@ namespace TouchpointApp.Model
             get { return _lokale; }
             set { _lokale = value; }
         }
-
-        public int Key { get; set; }
+        public int Key
+        {
+            get { return _undervisningsStedID; }
+            set { _undervisningsStedID = value; }
+        }
+        public int UndervisningsStedID
+        {
+            get { return _undervisningsStedID; }
+            set { _undervisningsStedID = value; }
+        }
         #endregion
 
         #region ToString Metode

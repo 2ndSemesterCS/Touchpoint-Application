@@ -11,6 +11,8 @@ namespace TouchpointApp.Model
         private List<Kursus> _kursusSerie;
         private string _beskrivelse;
 
+        private int _serieID;
+
 
         public List<Kursus> KursusSerie
         {
@@ -23,8 +25,18 @@ namespace TouchpointApp.Model
             get { return _beskrivelse; }
             set { _beskrivelse = value; }
         }
+        public int Key
+        {
+            get { return _serieID; }
+            set { _serieID = value; }
+        }
+        public int SerieID
+        {
+            get { return _serieID; }
+            set { _serieID = value; }
+        }
 
-        public int Key { get; set; }
+
 
         public Serie(List<Kursus> kursusSerie, string beskrivelse)
         {

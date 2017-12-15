@@ -14,13 +14,20 @@ namespace TouchpointApp.ViewModel.Undervisningssted
     {
         #region Instance fields
         private Model.Undervisningssted _ItemIsSeleceted;
+        private UndervisningsstedCatalog _undervisningsStedCatalog;
         #endregion
 
         #region Constructor
         public UndervisningsstedViewModelSlet()
         {
-            CreateObservableCollection();
+            _undervisningsStedCatalog = UndervisningsstedCatalog.Instance();
             SletCommand = new RelayCommand(DeleteCommand, () => { return _ItemIsSeleceted != null; });
+            CreateObservableCollection();
+
+            if (_undervisningsStedCatalog.All.Count == 0)
+            {
+                _undervisningsStedCatalog.Load();
+            }
         }
         #endregion
 
@@ -68,10 +75,12 @@ namespace TouchpointApp.ViewModel.Undervisningssted
         #region Slet Metode
         public void DeleteCommand()
         {
-            UndervisningsstedCatalog.Instance().All.Remove(_ItemIsSeleceted);
+            _undervisningsStedCatalog.Delete(_ItemIsSeleceted.Key);
             OnPropertyChanged(nameof(Collection));
         }
         #endregion
     }
 }
+
+
 

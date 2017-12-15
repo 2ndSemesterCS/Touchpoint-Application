@@ -10,7 +10,7 @@ using TouchpointApp.Model;
 namespace TouchpointApp.Persistency
 {
 
-    public class UnderviserCatalog : WebAPICatalog<Underviser>
+    public class UnderviserCatalog : Catalog<Underviser>
     {
         #region Instance Fields
 
@@ -19,7 +19,7 @@ namespace TouchpointApp.Persistency
         #endregion
 
         #region Constructor
-        private UnderviserCatalog(string url)  : base(url, "Underviser")
+        private UnderviserCatalog(string url)  : base(url, "Undervisers")
         {
 
         }
@@ -42,12 +42,12 @@ namespace TouchpointApp.Persistency
         #region Metoder
         public void OpretUnderviser(string Navn, string Adresse, string email, string tlf)
         {
-            foreach (var item in All)
-            {
-               if( item.Email == email)
-                {
-                    throw new ArgumentException("Email eksisterer allerede i systemet");
-                }
+            //foreach (var item in All)
+            //{
+            //   if( item.Email == email)
+            //    {
+            //        throw new ArgumentException("Email eksisterer allerede i systemet");
+            //    }
 
                 Create(new Underviser(Navn, Adresse, email, tlf));
             }
@@ -56,6 +56,6 @@ namespace TouchpointApp.Persistency
         }
         #endregion
     }
-}
+
 
 

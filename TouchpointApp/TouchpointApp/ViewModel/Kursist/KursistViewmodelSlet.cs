@@ -17,34 +17,34 @@ namespace TouchpointApp.ViewModel.Kursist
         private KursistCatalog _kursistCatalog;
         #endregion
 
-        #region Slet Metode
         public KursistViewmodelSlet()
         {
-            _kursistCatalog = KursistCatalog.Instance();
             _kursistCatalog = KursistCatalog.Instance();
             if (_kursistCatalog.All.Count == 0)
             {
                 _kursistCatalog.Load();
             }
             CreateObservableCollection();
-            SletCommand = new RelayCommand(DeleteCommand, () => { return _ItemIsSeleceted != null; });
+            SletCommand = new RelayCommand(DeleteMetode, () => { return _ItemIsSeleceted != null; });
         }
-        public void DeleteCommand()
+       
+        #region ObservableCollection
+        public ObservableCollection<Model.Kursist> CreateObservableCollection()
         {
-            KursistCatalog.Instance().Delete(_ItemIsSeleceted.Key);
-            OnPropertyChanged(nameof(Collection));
+            var Collection = new ObservableCollection<Model.Kursist>();
+            foreach (var item in KursistCatalog.Instance().All)
+            {
+                Collection.Add(item);
+            }
+            return Collection;
         }
         #endregion
 
         #region Commands
         public RelayCommand SletCommand { get; set; }
-        public ObservableCollection<Model.Kursist> Collection
-        {
-            get { return CreateObservableCollection(); }
-        }
+       
         #endregion
-
-        #region SelectedItemListView
+        #region Propperties
         public Model.Kursist SelectedItemListview
         {
             get { return _ItemIsSeleceted; }
@@ -55,17 +55,17 @@ namespace TouchpointApp.ViewModel.Kursist
                 OnPropertyChanged();
             }
         }
+        public ObservableCollection<Model.Kursist> Collection
+        {
+            get { return CreateObservableCollection(); }
+        }
         #endregion
 
-        #region ObservableCollection
-        public ObservableCollection<Model.Kursist> CreateObservableCollection()
+        #region Slet Metode
+        public void DeleteMetode()
         {
-            var Collection = new ObservableCollection<Model.Kursist>();
-            foreach (var item in KursistCatalog.Instance().All)
-            {
-                Collection.Add(item);
-            }
-            return Collection;
+           _kursistCatalog.Delete(_ItemIsSeleceted.Key);
+            OnPropertyChanged(nameof(Collection));
         }
         #endregion
 

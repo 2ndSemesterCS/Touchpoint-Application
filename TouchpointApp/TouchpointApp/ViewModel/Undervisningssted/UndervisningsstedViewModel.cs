@@ -13,18 +13,21 @@ namespace TouchpointApp.ViewModel.Undervisningssted
 
         #region Instance Fields
         private UndervisningsStedData _undervisningsstedData;
-        private UndervisningsstedCatalog _undervisningsstedCatalog;
-        private RelayCommand _loadCommand;
-        private RelayCommand _saveCommand;
+        private UndervisningsstedCatalog _undervisningsStedCatalog;
 
         #endregion
 
         #region Constructor
         public UndervisningsstedViewModel()
         {
-            _undervisningsstedCatalog = UndervisningsstedCatalog.Instance();
+            _undervisningsStedCatalog = UndervisningsstedCatalog.Instance();
             _undervisningsstedData = new UndervisningsStedData();
-            OpretNytUndervisningsstedCommand = new RelayCommand(OpretNytUndervisningssted); 
+            OpretNytUndervisningsstedCommand = new RelayCommand(OpretNytUndervisningssted);
+
+            if (_undervisningsStedCatalog.All.Count == 0)
+            {
+                _undervisningsStedCatalog.Load();
+            }
         }
         #endregion
 
@@ -54,10 +57,11 @@ namespace TouchpointApp.ViewModel.Undervisningssted
         #region Opret Metode
         public void OpretNytUndervisningssted()
         {
-            _undervisningsstedCatalog.OpretUndervisningssted(_undervisningsstedData.Lokale, _undervisningsstedData.Adresse);
+            _undervisningsStedCatalog.Create(new Model.Undervisningssted(_undervisningsstedData.Lokale, _undervisningsstedData.Adresse));
             OnPropertyChanged(nameof(Collection));
         }
         #endregion
 
     }
 }
+

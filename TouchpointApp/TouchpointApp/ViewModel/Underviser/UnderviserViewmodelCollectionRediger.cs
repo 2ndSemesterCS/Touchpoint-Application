@@ -25,6 +25,11 @@ namespace TouchpointApp.ViewModel.Underviser
             _UnderviserData = new UnderviserData();
             _underviserCatalog = UnderviserCatalog.Instance() ;
             RedigerCommand = new RelayCommand(RedigerMetode, () => { return _ItemIsSeleceted != null; });
+
+            if (_underviserCatalog.All.Count == 0)
+            {
+                _underviserCatalog.Load();
+            }
         }
         #endregion
 
@@ -39,9 +44,12 @@ namespace TouchpointApp.ViewModel.Underviser
         public void RedigerMetode()
         {
             int key = _ItemIsSeleceted.Key;
+            Model.Underviser Underviser = new Model.Underviser(_UnderviserData.Navn, _UnderviserData.Adresse, _UnderviserData.Email, _UnderviserData.Tlf);
+            OnPropertyChanged(nameof(Collection));
             _underviserCatalog.Delete(key);
-            Model.Underviser Underviser = new Model.Underviser(_UnderviserData.Navn, _UnderviserData.Adresse, _UnderviserData.Email, _UnderviserData.Tlf));
-            Underviser.Key = key;
+
+            Underviser.UnderviserID = key;
+            _underviserCatalog.Create(Underviser);
             OnPropertyChanged(nameof(Collection));
         }
         #endregion
@@ -58,7 +66,7 @@ namespace TouchpointApp.ViewModel.Underviser
                 {
                     _UnderviserData.Navn = _ItemIsSeleceted.Navn;
                     _UnderviserData.Email = _ItemIsSeleceted.Email;
-                    _UnderviserData.Adresse = _ItemIsSeleceted.Addresse;
+                    _UnderviserData.Adresse = _ItemIsSeleceted.Adresse;
                     _UnderviserData.Tlf = _ItemIsSeleceted.Tlf;
                 }
                 OnPropertyChanged(nameof(UnderviserData));
