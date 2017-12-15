@@ -64,7 +64,6 @@ namespace TouchpointApp.ViewModel.Kursist
             get { return CreateObservableCollection(); }
         }
 
-       
         public ObservableCollection<Model.Kursist> CreateObservableCollection()
         {
        

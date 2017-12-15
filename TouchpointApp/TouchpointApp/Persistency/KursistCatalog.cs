@@ -24,7 +24,7 @@ namespace TouchpointApp.Persistency
         {
             if(_kursistCatalog == null)
             {
-                _kursistCatalog = new KursistCatalog("http://touchpointdbwebservice.azurewebsites.net");
+                _kursistCatalog = new KursistCatalog("http://touchpointdbwebservice.azurewebsites.net/");
             }
             return _kursistCatalog;
         }
@@ -33,13 +33,13 @@ namespace TouchpointApp.Persistency
         #region Metode
         public void OpretKursist(string navn, string adresse, string email, string tlf, string land, string by)
         {
-            foreach (var item in All)
-            {
-                if (item.EMail == email)
-                {
-                    throw new ArgumentException("Email eksisterer allerede i systemet");
-                }
-            }
+            //foreach (var item in All)
+            //{
+            //    if (item.EMail == email)
+            //    {
+            //        throw new ArgumentException("Email eksisterer allerede i systemet");
+            //    }
+            //}
 
             Create(new Kursist(navn, email, by, land, adresse, tlf));
         }

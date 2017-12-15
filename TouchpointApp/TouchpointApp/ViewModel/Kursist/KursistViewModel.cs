@@ -53,7 +53,7 @@ namespace TouchpointApp.ViewModel.Kursist
         #region Metoder
         public void OpretNyKursist()
         {
-            _kc.OpretKursist(_kd.Navn, _kd.Adresse, _kd.Email,_kd.Tlf, _kd.Land, _kd.By);
+            _kc.OpretKursist(_kd.Navn, _kd.Adresse, _kd.Email, _kd.Tlf, _kd.Land, _kd.By);
             OnPropertyChanged(nameof(Collection));
         }
         #endregion
