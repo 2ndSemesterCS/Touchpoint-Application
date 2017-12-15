@@ -13,7 +13,7 @@ namespace TouchpointApp.ViewModel.Kursus
         private KursusCatalog _kursusCatalog;
         private KursusData _kursusData;
         private UnderviserCatalog _underviserCatalog;
-        private UndervisningsstedCatalog _undervisersstedsCatalog;
+        private UndervisningsstedCatalog _undervisersStedsCatalog;
 
         private Model.Kursus _selectedKurus;
         private Model.Underviser _selectedUnderviser;
@@ -25,7 +25,7 @@ namespace TouchpointApp.ViewModel.Kursus
         {
             _kursusCatalog = KursusCatalog.Instance();
             _underviserCatalog = UnderviserCatalog.Instance();
-            _undervisersstedsCatalog = UndervisningsstedCatalog.Instance();
+            _undervisersStedsCatalog = UndervisningsstedCatalog.Instance();
             _kursusData = new KursusData();
             OpretNytKursusCommand = new RelayCommand(OpretNytKursus);
 
@@ -37,9 +37,9 @@ namespace TouchpointApp.ViewModel.Kursus
             {
                 _underviserCatalog.Load();
             }
-            if (_undervisersstedsCatalog.All.Count == 0)
+            if (_undervisersStedsCatalog.All.Count == 0)
             {
-                _undervisersstedsCatalog.Load();
+                _undervisersStedsCatalog.Load();
             }
         }
         #endregion
@@ -91,7 +91,11 @@ namespace TouchpointApp.ViewModel.Kursus
         public Model.Underviser SelectedItemListviewUnderviser
         {
             get { return _selectedUnderviser; }
-            set {  _selectedUnderviser = value;}
+            set
+            {
+                _selectedUnderviser = value;
+                OnPropertyChanged(nameof(_selectedUnderviser));
+            }
         } 
         #endregion
 
@@ -114,7 +118,10 @@ namespace TouchpointApp.ViewModel.Kursus
         public Model.Undervisningssted SelectedItemListviewUnderviserssted
         {
             get { return _selectedUnderviserssted; }
-            set { _selectedUnderviserssted = value; }
+            set {
+                _selectedUnderviserssted = value;
+                OnPropertyChanged(nameof(_selectedUnderviserssted));
+            }
         }
         #endregion
 

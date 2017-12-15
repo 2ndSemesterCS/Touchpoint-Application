@@ -99,16 +99,16 @@ namespace TouchpointApp.Model
             //{ 
             //    throw new ArgumentException("Information mangler");
             //}
-            //_titel = titel;
-            //_dato = dato;
-            //_tidspunkt = tidspunkt;
-            //_varighed = varighed;
-            //_pris = pris;
-            //_underviser = underviser;
-            //_undervisningssted = undervisningssted;
-            //_sprog = sprog;
-            //_beskrivelse = beskrivelse;
-            //_depositum = depositum;
+            _titel = titel;
+            _dato = dato;
+            _tidspunkt = tidspunkt;
+            _varighed = varighed;
+            _pris = pris;
+            _underviser = underviser;
+            _undervisningssted = undervisningssted;
+            _sprog = sprog;
+            _beskrivelse = beskrivelse;
+            _depositum = depositum;
 
         }
         #endregion
