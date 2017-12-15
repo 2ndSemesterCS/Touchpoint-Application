@@ -38,7 +38,7 @@ namespace TouchpointApp.ViewModel.Undervisningssted
         public ObservableCollection<Model.Undervisningssted> CreateObservableCollection()
         {
             var Collection = new ObservableCollection<Model.Undervisningssted>();
-            foreach (var item in UndervisningsstedCatalog.Instance().Getlist)
+            foreach (var item in UndervisningsstedCatalog.Instance().All)
             {
                 Collection.Add(item);
             }

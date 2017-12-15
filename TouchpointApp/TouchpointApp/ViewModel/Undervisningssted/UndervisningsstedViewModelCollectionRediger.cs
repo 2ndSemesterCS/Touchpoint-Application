@@ -39,7 +39,7 @@ namespace TouchpointApp.ViewModel.Undervisningssted
         // Så ville vi rette direkt i model klasse, det var hvad vi gjorde til at starte med.  
         public void RedigerMetode()
         {
-            UndervisningsstedCatalog.Instance().Getlist.Remove(_ItemIsSeleceted);
+            UndervisningsstedCatalog.Instance().All.Remove(_ItemIsSeleceted);
             UndervisningsstedCatalog.Instance().OpretUndervisningssted(_UndervisningsstedData.Lokale, _UndervisningsstedData.Adresse);
             OnPropertyChanged(nameof(Collection));
         }
@@ -75,7 +75,7 @@ namespace TouchpointApp.ViewModel.Undervisningssted
         public ObservableCollection<Model.Undervisningssted> CreateObservableCollection()
         {
             var Collection = new ObservableCollection<Model.Undervisningssted>();
-            foreach (var item in UndervisningsstedCatalog.Instance().Getlist)
+            foreach (var item in UndervisningsstedCatalog.Instance().All)
             {
                 Collection.Add(item);
             }

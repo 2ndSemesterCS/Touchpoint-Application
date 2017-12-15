@@ -4,6 +4,7 @@ using TouchpointApp.Command;
 using TouchpointApp.Web;
 using System.Windows.Input;
 using System.Collections.ObjectModel;
+using TouchpointApp.Model;
 
 namespace TouchpointApp.ViewModel.Kursist
 {
@@ -12,12 +13,15 @@ namespace TouchpointApp.ViewModel.Kursist
         #region Instance fields
         private Model.Kursist _ItemIsSeleceted;
         private KursistData _KursistData;
+        private KursistCatalog _kursistCatalog;
         #endregion
 
         #region Constructor
         public KursistViewmodelCollectionRediger()
         {
-            _KursistData = new KursistData();
+            _kursistCatalog = KursistCatalog.Instance();
+            _kursistCatalog.Load();
+            _KursistData = new KursistData(); 
             RedigerCommand = new RelayCommand(RedigerMetode, () => { return _ItemIsSeleceted != null; });
         }
         #endregion
@@ -31,7 +35,7 @@ namespace TouchpointApp.ViewModel.Kursist
         public void RedigerMetode()
         {
             KursistCatalog.Instance().All.Remove(_ItemIsSeleceted);
-            KursistCatalog.Instance().OpretKursist(_KursistData.Navn, _KursistData.Adresse, _KursistData.Email, _KursistData.Tlf, _KursistData.Land, _KursistData.By);
+            KursistCatalog.Instance().Create(new Model.Kursist(_KursistData.Navn, _KursistData.Adresse, _KursistData.Email, _KursistData.Tlf, _KursistData.Land, _KursistData.By));
             OnPropertyChanged(nameof(Collection));
         }
         #endregion
