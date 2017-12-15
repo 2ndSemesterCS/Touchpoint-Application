@@ -11,17 +11,18 @@ namespace TouchpointApp.ViewModel.Kursist
     {
         #region Instance Fields
 
-        private KursistCatalog _kc;
+        private KursistCatalog _kursistCatalog;
         private KursistData _kd;
-        private RelayCommand _loadCommand;
-        private RelayCommand _saveCommand;
         #endregion
 
         #region Constructor
         public KursistViewModel()
         {
-            _kc = KursistCatalog.Instance();
-            _kc.Load();
+            _kursistCatalog = KursistCatalog.Instance();
+            if (_kursistCatalog.All.Count == 0)
+            {
+                _kursistCatalog.Load();
+            }
             _kd = new KursistData();
                
             OpretNyKursistCommand = new RelayCommand(OpretNyKursist);
@@ -55,7 +56,7 @@ namespace TouchpointApp.ViewModel.Kursist
         #region Metoder
         public void OpretNyKursist()
         {
-            _kc.OpretKursist(_kd.Navn, _kd.Adresse, _kd.Email, _kd.Tlf, _kd.Land, _kd.By);
+            _kursistCatalog.Create(new Model.Kursist(_kd.Navn, _kd.Adresse, _kd.Email, _kd.Tlf, _kd.Land, _kd.By));
             OnPropertyChanged(nameof(Collection));
         }
         #endregion

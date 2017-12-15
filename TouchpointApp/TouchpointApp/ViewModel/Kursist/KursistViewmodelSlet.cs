@@ -21,7 +21,11 @@ namespace TouchpointApp.ViewModel.Kursist
         public KursistViewmodelSlet()
         {
             _kursistCatalog = KursistCatalog.Instance();
-            _kursistCatalog.Load();
+            _kursistCatalog = KursistCatalog.Instance();
+            if (_kursistCatalog.All.Count == 0)
+            {
+                _kursistCatalog.Load();
+            }
             CreateObservableCollection();
             SletCommand = new RelayCommand(DeleteCommand, () => { return _ItemIsSeleceted != null; });
         }
