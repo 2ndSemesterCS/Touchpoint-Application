@@ -26,9 +26,6 @@ namespace TouchpointApp.ViewModel.Kursus
             _kursusCatalog = KursusCatalog.Instance();
             _underviserCatalog = UnderviserCatalog.Instance();
             _undervisersStedsCatalog = UndervisningsstedCatalog.Instance();
-            _kursusData = new KursusData();
-            OpretNytKursusCommand = new RelayCommand(OpretNytKursus);
-
             if (_kursusCatalog.All.Count == 0)
             {
                 _kursusCatalog.Load();
@@ -41,6 +38,9 @@ namespace TouchpointApp.ViewModel.Kursus
             {
                 _undervisersStedsCatalog.Load();
             }
+
+            _kursusData = new KursusData();
+            OpretNytKursusCommand = new RelayCommand(OpretNytKursus);
         }
         #endregion
 
@@ -94,7 +94,13 @@ namespace TouchpointApp.ViewModel.Kursus
             set
             {
                 _selectedUnderviser = value;
-                OnPropertyChanged(nameof(_selectedUnderviser));
+                if (_selectedUnderviser != null)
+                {
+                    _kursusData.Underviser = _selectedUnderviser;
+                }
+                OnPropertyChanged(nameof(_kursusData));
+                OpretNytKursusCommand.RaiseCanExecuteChanged();
+
             }
         } 
         #endregion
@@ -120,7 +126,12 @@ namespace TouchpointApp.ViewModel.Kursus
             get { return _selectedUnderviserssted; }
             set {
                 _selectedUnderviserssted = value;
-                OnPropertyChanged(nameof(_selectedUnderviserssted));
+                if (_selectedUnderviserssted != null)
+                {
+                    _kursusData.Undervisningssted = _selectedUnderviserssted;
+                }
+                OnPropertyChanged(nameof(_kursusData));
+                OpretNytKursusCommand.RaiseCanExecuteChanged();
             }
         }
         #endregion
@@ -128,7 +139,7 @@ namespace TouchpointApp.ViewModel.Kursus
         #region Opret metode
         public void OpretNytKursus()
         {
-           _kursusCatalog.Create(new Model.Kursus(_kursusData.Titel, _kursusData.Dato, _kursusData.Tidspunkt, _kursusData.Varighed, _kursusData.Pris, _kursusData.Sprog, _kursusData.Beskrivelse, _kursusData.Depositum, _selectedUnderviser, _selectedUnderviserssted));
+           _kursusCatalog.Create(new Model.Kursus(_kursusData.Titel, _kursusData.Dato, _kursusData.Tidspunkt, _kursusData.Varighed, _kursusData.Pris, _kursusData.Sprog, _kursusData.Beskrivelse, _kursusData.Depositum, _kursusData.Underviser, _kursusData.Undervisningssted));
             OnPropertyChanged(nameof(CollectionKursus));
         }
         #endregion

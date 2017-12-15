@@ -15,14 +15,21 @@ namespace TouchpointApp.ViewModel.Kursus
     {
         #region Instance fields
         private Model.Kursus _itemIsSeleceted;
+        private KursusCatalog _kursusCatalog;
         #endregion
 
         #region Constructor
         public KursusViewmodelSlet()
             {
-                CreateObservableCollection();
-                SletCommand = new RelayCommand(DeleteCommand, () => { return _itemIsSeleceted != null; });
+            _kursusCatalog = KursusCatalog.Instance();
+             SletCommand = new RelayCommand(DeleteCommand, () => { return _itemIsSeleceted != null; });
+
+            if (_kursusCatalog.All.Count == 0)
+            {
+                _kursusCatalog.Load();
             }
+            CreateObservableCollection();
+        }
         #endregion
 
         #region Commands
@@ -67,10 +74,10 @@ namespace TouchpointApp.ViewModel.Kursus
         #region SletMetode
         public void DeleteCommand()
             {
-                KursusCatalog.Instance().All.Remove(_itemIsSeleceted);
+               _kursusCatalog.Delete(_itemIsSeleceted.Key);
                 OnPropertyChanged(nameof(Collection));
             }
         }
-         #endregion
+    #endregion
 }
 
