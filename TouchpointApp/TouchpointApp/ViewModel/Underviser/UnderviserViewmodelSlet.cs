@@ -47,7 +47,7 @@ namespace TouchpointApp.ViewModel.Underviser
                 SletCommand.RaiseCanExecuteChanged();
                 OnPropertyChanged();
                 OnPropertyChanged(nameof(DeleteMetode));
-            }
+            } 
         }
         #endregion
 

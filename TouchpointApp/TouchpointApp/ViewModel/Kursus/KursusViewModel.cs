@@ -26,7 +26,8 @@ namespace TouchpointApp.ViewModel.Kursus
             _kursusCatalog = KursusCatalog.Instance();
             _underviserCatalog = UnderviserCatalog.Instance();
             _undervisersStedsCatalog = UndervisningsstedCatalog.Instance();
-            if (_kursusCatalog.All.Count == 0)
+
+            if (_kursusCatalog.All.Count == 1)
             {
                 _kursusCatalog.Load();
             }
@@ -96,7 +97,7 @@ namespace TouchpointApp.ViewModel.Kursus
                 _selectedUnderviser = value;
                 if (_selectedUnderviser != null)
                 {
-                    _kursusData.Underviser = _selectedUnderviser;
+                    _kursusData.UnderviserKey = _selectedUnderviser.Key;
                 }
                 OnPropertyChanged(nameof(_kursusData));
                 OpretNytKursusCommand.RaiseCanExecuteChanged();
@@ -128,7 +129,7 @@ namespace TouchpointApp.ViewModel.Kursus
                 _selectedUnderviserssted = value;
                 if (_selectedUnderviserssted != null)
                 {
-                    _kursusData.Undervisningssted = _selectedUnderviserssted;
+                    _kursusData.UndervisningsstedKey = _selectedUnderviserssted.Key;
                 }
                 OnPropertyChanged(nameof(_kursusData));
                 OpretNytKursusCommand.RaiseCanExecuteChanged();
@@ -139,7 +140,7 @@ namespace TouchpointApp.ViewModel.Kursus
         #region Opret metode
         public void OpretNytKursus()
         {
-           _kursusCatalog.Create(new Model.Kursus(_kursusData.Titel, _kursusData.Dato, _kursusData.Tidspunkt, _kursusData.Varighed, _kursusData.Pris, _kursusData.Sprog, _kursusData.Beskrivelse, _kursusData.Depositum, _kursusData.Underviser, _kursusData.Undervisningssted));
+           _kursusCatalog.Create(new Model.Kursus(_kursusData.Titel, _kursusData.Dato, _kursusData.Tidspunkt, _kursusData.Varighed, _kursusData.Pris, _kursusData.Sprog, _kursusData.Beskrivelse, _kursusData.Depositum, _kursusData.UnderviserKey, _kursusData.UndervisningsstedKey ));
             OnPropertyChanged(nameof(CollectionKursus));
         }
         #endregion

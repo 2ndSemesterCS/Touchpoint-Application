@@ -36,7 +36,7 @@ namespace TouchpointApp.ViewModel.Kursus
             KursusCatalog.Instance().All.Remove(_itemIsSeleceted);
             KursusCatalog.Instance().OpretKursus(_kursusData.Titel, _kursusData.Dato, 
                 _kursusData.Tidspunkt, _kursusData.Varighed, _kursusData.Pris, _kursusData.Sprog,
-                _kursusData.Beskrivelse, _kursusData.Depositum, _kursusData.Underviser, _kursusData.Undervisningssted);
+                _kursusData.Beskrivelse, _kursusData.Depositum, _kursusData.UnderviserKey, _kursusData.UndervisningsstedKey);
             OnPropertyChanged(nameof(Collection));
         }
         #endregion
@@ -59,8 +59,8 @@ namespace TouchpointApp.ViewModel.Kursus
                     _kursusData.Sprog = _itemIsSeleceted.Sprog;
                     _kursusData.Beskrivelse = _itemIsSeleceted.Beskrivelse;
                     _kursusData.Depositum = _itemIsSeleceted.Depositum;
-                    _kursusData.Underviser = _itemIsSeleceted.Underviser;
-                    _kursusData.Undervisningssted = _itemIsSeleceted.Undervisningssted;
+                    _kursusData.UnderviserKey = _itemIsSeleceted.UnderviserKey;
+                    _kursusData.UndervisningsstedKey = _itemIsSeleceted.UndervisningsstedKey;
                 }
                 OnPropertyChanged(nameof(KursusData));
                 RedigerCommand.RaiseCanExecuteChanged();

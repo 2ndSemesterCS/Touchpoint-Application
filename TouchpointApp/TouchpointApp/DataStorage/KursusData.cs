@@ -14,8 +14,8 @@ namespace TouchpointApp.DataStorage
         private double _depositum;
         private DateTime _dato;
         private DateTime _tidspunkt;
-        private Model.Underviser _underviser;
-        private Model.Undervisningssted _undervisningssted;
+        private int _underviserKey;
+        private int _undervisningsStedKey;
         #endregion
 
         #region Constructor
@@ -34,8 +34,8 @@ namespace TouchpointApp.DataStorage
         public string Sprog { get { return _sprog; } set {_sprog = value; OnPropertyChanged("sprog"); } }
         public string Beskrivelse { get { return _beskrivelse; } set {_beskrivelse = value; OnPropertyChanged("beskrivelse"); } }
         public double Depositum { get { return _depositum; } set {_depositum = value; OnPropertyChanged("depositum"); } }
-        public Model.Underviser Underviser { get { return _underviser; } set {_underviser = value; OnPropertyChanged("underviser"); } }
-        public Model.Undervisningssted Undervisningssted { get { return _undervisningssted; } set {_undervisningssted = value; OnPropertyChanged("undervisningssted"); } }
+        public int UnderviserKey { get { return _underviserKey; } set { _underviserKey = value; OnPropertyChanged("underviser"); } }
+        public int UndervisningsstedKey { get { return _undervisningsStedKey; } set { _undervisningsStedKey = value; OnPropertyChanged("undervisningssted"); } }
         #endregion
     }
 }

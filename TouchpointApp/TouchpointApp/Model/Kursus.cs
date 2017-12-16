@@ -14,8 +14,8 @@ namespace TouchpointApp.Model
         private string _beskrivelse;
         private double _depositum;
 
-        private Underviser _underviser;
-        private Undervisningssted _undervisningssted;
+        private int _underviserKey;
+        private int _undervisningsstedKey;
 
         private int _KursusID;
         #endregion
@@ -51,10 +51,10 @@ namespace TouchpointApp.Model
             set { _pris = value; }
         }
 
-        public Underviser Underviser
+        public int UnderviserKey
         {
-            get { return _underviser; }
-            set { _underviser = value; }
+            get { return _underviserKey; }
+            set { _underviserKey = value; }
         }
       
         public string Sprog
@@ -72,10 +72,10 @@ namespace TouchpointApp.Model
             get { return _depositum; }
             set { _depositum = value; }
         }
-        public Undervisningssted Undervisningssted
+        public int UndervisningsstedKey
         {
-            get { return _undervisningssted; }
-            set { _undervisningssted = value; }
+            get { return _underviserKey; }
+            set { _underviserKey = value; }
         }
         public int Key
         {
@@ -91,7 +91,7 @@ namespace TouchpointApp.Model
 
         #region Constructor
         public Kursus(string titel, DateTime dato, DateTime tidspunkt, string varighed, 
-            double pris, string sprog, string beskrivelse, double depositum, Underviser underviser, Undervisningssted undervisningssted)
+            double pris, string sprog, string beskrivelse, double depositum, int underviser, int undervisningssted)
         {
             //if (String.IsNullOrEmpty(titel)|| String.IsNullOrEmpty(varighed) || String.IsNullOrEmpty(sprog) 
             //    || String.IsNullOrEmpty(beskrivelse) || pris < 0 || underviser == null 
@@ -104,8 +104,8 @@ namespace TouchpointApp.Model
             _tidspunkt = tidspunkt;
             _varighed = varighed;
             _pris = pris;
-            _underviser = underviser;
-            _undervisningssted = undervisningssted;
+            _underviserKey = underviser;
+            _undervisningsstedKey = undervisningssted;
             _sprog = sprog;
             _beskrivelse = beskrivelse;
             _depositum = depositum;
