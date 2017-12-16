@@ -14,7 +14,7 @@ namespace TouchpointApp.Persistency
         {
             if (_kursuscatalog == null)
             {
-                _kursuscatalog = new KursusCatalog("http://touchpointdbwebservice.azurewebsites.net/");
+                _kursuscatalog = new KursusCatalog("http://touchpointdbwebservice.azurewebsites.net");
 
             }
             return _kursuscatalog;

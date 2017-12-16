@@ -31,7 +31,7 @@ namespace TouchpointApp.Persistency
         {
             if (_UnderviserCatalog == null)
             {
-                _UnderviserCatalog = new UnderviserCatalog("http://touchpointdbwebservice.azurewebsites.net/");
+                _UnderviserCatalog = new UnderviserCatalog("http://touchpointdbwebservice.azurewebsites.net");
 
             }
             return _UnderviserCatalog;

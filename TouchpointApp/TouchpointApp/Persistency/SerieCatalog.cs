@@ -19,13 +19,13 @@ namespace TouchpointApp.Persistency
         {
             if (_SerieCatalog == null)
             {
-                _SerieCatalog = new SerieCatalog("http://touchpointdbwebservice.azurewebsites.net/");
+                _SerieCatalog = new SerieCatalog("http://touchpointdbwebservice.azurewebsites.net");
             }
             return _SerieCatalog;
         }
 
         #region Constructor
-        private SerieCatalog(string url) : base(url, "Serie")
+        private SerieCatalog(string url) : base(url, "Series")
         {
 
         }

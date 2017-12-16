@@ -27,7 +27,7 @@ public class UndervisningsstedCatalog : Catalog<Undervisningssted>
     {
         if (_UndervisningsstedCatalog == null)
         {
-            _UndervisningsstedCatalog = new UndervisningsstedCatalog("http://touchpointdbwebservice.azurewebsites.net/");
+            _UndervisningsstedCatalog = new UndervisningsstedCatalog("http://touchpointdbwebservice.azurewebsites.net");
 
         }
         return _UndervisningsstedCatalog;

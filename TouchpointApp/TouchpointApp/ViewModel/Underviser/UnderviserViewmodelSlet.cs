@@ -46,6 +46,7 @@ namespace TouchpointApp.ViewModel.Underviser
                 _ItemIsSeleceted = value;
                 SletCommand.RaiseCanExecuteChanged();
                 OnPropertyChanged();
+                OnPropertyChanged(nameof(DeleteMetode));
             }
         }
         #endregion
