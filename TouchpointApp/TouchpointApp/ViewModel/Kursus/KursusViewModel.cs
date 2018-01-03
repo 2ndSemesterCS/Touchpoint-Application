@@ -140,7 +140,8 @@ namespace TouchpointApp.ViewModel.Kursus
         #region Opret metode
         public void OpretNytKursus()
         {
-           _kursusCatalog.Create(new Model.Kursus(_kursusData.Titel, _kursusData.Dato, _kursusData.Tidspunkt, _kursusData.Varighed, _kursusData.Pris, _kursusData.Sprog, _kursusData.Beskrivelse, _kursusData.Depositum, _kursusData.UnderviserKey, _kursusData.UndervisningsstedKey ));
+            Model.Kursus obj = new Model.Kursus(_kursusData.Titel, _kursusData.Dato, _kursusData.Tidspunkt, _kursusData.Varighed, _kursusData.Pris, _kursusData.Sprog, _kursusData.Beskrivelse, _kursusData.Depositum, _kursusData.UnderviserKey, _kursusData.UndervisningsstedKey);
+           _kursusCatalog.Create(obj);
             OnPropertyChanged(nameof(CollectionKursus));
         }
         #endregion
