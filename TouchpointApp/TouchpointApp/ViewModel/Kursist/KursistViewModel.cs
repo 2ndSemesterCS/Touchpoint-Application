@@ -23,8 +23,8 @@ namespace TouchpointApp.ViewModel.Kursist
             {
                 _kursistCatalog.Load();
             }
+
             _kd = new KursistData();
-               
             OpretNyKursistCommand = new RelayCommand(OpretNyKursist);
         }
         #endregion
@@ -50,7 +50,7 @@ namespace TouchpointApp.ViewModel.Kursist
         #region Commands
         public RelayCommand OpretNyKursistCommand { get; set; }
 
-        public KursistData KursistData { get { return _kd; } set { _kd = value; } }
+        public KursistData KursistData { get { return _kd; } set {value = _kd; } }
         #endregion
 
         #region Metoder

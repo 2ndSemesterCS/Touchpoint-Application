@@ -50,7 +50,7 @@ namespace TouchpointApp.ViewModel.Underviser
         #region Commands
         //Propperty with type relaycommand, so we can bind our creat method to a buttom
         public RelayCommand OpretNyUnderviserCommand { get; set; }
-        public UnderviserData UnderviserData { get { return _underviserData; } set { _underviserData = value; } }
+        public UnderviserData UnderviserData { get { return _underviserData; } set {value = _underviserData ; } }
         #endregion
 
         #region Opret metode

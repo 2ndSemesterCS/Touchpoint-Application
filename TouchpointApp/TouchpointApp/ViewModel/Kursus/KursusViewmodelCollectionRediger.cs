@@ -27,7 +27,7 @@ namespace TouchpointApp.ViewModel.Kursus
 
         #region Commands
         public RelayCommand RedigerCommand { get; set; }
-        public KursusData KursusData { get { return _kursusData; } set { _kursusData = value; } }
+        public KursusData KursusData { get { return _kursusData; } set { value = _kursusData; } }
         #endregion
 
         #region RedigerMetode

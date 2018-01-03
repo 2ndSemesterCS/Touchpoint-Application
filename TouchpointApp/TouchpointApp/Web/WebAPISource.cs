@@ -46,7 +46,10 @@ namespace TouchpointApp.Web
 
         public async Task<int> Create(T obj)
         {
-            HttpResponseMessage response = await InvokeAPIAsync(() => _httpClient.PostAsJsonAsync(BuildRequestURI(APIMethod.Create), obj));
+            //HttpResponseMessage response = await InvokeAPIAsync(() => _httpClient.PostAsJsonAsync(BuildRequestURI(APIMethod.Create), obj));
+            //T createdObj = await response.Content.ReadAsAsync<T>();
+            //return createdObj.Key;
+            HttpResponseMessage response = await InvokeAPIAsync((() => _httpClient.PostAsJsonAsync(BuildRequestURI(APIMethod.Create), obj)));
             T createdObj = await response.Content.ReadAsAsync<T>();
             return createdObj.Key;
         }

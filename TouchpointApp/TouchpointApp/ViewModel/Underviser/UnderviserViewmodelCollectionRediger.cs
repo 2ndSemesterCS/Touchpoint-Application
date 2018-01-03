@@ -45,8 +45,8 @@ namespace TouchpointApp.ViewModel.Underviser
         {
             int key = _ItemIsSeleceted.Key;
             Model.Underviser Underviser = new Model.Underviser(_UnderviserData.Navn, _UnderviserData.Adresse, _UnderviserData.Email, _UnderviserData.Tlf);
-            OnPropertyChanged(nameof(Collection));
             _underviserCatalog.Delete(key);
+            OnPropertyChanged(nameof(Collection));
 
             Underviser.UnderviserID = key;
             _underviserCatalog.Create(Underviser);

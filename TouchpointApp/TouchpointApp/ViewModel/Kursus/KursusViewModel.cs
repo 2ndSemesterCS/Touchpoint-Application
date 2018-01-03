@@ -27,10 +27,10 @@ namespace TouchpointApp.ViewModel.Kursus
             _underviserCatalog = UnderviserCatalog.Instance();
             _undervisersStedsCatalog = UndervisningsstedCatalog.Instance();
 
-            if (_kursusCatalog.All.Count == 1)
-            {
-                _kursusCatalog.Load();
-            }
+            //if (_kursusCatalog.All.Count == 1)
+            //{
+            //    _kursusCatalog.Load();
+            //}
             if (_underviserCatalog.All.Count == 0)
             {
                 _underviserCatalog.Load();
@@ -46,7 +46,7 @@ namespace TouchpointApp.ViewModel.Kursus
         #endregion
 
         #region Commands
-        public KursusData kursusData { get { return _kursusData; } set { _kursusData = value; } }
+        public KursusData kursusData { get { return _kursusData; } set {value = _kursusData; } }
         public RelayCommand OpretNytKursusCommand { get; set; }
         #endregion
 
