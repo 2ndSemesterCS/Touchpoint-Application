@@ -6,8 +6,8 @@ namespace TouchpointApp.Model
     {
         #region Instance Fields
         private string _titel;
-        private DateTime _dato;
-        private DateTime _tidspunkt;
+        private string _dato;
+        private string _tidspunkt;
         private string _varighed;
         private double _pris;
         private string _sprog;
@@ -27,13 +27,13 @@ namespace TouchpointApp.Model
             set { _titel = value; }
         }
 
-        public DateTime Dato
+        public string Dato
         {
             get { return _dato; }
             set { _dato = value; }
         }
 
-        public DateTime Tidspunkt
+        public string Tidspunkt
         {
             get { return _tidspunkt; }
             set { _tidspunkt = value; }
@@ -90,7 +90,7 @@ namespace TouchpointApp.Model
         #endregion
 
         #region Constructor
-        public Kursus(string titel, DateTime dato, DateTime tidspunkt, string varighed, 
+        public Kursus(string titel, string dato, string tidspunkt, string varighed, 
             double pris, string sprog, string beskrivelse, double depositum, int underviser, int undervisningssted)
         {
             //if (String.IsNullOrEmpty(titel)|| String.IsNullOrEmpty(varighed) || String.IsNullOrEmpty(sprog) 

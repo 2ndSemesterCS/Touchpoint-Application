@@ -8,7 +8,7 @@
     public partial class TouchpointDBContext : DbContext
     {
         public TouchpointDBContext()
-            : base("name=TouchpointDBContext1")
+            : base("name=TouchpointDBContext2")
         {
             base.Configuration.LazyLoadingEnabled = false;
             base.Configuration.ProxyCreationEnabled = false;
@@ -74,22 +74,12 @@
                 .HasPrecision(19, 4);
 
             modelBuilder.Entity<Kursus>()
-                .Property(e => e.Dato)
-                .IsFixedLength()
-                .IsUnicode(false);
-
-            modelBuilder.Entity<Kursus>()
                 .Property(e => e.Beskrivelse)
                 .IsFixedLength()
                 .IsUnicode(false);
 
             modelBuilder.Entity<Kursus>()
                 .Property(e => e.Varighed)
-                .IsFixedLength()
-                .IsUnicode(false);
-
-            modelBuilder.Entity<Kursus>()
-                .Property(e => e.Tidspunkt)
                 .IsFixedLength()
                 .IsUnicode(false);
 
@@ -137,6 +127,11 @@
                 .Property(e => e.Email)
                 .IsFixedLength()
                 .IsUnicode(false);
+
+            modelBuilder.Entity<Underviser>()
+                .HasMany(e => e.Kursus)
+                .WithRequired(e => e.Underviser)
+                .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<Underviser>()
                 .HasMany(e => e.UnderviserPåKursus)

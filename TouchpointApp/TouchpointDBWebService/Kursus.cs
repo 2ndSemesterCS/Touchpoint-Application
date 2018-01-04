@@ -29,8 +29,6 @@ namespace TouchpointDBWebService
         [Column(TypeName = "money")]
         public decimal Depositum { get; set; }
 
-        [Required]
-        [StringLength(100)]
         public string Dato { get; set; }
 
         [Required]
@@ -41,15 +39,13 @@ namespace TouchpointDBWebService
         [StringLength(100)]
         public string Varighed { get; set; }
 
-        [Required]
-        [StringLength(100)]
         public string Tidspunkt { get; set; }
 
         [Required]
         [StringLength(100)]
         public string Titel { get; set; }
 
-        public int? UnderviserID { get; set; }
+        public int UnderviserID { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<DeltagerIKursus> DeltagerIKursus { get; set; }

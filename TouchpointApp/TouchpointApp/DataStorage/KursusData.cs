@@ -12,8 +12,8 @@ namespace TouchpointApp.DataStorage
         private string _sprog;
         private string _beskrivelse;
         private double _depositum;
-        private DateTime _dato;
-        private DateTime _tidspunkt;
+        private string _dato;
+        private string _tidspunkt;
         private int _underviserKey;
         private int _undervisningsStedKey;
         #endregion
@@ -27,8 +27,8 @@ namespace TouchpointApp.DataStorage
 
         #region Properties
         public string Titel { get { return _titel; } set { _titel = value; OnPropertyChanged("titel"); } }
-        public DateTime Dato { get { return _dato; } set {_dato = value; OnPropertyChanged("dato"); } }
-        public DateTime Tidspunkt { get { return _tidspunkt; } set { _tidspunkt = value; OnPropertyChanged("tidspunkt"); } }
+        public string Dato { get { return _dato; } set {_dato = value; OnPropertyChanged("dato"); } }
+        public string Tidspunkt { get { return _tidspunkt; } set { _tidspunkt = value; OnPropertyChanged("tidspunkt"); } }
         public string Varighed { get { return _varighed; } set {_varighed = value; OnPropertyChanged("varighed"); } }
         public double Pris { get { return _pris; } set {_pris = value; OnPropertyChanged("pris"); } }
         public string Sprog { get { return _sprog; } set {_sprog = value; OnPropertyChanged("sprog"); } }
