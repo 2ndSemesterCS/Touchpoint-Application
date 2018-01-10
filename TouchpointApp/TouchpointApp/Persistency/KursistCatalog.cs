@@ -1,5 +1,6 @@
-﻿using TouchpointApp.Exceptions;
+﻿using System.Collections.Generic;
 using TouchpointApp.Model;
+using System;
 
 namespace TouchpointApp.Persistency
 {
@@ -32,14 +33,13 @@ namespace TouchpointApp.Persistency
         #region Metode
         public void OpretKursist(string navn, string adresse, string email, string tlf, string land, string by)
         {
-            foreach (var item in _kursistCatalog.All)
-            {
-                if (item.EMail == email)
-                {
-                    ExceptionEmailAllreadyExsists exceptionEmail = new ExceptionEmailAllreadyExsists("Email eksisterer allerede i systemet");
-                    throw exceptionEmail;
-                }
-            }
+            //foreach (var item in All)
+            //{
+            //    if (item.EMail == email)
+            //    {
+            //        throw new ArgumentException("Email eksisterer allerede i systemet");
+            //    }
+            //}
             Create(new Kursist(navn, email, by, land, adresse, tlf));
         }
      

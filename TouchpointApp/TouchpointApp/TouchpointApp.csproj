@@ -102,8 +102,6 @@
     <Compile Include="DataStorage\SerieData.cs" />
     <Compile Include="DataStorage\UnderviserData.cs" />
     <Compile Include="DataStorage\UndervisningsStedData.cs" />
-    <Compile Include="Exceptions\Kursist\ExceptionEmailAllreadyExsists.cs" />
-    <Compile Include="Exceptions\Kursist\ExceptionPersonligInfoMangler.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
