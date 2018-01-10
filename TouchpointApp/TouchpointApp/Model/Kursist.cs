@@ -1,5 +1,6 @@
 ﻿using System;
 using TouchpointApp.DataStorage;
+
 namespace TouchpointApp.Model
 {
     public class Kursist : IKey

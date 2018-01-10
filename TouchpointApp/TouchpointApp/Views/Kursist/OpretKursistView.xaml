@@ -82,7 +82,7 @@
                 <TextBlock Height="59" Margin="55,0,45,0" TextWrapping="Wrap" HorizontalAlignment="Center" Text="Oversigt over Kursister" FontSize="20" Foreground="White"/>
             </Border>
             <ScrollViewer Height="245">
-                <ListView Height="221" Width="280" FontSize="20" Foreground="#230101" BorderBrush="White" BorderThickness="5" Background="MistyRose"
+                <ListView Height="179" Width="280" FontSize="20" Foreground="#230101" BorderBrush="White" BorderThickness="5" Background="MistyRose"
                           SelectedItem="{Binding SelectedItemListview, Mode=TwoWay}"
                           ItemsSource="{Binding Collection, Mode=TwoWay}"
                           />

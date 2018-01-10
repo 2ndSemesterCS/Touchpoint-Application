@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-using TouchpointApp.Model;
-using System;
+﻿using TouchpointApp.Model;
 
 namespace TouchpointApp.Persistency
 {

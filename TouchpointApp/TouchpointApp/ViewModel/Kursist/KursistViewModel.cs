@@ -44,6 +44,7 @@ namespace TouchpointApp.ViewModel.Kursist
         public ObservableCollection<Model.Kursist> Collection
         {
             get { return CreateObservableCollection(); }
+            
         }
         #endregion
 
@@ -57,7 +58,9 @@ namespace TouchpointApp.ViewModel.Kursist
         public void OpretNyKursist()
         {
             _kursistCatalog.Create(new Model.Kursist(_kd.Navn, _kd.Adresse, _kd.Email, _kd.Tlf, _kd.Land, _kd.By));
+            CreateObservableCollection();
             OnPropertyChanged(nameof(Collection));
+            OnPropertyChanged(nameof(CreateObservableCollection));
         }
         #endregion
     }
