@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using TouchpointApp.Model;
 using TouchpointApp.Web;
 
@@ -21,7 +22,7 @@ namespace TouchpointApp.Persistency
             get { return _coll.Values.ToList(); }
         }
 
-        public async void Create(T obj)
+        public async Task Create(T obj)
         {
             int key = await _source.Create(obj);
             obj.Key = key;

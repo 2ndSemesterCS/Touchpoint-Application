@@ -55,12 +55,12 @@ namespace TouchpointApp.ViewModel.Kursist
         #endregion
 
         #region Metoder
-        public void OpretNyKursist()
+        public async void OpretNyKursist()
         {
-            _kursistCatalog.Create(new Model.Kursist(_kd.Navn, _kd.Adresse, _kd.Email, _kd.Tlf, _kd.Land, _kd.By));
-            CreateObservableCollection();
+            await _kursistCatalog.Create(new Model.Kursist(_kd.Navn, _kd.Adresse, _kd.Email, _kd.Tlf, _kd.Land, _kd.By));
+        
             OnPropertyChanged(nameof(Collection));
-            OnPropertyChanged(nameof(CreateObservableCollection));
+            
         }
         #endregion
     }

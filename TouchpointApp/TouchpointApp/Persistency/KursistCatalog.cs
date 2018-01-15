@@ -29,7 +29,7 @@ namespace TouchpointApp.Persistency
         #endregion
 
         #region Metode
-        public void OpretKursist(string navn, string adresse, string email, string tlf, string land, string by)
+        public async void OpretKursist(string navn, string adresse, string email, string tlf, string land, string by)
         {
             //foreach (var item in All)
             //{
@@ -38,7 +38,7 @@ namespace TouchpointApp.Persistency
             //        throw new ArgumentException("Email eksisterer allerede i systemet");
             //    }
             //}
-            Create(new Kursist(navn, email, by, land, adresse, tlf));
+           await Create(new Kursist(navn, email, by, land, adresse, tlf));
         }
      
         #endregion
