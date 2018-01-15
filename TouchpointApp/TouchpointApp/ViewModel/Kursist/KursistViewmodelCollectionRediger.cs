@@ -39,14 +39,14 @@ namespace TouchpointApp.ViewModel.Kursist
         #endregion
 
         #region Metode
-        public void RedigerMetode()
+        public async void RedigerMetode()
         {
             int keyDB = _ItemIsSeleceted.KursistID;
             Model.Kursist kursist = new Model.Kursist(_KursistData.Navn, _KursistData.Adresse, _KursistData.Email, _KursistData.Tlf, _KursistData.Land, _KursistData.By);
 
             _kursistCatalog.Delete(keyDB);
             kursist.KursistID = keyDB;
-            _kursistCatalog.Create(kursist);
+            await _kursistCatalog.Create(kursist);
 
             OnPropertyChanged(nameof(Collection));  
         }

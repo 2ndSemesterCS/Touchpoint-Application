@@ -71,21 +71,20 @@ namespace TouchpointApp.Model
 
         #region Constructor
 
-        public Kursist(string navn, string email, string by, string land, string adresse, string tlf)
+        public Kursist(string navn, string adresse, string email, string tlf, string land, string by)
         {
-            //if (String.IsNullOrEmpty(navn) || String.IsNullOrEmpty(email)
-            //    || String.IsNullOrEmpty(by) || String.IsNullOrEmpty(land)
-            //    || String.IsNullOrEmpty(adresse) || String.IsNullOrEmpty(tlf))
-            //{
-            //    throw new ArgumentException("Personlig information mangler");
-            //}
+            if (String.IsNullOrEmpty(navn) || String.IsNullOrEmpty(email)
+                || String.IsNullOrEmpty(by) || String.IsNullOrEmpty(land)
+                || String.IsNullOrEmpty(adresse) || String.IsNullOrEmpty(tlf))
+            {
+                throw new ArgumentException("Personlig information mangler");
+            }
 
-            
-            //CheckForTal(navn, by, land);
-            //CheckTlfLængde(tlf);
-            //CheckForTalITlf(tlf);
 
-            _navn = navn ;
+            CheckForTal(navn, by, land);
+            CheckForTalITlf(tlf);
+
+            _navn = navn;
             _email = email;
             _by = by;
             _land = land;
@@ -95,48 +94,38 @@ namespace TouchpointApp.Model
         #endregion
 
         #region Metoder med exceptions
-        //public void CheckForTal(string navn, string by, string land)
-        //{
-        //    int value;
+        public void CheckForTal(string navn, string by, string land)
+        {
+            int value;
 
 
-        //    if (int.TryParse(navn, out value))
+            if (int.TryParse(navn, out value))
 
-        //    {
-        //        throw new ArgumentException("Der kan ikke indtastes tal i navn");
-        //    }
+            {
+                throw new ArgumentException("Der kan ikke indtastes tal i navn");
+            }
 
-        //    if (int.TryParse(by, out value))
-        //    {
-        //        throw new ArgumentException("Der kan ikke indtastes tal i by");
-        //    }
+            if (int.TryParse(by, out value))
+            {
+                throw new ArgumentException("Der kan ikke indtastes tal i by");
+            }
 
-        //    if (int.TryParse(land, out value))
-        //    {
-        //        throw new ArgumentException("Der kan ikke indtastes tal i land");
-        //    }
+            if (int.TryParse(land, out value))
+            {
+                throw new ArgumentException("Der kan ikke indtastes tal i land");
+            }
 
-        //}
+        }
 
-        //public void CheckForTalITlf(string Tlf)
-        //{
-        //    int value;
-        //    if (!int.TryParse(Tlf, out value))
-        //    {
-        //        throw new ArgumentException("Kun tal i telefonnummer");
-        //    }
-        //}
+        public void CheckForTalITlf(string Tlf)
+        {
+            int value;
+            if (!int.TryParse(Tlf, out value))
+            {
+                throw new ArgumentException("Kun tal i telefonnummer");
+            }
+        }
 
-        //public void CheckTlfLængde(string tlf)
-        //{
-
-        //    if (tlf.Length < 8 || tlf.Length > 8)
-        //    {
-        //        throw new ArgumentException("Invalid telefonnummer");
-        //    }
-
-
-        //}
         #endregion
 
         #region Metode Tostring
