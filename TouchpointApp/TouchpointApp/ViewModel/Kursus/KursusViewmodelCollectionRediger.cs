@@ -34,9 +34,9 @@ namespace TouchpointApp.ViewModel.Kursus
         public void RedigerMetode()
         {
             KursusCatalog.Instance().All.Remove(_itemIsSeleceted);
-            KursusCatalog.Instance().OpretKursus(_kursusData.Titel, _kursusData.Dato, 
+            KursusCatalog.Instance().Create(new Model.Kursus(_kursusData.Titel, _kursusData.Dato, 
                 _kursusData.Tidspunkt, _kursusData.Varighed, _kursusData.Pris, _kursusData.Sprog,
-                _kursusData.Beskrivelse, _kursusData.Depositum, _kursusData.UnderviserKey, _kursusData.UndervisningsstedKey);
+                _kursusData.Beskrivelse, _kursusData.Depositum, _kursusData.UnderviserKey, _kursusData.UndervisningsstedKey));
             OnPropertyChanged(nameof(Collection));
         }
         #endregion

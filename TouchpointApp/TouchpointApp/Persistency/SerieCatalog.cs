@@ -30,14 +30,5 @@ namespace TouchpointApp.Persistency
 
         }
         #endregion
-
-        #region Metode
-        
-
-        public void Create(List<Kursus> kursusSerie, string beskrivelse)
-        {
-            Create(new Serie(kursusSerie, beskrivelse));
-        }
-        #endregion
     }
 }

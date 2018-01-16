@@ -28,12 +28,6 @@ namespace TouchpointApp.Persistency
         }
         #endregion
 
-        #region Metode
-        public async void OpretKursist(string navn, string adresse, string email, string tlf, string land, string by)
-        {
-           await Create(new Kursist(navn, email, by, land, adresse, tlf));
-        }
      
-        #endregion
     }
 }

@@ -19,7 +19,7 @@ namespace TouchpointApp.Persistency
         #endregion
 
         #region Constructor
-        private UnderviserCatalog(string url)  : base(url, "Undervisers")
+        private UnderviserCatalog(string url) : base(url, "Undervisers")
         {
 
         }
@@ -37,25 +37,8 @@ namespace TouchpointApp.Persistency
             return _UnderviserCatalog;
         }
         #endregion
-
-
-        #region Metoder
-        public void OpretUnderviser(string Navn, string Adresse, string email, string tlf)
-        {
-            //foreach (var item in All)
-            //{
-            //   if( item.Email == email)
-            //    {
-            //        throw new ArgumentException("Email eksisterer allerede i systemet");
-            //    }
-
-                Create(new Underviser(Navn, Adresse, email, tlf));
-            }
-            
-            
-        }
-        #endregion
     }
+}
 
 
 

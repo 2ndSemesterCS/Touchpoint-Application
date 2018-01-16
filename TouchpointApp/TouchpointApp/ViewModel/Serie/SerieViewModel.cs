@@ -154,9 +154,9 @@ namespace TouchpointApp.ViewModel.Serie
             OnPropertyChanged(nameof(CollectionKursusTilserie));
         }
 
-        public void OpretNySerie()
+        public async void OpretNySerie()
         {
-            _serieCatalog.Create(_serieData.KursusSerie, _serieData.Beskrivelse);
+            await _serieCatalog.Create(new Model.Serie(_serieData.KursusSerie, _serieData.Beskrivelse));
             CreateObservableCollectionSerie();
             OnPropertyChanged(nameof(CollectionSerie));
 

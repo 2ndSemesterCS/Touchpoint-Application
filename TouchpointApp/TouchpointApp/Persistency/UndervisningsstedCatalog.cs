@@ -33,18 +33,6 @@ public class UndervisningsstedCatalog : Catalog<Undervisningssted>
         return _UndervisningsstedCatalog;
     }
     #endregion
-
-
-
-
-    #region Metoder
-
-    public void OpretUndervisningssted(string lokale, string adresse)
-    {
-       Create(new Undervisningssted(lokale, adresse));
-    }
-    #endregion
-
 }
 
 
