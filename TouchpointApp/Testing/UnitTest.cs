@@ -16,7 +16,7 @@ namespace Testing
         [TestMethod]
         public void OpretUndervisingsstedUdenAdresse()
         {
-            Assert.ThrowsException<ArgumentException>(() => { new Undervisningssted("", ""); });
+            Assert.ThrowsException<ArgumentException>(() => { new Undervisningssted("lokale 1A", ""); });
         }
 
         [TestMethod]
