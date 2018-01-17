@@ -11,7 +11,7 @@ namespace TouchpointApp.Persistency
 
         #region Constructor
 
-        public KursistCatalog(string url) : base(url, "Kursists")
+        private KursistCatalog(string url) : base(url, "Kursists")
         {
 
         }
